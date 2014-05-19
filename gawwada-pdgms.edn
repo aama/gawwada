@@ -13,7 +13,7 @@
 	  :pdgmType [:Template]
 	  :person [:Common, :Impersonal, :Person1, :Person2, :Person3]
 	  :polarity [:Affirmative, :Common, :Negative]
-	  :pos [:Pro, :Verb]
+	  :pos [:Pronoun, :Verb]
 	  :proClass [:Independent, :ObjProclitic, :PossSuff, :SubjProclitic]
 	  :tam [:Consecutive, :Imperative, :Imperfective, :Infinitive, :Jussive, :Past, :Perfective, :Present]
 	  :tense2 [:Future, :Habitual]
@@ -340,7 +340,7 @@
     {:label "gawwada-PPossSuff"
     :note "Tosco2007b Table 10 (5.0,p. 523)"
     :common {:morpheme :PROPOSSSUFF,
-	    :pos :Pro,
+	    :pos :Pronoun,
 	    :proClass :PossSuff}
     :terms [[:genderHead, :gender, :number, :person, :token]  ;; schema
 	    [:Masc, :Common, :Singular, :Person1, "-ħ-áyyu"],
@@ -385,7 +385,7 @@
     {:label "gawwada-PSubjProclitic"
     :note "Tosco2007b Table 10 (5.0,p. 523)"
     :common {:morpheme :PROSUBJPROCLITIC,
-	    :pos :Pro,
+	    :pos :Pronoun,
 	    :proClass :SubjProclitic}
     :terms [[:number, :person, :polarity, :token]  ;; schema
 	    [:Singular, :Person1, :Common, "an-"],
@@ -439,7 +439,7 @@
     {:label "gawwada-PInd"
     :note "Tosco2007b Table 10 (5.0,p. 523)"
     :common {:morpheme :PROIND,
-	    :pos :Pro,
+	    :pos :Pronoun,
 	    :proClass :Independent}
     :terms [[:gender, :number, :person, :token]  ;; schema
 	    [:Common, :Singular, :Person1, "áno"],
@@ -469,7 +469,7 @@
     {:label "gawwada-PObjProclitic"
     :note "Tosco2007b Table 10 (5.0,p. 523)"
     :common {:morpheme :PROOBJPROCLITIC,
-	    :pos :Pro,
+	    :pos :Pronoun,
 	    :proClass :ObjProclitic}
     :terms [[:gender, :number, :person, :token]  ;; schema
 	    [:Common, :Singular, :Person1, "ye-"],
