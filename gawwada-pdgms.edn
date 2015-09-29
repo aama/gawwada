@@ -1,6 +1,9 @@
 {
 :lang :gawwada
 :sgpref "gaw"
+:datasource "Tosco2007b"
+:geodemoURL "http://www.ethnologue.com/language/ged"
+:geodemoTXT "Varieties and subdialects of Gawwada are spoken in "
 :schemata {
 :classification [:FOCUSSTRUCTURE]
 	  :derivedStem [:Causative, :Inceptive, :Ingressive, :Intensive, :Middel, :Passive, :Semelfactive]
@@ -123,7 +126,7 @@
 	    [:Common, :Plural, :Person2, "áššóngu"],
 	    [:Common, :Plural, :Person3, "áššóngi"]]
     }
-    {:label "gawwada-VPerfective-`ug"
+    {:label "gawwada-VPerfective-ug"
     :note "Tosco2007b Table 3 (p. 514). There are two tonally distinct inflectional classes of verb in the perfective,imperative,and consecutive positive tenses."
     :common {:inflClass :Class1,
 	    :lexeme :ug,

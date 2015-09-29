@@ -1,73 +1,22 @@
-
 #TTL FROM INPUT FILE:
-# data/gawwada/gawwada-pdgms.edn
+#../aama-data/data/gawwada/gawwada-pdgms.edn
+
 @prefix rdf:	 <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:	 <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dc:    <http://purl.org/dc/elements>.
+@prefix dcterms:    <http://purl.org/dc/terms>.
 @prefix aama:	 <http://id.oi.uchicago.edu/aama/2013/> .
 @prefix aamas:	 <http://id.oi.uchicago.edu/aama/2013/schema/> .
 @prefix gaw:   <http://id.oi.uchicago.edu/aama/2013/gawwada/> .
 
-#SCHEMATA:
+#LANG INFO:
 
 aama:Gawwada a aamas:Language .
 aama:Gawwada rdfs:label "Gawwada" .
+aama:Gawwada aamas:dataSource "Tosco2007b" .
+aama:Gawwada aamas:geodemoURL "http://www.ethnologue.com/language/ged" .
+aama:Gawwada aamas:geodemoTXT "Varieties and subdialects of Gawwada are spoken in " .
 
-#SCHEMATA: gender
-gaw:gender aamas:lang aama:Gawwada .
-gaw:Gender aamas:lang aama:Gawwada .
-gaw:gender rdfs:domain aamas:Term .
-gaw:Gender rdfs:label "gender exponents" .
-gaw:gender rdfs:label "gender" .
-gaw:gender rdfs:range gaw:Gender .
-gaw:Gender rdfs:subClassOf gaw:MuExponent .
-gaw:gender rdfs:subPropertyOf gaw:muProperty .
-gaw:Common aamas:lang aama:Gawwada .
-gaw:Common rdf:type gaw:Gender .
-gaw:Common rdfs:label "Common".
-gaw:Fem aamas:lang aama:Gawwada .
-gaw:Fem rdf:type gaw:Gender .
-gaw:Fem rdfs:label "Fem".
-gaw:Masc aamas:lang aama:Gawwada .
-gaw:Masc rdf:type gaw:Gender .
-gaw:Masc rdfs:label "Masc".
-
-#SCHEMATA: genderHead
-gaw:genderHead aamas:lang aama:Gawwada .
-gaw:Genderhead aamas:lang aama:Gawwada .
-gaw:genderHead rdfs:domain aamas:Term .
-gaw:Genderhead rdfs:label "genderHead exponents" .
-gaw:genderHead rdfs:label "genderHead" .
-gaw:genderHead rdfs:range gaw:Genderhead .
-gaw:Genderhead rdfs:subClassOf gaw:MuExponent .
-gaw:genderHead rdfs:subPropertyOf gaw:muProperty .
-gaw:Fem aamas:lang aama:Gawwada .
-gaw:Fem rdf:type gaw:Genderhead .
-gaw:Fem rdfs:label "Fem".
-gaw:Masc aamas:lang aama:Gawwada .
-gaw:Masc rdf:type gaw:Genderhead .
-gaw:Masc rdfs:label "Masc".
-
-#SCHEMATA: inflClass
-gaw:inflClass aamas:lang aama:Gawwada .
-gaw:Inflclass aamas:lang aama:Gawwada .
-gaw:inflClass rdfs:domain aamas:Term .
-gaw:Inflclass rdfs:label "inflClass exponents" .
-gaw:inflClass rdfs:label "inflClass" .
-gaw:inflClass rdfs:range gaw:Inflclass .
-gaw:Inflclass rdfs:subClassOf gaw:MuExponent .
-gaw:inflClass rdfs:subPropertyOf gaw:muProperty .
-gaw:Class1 aamas:lang aama:Gawwada .
-gaw:Class1 rdf:type gaw:Inflclass .
-gaw:Class1 rdfs:label "Class1".
-gaw:Class1a aamas:lang aama:Gawwada .
-gaw:Class1a rdf:type gaw:Inflclass .
-gaw:Class1a rdfs:label "Class1a".
-gaw:Class1b aamas:lang aama:Gawwada .
-gaw:Class1b rdf:type gaw:Inflclass .
-gaw:Class1b rdfs:label "Class1b".
-gaw:Class2 aamas:lang aama:Gawwada .
-gaw:Class2 rdf:type gaw:Inflclass .
-gaw:Class2 rdfs:label "Class2".
 
 #SCHEMATA: tense2
 gaw:tense2 aamas:lang aama:Gawwada .
@@ -80,90 +29,10 @@ gaw:Tense2 rdfs:subClassOf gaw:MuExponent .
 gaw:tense2 rdfs:subPropertyOf gaw:muProperty .
 gaw:Future aamas:lang aama:Gawwada .
 gaw:Future rdf:type gaw:Tense2 .
-gaw:Future rdfs:label "Future".
+gaw:Future rdfs:label "Future" .
 gaw:Habitual aamas:lang aama:Gawwada .
 gaw:Habitual rdf:type gaw:Tense2 .
-gaw:Habitual rdfs:label "Habitual".
-
-#SCHEMATA: pdgmType
-gaw:pdgmType aamas:lang aama:Gawwada .
-gaw:Pdgmtype aamas:lang aama:Gawwada .
-gaw:pdgmType rdfs:domain aamas:Term .
-gaw:Pdgmtype rdfs:label "pdgmType exponents" .
-gaw:pdgmType rdfs:label "pdgmType" .
-gaw:pdgmType rdfs:range gaw:Pdgmtype .
-gaw:Pdgmtype rdfs:subClassOf gaw:MuExponent .
-gaw:pdgmType rdfs:subPropertyOf gaw:muProperty .
-gaw:Template aamas:lang aama:Gawwada .
-gaw:Template rdf:type gaw:Pdgmtype .
-gaw:Template rdfs:label "Template".
-
-#SCHEMATA: classification
-gaw:classification aamas:lang aama:Gawwada .
-gaw:Classification aamas:lang aama:Gawwada .
-gaw:classification rdfs:domain aamas:Term .
-gaw:Classification rdfs:label "classification exponents" .
-gaw:classification rdfs:label "classification" .
-gaw:classification rdfs:range gaw:Classification .
-gaw:Classification rdfs:subClassOf gaw:MuExponent .
-gaw:classification rdfs:subPropertyOf gaw:muProperty .
-gaw:FOCUSSTRUCTURE aamas:lang aama:Gawwada .
-gaw:FOCUSSTRUCTURE rdf:type gaw:Classification .
-gaw:FOCUSSTRUCTURE rdfs:label "FOCUSSTRUCTURE".
-
-#SCHEMATA: polarity
-gaw:polarity aamas:lang aama:Gawwada .
-gaw:Polarity aamas:lang aama:Gawwada .
-gaw:polarity rdfs:domain aamas:Term .
-gaw:Polarity rdfs:label "polarity exponents" .
-gaw:polarity rdfs:label "polarity" .
-gaw:polarity rdfs:range gaw:Polarity .
-gaw:Polarity rdfs:subClassOf gaw:MuExponent .
-gaw:polarity rdfs:subPropertyOf gaw:muProperty .
-gaw:Affirmative aamas:lang aama:Gawwada .
-gaw:Affirmative rdf:type gaw:Polarity .
-gaw:Affirmative rdfs:label "Affirmative".
-gaw:Common aamas:lang aama:Gawwada .
-gaw:Common rdf:type gaw:Polarity .
-gaw:Common rdfs:label "Common".
-gaw:Negative aamas:lang aama:Gawwada .
-gaw:Negative rdf:type gaw:Polarity .
-gaw:Negative rdfs:label "Negative".
-
-#SCHEMATA: focusType
-gaw:focusType aamas:lang aama:Gawwada .
-gaw:Focustype aamas:lang aama:Gawwada .
-gaw:focusType rdfs:domain aamas:Term .
-gaw:Focustype rdfs:label "focusType exponents" .
-gaw:focusType rdfs:label "focusType" .
-gaw:focusType rdfs:range gaw:Focustype .
-gaw:Focustype rdfs:subClassOf gaw:MuExponent .
-gaw:focusType rdfs:subPropertyOf gaw:muProperty .
-gaw:K-Focus aamas:lang aama:Gawwada .
-gaw:K-Focus rdf:type gaw:Focustype .
-gaw:K-Focus rdfs:label "K-Focus".
-gaw:SubjFocus aamas:lang aama:Gawwada .
-gaw:SubjFocus rdf:type gaw:Focustype .
-gaw:SubjFocus rdfs:label "SubjFocus".
-gaw:VerbFocus aamas:lang aama:Gawwada .
-gaw:VerbFocus rdf:type gaw:Focustype .
-gaw:VerbFocus rdfs:label "VerbFocus".
-
-#SCHEMATA: pos
-gaw:pos aamas:lang aama:Gawwada .
-gaw:Pos aamas:lang aama:Gawwada .
-gaw:pos rdfs:domain aamas:Term .
-gaw:Pos rdfs:label "pos exponents" .
-gaw:pos rdfs:label "pos" .
-gaw:pos rdfs:range gaw:Pos .
-gaw:Pos rdfs:subClassOf gaw:MuExponent .
-gaw:pos rdfs:subPropertyOf gaw:muProperty .
-gaw:Pronoun aamas:lang aama:Gawwada .
-gaw:Pronoun rdf:type gaw:Pos .
-gaw:Pronoun rdfs:label "Pronoun".
-gaw:Verb aamas:lang aama:Gawwada .
-gaw:Verb rdf:type gaw:Pos .
-gaw:Verb rdfs:label "Verb".
+gaw:Habitual rdfs:label "Habitual" .
 
 #SCHEMATA: person
 gaw:person aamas:lang aama:Gawwada .
@@ -176,16 +45,16 @@ gaw:Person rdfs:subClassOf gaw:MuExponent .
 gaw:person rdfs:subPropertyOf gaw:muProperty .
 gaw:Impersonal aamas:lang aama:Gawwada .
 gaw:Impersonal rdf:type gaw:Person .
-gaw:Impersonal rdfs:label "Impersonal".
+gaw:Impersonal rdfs:label "Impersonal" .
 gaw:Person1 aamas:lang aama:Gawwada .
 gaw:Person1 rdf:type gaw:Person .
-gaw:Person1 rdfs:label "Person1".
+gaw:Person1 rdfs:label "Person1" .
 gaw:Person2 aamas:lang aama:Gawwada .
 gaw:Person2 rdf:type gaw:Person .
-gaw:Person2 rdfs:label "Person2".
+gaw:Person2 rdfs:label "Person2" .
 gaw:Person3 aamas:lang aama:Gawwada .
 gaw:Person3 rdf:type gaw:Person .
-gaw:Person3 rdfs:label "Person3".
+gaw:Person3 rdfs:label "Person3" .
 
 #SCHEMATA: derivedStem
 gaw:derivedStem aamas:lang aama:Gawwada .
@@ -198,94 +67,25 @@ gaw:Derivedstem rdfs:subClassOf gaw:MuExponent .
 gaw:derivedStem rdfs:subPropertyOf gaw:muProperty .
 gaw:Causative aamas:lang aama:Gawwada .
 gaw:Causative rdf:type gaw:Derivedstem .
-gaw:Causative rdfs:label "Causative".
+gaw:Causative rdfs:label "Causative" .
 gaw:Inceptive aamas:lang aama:Gawwada .
 gaw:Inceptive rdf:type gaw:Derivedstem .
-gaw:Inceptive rdfs:label "Inceptive".
+gaw:Inceptive rdfs:label "Inceptive" .
 gaw:Ingressive aamas:lang aama:Gawwada .
 gaw:Ingressive rdf:type gaw:Derivedstem .
-gaw:Ingressive rdfs:label "Ingressive".
+gaw:Ingressive rdfs:label "Ingressive" .
 gaw:Intensive aamas:lang aama:Gawwada .
 gaw:Intensive rdf:type gaw:Derivedstem .
-gaw:Intensive rdfs:label "Intensive".
+gaw:Intensive rdfs:label "Intensive" .
 gaw:Middel aamas:lang aama:Gawwada .
 gaw:Middel rdf:type gaw:Derivedstem .
-gaw:Middel rdfs:label "Middel".
+gaw:Middel rdfs:label "Middel" .
 gaw:Passive aamas:lang aama:Gawwada .
 gaw:Passive rdf:type gaw:Derivedstem .
-gaw:Passive rdfs:label "Passive".
+gaw:Passive rdfs:label "Passive" .
 gaw:Semelfactive aamas:lang aama:Gawwada .
 gaw:Semelfactive rdf:type gaw:Derivedstem .
-gaw:Semelfactive rdfs:label "Semelfactive".
-
-#SCHEMATA: morphClass
-gaw:morphClass aamas:lang aama:Gawwada .
-gaw:Morphclass aamas:lang aama:Gawwada .
-gaw:morphClass rdfs:domain aamas:Term .
-gaw:Morphclass rdfs:label "morphClass exponents" .
-gaw:morphClass rdfs:label "morphClass" .
-gaw:morphClass rdfs:range gaw:Morphclass .
-gaw:Morphclass rdfs:subClassOf gaw:MuExponent .
-gaw:morphClass rdfs:subPropertyOf gaw:muProperty .
-gaw:DervStem aamas:lang aama:Gawwada .
-gaw:DervStem rdf:type gaw:Morphclass .
-gaw:DervStem rdfs:label "DervStem".
-gaw:NegImprtvExx aamas:lang aama:Gawwada .
-gaw:NegImprtvExx rdf:type gaw:Morphclass .
-gaw:NegImprtvExx rdfs:label "NegImprtvExx".
-
-#SCHEMATA: proClass
-gaw:proClass aamas:lang aama:Gawwada .
-gaw:Proclass aamas:lang aama:Gawwada .
-gaw:proClass rdfs:domain aamas:Term .
-gaw:Proclass rdfs:label "proClass exponents" .
-gaw:proClass rdfs:label "proClass" .
-gaw:proClass rdfs:range gaw:Proclass .
-gaw:Proclass rdfs:subClassOf gaw:MuExponent .
-gaw:proClass rdfs:subPropertyOf gaw:muProperty .
-gaw:Independent aamas:lang aama:Gawwada .
-gaw:Independent rdf:type gaw:Proclass .
-gaw:Independent rdfs:label "Independent".
-gaw:ObjProclitic aamas:lang aama:Gawwada .
-gaw:ObjProclitic rdf:type gaw:Proclass .
-gaw:ObjProclitic rdfs:label "ObjProclitic".
-gaw:PossSuff aamas:lang aama:Gawwada .
-gaw:PossSuff rdf:type gaw:Proclass .
-gaw:PossSuff rdfs:label "PossSuff".
-gaw:SubjProclitic aamas:lang aama:Gawwada .
-gaw:SubjProclitic rdf:type gaw:Proclass .
-gaw:SubjProclitic rdfs:label "SubjProclitic".
-
-#SCHEMATA: tam
-gaw:tam aamas:lang aama:Gawwada .
-gaw:Tam aamas:lang aama:Gawwada .
-gaw:tam rdfs:domain aamas:Term .
-gaw:Tam rdfs:label "tam exponents" .
-gaw:tam rdfs:label "tam" .
-gaw:tam rdfs:range gaw:Tam .
-gaw:Tam rdfs:subClassOf gaw:MuExponent .
-gaw:tam rdfs:subPropertyOf gaw:muProperty .
-gaw:Consecutive aamas:lang aama:Gawwada .
-gaw:Consecutive rdf:type gaw:Tam .
-gaw:Consecutive rdfs:label "Consecutive".
-gaw:Imperative aamas:lang aama:Gawwada .
-gaw:Imperative rdf:type gaw:Tam .
-gaw:Imperative rdfs:label "Imperative".
-gaw:Imperfective aamas:lang aama:Gawwada .
-gaw:Imperfective rdf:type gaw:Tam .
-gaw:Imperfective rdfs:label "Imperfective".
-gaw:Jussive aamas:lang aama:Gawwada .
-gaw:Jussive rdf:type gaw:Tam .
-gaw:Jussive rdfs:label "Jussive".
-gaw:Past aamas:lang aama:Gawwada .
-gaw:Past rdf:type gaw:Tam .
-gaw:Past rdfs:label "Past".
-gaw:Perfective aamas:lang aama:Gawwada .
-gaw:Perfective rdf:type gaw:Tam .
-gaw:Perfective rdfs:label "Perfective".
-gaw:Present aamas:lang aama:Gawwada .
-gaw:Present rdf:type gaw:Tam .
-gaw:Present rdfs:label "Present".
+gaw:Semelfactive rdfs:label "Semelfactive" .
 
 #SCHEMATA: number
 gaw:number aamas:lang aama:Gawwada .
@@ -298,150 +98,328 @@ gaw:Number rdfs:subClassOf gaw:MuExponent .
 gaw:number rdfs:subPropertyOf gaw:muProperty .
 gaw:Common aamas:lang aama:Gawwada .
 gaw:Common rdf:type gaw:Number .
-gaw:Common rdfs:label "Common".
+gaw:Common rdfs:label "Common" .
 gaw:Plural aamas:lang aama:Gawwada .
 gaw:Plural rdf:type gaw:Number .
-gaw:Plural rdfs:label "Plural".
+gaw:Plural rdfs:label "Plural" .
 gaw:Singular aamas:lang aama:Gawwada .
 gaw:Singular rdf:type gaw:Number .
-gaw:Singular rdfs:label "Singular".
+gaw:Singular rdfs:label "Singular" .
+
+#SCHEMATA: genderHead
+gaw:genderHead aamas:lang aama:Gawwada .
+gaw:Genderhead aamas:lang aama:Gawwada .
+gaw:genderHead rdfs:domain aamas:Term .
+gaw:Genderhead rdfs:label "genderHead exponents" .
+gaw:genderHead rdfs:label "genderHead" .
+gaw:genderHead rdfs:range gaw:Genderhead .
+gaw:Genderhead rdfs:subClassOf gaw:MuExponent .
+gaw:genderHead rdfs:subPropertyOf gaw:muProperty .
+gaw:Fem aamas:lang aama:Gawwada .
+gaw:Fem rdf:type gaw:Genderhead .
+gaw:Fem rdfs:label "Fem" .
+gaw:Masc aamas:lang aama:Gawwada .
+gaw:Masc rdf:type gaw:Genderhead .
+gaw:Masc rdfs:label "Masc" .
+
+#SCHEMATA: focusType
+gaw:focusType aamas:lang aama:Gawwada .
+gaw:Focustype aamas:lang aama:Gawwada .
+gaw:focusType rdfs:domain aamas:Term .
+gaw:Focustype rdfs:label "focusType exponents" .
+gaw:focusType rdfs:label "focusType" .
+gaw:focusType rdfs:range gaw:Focustype .
+gaw:Focustype rdfs:subClassOf gaw:MuExponent .
+gaw:focusType rdfs:subPropertyOf gaw:muProperty .
+gaw:K-Focus aamas:lang aama:Gawwada .
+gaw:K-Focus rdf:type gaw:Focustype .
+gaw:K-Focus rdfs:label "K-Focus" .
+gaw:SubjFocus aamas:lang aama:Gawwada .
+gaw:SubjFocus rdf:type gaw:Focustype .
+gaw:SubjFocus rdfs:label "SubjFocus" .
+gaw:VerbFocus aamas:lang aama:Gawwada .
+gaw:VerbFocus rdf:type gaw:Focustype .
+gaw:VerbFocus rdfs:label "VerbFocus" .
+
+#SCHEMATA: pos
+gaw:pos aamas:lang aama:Gawwada .
+gaw:Pos aamas:lang aama:Gawwada .
+gaw:pos rdfs:domain aamas:Term .
+gaw:Pos rdfs:label "pos exponents" .
+gaw:pos rdfs:label "pos" .
+gaw:pos rdfs:range gaw:Pos .
+gaw:Pos rdfs:subClassOf gaw:MuExponent .
+gaw:pos rdfs:subPropertyOf gaw:muProperty .
+gaw:Pronoun aamas:lang aama:Gawwada .
+gaw:Pronoun rdf:type gaw:Pos .
+gaw:Pronoun rdfs:label "Pronoun" .
+gaw:Verb aamas:lang aama:Gawwada .
+gaw:Verb rdf:type gaw:Pos .
+gaw:Verb rdfs:label "Verb" .
+
+#SCHEMATA: inflClass
+gaw:inflClass aamas:lang aama:Gawwada .
+gaw:Inflclass aamas:lang aama:Gawwada .
+gaw:inflClass rdfs:domain aamas:Term .
+gaw:Inflclass rdfs:label "inflClass exponents" .
+gaw:inflClass rdfs:label "inflClass" .
+gaw:inflClass rdfs:range gaw:Inflclass .
+gaw:Inflclass rdfs:subClassOf gaw:MuExponent .
+gaw:inflClass rdfs:subPropertyOf gaw:muProperty .
+gaw:Class1 aamas:lang aama:Gawwada .
+gaw:Class1 rdf:type gaw:Inflclass .
+gaw:Class1 rdfs:label "Class1" .
+gaw:Class1a aamas:lang aama:Gawwada .
+gaw:Class1a rdf:type gaw:Inflclass .
+gaw:Class1a rdfs:label "Class1a" .
+gaw:Class1b aamas:lang aama:Gawwada .
+gaw:Class1b rdf:type gaw:Inflclass .
+gaw:Class1b rdfs:label "Class1b" .
+gaw:Class2 aamas:lang aama:Gawwada .
+gaw:Class2 rdf:type gaw:Inflclass .
+gaw:Class2 rdfs:label "Class2" .
+
+#SCHEMATA: proClass
+gaw:proClass aamas:lang aama:Gawwada .
+gaw:Proclass aamas:lang aama:Gawwada .
+gaw:proClass rdfs:domain aamas:Term .
+gaw:Proclass rdfs:label "proClass exponents" .
+gaw:proClass rdfs:label "proClass" .
+gaw:proClass rdfs:range gaw:Proclass .
+gaw:Proclass rdfs:subClassOf gaw:MuExponent .
+gaw:proClass rdfs:subPropertyOf gaw:muProperty .
+gaw:Independent aamas:lang aama:Gawwada .
+gaw:Independent rdf:type gaw:Proclass .
+gaw:Independent rdfs:label "Independent" .
+gaw:ObjProclitic aamas:lang aama:Gawwada .
+gaw:ObjProclitic rdf:type gaw:Proclass .
+gaw:ObjProclitic rdfs:label "ObjProclitic" .
+gaw:PossSuff aamas:lang aama:Gawwada .
+gaw:PossSuff rdf:type gaw:Proclass .
+gaw:PossSuff rdfs:label "PossSuff" .
+gaw:SubjProclitic aamas:lang aama:Gawwada .
+gaw:SubjProclitic rdf:type gaw:Proclass .
+gaw:SubjProclitic rdfs:label "SubjProclitic" .
+
+#SCHEMATA: classification
+gaw:classification aamas:lang aama:Gawwada .
+gaw:Classification aamas:lang aama:Gawwada .
+gaw:classification rdfs:domain aamas:Term .
+gaw:Classification rdfs:label "classification exponents" .
+gaw:classification rdfs:label "classification" .
+gaw:classification rdfs:range gaw:Classification .
+gaw:Classification rdfs:subClassOf gaw:MuExponent .
+gaw:classification rdfs:subPropertyOf gaw:muProperty .
+gaw:FOCUSSTRUCTURE aamas:lang aama:Gawwada .
+gaw:FOCUSSTRUCTURE rdf:type gaw:Classification .
+gaw:FOCUSSTRUCTURE rdfs:label "FOCUSSTRUCTURE" .
+
+#SCHEMATA: morphClass
+gaw:morphClass aamas:lang aama:Gawwada .
+gaw:Morphclass aamas:lang aama:Gawwada .
+gaw:morphClass rdfs:domain aamas:Term .
+gaw:Morphclass rdfs:label "morphClass exponents" .
+gaw:morphClass rdfs:label "morphClass" .
+gaw:morphClass rdfs:range gaw:Morphclass .
+gaw:Morphclass rdfs:subClassOf gaw:MuExponent .
+gaw:morphClass rdfs:subPropertyOf gaw:muProperty .
+gaw:DervStem aamas:lang aama:Gawwada .
+gaw:DervStem rdf:type gaw:Morphclass .
+gaw:DervStem rdfs:label "DervStem" .
+gaw:NegImprtvExx aamas:lang aama:Gawwada .
+gaw:NegImprtvExx rdf:type gaw:Morphclass .
+gaw:NegImprtvExx rdfs:label "NegImprtvExx" .
+
+#SCHEMATA: polarity
+gaw:polarity aamas:lang aama:Gawwada .
+gaw:Polarity aamas:lang aama:Gawwada .
+gaw:polarity rdfs:domain aamas:Term .
+gaw:Polarity rdfs:label "polarity exponents" .
+gaw:polarity rdfs:label "polarity" .
+gaw:polarity rdfs:range gaw:Polarity .
+gaw:Polarity rdfs:subClassOf gaw:MuExponent .
+gaw:polarity rdfs:subPropertyOf gaw:muProperty .
+gaw:Affirmative aamas:lang aama:Gawwada .
+gaw:Affirmative rdf:type gaw:Polarity .
+gaw:Affirmative rdfs:label "Affirmative" .
+gaw:Common aamas:lang aama:Gawwada .
+gaw:Common rdf:type gaw:Polarity .
+gaw:Common rdfs:label "Common" .
+gaw:Negative aamas:lang aama:Gawwada .
+gaw:Negative rdf:type gaw:Polarity .
+gaw:Negative rdfs:label "Negative" .
+
+#SCHEMATA: tam
+gaw:tam aamas:lang aama:Gawwada .
+gaw:Tam aamas:lang aama:Gawwada .
+gaw:tam rdfs:domain aamas:Term .
+gaw:Tam rdfs:label "tam exponents" .
+gaw:tam rdfs:label "tam" .
+gaw:tam rdfs:range gaw:Tam .
+gaw:Tam rdfs:subClassOf gaw:MuExponent .
+gaw:tam rdfs:subPropertyOf gaw:muProperty .
+gaw:Consecutive aamas:lang aama:Gawwada .
+gaw:Consecutive rdf:type gaw:Tam .
+gaw:Consecutive rdfs:label "Consecutive" .
+gaw:Imperative aamas:lang aama:Gawwada .
+gaw:Imperative rdf:type gaw:Tam .
+gaw:Imperative rdfs:label "Imperative" .
+gaw:Imperfective aamas:lang aama:Gawwada .
+gaw:Imperfective rdf:type gaw:Tam .
+gaw:Imperfective rdfs:label "Imperfective" .
+gaw:Jussive aamas:lang aama:Gawwada .
+gaw:Jussive rdf:type gaw:Tam .
+gaw:Jussive rdfs:label "Jussive" .
+gaw:Past aamas:lang aama:Gawwada .
+gaw:Past rdf:type gaw:Tam .
+gaw:Past rdfs:label "Past" .
+gaw:Perfective aamas:lang aama:Gawwada .
+gaw:Perfective rdf:type gaw:Tam .
+gaw:Perfective rdfs:label "Perfective" .
+gaw:Present aamas:lang aama:Gawwada .
+gaw:Present rdf:type gaw:Tam .
+gaw:Present rdfs:label "Present" .
+
+#SCHEMATA: gender
+gaw:gender aamas:lang aama:Gawwada .
+gaw:Gender aamas:lang aama:Gawwada .
+gaw:gender rdfs:domain aamas:Term .
+gaw:Gender rdfs:label "gender exponents" .
+gaw:gender rdfs:label "gender" .
+gaw:gender rdfs:range gaw:Gender .
+gaw:Gender rdfs:subClassOf gaw:MuExponent .
+gaw:gender rdfs:subPropertyOf gaw:muProperty .
+gaw:Common aamas:lang aama:Gawwada .
+gaw:Common rdf:type gaw:Gender .
+gaw:Common rdfs:label "Common" .
+gaw:Fem aamas:lang aama:Gawwada .
+gaw:Fem rdf:type gaw:Gender .
+gaw:Fem rdfs:label "Fem" .
+gaw:Masc aamas:lang aama:Gawwada .
+gaw:Masc rdf:type gaw:Gender .
+gaw:Masc rdfs:label "Masc" .
+
+#SCHEMATA: pdgmType
+gaw:pdgmType aamas:lang aama:Gawwada .
+gaw:Pdgmtype aamas:lang aama:Gawwada .
+gaw:pdgmType rdfs:domain aamas:Term .
+gaw:Pdgmtype rdfs:label "pdgmType exponents" .
+gaw:pdgmType rdfs:label "pdgmType" .
+gaw:pdgmType rdfs:range gaw:Pdgmtype .
+gaw:Pdgmtype rdfs:subClassOf gaw:MuExponent .
+gaw:pdgmType rdfs:subPropertyOf gaw:muProperty .
+gaw:Template aamas:lang aama:Gawwada .
+gaw:Template rdf:type gaw:Pdgmtype .
+gaw:Template rdfs:label "Template" .
+
+#PCLASSES:
+
 
 #MORPHEMES:
 
-aama:Gawwada-PERFECTIVETEMPLATE a aamas:Morpheme ;
-	aamas:lang aama:Gawwada ;
-	rdfs:label "PERFECTIVETEMPLATE" ;
-	rdfs:comment "[x]" ;
-	rdfs:comment "[y]" ;
-	.
-aama:Gawwada-PROIND a aamas:Morpheme ;
-	aamas:lang aama:Gawwada ;
-	rdfs:label "PROIND" ;
-	rdfs:comment "[x]" ;
-	rdfs:comment "[y]" ;
-	.
-aama:Gawwada-DERVSTEMS a aamas:Morpheme ;
+aama:Gawwada-DERVSTEMS a aamas:Muterm ;
 	aamas:lang aama:Gawwada ;
 	rdfs:label "DERVSTEMS" ;
 	rdfs:comment "[x]" ;
 	rdfs:comment "[y]" ;
 	.
-aama:Gawwada-IMPERFHABTEMPLATE a aamas:Morpheme ;
-	aamas:lang aama:Gawwada ;
-	rdfs:label "IMPERFHABTEMPLATE" ;
-	rdfs:comment "[x]" ;
-	rdfs:comment "[y]" ;
-	.
-aama:Gawwada-CONSECTEMPLATE a aamas:Morpheme ;
-	aamas:lang aama:Gawwada ;
-	rdfs:label "CONSECTEMPLATE" ;
-	rdfs:comment "[x]" ;
-	rdfs:comment "[y]" ;
-	.
-aama:Gawwada-PERFHABTEMPLATE a aamas:Morpheme ;
-	aamas:lang aama:Gawwada ;
-	rdfs:label "PERFHABTEMPLATE" ;
-	rdfs:comment "[x]" ;
-	rdfs:comment "[y]" ;
-	.
-aama:Gawwada-PROSUBJPROCLITIC a aamas:Morpheme ;
-	aamas:lang aama:Gawwada ;
-	rdfs:label "PROSUBJPROCLITIC" ;
-	rdfs:comment "[x]" ;
-	rdfs:comment "[y]" ;
-	.
-aama:Gawwada-IMPERFFUTTEMPLATE a aamas:Morpheme ;
-	aamas:lang aama:Gawwada ;
-	rdfs:label "IMPERFFUTTEMPLATE" ;
-	rdfs:comment "[x]" ;
-	rdfs:comment "[y]" ;
-	.
-aama:Gawwada-PERFFUTTEMPLATE a aamas:Morpheme ;
-	aamas:lang aama:Gawwada ;
-	rdfs:label "PERFFUTTEMPLATE" ;
-	rdfs:comment "[x]" ;
-	rdfs:comment "[y]" ;
-	.
-aama:Gawwada-NEGTEMPLATE a aamas:Morpheme ;
-	aamas:lang aama:Gawwada ;
-	rdfs:label "NEGTEMPLATE" ;
-	rdfs:comment "[x]" ;
-	rdfs:comment "[y]" ;
-	.
-aama:Gawwada-NEGFUTTEMPLATE a aamas:Morpheme ;
-	aamas:lang aama:Gawwada ;
-	rdfs:label "NEGFUTTEMPLATE" ;
-	rdfs:comment "[x]" ;
-	rdfs:comment "[y]" ;
-	.
-aama:Gawwada-PROOBJPROCLITIC a aamas:Morpheme ;
-	aamas:lang aama:Gawwada ;
-	rdfs:label "PROOBJPROCLITIC" ;
-	rdfs:comment "[x]" ;
-	rdfs:comment "[y]" ;
-	.
-aama:Gawwada-IMPERFTEMPLATE a aamas:Morpheme ;
-	aamas:lang aama:Gawwada ;
-	rdfs:label "IMPERFTEMPLATE" ;
-	rdfs:comment "[x]" ;
-	rdfs:comment "[y]" ;
-	.
-aama:Gawwada-PROPOSSSUFF a aamas:Morpheme ;
-	aamas:lang aama:Gawwada ;
-	rdfs:label "PROPOSSSUFF" ;
-	rdfs:comment "[x]" ;
-	rdfs:comment "[y]" ;
-	.
-aama:Gawwada-IMPRTVTEMPLATE a aamas:Morpheme ;
+aama:Gawwada-IMPRTVTEMPLATE a aamas:Muterm ;
 	aamas:lang aama:Gawwada ;
 	rdfs:label "IMPRTVTEMPLATE" ;
 	rdfs:comment "[x]" ;
 	rdfs:comment "[y]" ;
 	.
-aama:Gawwada-NEGHABTEMPLATE a aamas:Morpheme ;
+aama:Gawwada-PROPOSSSUFF a aamas:Muterm ;
+	aamas:lang aama:Gawwada ;
+	rdfs:label "PROPOSSSUFF" ;
+	rdfs:comment "[x]" ;
+	rdfs:comment "[y]" ;
+	.
+aama:Gawwada-PROIND a aamas:Muterm ;
+	aamas:lang aama:Gawwada ;
+	rdfs:label "PROIND" ;
+	rdfs:comment "[x]" ;
+	rdfs:comment "[y]" ;
+	.
+aama:Gawwada-PERFFUTTEMPLATE a aamas:Muterm ;
+	aamas:lang aama:Gawwada ;
+	rdfs:label "PERFFUTTEMPLATE" ;
+	rdfs:comment "[x]" ;
+	rdfs:comment "[y]" ;
+	.
+aama:Gawwada-NEGFUTTEMPLATE a aamas:Muterm ;
+	aamas:lang aama:Gawwada ;
+	rdfs:label "NEGFUTTEMPLATE" ;
+	rdfs:comment "[x]" ;
+	rdfs:comment "[y]" ;
+	.
+aama:Gawwada-PROSUBJPROCLITIC a aamas:Muterm ;
+	aamas:lang aama:Gawwada ;
+	rdfs:label "PROSUBJPROCLITIC" ;
+	rdfs:comment "[x]" ;
+	rdfs:comment "[y]" ;
+	.
+aama:Gawwada-PERFHABTEMPLATE a aamas:Muterm ;
+	aamas:lang aama:Gawwada ;
+	rdfs:label "PERFHABTEMPLATE" ;
+	rdfs:comment "[x]" ;
+	rdfs:comment "[y]" ;
+	.
+aama:Gawwada-NEGTEMPLATE a aamas:Muterm ;
+	aamas:lang aama:Gawwada ;
+	rdfs:label "NEGTEMPLATE" ;
+	rdfs:comment "[x]" ;
+	rdfs:comment "[y]" ;
+	.
+aama:Gawwada-IMPERFFUTTEMPLATE a aamas:Muterm ;
+	aamas:lang aama:Gawwada ;
+	rdfs:label "IMPERFFUTTEMPLATE" ;
+	rdfs:comment "[x]" ;
+	rdfs:comment "[y]" ;
+	.
+aama:Gawwada-NEGHABTEMPLATE a aamas:Muterm ;
 	aamas:lang aama:Gawwada ;
 	rdfs:label "NEGHABTEMPLATE" ;
 	rdfs:comment "[x]" ;
 	rdfs:comment "[y]" ;
 	.
+aama:Gawwada-IMPERFTEMPLATE a aamas:Muterm ;
+	aamas:lang aama:Gawwada ;
+	rdfs:label "IMPERFTEMPLATE" ;
+	rdfs:comment "[x]" ;
+	rdfs:comment "[y]" ;
+	.
+aama:Gawwada-CONSECTEMPLATE a aamas:Muterm ;
+	aamas:lang aama:Gawwada ;
+	rdfs:label "CONSECTEMPLATE" ;
+	rdfs:comment "[x]" ;
+	rdfs:comment "[y]" ;
+	.
+aama:Gawwada-IMPERFHABTEMPLATE a aamas:Muterm ;
+	aamas:lang aama:Gawwada ;
+	rdfs:label "IMPERFHABTEMPLATE" ;
+	rdfs:comment "[x]" ;
+	rdfs:comment "[y]" ;
+	.
+aama:Gawwada-PROOBJPROCLITIC a aamas:Muterm ;
+	aamas:lang aama:Gawwada ;
+	rdfs:label "PROOBJPROCLITIC" ;
+	rdfs:comment "[x]" ;
+	rdfs:comment "[y]" ;
+	.
+aama:Gawwada-PERFECTIVETEMPLATE a aamas:Muterm ;
+	aamas:lang aama:Gawwada ;
+	rdfs:label "PERFECTIVETEMPLATE" ;
+	rdfs:comment "[x]" ;
+	rdfs:comment "[y]" ;
+	.
 
 #LEXEMES:
-
-aama:Gawwada-pupusa a aamas:Lexeme ;
+aama:Gawwada-yooq a aamas:Lexeme ;
 	aamas:lang aama:Gawwada ;
-	rdfs:label "pupusa" ;
-	aamas:lemma "pupusaʕ-" ;
-	aamas:gloss "betray(HD)" ;
-	.
-aama:Gawwada-dawr a aamas:Lexeme ;
-	aamas:lang aama:Gawwada ;
-	rdfs:label "dawr" ;
-	aamas:lemma "ɗawr" ;
-	aamas:gloss "refuse" ;
-	.
-aama:Gawwada-urkees a aamas:Lexeme ;
-	aamas:lang aama:Gawwada ;
-	rdfs:label "urkees" ;
-	aamas:lemma "úrkées" ;
-	aamas:gloss "dress(tr.)" ;
-	.
-aama:Gawwada-af a aamas:Lexeme ;
-	aamas:lang aama:Gawwada ;
-	rdfs:label "af" ;
-	aamas:lemma "ʕáf" ;
-	aamas:gloss "spread" ;
-	.
-aama:Gawwada-sor a aamas:Lexeme ;
-	aamas:lang aama:Gawwada ;
-	rdfs:label "sor" ;
-	aamas:lemma "sór" ;
-	aamas:gloss "run" ;
-	.
-aama:Gawwada-tatak a aamas:Lexeme ;
-	aamas:lang aama:Gawwada ;
-	rdfs:label "tatak" ;
-	aamas:lemma "tatak-" ;
-	aamas:gloss "betray(G)" ;
+	rdfs:label "yooq" ;
+	aamas:lemma "yóoqa" ;
+	aamas:gloss "grind" ;
 	.
 aama:Gawwada-ug a aamas:Lexeme ;
 	aamas:lang aama:Gawwada ;
@@ -449,11 +427,17 @@ aama:Gawwada-ug a aamas:Lexeme ;
 	aamas:lemma "ʕúg-" ;
 	aamas:gloss "drink" ;
 	.
-aama:Gawwada-yooq a aamas:Lexeme ;
+aama:Gawwada-sor a aamas:Lexeme ;
 	aamas:lang aama:Gawwada ;
-	rdfs:label "yooq" ;
-	aamas:lemma "yóoqa" ;
-	aamas:gloss "grind" ;
+	rdfs:label "sor" ;
+	aamas:lemma "sór" ;
+	aamas:gloss "run" ;
+	.
+aama:Gawwada-teeh a aamas:Lexeme ;
+	aamas:lang aama:Gawwada ;
+	rdfs:label "teeh" ;
+	aamas:lemma "teeħ-" ;
+	aamas:gloss "give" ;
 	.
 aama:Gawwada-urkeesad a aamas:Lexeme ;
 	aamas:lang aama:Gawwada ;
@@ -461,17 +445,35 @@ aama:Gawwada-urkeesad a aamas:Lexeme ;
 	aamas:lemma "úrkeesáɗ" ;
 	aamas:gloss "dress(intr.)" ;
 	.
+aama:Gawwada-tatak a aamas:Lexeme ;
+	aamas:lang aama:Gawwada ;
+	rdfs:label "tatak" ;
+	aamas:lemma "tatak-" ;
+	aamas:gloss "betray(G)" ;
+	.
+aama:Gawwada-af a aamas:Lexeme ;
+	aamas:lang aama:Gawwada ;
+	rdfs:label "af" ;
+	aamas:lemma "ʕáf" ;
+	aamas:gloss "spread" ;
+	.
+aama:Gawwada-dawr a aamas:Lexeme ;
+	aamas:lang aama:Gawwada ;
+	rdfs:label "dawr" ;
+	aamas:lemma "ɗawr" ;
+	aamas:gloss "refuse" ;
+	.
 aama:Gawwada-ass a aamas:Lexeme ;
 	aamas:lang aama:Gawwada ;
 	rdfs:label "ass" ;
 	aamas:lemma "ášša-" ;
 	aamas:gloss "go" ;
 	.
-aama:Gawwada-teeh a aamas:Lexeme ;
+aama:Gawwada-pupusa a aamas:Lexeme ;
 	aamas:lang aama:Gawwada ;
-	rdfs:label "teeh" ;
-	aamas:lemma "teeħ-" ;
-	aamas:gloss "give" ;
+	rdfs:label "pupusa" ;
+	aamas:lemma "pupusaʕ-" ;
+	aamas:gloss "betray(HD)" ;
 	.
 aama:Gawwada-qut a aamas:Lexeme ;
 	aamas:lang aama:Gawwada ;
@@ -485,11 +487,23 @@ aama:Gawwada-oggay a aamas:Lexeme ;
 	aamas:lemma "ógááy-" ;
 	aamas:gloss "come" ;
 	.
-
-#TERMCLUSTER: gawwada-VPerfectiveTemplate-ass
-
-aama:ID86ab08e2-3179-435a-989b-19bd3623f84f a aamas:Term ;
+aama:Gawwada-urkees a aamas:Lexeme ;
 	aamas:lang aama:Gawwada ;
+	rdfs:label "urkees" ;
+	aamas:lemma "úrkées" ;
+	aamas:gloss "dress(tr.)" ;
+	.
+
+#TERMCLUSTER:  gawwada-VPerfectiveTemplate-ass
+
+gaw:gawwada-VPerfectiveTemplate-ass a aamas:Termcluster ;
+	rdfs:label "gawwada-VPerfectiveTemplate-ass" ;
+	rdfs:comment "Tosco2007b Table 3 (p. 514). There are two tonally distinct inflectional classes of verb in the perfective,imperative,and consecutive positive tenses." 
+	.
+
+aama:ID886b1adb-0b4a-4b31-8b91-c0dbd800499b a aamas:Term ;
+	aamas:lang aama:Gawwada ;
+	aamas:memberOf gaw:gawwada-VPerfectiveTemplate-ass ;
 	gaw:inflClass gaw:Class2 ;
 	aamas:lexeme aama:Gawwada-ass ;
 	gaw:pdgmType gaw:Template ;
@@ -500,8 +514,10 @@ aama:ID86ab08e2-3179-435a-989b-19bd3623f84f a aamas:Term ;
 	gaw:number gaw:Singular ;
 	gaw:gender gaw:Common ;
 	.
-aama:ID5f931c40-76eb-4267-b34e-d6b4c260ae4f a aamas:Term ;
+
+aama:IDf93614c2-35ca-46a4-b054-e1afa4ab65d7 a aamas:Term ;
 	aamas:lang aama:Gawwada ;
+	aamas:memberOf gaw:gawwada-VPerfectiveTemplate-ass ;
 	gaw:inflClass gaw:Class2 ;
 	aamas:lexeme aama:Gawwada-ass ;
 	gaw:pdgmType gaw:Template ;
@@ -512,8 +528,10 @@ aama:ID5f931c40-76eb-4267-b34e-d6b4c260ae4f a aamas:Term ;
 	gaw:number gaw:Singular ;
 	gaw:gender gaw:Common ;
 	.
-aama:ID7dde864a-f685-4073-9187-d1b1ca4801d4 a aamas:Term ;
+
+aama:ID36712b0c-2acf-43d9-9c19-0808c44b36bb a aamas:Term ;
 	aamas:lang aama:Gawwada ;
+	aamas:memberOf gaw:gawwada-VPerfectiveTemplate-ass ;
 	gaw:inflClass gaw:Class2 ;
 	aamas:lexeme aama:Gawwada-ass ;
 	gaw:pdgmType gaw:Template ;
@@ -524,8 +542,10 @@ aama:ID7dde864a-f685-4073-9187-d1b1ca4801d4 a aamas:Term ;
 	gaw:number gaw:Singular ;
 	gaw:gender gaw:Masc ;
 	.
-aama:IDe05e9138-ac12-40ed-a1d0-45eea9a6e7c8 a aamas:Term ;
+
+aama:IDd29468b9-de46-47a7-ac37-5e31652a7c3f a aamas:Term ;
 	aamas:lang aama:Gawwada ;
+	aamas:memberOf gaw:gawwada-VPerfectiveTemplate-ass ;
 	gaw:inflClass gaw:Class2 ;
 	aamas:lexeme aama:Gawwada-ass ;
 	gaw:pdgmType gaw:Template ;
@@ -536,8 +556,10 @@ aama:IDe05e9138-ac12-40ed-a1d0-45eea9a6e7c8 a aamas:Term ;
 	gaw:number gaw:Singular ;
 	gaw:gender gaw:Fem ;
 	.
-aama:ID4d63f750-dbb6-4277-a07f-bff5d9b003a5 a aamas:Term ;
+
+aama:ID8579b9a7-abc6-465e-a6dc-aff5130a1e4e a aamas:Term ;
 	aamas:lang aama:Gawwada ;
+	aamas:memberOf gaw:gawwada-VPerfectiveTemplate-ass ;
 	gaw:inflClass gaw:Class2 ;
 	aamas:lexeme aama:Gawwada-ass ;
 	gaw:pdgmType gaw:Template ;
@@ -548,8 +570,10 @@ aama:ID4d63f750-dbb6-4277-a07f-bff5d9b003a5 a aamas:Term ;
 	gaw:number gaw:Plural ;
 	gaw:gender gaw:Common ;
 	.
-aama:ID8ec3e768-530d-49ec-a5ef-c3da209ad9b8 a aamas:Term ;
+
+aama:ID69826b7a-d51b-4e4a-982f-02fe650ebae4 a aamas:Term ;
 	aamas:lang aama:Gawwada ;
+	aamas:memberOf gaw:gawwada-VPerfectiveTemplate-ass ;
 	gaw:inflClass gaw:Class2 ;
 	aamas:lexeme aama:Gawwada-ass ;
 	gaw:pdgmType gaw:Template ;
@@ -560,8 +584,10 @@ aama:ID8ec3e768-530d-49ec-a5ef-c3da209ad9b8 a aamas:Term ;
 	gaw:number gaw:Plural ;
 	gaw:gender gaw:Common ;
 	.
-aama:IDe5e390a0-f687-4b00-adb2-1547a3ad1662 a aamas:Term ;
+
+aama:ID3df0f9ef-f054-4d92-8b1e-d95fc34387f1 a aamas:Term ;
 	aamas:lang aama:Gawwada ;
+	aamas:memberOf gaw:gawwada-VPerfectiveTemplate-ass ;
 	gaw:inflClass gaw:Class2 ;
 	aamas:lexeme aama:Gawwada-ass ;
 	gaw:pdgmType gaw:Template ;
@@ -573,646 +599,16 @@ aama:IDe5e390a0-f687-4b00-adb2-1547a3ad1662 a aamas:Term ;
 	gaw:gender gaw:Common ;
 	.
 
-#TERMCLUSTER: gawwada-VNegPresent-ass
+#TERMCLUSTER:  gawwada-VNegJussive-ass
 
-aama:IDdcd4ec14-404d-4380-ad6e-9856bbfcc21f a aamas:Term ;
-	aamas:lang aama:Gawwada ;
-	aamas:lexeme aama:Gawwada-ass ;
-	gaw:pos gaw:Verb ;
-	gaw:polarity gaw:Negative ;
-	gaw:tam gaw:Present ;
-	gaw:token "⊤" ;
-	gaw:person gaw:Person1 ;
-	gaw:number gaw:Singular ;
-	gaw:gender gaw:Common ;
-	.
-aama:IDcf54f38b-bbe3-49ab-b9fc-56366d9325a6 a aamas:Term ;
-	aamas:lang aama:Gawwada ;
-	aamas:lexeme aama:Gawwada-ass ;
-	gaw:pos gaw:Verb ;
-	gaw:polarity gaw:Negative ;
-	gaw:tam gaw:Present ;
-	gaw:token "áššití" ;
-	gaw:person gaw:Person2 ;
-	gaw:number gaw:Singular ;
-	gaw:gender gaw:Common ;
-	.
-aama:IDe1399c9c-7271-44ee-ac8b-cdf0010cd588 a aamas:Term ;
-	aamas:lang aama:Gawwada ;
-	aamas:lexeme aama:Gawwada-ass ;
-	gaw:pos gaw:Verb ;
-	gaw:polarity gaw:Negative ;
-	gaw:tam gaw:Present ;
-	gaw:token "⊤" ;
-	gaw:person gaw:Person3 ;
-	gaw:number gaw:Singular ;
-	gaw:gender gaw:Masc ;
-	.
-aama:ID525e943c-e6fa-425d-978a-183e8e908646 a aamas:Term ;
-	aamas:lang aama:Gawwada ;
-	aamas:lexeme aama:Gawwada-ass ;
-	gaw:pos gaw:Verb ;
-	gaw:polarity gaw:Negative ;
-	gaw:tam gaw:Present ;
-	gaw:token "áššití" ;
-	gaw:person gaw:Person3 ;
-	gaw:number gaw:Singular ;
-	gaw:gender gaw:Fem ;
-	.
-aama:ID8bdcdad8-c1ad-4abb-8de7-d4afa8ba614c a aamas:Term ;
-	aamas:lang aama:Gawwada ;
-	aamas:lexeme aama:Gawwada-ass ;
-	gaw:pos gaw:Verb ;
-	gaw:polarity gaw:Negative ;
-	gaw:tam gaw:Present ;
-	gaw:token "áššiní" ;
-	gaw:person gaw:Person1 ;
-	gaw:number gaw:Plural ;
-	gaw:gender gaw:Common ;
-	.
-aama:IDcab29c0b-46f5-4076-a8cd-d8dda0ce0059 a aamas:Term ;
-	aamas:lang aama:Gawwada ;
-	aamas:lexeme aama:Gawwada-ass ;
-	gaw:pos gaw:Verb ;
-	gaw:polarity gaw:Negative ;
-	gaw:tam gaw:Present ;
-	gaw:token "áššité" ;
-	gaw:person gaw:Person2 ;
-	gaw:number gaw:Plural ;
-	gaw:gender gaw:Common ;
-	.
-aama:ID280ec1e6-c822-4aea-a130-62fba648cf61 a aamas:Term ;
-	aamas:lang aama:Gawwada ;
-	aamas:lexeme aama:Gawwada-ass ;
-	gaw:pos gaw:Verb ;
-	gaw:polarity gaw:Negative ;
-	gaw:tam gaw:Present ;
-	gaw:token "⊤" ;
-	gaw:person gaw:Person3 ;
-	gaw:number gaw:Plural ;
-	gaw:gender gaw:Common ;
+gaw:gawwada-VNegJussive-ass a aamas:Termcluster ;
+	rdfs:label "gawwada-VNegJussive-ass" ;
+	rdfs:comment "Tosco2007b Table 8,3.3.7 (p.517). The desinences are the same as the past negative,preceded by the jussive marker ínnu." 
 	.
 
-#TERMCLUSTER: gawwada-VConsecutive-sor
-
-aama:ID4cee569d-9cfc-4616-8195-f526a1f263fb a aamas:Term ;
+aama:IDb1fba0ce-4b58-439e-b164-576b714ef610 a aamas:Term ;
 	aamas:lang aama:Gawwada ;
-	gaw:inflClass gaw:Class1 ;
-	aamas:lexeme aama:Gawwada-sor ;
-	gaw:pos gaw:Verb ;
-	gaw:tam gaw:Consecutive ;
-	gaw:token "sorá" ;
-	gaw:person gaw:Person1 ;
-	gaw:number gaw:Singular ;
-	gaw:gender gaw:Common ;
-	.
-aama:ID49264b38-79ad-41d1-8061-e73f3d399553 a aamas:Term ;
-	aamas:lang aama:Gawwada ;
-	gaw:inflClass gaw:Class1 ;
-	aamas:lexeme aama:Gawwada-sor ;
-	gaw:pos gaw:Verb ;
-	gaw:tam gaw:Consecutive ;
-	gaw:token "soráy" ;
-	gaw:person gaw:Person2 ;
-	gaw:number gaw:Singular ;
-	gaw:gender gaw:Common ;
-	.
-aama:IDeee075b8-c910-496d-9d86-8c2af112e196 a aamas:Term ;
-	aamas:lang aama:Gawwada ;
-	gaw:inflClass gaw:Class1 ;
-	aamas:lexeme aama:Gawwada-sor ;
-	gaw:pos gaw:Verb ;
-	gaw:tam gaw:Consecutive ;
-	gaw:token "sorú" ;
-	gaw:person gaw:Person3 ;
-	gaw:number gaw:Singular ;
-	gaw:gender gaw:Masc ;
-	.
-aama:IDab085703-b427-4a67-8bd5-1050a6ac2573 a aamas:Term ;
-	aamas:lang aama:Gawwada ;
-	gaw:inflClass gaw:Class1 ;
-	aamas:lexeme aama:Gawwada-sor ;
-	gaw:pos gaw:Verb ;
-	gaw:tam gaw:Consecutive ;
-	gaw:token "sorí" ;
-	gaw:person gaw:Person3 ;
-	gaw:number gaw:Singular ;
-	gaw:gender gaw:Fem ;
-	.
-aama:ID5d798e08-0bed-4617-a28e-6049cfb628b5 a aamas:Term ;
-	aamas:lang aama:Gawwada ;
-	gaw:inflClass gaw:Class1 ;
-	aamas:lexeme aama:Gawwada-sor ;
-	gaw:pos gaw:Verb ;
-	gaw:tam gaw:Consecutive ;
-	gaw:token "sórání" ;
-	gaw:person gaw:Person1 ;
-	gaw:number gaw:Plural ;
-	gaw:gender gaw:Common ;
-	.
-aama:ID14fe3809-5696-4c78-81c7-3be23a007e0b a aamas:Term ;
-	aamas:lang aama:Gawwada ;
-	gaw:inflClass gaw:Class1 ;
-	aamas:lexeme aama:Gawwada-sor ;
-	gaw:pos gaw:Verb ;
-	gaw:tam gaw:Consecutive ;
-	gaw:token "sórángú" ;
-	gaw:person gaw:Person2 ;
-	gaw:number gaw:Plural ;
-	gaw:gender gaw:Common ;
-	.
-aama:ID6bc14835-00c8-4ee6-86c8-f405e0e3229e a aamas:Term ;
-	aamas:lang aama:Gawwada ;
-	gaw:inflClass gaw:Class1 ;
-	aamas:lexeme aama:Gawwada-sor ;
-	gaw:pos gaw:Verb ;
-	gaw:tam gaw:Consecutive ;
-	gaw:token "sórángí" ;
-	gaw:person gaw:Person3 ;
-	gaw:number gaw:Plural ;
-	gaw:gender gaw:Common ;
-	.
-
-#TERMCLUSTER: gawwada-VImperfective-ass
-
-aama:ID43b74c4e-c51c-4f04-9a82-ff7fc03fde56 a aamas:Term ;
-	aamas:lang aama:Gawwada ;
-	aamas:lexeme aama:Gawwada-ass ;
-	gaw:pos gaw:Verb ;
-	gaw:tam gaw:Imperfective ;
-	gaw:token "ášša" ;
-	gaw:person gaw:Person1 ;
-	gaw:number gaw:Singular ;
-	gaw:gender gaw:Common ;
-	.
-aama:ID2a27cbb7-c9f5-46ea-b1e0-2f49d0242689 a aamas:Term ;
-	aamas:lang aama:Gawwada ;
-	aamas:lexeme aama:Gawwada-ass ;
-	gaw:pos gaw:Verb ;
-	gaw:tam gaw:Imperfective ;
-	gaw:token "áššay" ;
-	gaw:person gaw:Person2 ;
-	gaw:number gaw:Singular ;
-	gaw:gender gaw:Common ;
-	.
-aama:ID6aa5608d-2d3a-4b3b-9d27-0d1193b51336 a aamas:Term ;
-	aamas:lang aama:Gawwada ;
-	aamas:lexeme aama:Gawwada-ass ;
-	gaw:pos gaw:Verb ;
-	gaw:tam gaw:Imperfective ;
-	gaw:token "ášša" ;
-	gaw:person gaw:Person3 ;
-	gaw:number gaw:Singular ;
-	gaw:gender gaw:Masc ;
-	.
-aama:IDd0d3f5d6-3009-4572-a3dc-2f0d1449123f a aamas:Term ;
-	aamas:lang aama:Gawwada ;
-	aamas:lexeme aama:Gawwada-ass ;
-	gaw:pos gaw:Verb ;
-	gaw:tam gaw:Imperfective ;
-	gaw:token "áššay" ;
-	gaw:person gaw:Person3 ;
-	gaw:number gaw:Singular ;
-	gaw:gender gaw:Fem ;
-	.
-aama:IDb8a83fe9-828c-4db2-ad40-98e4d00e8ec9 a aamas:Term ;
-	aamas:lang aama:Gawwada ;
-	aamas:lexeme aama:Gawwada-ass ;
-	gaw:pos gaw:Verb ;
-	gaw:tam gaw:Imperfective ;
-	gaw:token "áššani" ;
-	gaw:person gaw:Person1 ;
-	gaw:number gaw:Plural ;
-	gaw:gender gaw:Common ;
-	.
-aama:ID13f38159-0228-4809-890a-5222e57f4d10 a aamas:Term ;
-	aamas:lang aama:Gawwada ;
-	aamas:lexeme aama:Gawwada-ass ;
-	gaw:pos gaw:Verb ;
-	gaw:tam gaw:Imperfective ;
-	gaw:token "áššangu" ;
-	gaw:person gaw:Person2 ;
-	gaw:number gaw:Plural ;
-	gaw:gender gaw:Common ;
-	.
-aama:IDf8c18b9d-b757-4b40-be10-5984697f173c a aamas:Term ;
-	aamas:lang aama:Gawwada ;
-	aamas:lexeme aama:Gawwada-ass ;
-	gaw:pos gaw:Verb ;
-	gaw:tam gaw:Imperfective ;
-	gaw:token "áššangi" ;
-	gaw:person gaw:Person3 ;
-	gaw:number gaw:Plural ;
-	gaw:gender gaw:Common ;
-	.
-
-#TERMCLUSTER: gawwada-VNegImprtvExx
-
-aama:IDcf5b9b55-2ab9-44c6-930a-7ef5834af8f3 a aamas:Term ;
-	aamas:lang aama:Gawwada ;
-	aamas:lexeme aama:Gawwada-ass ;
-	gaw:person gaw:Person2 ;
-	gaw:polarity gaw:Negative ;
-	gaw:pos gaw:Verb ;
-	gaw:tam gaw:Imperative ;
-	gaw:morphClass gaw:NegImprtvExx ;
-	gaw:token "ólo ašší" ;
-	gaw:number gaw:Singular ;
-	.
-aama:IDf1999731-2a64-4a48-a336-56d06a05dd1f a aamas:Term ;
-	aamas:lang aama:Gawwada ;
-	aamas:lexeme aama:Gawwada-ass ;
-	gaw:person gaw:Person2 ;
-	gaw:polarity gaw:Negative ;
-	gaw:pos gaw:Verb ;
-	gaw:tam gaw:Imperative ;
-	gaw:morphClass gaw:NegImprtvExx ;
-	gaw:token "ólo ašší" ;
-	gaw:number gaw:Plural ;
-	.
-
-#TERMCLUSTER: gawwada-VConsecutive-ass
-
-aama:IDd00390e1-e27d-417b-b171-63d64ac30d34 a aamas:Term ;
-	aamas:lang aama:Gawwada ;
-	gaw:inflClass gaw:Class2 ;
-	aamas:lexeme aama:Gawwada-ass ;
-	gaw:pos gaw:Verb ;
-	gaw:tam gaw:Consecutive ;
-	gaw:token "⊤" ;
-	gaw:person gaw:Person1 ;
-	gaw:number gaw:Singular ;
-	gaw:gender gaw:Common ;
-	.
-aama:IDe0e1e4fb-0d59-4765-a56f-f2b029b2eff1 a aamas:Term ;
-	aamas:lang aama:Gawwada ;
-	gaw:inflClass gaw:Class2 ;
-	aamas:lexeme aama:Gawwada-ass ;
-	gaw:pos gaw:Verb ;
-	gaw:tam gaw:Consecutive ;
-	gaw:token "áššóy" ;
-	gaw:person gaw:Person2 ;
-	gaw:number gaw:Singular ;
-	gaw:gender gaw:Common ;
-	.
-aama:ID8c20175b-f1b1-4580-9360-051af8575307 a aamas:Term ;
-	aamas:lang aama:Gawwada ;
-	gaw:inflClass gaw:Class2 ;
-	aamas:lexeme aama:Gawwada-ass ;
-	gaw:pos gaw:Verb ;
-	gaw:tam gaw:Consecutive ;
-	gaw:token "⊤" ;
-	gaw:person gaw:Person3 ;
-	gaw:number gaw:Singular ;
-	gaw:gender gaw:Masc ;
-	.
-aama:IDa12fbdc3-76ed-4f1a-a962-0158239a305a a aamas:Term ;
-	aamas:lang aama:Gawwada ;
-	gaw:inflClass gaw:Class2 ;
-	aamas:lexeme aama:Gawwada-ass ;
-	gaw:pos gaw:Verb ;
-	gaw:tam gaw:Consecutive ;
-	gaw:token "áššóy" ;
-	gaw:person gaw:Person3 ;
-	gaw:number gaw:Singular ;
-	gaw:gender gaw:Fem ;
-	.
-aama:ID6f05c024-f98c-46a2-a760-16db3e8fe47b a aamas:Term ;
-	aamas:lang aama:Gawwada ;
-	gaw:inflClass gaw:Class2 ;
-	aamas:lexeme aama:Gawwada-ass ;
-	gaw:pos gaw:Verb ;
-	gaw:tam gaw:Consecutive ;
-	gaw:token "áššóni" ;
-	gaw:person gaw:Person1 ;
-	gaw:number gaw:Plural ;
-	gaw:gender gaw:Common ;
-	.
-aama:ID2a37a908-8d77-4f98-aa12-7c87c8d04579 a aamas:Term ;
-	aamas:lang aama:Gawwada ;
-	gaw:inflClass gaw:Class2 ;
-	aamas:lexeme aama:Gawwada-ass ;
-	gaw:pos gaw:Verb ;
-	gaw:tam gaw:Consecutive ;
-	gaw:token "áššóngu" ;
-	gaw:person gaw:Person2 ;
-	gaw:number gaw:Plural ;
-	gaw:gender gaw:Common ;
-	.
-aama:ID8418a055-4676-4f4b-b469-1b9b10efd34a a aamas:Term ;
-	aamas:lang aama:Gawwada ;
-	gaw:inflClass gaw:Class2 ;
-	aamas:lexeme aama:Gawwada-ass ;
-	gaw:pos gaw:Verb ;
-	gaw:tam gaw:Consecutive ;
-	gaw:token "áššóngi" ;
-	gaw:person gaw:Person3 ;
-	gaw:number gaw:Plural ;
-	gaw:gender gaw:Common ;
-	.
-
-#TERMCLUSTER: gawwada-VNegPast-ass
-
-aama:IDb00df17b-5c79-4e6f-af8d-5458610d324d a aamas:Term ;
-	aamas:lang aama:Gawwada ;
-	aamas:lexeme aama:Gawwada-ass ;
-	gaw:pos gaw:Verb ;
-	gaw:polarity gaw:Negative ;
-	gaw:tam gaw:Past ;
-	gaw:token "⊤" ;
-	gaw:person gaw:Person1 ;
-	gaw:number gaw:Singular ;
-	gaw:gender gaw:Common ;
-	.
-aama:ID9ebb1cf8-c8c4-4207-bb37-a5cff8034517 a aamas:Term ;
-	aamas:lang aama:Gawwada ;
-	aamas:lexeme aama:Gawwada-ass ;
-	gaw:pos gaw:Verb ;
-	gaw:polarity gaw:Negative ;
-	gaw:tam gaw:Past ;
-	gaw:token "⊤" ;
-	gaw:person gaw:Person2 ;
-	gaw:number gaw:Singular ;
-	gaw:gender gaw:Common ;
-	.
-aama:ID03836909-f0dd-4ca9-9d26-b12a3c5ce231 a aamas:Term ;
-	aamas:lang aama:Gawwada ;
-	aamas:lexeme aama:Gawwada-ass ;
-	gaw:pos gaw:Verb ;
-	gaw:polarity gaw:Negative ;
-	gaw:tam gaw:Past ;
-	gaw:token "⊤" ;
-	gaw:person gaw:Person3 ;
-	gaw:number gaw:Singular ;
-	gaw:gender gaw:Masc ;
-	.
-aama:ID23fdfce4-6bac-4caa-9704-36d5043078bf a aamas:Term ;
-	aamas:lang aama:Gawwada ;
-	aamas:lexeme aama:Gawwada-ass ;
-	gaw:pos gaw:Verb ;
-	gaw:polarity gaw:Negative ;
-	gaw:tam gaw:Past ;
-	gaw:token "⊤" ;
-	gaw:person gaw:Person3 ;
-	gaw:number gaw:Singular ;
-	gaw:gender gaw:Fem ;
-	.
-aama:ID958e8e0f-153a-4389-a3f9-5ca245a39204 a aamas:Term ;
-	aamas:lang aama:Gawwada ;
-	aamas:lexeme aama:Gawwada-ass ;
-	gaw:pos gaw:Verb ;
-	gaw:polarity gaw:Negative ;
-	gaw:tam gaw:Past ;
-	gaw:token "áššóoni" ;
-	gaw:person gaw:Person1 ;
-	gaw:number gaw:Plural ;
-	gaw:gender gaw:Common ;
-	.
-aama:ID39d2c0e4-fd83-4365-9494-2d9359da8aa5 a aamas:Term ;
-	aamas:lang aama:Gawwada ;
-	aamas:lexeme aama:Gawwada-ass ;
-	gaw:pos gaw:Verb ;
-	gaw:polarity gaw:Negative ;
-	gaw:tam gaw:Past ;
-	gaw:token "áššóngu" ;
-	gaw:person gaw:Person2 ;
-	gaw:number gaw:Plural ;
-	gaw:gender gaw:Common ;
-	.
-aama:ID6a1c8cd4-614c-427c-9db0-3efeb2d1b554 a aamas:Term ;
-	aamas:lang aama:Gawwada ;
-	aamas:lexeme aama:Gawwada-ass ;
-	gaw:pos gaw:Verb ;
-	gaw:polarity gaw:Negative ;
-	gaw:tam gaw:Past ;
-	gaw:token "áššóngi" ;
-	gaw:person gaw:Person3 ;
-	gaw:number gaw:Plural ;
-	gaw:gender gaw:Common ;
-	.
-
-#TERMCLUSTER: gawwada-VPerfective-`ug
-
-aama:ID1705f0a2-ed20-4828-af3c-aea12f70f9da a aamas:Term ;
-	aamas:lang aama:Gawwada ;
-	gaw:inflClass gaw:Class1 ;
-	aamas:lexeme aama:Gawwada-ug ;
-	gaw:pos gaw:Verb ;
-	gaw:tam gaw:Perfective ;
-	gaw:token "ʕúgí" ;
-	gaw:person gaw:Person1 ;
-	gaw:number gaw:Singular ;
-	gaw:gender gaw:Common ;
-	.
-aama:ID54f48743-8065-46dc-8afe-cae7f530afc9 a aamas:Term ;
-	aamas:lang aama:Gawwada ;
-	gaw:inflClass gaw:Class1 ;
-	aamas:lexeme aama:Gawwada-ug ;
-	gaw:pos gaw:Verb ;
-	gaw:tam gaw:Perfective ;
-	gaw:token "ʕúgtí" ;
-	gaw:person gaw:Person2 ;
-	gaw:number gaw:Singular ;
-	gaw:gender gaw:Common ;
-	.
-aama:ID400df239-08b4-4312-ba3b-fc3506d334de a aamas:Term ;
-	aamas:lang aama:Gawwada ;
-	gaw:inflClass gaw:Class1 ;
-	aamas:lexeme aama:Gawwada-ug ;
-	gaw:pos gaw:Verb ;
-	gaw:tam gaw:Perfective ;
-	gaw:token "ʕúgí" ;
-	gaw:person gaw:Person3 ;
-	gaw:number gaw:Singular ;
-	gaw:gender gaw:Masc ;
-	.
-aama:ID8a376691-52db-4eec-b814-eab0521760f6 a aamas:Term ;
-	aamas:lang aama:Gawwada ;
-	gaw:inflClass gaw:Class1 ;
-	aamas:lexeme aama:Gawwada-ug ;
-	gaw:pos gaw:Verb ;
-	gaw:tam gaw:Perfective ;
-	gaw:token "ʕúgtí" ;
-	gaw:person gaw:Person3 ;
-	gaw:number gaw:Singular ;
-	gaw:gender gaw:Fem ;
-	.
-aama:IDe165fbd7-c5d7-4767-866f-ad21969bfc59 a aamas:Term ;
-	aamas:lang aama:Gawwada ;
-	gaw:inflClass gaw:Class1 ;
-	aamas:lexeme aama:Gawwada-ug ;
-	gaw:pos gaw:Verb ;
-	gaw:tam gaw:Perfective ;
-	gaw:token "ʕúgné(eni)" ;
-	gaw:person gaw:Person1 ;
-	gaw:number gaw:Plural ;
-	gaw:gender gaw:Common ;
-	.
-aama:IDcc73a543-910a-4182-aa66-83b99192863b a aamas:Term ;
-	aamas:lang aama:Gawwada ;
-	gaw:inflClass gaw:Class1 ;
-	aamas:lexeme aama:Gawwada-ug ;
-	gaw:pos gaw:Verb ;
-	gaw:tam gaw:Perfective ;
-	gaw:token "ʕúgté(ngu)" ;
-	gaw:person gaw:Person2 ;
-	gaw:number gaw:Plural ;
-	gaw:gender gaw:Common ;
-	.
-aama:ID29e06cc2-d1d2-4c29-932e-1eeebf0c0167 a aamas:Term ;
-	aamas:lang aama:Gawwada ;
-	gaw:inflClass gaw:Class1 ;
-	aamas:lexeme aama:Gawwada-ug ;
-	gaw:pos gaw:Verb ;
-	gaw:tam gaw:Perfective ;
-	gaw:token "ʕúgné(eni)" ;
-	gaw:person gaw:Person3 ;
-	gaw:number gaw:Plural ;
-	gaw:gender gaw:Common ;
-	.
-
-#TERMCLUSTER: gawwada-VAffJussive-ass
-
-aama:IDfdadddab-ad30-41e0-82c7-839f1560bfa7 a aamas:Term ;
-	aamas:lang aama:Gawwada ;
-	aamas:lexeme aama:Gawwada-ass ;
-	gaw:pos gaw:Verb ;
-	gaw:polarity gaw:Affirmative ;
-	gaw:tam gaw:Jussive ;
-	gaw:token "ašší" ;
-	gaw:person gaw:Person1 ;
-	gaw:number gaw:Singular ;
-	gaw:gender gaw:Common ;
-	.
-aama:ID57a489e9-4b19-451a-b0e9-aa23c1f139d3 a aamas:Term ;
-	aamas:lang aama:Gawwada ;
-	aamas:lexeme aama:Gawwada-ass ;
-	gaw:pos gaw:Verb ;
-	gaw:polarity gaw:Affirmative ;
-	gaw:tam gaw:Jussive ;
-	gaw:token "ašší" ;
-	gaw:person gaw:Person3 ;
-	gaw:number gaw:Singular ;
-	gaw:gender gaw:Masc ;
-	.
-aama:IDd4012cd0-ae6b-4a88-9e3a-2ea7e594b01f a aamas:Term ;
-	aamas:lang aama:Gawwada ;
-	aamas:lexeme aama:Gawwada-ass ;
-	gaw:pos gaw:Verb ;
-	gaw:polarity gaw:Affirmative ;
-	gaw:tam gaw:Jussive ;
-	gaw:token "aššití" ;
-	gaw:person gaw:Person3 ;
-	gaw:number gaw:Singular ;
-	gaw:gender gaw:Fem ;
-	.
-aama:ID4de2b4ab-7477-4570-a30b-c852646343da a aamas:Term ;
-	aamas:lang aama:Gawwada ;
-	aamas:lexeme aama:Gawwada-ass ;
-	gaw:pos gaw:Verb ;
-	gaw:polarity gaw:Affirmative ;
-	gaw:tam gaw:Jussive ;
-	gaw:token "aššiní" ;
-	gaw:person gaw:Person1 ;
-	gaw:number gaw:Plural ;
-	gaw:gender gaw:Common ;
-	.
-aama:ID2838b495-52d4-4762-85cc-16e8ee660b9d a aamas:Term ;
-	aamas:lang aama:Gawwada ;
-	aamas:lexeme aama:Gawwada-ass ;
-	gaw:pos gaw:Verb ;
-	gaw:polarity gaw:Affirmative ;
-	gaw:tam gaw:Jussive ;
-	gaw:token "aššé" ;
-	gaw:person gaw:Person3 ;
-	gaw:number gaw:Plural ;
-	gaw:gender gaw:Common ;
-	.
-
-#TERMCLUSTER: gawwada-VPerfective-oggay
-
-aama:ID77ac8a33-289c-4455-991a-58784513b77e a aamas:Term ;
-	aamas:lang aama:Gawwada ;
-	gaw:inflClass gaw:Class1 ;
-	aamas:lexeme aama:Gawwada-oggay ;
-	gaw:pos gaw:Verb ;
-	gaw:tam gaw:Perfective ;
-	gaw:token "ógááyí" ;
-	gaw:person gaw:Person1 ;
-	gaw:number gaw:Singular ;
-	gaw:gender gaw:Common ;
-	.
-aama:ID0da52b02-c21e-4134-ab4e-cc5516086226 a aamas:Term ;
-	aamas:lang aama:Gawwada ;
-	gaw:inflClass gaw:Class1 ;
-	aamas:lexeme aama:Gawwada-oggay ;
-	gaw:pos gaw:Verb ;
-	gaw:tam gaw:Perfective ;
-	gaw:token "ógááytí" ;
-	gaw:person gaw:Person2 ;
-	gaw:number gaw:Singular ;
-	gaw:gender gaw:Common ;
-	.
-aama:IDaadaffee-b4d4-4579-911c-00788055bb52 a aamas:Term ;
-	aamas:lang aama:Gawwada ;
-	gaw:inflClass gaw:Class1 ;
-	aamas:lexeme aama:Gawwada-oggay ;
-	gaw:pos gaw:Verb ;
-	gaw:tam gaw:Perfective ;
-	gaw:token "ógááyí" ;
-	gaw:person gaw:Person3 ;
-	gaw:number gaw:Singular ;
-	gaw:gender gaw:Masc ;
-	.
-aama:ID3c6d6814-aa4c-4c0a-9d5b-bd5ee818f26f a aamas:Term ;
-	aamas:lang aama:Gawwada ;
-	gaw:inflClass gaw:Class1 ;
-	aamas:lexeme aama:Gawwada-oggay ;
-	gaw:pos gaw:Verb ;
-	gaw:tam gaw:Perfective ;
-	gaw:token "ógááytí" ;
-	gaw:person gaw:Person3 ;
-	gaw:number gaw:Singular ;
-	gaw:gender gaw:Fem ;
-	.
-aama:IDacb44b90-6e4a-47a1-8cf9-0f7f20499547 a aamas:Term ;
-	aamas:lang aama:Gawwada ;
-	gaw:inflClass gaw:Class1 ;
-	aamas:lexeme aama:Gawwada-oggay ;
-	gaw:pos gaw:Verb ;
-	gaw:tam gaw:Perfective ;
-	gaw:token "ógááyné(eni)" ;
-	gaw:person gaw:Person1 ;
-	gaw:number gaw:Plural ;
-	gaw:gender gaw:Common ;
-	.
-aama:ID1f3cac74-29f6-42e5-a412-f9e244d354a0 a aamas:Term ;
-	aamas:lang aama:Gawwada ;
-	gaw:inflClass gaw:Class1 ;
-	aamas:lexeme aama:Gawwada-oggay ;
-	gaw:pos gaw:Verb ;
-	gaw:tam gaw:Perfective ;
-	gaw:token "ógááyté(ngu)" ;
-	gaw:person gaw:Person2 ;
-	gaw:number gaw:Plural ;
-	gaw:gender gaw:Common ;
-	.
-aama:ID9dd0cd3e-0c87-4fcb-bb70-73c6c83cdc69 a aamas:Term ;
-	aamas:lang aama:Gawwada ;
-	gaw:inflClass gaw:Class1 ;
-	aamas:lexeme aama:Gawwada-oggay ;
-	gaw:pos gaw:Verb ;
-	gaw:tam gaw:Perfective ;
-	gaw:token "ógááyné(eni)" ;
-	gaw:person gaw:Person3 ;
-	gaw:number gaw:Plural ;
-	gaw:gender gaw:Common ;
-	.
-
-#TERMCLUSTER: gawwada-VNegJussive-ass
-
-aama:IDc8b89bd5-701f-4576-93ec-0a4bf4784aaf a aamas:Term ;
-	aamas:lang aama:Gawwada ;
+	aamas:memberOf gaw:gawwada-VNegJussive-ass ;
 	aamas:lexeme aama:Gawwada-ass ;
 	gaw:pos gaw:Verb ;
 	gaw:polarity gaw:Negative ;
@@ -1222,8 +618,10 @@ aama:IDc8b89bd5-701f-4576-93ec-0a4bf4784aaf a aamas:Term ;
 	gaw:number gaw:Singular ;
 	gaw:gender gaw:Common ;
 	.
-aama:ID22b3ab3a-8aa1-406c-961c-e601bdc1d73b a aamas:Term ;
+
+aama:ID6381eca0-6e90-456a-a65b-d257b2e998fa a aamas:Term ;
 	aamas:lang aama:Gawwada ;
+	aamas:memberOf gaw:gawwada-VNegJussive-ass ;
 	aamas:lexeme aama:Gawwada-ass ;
 	gaw:pos gaw:Verb ;
 	gaw:polarity gaw:Negative ;
@@ -1233,8 +631,10 @@ aama:ID22b3ab3a-8aa1-406c-961c-e601bdc1d73b a aamas:Term ;
 	gaw:number gaw:Singular ;
 	gaw:gender gaw:Masc ;
 	.
-aama:ID28e16871-64e7-48d8-8c18-b95fc40d92be a aamas:Term ;
+
+aama:IDc72bb1f1-b53c-42e2-bf2a-22d1460aea0a a aamas:Term ;
 	aamas:lang aama:Gawwada ;
+	aamas:memberOf gaw:gawwada-VNegJussive-ass ;
 	aamas:lexeme aama:Gawwada-ass ;
 	gaw:pos gaw:Verb ;
 	gaw:polarity gaw:Negative ;
@@ -1244,8 +644,10 @@ aama:ID28e16871-64e7-48d8-8c18-b95fc40d92be a aamas:Term ;
 	gaw:number gaw:Singular ;
 	gaw:gender gaw:Fem ;
 	.
-aama:ID11bb630e-891f-4002-b29b-4492d0f82b9b a aamas:Term ;
+
+aama:IDb6f9a940-bdbe-4b40-8ba2-bdbdea727500 a aamas:Term ;
 	aamas:lang aama:Gawwada ;
+	aamas:memberOf gaw:gawwada-VNegJussive-ass ;
 	aamas:lexeme aama:Gawwada-ass ;
 	gaw:pos gaw:Verb ;
 	gaw:polarity gaw:Negative ;
@@ -1255,8 +657,10 @@ aama:ID11bb630e-891f-4002-b29b-4492d0f82b9b a aamas:Term ;
 	gaw:number gaw:Plural ;
 	gaw:gender gaw:Common ;
 	.
-aama:ID9be097bb-4011-4367-81d8-60e664702b8e a aamas:Term ;
+
+aama:IDff63716e-5686-47af-9d02-41e55f542b90 a aamas:Term ;
 	aamas:lang aama:Gawwada ;
+	aamas:memberOf gaw:gawwada-VNegJussive-ass ;
 	aamas:lexeme aama:Gawwada-ass ;
 	gaw:pos gaw:Verb ;
 	gaw:polarity gaw:Negative ;
@@ -1267,1213 +671,793 @@ aama:ID9be097bb-4011-4367-81d8-60e664702b8e a aamas:Term ;
 	gaw:gender gaw:Common ;
 	.
 
-#MUTERMCLUSTER: gawwada-PPossSuff
+#TERMCLUSTER:  gawwada-VConsecutive-ass
 
-aama:IDb3c715d2-a163-4d12-a6e0-de4ed3baf669 a aamas:Muterm ;
-	aamas:lang aama:Gawwada ;
-	aamas:morpheme aama:Gawwada-PROPOSSSUFF ;
-	gaw:pos gaw:Pronoun ;
-	gaw:proClass gaw:PossSuff ;
-	gaw:token "-ħ-áyyu" ;
-	gaw:person gaw:Person1 ;
-	gaw:number gaw:Singular ;
-	gaw:gender gaw:Common ;
-	gaw:genderHead gaw:Masc ;
-	.
-aama:ID9f3c6817-ff5c-4e16-b2da-cc59950fe508 a aamas:Muterm ;
-	aamas:lang aama:Gawwada ;
-	aamas:morpheme aama:Gawwada-PROPOSSSUFF ;
-	gaw:pos gaw:Pronoun ;
-	gaw:proClass gaw:PossSuff ;
-	gaw:token "-ħ-áaħu" ;
-	gaw:person gaw:Person2 ;
-	gaw:number gaw:Singular ;
-	gaw:gender gaw:Masc ;
-	gaw:genderHead gaw:Masc ;
-	.
-aama:ID4b1d7d31-9377-4dd3-aa64-ea4acb08eb6c a aamas:Muterm ;
-	aamas:lang aama:Gawwada ;
-	aamas:morpheme aama:Gawwada-PROPOSSSUFF ;
-	gaw:pos gaw:Pronoun ;
-	gaw:proClass gaw:PossSuff ;
-	gaw:token "-ħ-áaħi" ;
-	gaw:person gaw:Person2 ;
-	gaw:number gaw:Singular ;
-	gaw:gender gaw:Fem ;
-	gaw:genderHead gaw:Masc ;
-	.
-aama:IDfd3a0487-9816-4471-8c7b-a8fcc515cb5f a aamas:Muterm ;
-	aamas:lang aama:Gawwada ;
-	aamas:morpheme aama:Gawwada-PROPOSSSUFF ;
-	gaw:pos gaw:Pronoun ;
-	gaw:proClass gaw:PossSuff ;
-	gaw:token "-ħ-úusu" ;
-	gaw:person gaw:Person3 ;
-	gaw:number gaw:Singular ;
-	gaw:gender gaw:Masc ;
-	gaw:genderHead gaw:Masc ;
-	.
-aama:ID678939f9-e088-42ba-bb3b-919905524c36 a aamas:Muterm ;
-	aamas:lang aama:Gawwada ;
-	aamas:morpheme aama:Gawwada-PROPOSSSUFF ;
-	gaw:pos gaw:Pronoun ;
-	gaw:proClass gaw:PossSuff ;
-	gaw:token "-ħ-íisi" ;
-	gaw:person gaw:Person3 ;
-	gaw:number gaw:Singular ;
-	gaw:gender gaw:Fem ;
-	gaw:genderHead gaw:Masc ;
-	.
-aama:ID85bf1ee1-82c1-4912-b8ed-1a4e138a7c02 a aamas:Muterm ;
-	aamas:lang aama:Gawwada ;
-	aamas:morpheme aama:Gawwada-PROPOSSSUFF ;
-	gaw:pos gaw:Pronoun ;
-	gaw:proClass gaw:PossSuff ;
-	gaw:token "-ħ-áani" ;
-	gaw:person gaw:Person1 ;
-	gaw:number gaw:Plural ;
-	gaw:gender gaw:Common ;
-	gaw:genderHead gaw:Masc ;
-	.
-aama:ID958ad3ea-342f-425e-bbbe-4a15d193bb0e a aamas:Muterm ;
-	aamas:lang aama:Gawwada ;
-	aamas:morpheme aama:Gawwada-PROPOSSSUFF ;
-	gaw:pos gaw:Pronoun ;
-	gaw:proClass gaw:PossSuff ;
-	gaw:token "-ħ-áħunɗi" ;
-	gaw:person gaw:Person2 ;
-	gaw:number gaw:Plural ;
-	gaw:gender gaw:Common ;
-	gaw:genderHead gaw:Masc ;
-	.
-aama:IDafce8088-5887-45dc-a685-e2a084ff79e9 a aamas:Muterm ;
-	aamas:lang aama:Gawwada ;
-	aamas:morpheme aama:Gawwada-PROPOSSSUFF ;
-	gaw:pos gaw:Pronoun ;
-	gaw:proClass gaw:PossSuff ;
-	gaw:token "-ħ-úsunɗi" ;
-	gaw:person gaw:Person3 ;
-	gaw:number gaw:Plural ;
-	gaw:gender gaw:Common ;
-	gaw:genderHead gaw:Masc ;
-	.
-aama:IDefcbadfb-793d-47c8-bc0e-5ae9d4a06004 a aamas:Muterm ;
-	aamas:lang aama:Gawwada ;
-	aamas:morpheme aama:Gawwada-PROPOSSSUFF ;
-	gaw:pos gaw:Pronoun ;
-	gaw:proClass gaw:PossSuff ;
-	gaw:token "-t-áyyu" ;
-	gaw:person gaw:Person1 ;
-	gaw:number gaw:Singular ;
-	gaw:gender gaw:Common ;
-	gaw:genderHead gaw:Fem ;
-	.
-aama:ID0cbd5807-bef5-4214-885d-7bfa2b491819 a aamas:Muterm ;
-	aamas:lang aama:Gawwada ;
-	aamas:morpheme aama:Gawwada-PROPOSSSUFF ;
-	gaw:pos gaw:Pronoun ;
-	gaw:proClass gaw:PossSuff ;
-	gaw:token "-t-áaħu" ;
-	gaw:person gaw:Person2 ;
-	gaw:number gaw:Singular ;
-	gaw:gender gaw:Masc ;
-	gaw:genderHead gaw:Fem ;
-	.
-aama:ID09b5d6aa-4709-4035-b1e2-2e922286f3f8 a aamas:Muterm ;
-	aamas:lang aama:Gawwada ;
-	aamas:morpheme aama:Gawwada-PROPOSSSUFF ;
-	gaw:pos gaw:Pronoun ;
-	gaw:proClass gaw:PossSuff ;
-	gaw:token "-t-áaħi" ;
-	gaw:person gaw:Person2 ;
-	gaw:number gaw:Singular ;
-	gaw:gender gaw:Fem ;
-	gaw:genderHead gaw:Fem ;
-	.
-aama:IDaadd5162-6d22-406b-bd9a-d9a4caafdabc a aamas:Muterm ;
-	aamas:lang aama:Gawwada ;
-	aamas:morpheme aama:Gawwada-PROPOSSSUFF ;
-	gaw:pos gaw:Pronoun ;
-	gaw:proClass gaw:PossSuff ;
-	gaw:token "-t-úusu" ;
-	gaw:person gaw:Person3 ;
-	gaw:number gaw:Singular ;
-	gaw:gender gaw:Masc ;
-	gaw:genderHead gaw:Fem ;
-	.
-aama:IDe23e6266-b894-446f-836b-bcc5a27c38a0 a aamas:Muterm ;
-	aamas:lang aama:Gawwada ;
-	aamas:morpheme aama:Gawwada-PROPOSSSUFF ;
-	gaw:pos gaw:Pronoun ;
-	gaw:proClass gaw:PossSuff ;
-	gaw:token "-t-íisi" ;
-	gaw:person gaw:Person3 ;
-	gaw:number gaw:Singular ;
-	gaw:gender gaw:Fem ;
-	gaw:genderHead gaw:Fem ;
-	.
-aama:IDfb73b67c-ece3-458f-b066-872b47e5f445 a aamas:Muterm ;
-	aamas:lang aama:Gawwada ;
-	aamas:morpheme aama:Gawwada-PROPOSSSUFF ;
-	gaw:pos gaw:Pronoun ;
-	gaw:proClass gaw:PossSuff ;
-	gaw:token "-t-áani" ;
-	gaw:person gaw:Person1 ;
-	gaw:number gaw:Plural ;
-	gaw:gender gaw:Common ;
-	gaw:genderHead gaw:Fem ;
-	.
-aama:ID8cde9930-54c9-480f-8781-52fd282df9f6 a aamas:Muterm ;
-	aamas:lang aama:Gawwada ;
-	aamas:morpheme aama:Gawwada-PROPOSSSUFF ;
-	gaw:pos gaw:Pronoun ;
-	gaw:proClass gaw:PossSuff ;
-	gaw:token "-t-áħunɗi" ;
-	gaw:person gaw:Person2 ;
-	gaw:number gaw:Plural ;
-	gaw:gender gaw:Common ;
-	gaw:genderHead gaw:Fem ;
-	.
-aama:ID27448d97-4cde-4f92-a96a-37d9bc50fe5e a aamas:Muterm ;
-	aamas:lang aama:Gawwada ;
-	aamas:morpheme aama:Gawwada-PROPOSSSUFF ;
-	gaw:pos gaw:Pronoun ;
-	gaw:proClass gaw:PossSuff ;
-	gaw:token "-t-úsunɗi" ;
-	gaw:person gaw:Person3 ;
-	gaw:number gaw:Plural ;
-	gaw:gender gaw:Common ;
-	gaw:genderHead gaw:Fem ;
+gaw:gawwada-VConsecutive-ass a aamas:Termcluster ;
+	rdfs:label "gawwada-VConsecutive-ass" ;
+	rdfs:comment "Tosco2007b Table 4 (p. 515). There are two tonally distinct inflectional classes of verb in the perfective,imperative,and consecutive positive tenses." 
 	.
 
-#MUTERMCLUSTER: gawwada-VPerfectiveTemplate
-
-aama:IDdaedbb9c-042f-4a5f-a680-cc6b8c532749 a aamas:Muterm ;
+aama:ID7892a682-413f-4e72-9060-c53aab858a8d a aamas:Term ;
 	aamas:lang aama:Gawwada ;
-	aamas:morpheme aama:Gawwada-PERFECTIVETEMPLATE ;
-	gaw:pdgmType gaw:Template ;
+	aamas:memberOf gaw:gawwada-VConsecutive-ass ;
+	gaw:inflClass gaw:Class2 ;
+	aamas:lexeme aama:Gawwada-ass ;
 	gaw:pos gaw:Verb ;
-	gaw:tam gaw:Perfective ;
-	gaw:token "Cv́C(v́C)í" ;
+	gaw:tam gaw:Consecutive ;
+	gaw:token "⊤" ;
 	gaw:person gaw:Person1 ;
 	gaw:number gaw:Singular ;
-	gaw:inflClass gaw:Class1 ;
-	gaw:gender gaw:Common ;
-	.
-aama:IDa52377b0-bab9-4b54-a637-4b01670602ae a aamas:Muterm ;
-	aamas:lang aama:Gawwada ;
-	aamas:morpheme aama:Gawwada-PERFECTIVETEMPLATE ;
-	gaw:pdgmType gaw:Template ;
-	gaw:pos gaw:Verb ;
-	gaw:tam gaw:Perfective ;
-	gaw:token "Cv́C(v́C)tí" ;
-	gaw:person gaw:Person2 ;
-	gaw:number gaw:Singular ;
-	gaw:inflClass gaw:Class1 ;
-	gaw:gender gaw:Common ;
-	.
-aama:ID0d2e8768-3c24-4cbd-86de-193e7edfeb58 a aamas:Muterm ;
-	aamas:lang aama:Gawwada ;
-	aamas:morpheme aama:Gawwada-PERFECTIVETEMPLATE ;
-	gaw:pdgmType gaw:Template ;
-	gaw:pos gaw:Verb ;
-	gaw:tam gaw:Perfective ;
-	gaw:token "Cv́C(v́C)í" ;
-	gaw:person gaw:Person3 ;
-	gaw:number gaw:Singular ;
-	gaw:inflClass gaw:Class1 ;
-	gaw:gender gaw:Masc ;
-	.
-aama:IDbfc49785-81ff-4612-8a6d-eab47f883717 a aamas:Muterm ;
-	aamas:lang aama:Gawwada ;
-	aamas:morpheme aama:Gawwada-PERFECTIVETEMPLATE ;
-	gaw:pdgmType gaw:Template ;
-	gaw:pos gaw:Verb ;
-	gaw:tam gaw:Perfective ;
-	gaw:token "Cv́C(v́C)tí" ;
-	gaw:person gaw:Person3 ;
-	gaw:number gaw:Singular ;
-	gaw:inflClass gaw:Class1 ;
-	gaw:gender gaw:Fem ;
-	.
-aama:ID1f0c9cb7-ab30-4d68-ae9b-29dc5e6548e2 a aamas:Muterm ;
-	aamas:lang aama:Gawwada ;
-	aamas:morpheme aama:Gawwada-PERFECTIVETEMPLATE ;
-	gaw:pdgmType gaw:Template ;
-	gaw:pos gaw:Verb ;
-	gaw:tam gaw:Perfective ;
-	gaw:token "Cv́C(v́C)né(eni)" ;
-	gaw:person gaw:Person1 ;
-	gaw:number gaw:Plural ;
-	gaw:inflClass gaw:Class1 ;
-	gaw:gender gaw:Common ;
-	.
-aama:ID575cd4a1-2680-425a-883c-9d88258836c7 a aamas:Muterm ;
-	aamas:lang aama:Gawwada ;
-	aamas:morpheme aama:Gawwada-PERFECTIVETEMPLATE ;
-	gaw:pdgmType gaw:Template ;
-	gaw:pos gaw:Verb ;
-	gaw:tam gaw:Perfective ;
-	gaw:token "Cv́C(v́C)té(ngu)" ;
-	gaw:person gaw:Person2 ;
-	gaw:number gaw:Plural ;
-	gaw:inflClass gaw:Class1 ;
-	gaw:gender gaw:Common ;
-	.
-aama:ID689dc82d-d188-47a9-b6d6-c1fc19939e37 a aamas:Muterm ;
-	aamas:lang aama:Gawwada ;
-	aamas:morpheme aama:Gawwada-PERFECTIVETEMPLATE ;
-	gaw:pdgmType gaw:Template ;
-	gaw:pos gaw:Verb ;
-	gaw:tam gaw:Perfective ;
-	gaw:token "Cv́C(v́C)né(eni)" ;
-	gaw:person gaw:Person3 ;
-	gaw:number gaw:Plural ;
-	gaw:inflClass gaw:Class1 ;
-	gaw:gender gaw:Common ;
-	.
-aama:ID9fb991fd-2172-4227-b2fb-1dc572e4ac79 a aamas:Muterm ;
-	aamas:lang aama:Gawwada ;
-	aamas:morpheme aama:Gawwada-PERFECTIVETEMPLATE ;
-	gaw:pdgmType gaw:Template ;
-	gaw:pos gaw:Verb ;
-	gaw:tam gaw:Perfective ;
-	gaw:token "Cv́C(v́C)i" ;
-	gaw:person gaw:Person1 ;
-	gaw:number gaw:Singular ;
-	gaw:inflClass gaw:Class2 ;
-	gaw:gender gaw:Common ;
-	.
-aama:ID7c44c042-7d8f-42c6-a660-dc6c2ace2916 a aamas:Muterm ;
-	aamas:lang aama:Gawwada ;
-	aamas:morpheme aama:Gawwada-PERFECTIVETEMPLATE ;
-	gaw:pdgmType gaw:Template ;
-	gaw:pos gaw:Verb ;
-	gaw:tam gaw:Perfective ;
-	gaw:token "Cv́C(v́C)ti" ;
-	gaw:person gaw:Person2 ;
-	gaw:number gaw:Singular ;
-	gaw:inflClass gaw:Class2 ;
-	gaw:gender gaw:Common ;
-	.
-aama:ID23249f60-f595-49d5-bd49-bf2c87ae397a a aamas:Muterm ;
-	aamas:lang aama:Gawwada ;
-	aamas:morpheme aama:Gawwada-PERFECTIVETEMPLATE ;
-	gaw:pdgmType gaw:Template ;
-	gaw:pos gaw:Verb ;
-	gaw:tam gaw:Perfective ;
-	gaw:token "Cv́C(v́C)i" ;
-	gaw:person gaw:Person3 ;
-	gaw:number gaw:Singular ;
-	gaw:inflClass gaw:Class2 ;
-	gaw:gender gaw:Masc ;
-	.
-aama:IDf05f17c4-c6c8-4f25-901f-b7d9ae5ed051 a aamas:Muterm ;
-	aamas:lang aama:Gawwada ;
-	aamas:morpheme aama:Gawwada-PERFECTIVETEMPLATE ;
-	gaw:pdgmType gaw:Template ;
-	gaw:pos gaw:Verb ;
-	gaw:tam gaw:Perfective ;
-	gaw:token "Cv́C(v́C)ti" ;
-	gaw:person gaw:Person3 ;
-	gaw:number gaw:Singular ;
-	gaw:inflClass gaw:Class2 ;
-	gaw:gender gaw:Fem ;
-	.
-aama:ID5da56623-440d-4618-ad98-f0cbf8c526ca a aamas:Muterm ;
-	aamas:lang aama:Gawwada ;
-	aamas:morpheme aama:Gawwada-PERFECTIVETEMPLATE ;
-	gaw:pdgmType gaw:Template ;
-	gaw:pos gaw:Verb ;
-	gaw:tam gaw:Perfective ;
-	gaw:token "Cv́C(v́C)né(eni)" ;
-	gaw:person gaw:Person1 ;
-	gaw:number gaw:Plural ;
-	gaw:inflClass gaw:Class2 ;
-	gaw:gender gaw:Common ;
-	.
-aama:ID42b15c7b-99d9-4499-9b25-a6f6d5175e46 a aamas:Muterm ;
-	aamas:lang aama:Gawwada ;
-	aamas:morpheme aama:Gawwada-PERFECTIVETEMPLATE ;
-	gaw:pdgmType gaw:Template ;
-	gaw:pos gaw:Verb ;
-	gaw:tam gaw:Perfective ;
-	gaw:token "Cv́C(v́C)té(ngu)" ;
-	gaw:person gaw:Person2 ;
-	gaw:number gaw:Plural ;
-	gaw:inflClass gaw:Class2 ;
-	gaw:gender gaw:Common ;
-	.
-aama:ID60fee3ce-afef-432b-a2a3-26cc019adc34 a aamas:Muterm ;
-	aamas:lang aama:Gawwada ;
-	aamas:morpheme aama:Gawwada-PERFECTIVETEMPLATE ;
-	gaw:pdgmType gaw:Template ;
-	gaw:pos gaw:Verb ;
-	gaw:tam gaw:Perfective ;
-	gaw:token "Cv́C(v́C)né(eni)" ;
-	gaw:person gaw:Person3 ;
-	gaw:number gaw:Plural ;
-	gaw:inflClass gaw:Class2 ;
 	gaw:gender gaw:Common ;
 	.
 
-#MUTERMCLUSTER: gawwada-VDervStems
-
-aama:ID20d149b9-5698-4797-a8c1-ad20a4ca0845 a aamas:Muterm ;
+aama:IDca711da1-ae5a-4c2d-aaa8-c82025b37930 a aamas:Term ;
 	aamas:lang aama:Gawwada ;
-	aamas:morpheme aama:Gawwada-DERVSTEMS ;
-	gaw:pdgmType gaw:Template ;
-	gaw:tokenType "SuffixShapes" ;
+	aamas:memberOf gaw:gawwada-VConsecutive-ass ;
+	gaw:inflClass gaw:Class2 ;
+	aamas:lexeme aama:Gawwada-ass ;
 	gaw:pos gaw:Verb ;
-	gaw:morphClass gaw:DervStem ;
-	gaw:token "C1VC2C1VC2 [reduplication of first CV(V) string of first syllable" ;
-	gaw:derivedStem gaw:Intensive ;
-	.
-aama:ID4b6e0ef6-a899-4a19-bae3-8a6de91de37e a aamas:Muterm ;
-	aamas:lang aama:Gawwada ;
-	aamas:morpheme aama:Gawwada-DERVSTEMS ;
-	gaw:pdgmType gaw:Template ;
-	gaw:tokenType "SuffixShapes" ;
-	gaw:pos gaw:Verb ;
-	gaw:morphClass gaw:DervStem ;
-	gaw:token "CV(CCV)CC [reduplication of all stem C except the first" ;
-	gaw:derivedStem gaw:Semelfactive ;
-	.
-aama:IDd9852b63-a9bc-4bf8-8245-2ab1ef2afcab a aamas:Muterm ;
-	aamas:lang aama:Gawwada ;
-	aamas:morpheme aama:Gawwada-DERVSTEMS ;
-	gaw:pdgmType gaw:Template ;
-	gaw:tokenType "SuffixShapes" ;
-	gaw:pos gaw:Verb ;
-	gaw:morphClass gaw:DervStem ;
-	gaw:token "-um-" ;
-	gaw:derivedStem gaw:Inceptive ;
-	.
-aama:IDb6678acc-8e4c-49c0-8928-f942a5ca6350 a aamas:Muterm ;
-	aamas:lang aama:Gawwada ;
-	aamas:morpheme aama:Gawwada-DERVSTEMS ;
-	gaw:pdgmType gaw:Template ;
-	gaw:tokenType "SuffixShapes" ;
-	gaw:pos gaw:Verb ;
-	gaw:morphClass gaw:DervStem ;
-	gaw:token "-uy-" ;
-	gaw:derivedStem gaw:Ingressive ;
-	.
-aama:ID60d4216d-eeff-4baf-947c-96e1f35e96c7 a aamas:Muterm ;
-	aamas:lang aama:Gawwada ;
-	aamas:morpheme aama:Gawwada-DERVSTEMS ;
-	gaw:pdgmType gaw:Template ;
-	gaw:tokenType "SuffixShapes" ;
-	gaw:pos gaw:Verb ;
-	gaw:morphClass gaw:DervStem ;
-	gaw:token "-ad-" ;
-	gaw:derivedStem gaw:Middel ;
-	.
-aama:ID1340970b-dbed-46ef-b8f5-290dafec78f5 a aamas:Muterm ;
-	aamas:lang aama:Gawwada ;
-	aamas:morpheme aama:Gawwada-DERVSTEMS ;
-	gaw:pdgmType gaw:Template ;
-	gaw:tokenType "SuffixShapes" ;
-	gaw:pos gaw:Verb ;
-	gaw:morphClass gaw:DervStem ;
-	gaw:token "-am-" ;
-	gaw:derivedStem gaw:Passive ;
-	.
-aama:IDf1288e22-714d-4c13-81c9-df8e79e36c4a a aamas:Muterm ;
-	aamas:lang aama:Gawwada ;
-	aamas:morpheme aama:Gawwada-DERVSTEMS ;
-	gaw:pdgmType gaw:Template ;
-	gaw:tokenType "SuffixShapes" ;
-	gaw:pos gaw:Verb ;
-	gaw:morphClass gaw:DervStem ;
-	gaw:token "-Vs-" ;
-	gaw:derivedStem gaw:Causative ;
-	.
-
-#MUTERMCLUSTER: gawwada-PObjProclitic
-
-aama:ID80cef94f-041b-4728-989b-d49856100074 a aamas:Muterm ;
-	aamas:lang aama:Gawwada ;
-	aamas:morpheme aama:Gawwada-PROOBJPROCLITIC ;
-	gaw:pos gaw:Pronoun ;
-	gaw:proClass gaw:ObjProclitic ;
-	gaw:token "ye-" ;
-	gaw:person gaw:Person1 ;
+	gaw:tam gaw:Consecutive ;
+	gaw:token "áššóy" ;
+	gaw:person gaw:Person2 ;
 	gaw:number gaw:Singular ;
 	gaw:gender gaw:Common ;
 	.
-aama:ID7966b29b-1323-475f-ba3c-7bb81a6d9563 a aamas:Muterm ;
+
+aama:ID4f7c93a4-564b-4dc0-99c6-a60f2a4336a5 a aamas:Term ;
 	aamas:lang aama:Gawwada ;
-	aamas:morpheme aama:Gawwada-PROOBJPROCLITIC ;
-	gaw:pos gaw:Pronoun ;
-	gaw:proClass gaw:ObjProclitic ;
-	gaw:token "ħo-" ;
-	gaw:person gaw:Person2 ;
-	gaw:number gaw:Singular ;
-	gaw:gender gaw:Masc ;
-	.
-aama:ID36503183-27f1-4a2c-a31e-9ee57a575a90 a aamas:Muterm ;
-	aamas:lang aama:Gawwada ;
-	aamas:morpheme aama:Gawwada-PROOBJPROCLITIC ;
-	gaw:pos gaw:Pronoun ;
-	gaw:proClass gaw:ObjProclitic ;
-	gaw:token "ħe-" ;
-	gaw:person gaw:Person2 ;
-	gaw:number gaw:Singular ;
-	gaw:gender gaw:Fem ;
-	.
-aama:IDa7b1524e-1d62-4b52-b30c-fcefc192d517 a aamas:Muterm ;
-	aamas:lang aama:Gawwada ;
-	aamas:morpheme aama:Gawwada-PROOBJPROCLITIC ;
-	gaw:pos gaw:Pronoun ;
-	gaw:proClass gaw:ObjProclitic ;
+	aamas:memberOf gaw:gawwada-VConsecutive-ass ;
+	gaw:inflClass gaw:Class2 ;
+	aamas:lexeme aama:Gawwada-ass ;
+	gaw:pos gaw:Verb ;
+	gaw:tam gaw:Consecutive ;
 	gaw:token "⊤" ;
 	gaw:person gaw:Person3 ;
-	gaw:number gaw:Common ;
+	gaw:number gaw:Singular ;
+	gaw:gender gaw:Masc ;
+	.
+
+aama:IDf9fdca1f-a31b-42bf-8ef1-311c37fd08a9 a aamas:Term ;
+	aamas:lang aama:Gawwada ;
+	aamas:memberOf gaw:gawwada-VConsecutive-ass ;
+	gaw:inflClass gaw:Class2 ;
+	aamas:lexeme aama:Gawwada-ass ;
+	gaw:pos gaw:Verb ;
+	gaw:tam gaw:Consecutive ;
+	gaw:token "áššóy" ;
+	gaw:person gaw:Person3 ;
+	gaw:number gaw:Singular ;
+	gaw:gender gaw:Fem ;
+	.
+
+aama:ID9a659671-33fc-4e79-9593-d5d2217cd49c a aamas:Term ;
+	aamas:lang aama:Gawwada ;
+	aamas:memberOf gaw:gawwada-VConsecutive-ass ;
+	gaw:inflClass gaw:Class2 ;
+	aamas:lexeme aama:Gawwada-ass ;
+	gaw:pos gaw:Verb ;
+	gaw:tam gaw:Consecutive ;
+	gaw:token "áššóni" ;
+	gaw:person gaw:Person1 ;
+	gaw:number gaw:Plural ;
 	gaw:gender gaw:Common ;
 	.
-aama:IDe0abd61a-0e0c-497e-93db-18e0105272fa a aamas:Muterm ;
+
+aama:ID68f4d56c-943a-46b7-8882-f10b617384bc a aamas:Term ;
 	aamas:lang aama:Gawwada ;
-	aamas:morpheme aama:Gawwada-PROOBJPROCLITIC ;
-	gaw:pos gaw:Pronoun ;
-	gaw:proClass gaw:ObjProclitic ;
+	aamas:memberOf gaw:gawwada-VConsecutive-ass ;
+	gaw:inflClass gaw:Class2 ;
+	aamas:lexeme aama:Gawwada-ass ;
+	gaw:pos gaw:Verb ;
+	gaw:tam gaw:Consecutive ;
+	gaw:token "áššóngu" ;
+	gaw:person gaw:Person2 ;
+	gaw:number gaw:Plural ;
+	gaw:gender gaw:Common ;
+	.
+
+aama:IDc056f40c-46cd-42a8-bf68-a5ea14f50031 a aamas:Term ;
+	aamas:lang aama:Gawwada ;
+	aamas:memberOf gaw:gawwada-VConsecutive-ass ;
+	gaw:inflClass gaw:Class2 ;
+	aamas:lexeme aama:Gawwada-ass ;
+	gaw:pos gaw:Verb ;
+	gaw:tam gaw:Consecutive ;
+	gaw:token "áššóngi" ;
+	gaw:person gaw:Person3 ;
+	gaw:number gaw:Plural ;
+	gaw:gender gaw:Common ;
+	.
+
+#TERMCLUSTER:  gawwada-VImperfective-ass
+
+gaw:gawwada-VImperfective-ass a aamas:Termcluster ;
+	rdfs:label "gawwada-VImperfective-ass" ;
+	rdfs:comment "Tosco2007b Table 4 (p. 515). There are two tonally distinct inflectional classes of verb in the perfective,imperative,and consecutive positive tenses." 
+	.
+
+aama:ID2522dddd-818d-4ba3-b1b2-19cf4d85e2d3 a aamas:Term ;
+	aamas:lang aama:Gawwada ;
+	aamas:memberOf gaw:gawwada-VImperfective-ass ;
+	aamas:lexeme aama:Gawwada-ass ;
+	gaw:pos gaw:Verb ;
+	gaw:tam gaw:Imperfective ;
+	gaw:token "ášša" ;
+	gaw:person gaw:Person1 ;
+	gaw:number gaw:Singular ;
+	gaw:gender gaw:Common ;
+	.
+
+aama:ID0b81d3d3-3cc9-4165-9f73-1321756d56ec a aamas:Term ;
+	aamas:lang aama:Gawwada ;
+	aamas:memberOf gaw:gawwada-VImperfective-ass ;
+	aamas:lexeme aama:Gawwada-ass ;
+	gaw:pos gaw:Verb ;
+	gaw:tam gaw:Imperfective ;
+	gaw:token "áššay" ;
+	gaw:person gaw:Person2 ;
+	gaw:number gaw:Singular ;
+	gaw:gender gaw:Common ;
+	.
+
+aama:ID5273f79a-ab0a-4b3a-a33c-f11f2ee6ab33 a aamas:Term ;
+	aamas:lang aama:Gawwada ;
+	aamas:memberOf gaw:gawwada-VImperfective-ass ;
+	aamas:lexeme aama:Gawwada-ass ;
+	gaw:pos gaw:Verb ;
+	gaw:tam gaw:Imperfective ;
+	gaw:token "ášša" ;
+	gaw:person gaw:Person3 ;
+	gaw:number gaw:Singular ;
+	gaw:gender gaw:Masc ;
+	.
+
+aama:ID2e2c1d17-a6e0-47c8-beaf-175f5fd966dd a aamas:Term ;
+	aamas:lang aama:Gawwada ;
+	aamas:memberOf gaw:gawwada-VImperfective-ass ;
+	aamas:lexeme aama:Gawwada-ass ;
+	gaw:pos gaw:Verb ;
+	gaw:tam gaw:Imperfective ;
+	gaw:token "áššay" ;
+	gaw:person gaw:Person3 ;
+	gaw:number gaw:Singular ;
+	gaw:gender gaw:Fem ;
+	.
+
+aama:IDf24eb1b1-551d-47d8-ade3-35a6a73a7530 a aamas:Term ;
+	aamas:lang aama:Gawwada ;
+	aamas:memberOf gaw:gawwada-VImperfective-ass ;
+	aamas:lexeme aama:Gawwada-ass ;
+	gaw:pos gaw:Verb ;
+	gaw:tam gaw:Imperfective ;
+	gaw:token "áššani" ;
+	gaw:person gaw:Person1 ;
+	gaw:number gaw:Plural ;
+	gaw:gender gaw:Common ;
+	.
+
+aama:ID97d34111-067c-4c95-838b-f0e694ecab76 a aamas:Term ;
+	aamas:lang aama:Gawwada ;
+	aamas:memberOf gaw:gawwada-VImperfective-ass ;
+	aamas:lexeme aama:Gawwada-ass ;
+	gaw:pos gaw:Verb ;
+	gaw:tam gaw:Imperfective ;
+	gaw:token "áššangu" ;
+	gaw:person gaw:Person2 ;
+	gaw:number gaw:Plural ;
+	gaw:gender gaw:Common ;
+	.
+
+aama:ID66062f13-2e8b-4bb9-bf51-407f6cebe6c5 a aamas:Term ;
+	aamas:lang aama:Gawwada ;
+	aamas:memberOf gaw:gawwada-VImperfective-ass ;
+	aamas:lexeme aama:Gawwada-ass ;
+	gaw:pos gaw:Verb ;
+	gaw:tam gaw:Imperfective ;
+	gaw:token "áššangi" ;
+	gaw:person gaw:Person3 ;
+	gaw:number gaw:Plural ;
+	gaw:gender gaw:Common ;
+	.
+
+#TERMCLUSTER:  gawwada-VConsecutive-sor
+
+gaw:gawwada-VConsecutive-sor a aamas:Termcluster ;
+	rdfs:label "gawwada-VConsecutive-sor" ;
+	rdfs:comment "Tosco2007b Table 4 (p. 515). There are two tonally distinct inflectional classes of verb in the perfective,imperative,and consecutive positive tenses." 
+	.
+
+aama:IDd7cb9c65-c456-4081-bc70-80d973446c20 a aamas:Term ;
+	aamas:lang aama:Gawwada ;
+	aamas:memberOf gaw:gawwada-VConsecutive-sor ;
+	gaw:inflClass gaw:Class1 ;
+	aamas:lexeme aama:Gawwada-sor ;
+	gaw:pos gaw:Verb ;
+	gaw:tam gaw:Consecutive ;
+	gaw:token "sorá" ;
+	gaw:person gaw:Person1 ;
+	gaw:number gaw:Singular ;
+	gaw:gender gaw:Common ;
+	.
+
+aama:ID1e655630-447b-4a33-82cc-38faccff45da a aamas:Term ;
+	aamas:lang aama:Gawwada ;
+	aamas:memberOf gaw:gawwada-VConsecutive-sor ;
+	gaw:inflClass gaw:Class1 ;
+	aamas:lexeme aama:Gawwada-sor ;
+	gaw:pos gaw:Verb ;
+	gaw:tam gaw:Consecutive ;
+	gaw:token "soráy" ;
+	gaw:person gaw:Person2 ;
+	gaw:number gaw:Singular ;
+	gaw:gender gaw:Common ;
+	.
+
+aama:ID15184992-0f23-4080-87e6-46a2c65cf985 a aamas:Term ;
+	aamas:lang aama:Gawwada ;
+	aamas:memberOf gaw:gawwada-VConsecutive-sor ;
+	gaw:inflClass gaw:Class1 ;
+	aamas:lexeme aama:Gawwada-sor ;
+	gaw:pos gaw:Verb ;
+	gaw:tam gaw:Consecutive ;
+	gaw:token "sorú" ;
+	gaw:person gaw:Person3 ;
+	gaw:number gaw:Singular ;
+	gaw:gender gaw:Masc ;
+	.
+
+aama:IDa251e339-28b8-4703-a478-011a687617bf a aamas:Term ;
+	aamas:lang aama:Gawwada ;
+	aamas:memberOf gaw:gawwada-VConsecutive-sor ;
+	gaw:inflClass gaw:Class1 ;
+	aamas:lexeme aama:Gawwada-sor ;
+	gaw:pos gaw:Verb ;
+	gaw:tam gaw:Consecutive ;
+	gaw:token "sorí" ;
+	gaw:person gaw:Person3 ;
+	gaw:number gaw:Singular ;
+	gaw:gender gaw:Fem ;
+	.
+
+aama:IDa301404b-2647-4cab-aed5-54df6134770c a aamas:Term ;
+	aamas:lang aama:Gawwada ;
+	aamas:memberOf gaw:gawwada-VConsecutive-sor ;
+	gaw:inflClass gaw:Class1 ;
+	aamas:lexeme aama:Gawwada-sor ;
+	gaw:pos gaw:Verb ;
+	gaw:tam gaw:Consecutive ;
+	gaw:token "sórání" ;
+	gaw:person gaw:Person1 ;
+	gaw:number gaw:Plural ;
+	gaw:gender gaw:Common ;
+	.
+
+aama:ID871212ee-23f1-430b-a889-f2185b008c23 a aamas:Term ;
+	aamas:lang aama:Gawwada ;
+	aamas:memberOf gaw:gawwada-VConsecutive-sor ;
+	gaw:inflClass gaw:Class1 ;
+	aamas:lexeme aama:Gawwada-sor ;
+	gaw:pos gaw:Verb ;
+	gaw:tam gaw:Consecutive ;
+	gaw:token "sórángú" ;
+	gaw:person gaw:Person2 ;
+	gaw:number gaw:Plural ;
+	gaw:gender gaw:Common ;
+	.
+
+aama:IDc3d0f81c-c371-416b-b322-f3a6dcb41f11 a aamas:Term ;
+	aamas:lang aama:Gawwada ;
+	aamas:memberOf gaw:gawwada-VConsecutive-sor ;
+	gaw:inflClass gaw:Class1 ;
+	aamas:lexeme aama:Gawwada-sor ;
+	gaw:pos gaw:Verb ;
+	gaw:tam gaw:Consecutive ;
+	gaw:token "sórángí" ;
+	gaw:person gaw:Person3 ;
+	gaw:number gaw:Plural ;
+	gaw:gender gaw:Common ;
+	.
+
+#TERMCLUSTER:  gawwada-VNegPresent-ass
+
+gaw:gawwada-VNegPresent-ass a aamas:Termcluster ;
+	rdfs:label "gawwada-VNegPresent-ass" ;
+	rdfs:comment "Tosco2007b Table 5 (p. 515). There are two tonally distinct inflectional classes of verb in the perfective,imperative,and consecutive positive tenses." 
+	.
+
+aama:IDb7a56ff5-904e-49f9-bc45-f827e74bdbdd a aamas:Term ;
+	aamas:lang aama:Gawwada ;
+	aamas:memberOf gaw:gawwada-VNegPresent-ass ;
+	aamas:lexeme aama:Gawwada-ass ;
+	gaw:pos gaw:Verb ;
+	gaw:polarity gaw:Negative ;
+	gaw:tam gaw:Present ;
 	gaw:token "⊤" ;
-	gaw:person gaw:Common ;
-	gaw:number gaw:Plural ;
+	gaw:person gaw:Person1 ;
+	gaw:number gaw:Singular ;
 	gaw:gender gaw:Common ;
 	.
 
-#MUTERMCLUSTER: gawwada-VPerfectiveHabitualTemplate
-
-aama:ID4e0cdfcf-1759-42e5-99f5-d44e0fe9fa66 a aamas:Muterm ;
+aama:IDe531488b-0f2d-4d4b-9138-2c5caa1d3e9f a aamas:Term ;
 	aamas:lang aama:Gawwada ;
-	aamas:morpheme aama:Gawwada-PERFHABTEMPLATE ;
-	gaw:pdgmType gaw:Template ;
+	aamas:memberOf gaw:gawwada-VNegPresent-ass ;
+	aamas:lexeme aama:Gawwada-ass ;
 	gaw:pos gaw:Verb ;
-	gaw:tam gaw:Perfective ;
-	gaw:tense2 gaw:Habitual ;
-	gaw:token "Cv́C(v́C)-ay-í" ;
-	gaw:person gaw:Person1 ;
-	gaw:number gaw:Singular ;
-	gaw:inflClass gaw:Class1 ;
-	gaw:gender gaw:Common ;
-	.
-aama:ID4e1e39e5-72d8-4953-82b7-ef05c02d61f9 a aamas:Muterm ;
-	aamas:lang aama:Gawwada ;
-	aamas:morpheme aama:Gawwada-PERFHABTEMPLATE ;
-	gaw:pdgmType gaw:Template ;
-	gaw:pos gaw:Verb ;
-	gaw:tam gaw:Perfective ;
-	gaw:tense2 gaw:Habitual ;
-	gaw:token "Cv́C(v́C)-ay-tí" ;
-	gaw:person gaw:Person2 ;
-	gaw:number gaw:Singular ;
-	gaw:inflClass gaw:Class1 ;
-	gaw:gender gaw:Common ;
-	.
-aama:ID546f0cf6-3b0c-4453-a11b-94888d974697 a aamas:Muterm ;
-	aamas:lang aama:Gawwada ;
-	aamas:morpheme aama:Gawwada-PERFHABTEMPLATE ;
-	gaw:pdgmType gaw:Template ;
-	gaw:pos gaw:Verb ;
-	gaw:tam gaw:Perfective ;
-	gaw:tense2 gaw:Habitual ;
-	gaw:token "Cv́C(v́C)-ay-í" ;
-	gaw:person gaw:Person3 ;
-	gaw:number gaw:Singular ;
-	gaw:inflClass gaw:Class1 ;
-	gaw:gender gaw:Masc ;
-	.
-aama:ID576f0932-946b-4ded-a6e1-ba8e345573ca a aamas:Muterm ;
-	aamas:lang aama:Gawwada ;
-	aamas:morpheme aama:Gawwada-PERFHABTEMPLATE ;
-	gaw:pdgmType gaw:Template ;
-	gaw:pos gaw:Verb ;
-	gaw:tam gaw:Perfective ;
-	gaw:tense2 gaw:Habitual ;
-	gaw:token "Cv́C(v́C)-ay-tí" ;
-	gaw:person gaw:Person3 ;
-	gaw:number gaw:Singular ;
-	gaw:inflClass gaw:Class1 ;
-	gaw:gender gaw:Fem ;
-	.
-aama:IDa11871fb-4f29-4d99-bd25-b22fbb970efc a aamas:Muterm ;
-	aamas:lang aama:Gawwada ;
-	aamas:morpheme aama:Gawwada-PERFHABTEMPLATE ;
-	gaw:pdgmType gaw:Template ;
-	gaw:pos gaw:Verb ;
-	gaw:tam gaw:Perfective ;
-	gaw:tense2 gaw:Habitual ;
-	gaw:token "Cv́C(v́C)-ay-né(eni)" ;
-	gaw:person gaw:Person1 ;
-	gaw:number gaw:Plural ;
-	gaw:inflClass gaw:Class1 ;
-	gaw:gender gaw:Common ;
-	.
-aama:IDd0ccf634-5e63-449f-891b-fa044c65a7c5 a aamas:Muterm ;
-	aamas:lang aama:Gawwada ;
-	aamas:morpheme aama:Gawwada-PERFHABTEMPLATE ;
-	gaw:pdgmType gaw:Template ;
-	gaw:pos gaw:Verb ;
-	gaw:tam gaw:Perfective ;
-	gaw:tense2 gaw:Habitual ;
-	gaw:token "Cv́C(v́C)-ay-té(ngu)" ;
-	gaw:person gaw:Person2 ;
-	gaw:number gaw:Plural ;
-	gaw:inflClass gaw:Class1 ;
-	gaw:gender gaw:Common ;
-	.
-aama:IDa6328576-2765-44a9-be81-e88a2fb39a63 a aamas:Muterm ;
-	aamas:lang aama:Gawwada ;
-	aamas:morpheme aama:Gawwada-PERFHABTEMPLATE ;
-	gaw:pdgmType gaw:Template ;
-	gaw:pos gaw:Verb ;
-	gaw:tam gaw:Perfective ;
-	gaw:tense2 gaw:Habitual ;
-	gaw:token "Cv́C(v́C)-ay-né(eni)" ;
-	gaw:person gaw:Person3 ;
-	gaw:number gaw:Plural ;
-	gaw:inflClass gaw:Class1 ;
-	gaw:gender gaw:Common ;
-	.
-aama:ID1dc92ac6-0b4c-43fa-999d-127354992432 a aamas:Muterm ;
-	aamas:lang aama:Gawwada ;
-	aamas:morpheme aama:Gawwada-PERFHABTEMPLATE ;
-	gaw:pdgmType gaw:Template ;
-	gaw:pos gaw:Verb ;
-	gaw:tam gaw:Perfective ;
-	gaw:tense2 gaw:Habitual ;
-	gaw:token "Cv́C(v́C)-ay-i" ;
-	gaw:person gaw:Person1 ;
-	gaw:number gaw:Singular ;
-	gaw:inflClass gaw:Class2 ;
-	gaw:gender gaw:Common ;
-	.
-aama:ID1f941389-aef7-4106-89fa-bef9aa4f59b6 a aamas:Muterm ;
-	aamas:lang aama:Gawwada ;
-	aamas:morpheme aama:Gawwada-PERFHABTEMPLATE ;
-	gaw:pdgmType gaw:Template ;
-	gaw:pos gaw:Verb ;
-	gaw:tam gaw:Perfective ;
-	gaw:tense2 gaw:Habitual ;
-	gaw:token "Cv́C(v́C)-ay-ti" ;
-	gaw:person gaw:Person2 ;
-	gaw:number gaw:Singular ;
-	gaw:inflClass gaw:Class2 ;
-	gaw:gender gaw:Common ;
-	.
-aama:ID8398ee1d-6c55-415e-9bfa-c1200a7684d1 a aamas:Muterm ;
-	aamas:lang aama:Gawwada ;
-	aamas:morpheme aama:Gawwada-PERFHABTEMPLATE ;
-	gaw:pdgmType gaw:Template ;
-	gaw:pos gaw:Verb ;
-	gaw:tam gaw:Perfective ;
-	gaw:tense2 gaw:Habitual ;
-	gaw:token "Cv́C(v́C)-ay-i" ;
-	gaw:person gaw:Person3 ;
-	gaw:number gaw:Singular ;
-	gaw:inflClass gaw:Class2 ;
-	gaw:gender gaw:Masc ;
-	.
-aama:ID363b1531-dccf-44c9-a8c3-db22a9aedb8d a aamas:Muterm ;
-	aamas:lang aama:Gawwada ;
-	aamas:morpheme aama:Gawwada-PERFHABTEMPLATE ;
-	gaw:pdgmType gaw:Template ;
-	gaw:pos gaw:Verb ;
-	gaw:tam gaw:Perfective ;
-	gaw:tense2 gaw:Habitual ;
-	gaw:token "Cv́C(v́C)-ay-ti" ;
-	gaw:person gaw:Person3 ;
-	gaw:number gaw:Singular ;
-	gaw:inflClass gaw:Class2 ;
-	gaw:gender gaw:Fem ;
-	.
-aama:ID7fa1c752-7e74-4a33-b114-be4eb92c5807 a aamas:Muterm ;
-	aamas:lang aama:Gawwada ;
-	aamas:morpheme aama:Gawwada-PERFHABTEMPLATE ;
-	gaw:pdgmType gaw:Template ;
-	gaw:pos gaw:Verb ;
-	gaw:tam gaw:Perfective ;
-	gaw:tense2 gaw:Habitual ;
-	gaw:token "Cv́C(v́C)-ay-né(eni)" ;
-	gaw:person gaw:Person1 ;
-	gaw:number gaw:Plural ;
-	gaw:inflClass gaw:Class2 ;
-	gaw:gender gaw:Common ;
-	.
-aama:IDfe8cb246-cc66-428b-bc23-5ca0dd095f45 a aamas:Muterm ;
-	aamas:lang aama:Gawwada ;
-	aamas:morpheme aama:Gawwada-PERFHABTEMPLATE ;
-	gaw:pdgmType gaw:Template ;
-	gaw:pos gaw:Verb ;
-	gaw:tam gaw:Perfective ;
-	gaw:tense2 gaw:Habitual ;
-	gaw:token "Cv́C(v́C)-ay-té(ngu)" ;
-	gaw:person gaw:Person2 ;
-	gaw:number gaw:Plural ;
-	gaw:inflClass gaw:Class2 ;
-	gaw:gender gaw:Common ;
-	.
-aama:IDe79e8e32-cc88-43b1-9cb3-d97be8320d5e a aamas:Muterm ;
-	aamas:lang aama:Gawwada ;
-	aamas:morpheme aama:Gawwada-PERFHABTEMPLATE ;
-	gaw:pdgmType gaw:Template ;
-	gaw:pos gaw:Verb ;
-	gaw:tam gaw:Perfective ;
-	gaw:tense2 gaw:Habitual ;
-	gaw:token "Cv́C(v́C)-ay-né(eni)" ;
-	gaw:person gaw:Person3 ;
-	gaw:number gaw:Plural ;
-	gaw:inflClass gaw:Class2 ;
-	gaw:gender gaw:Common ;
-	.
-
-#MUTERMCLUSTER: gawwada-VNegFutureTemplate
-
-aama:ID01747571-120f-41d9-8b2a-bc44189f497c a aamas:Muterm ;
-	aamas:lang aama:Gawwada ;
-	aamas:morpheme aama:Gawwada-NEGFUTTEMPLATE ;
-	gaw:pdgmType gaw:Template ;
 	gaw:polarity gaw:Negative ;
-	gaw:pos gaw:Verb ;
-	gaw:tense2 gaw:Future ;
-	gaw:token "CvC(vC)-n-ú" ;
-	gaw:tam gaw:Past ;
-	gaw:person gaw:Person1 ;
-	gaw:number gaw:Singular ;
-	gaw:gender gaw:Common ;
-	.
-aama:ID7804d229-2f7d-4da1-9800-7accb1c85ab9 a aamas:Muterm ;
-	aamas:lang aama:Gawwada ;
-	aamas:morpheme aama:Gawwada-NEGFUTTEMPLATE ;
-	gaw:pdgmType gaw:Template ;
-	gaw:polarity gaw:Negative ;
-	gaw:pos gaw:Verb ;
-	gaw:tense2 gaw:Future ;
-	gaw:token "CvC(vC)-n-ú" ;
-	gaw:tam gaw:Past ;
+	gaw:tam gaw:Present ;
+	gaw:token "áššití" ;
 	gaw:person gaw:Person2 ;
 	gaw:number gaw:Singular ;
 	gaw:gender gaw:Common ;
 	.
-aama:ID06df8e7d-f1c4-442c-ac54-3e59a1d1d73b a aamas:Muterm ;
+
+aama:ID58271cca-f28b-46fa-b255-fa33757a57df a aamas:Term ;
 	aamas:lang aama:Gawwada ;
-	aamas:morpheme aama:Gawwada-NEGFUTTEMPLATE ;
-	gaw:pdgmType gaw:Template ;
-	gaw:polarity gaw:Negative ;
+	aamas:memberOf gaw:gawwada-VNegPresent-ass ;
+	aamas:lexeme aama:Gawwada-ass ;
 	gaw:pos gaw:Verb ;
-	gaw:tense2 gaw:Future ;
-	gaw:token "CvC(vC)-n-ú" ;
-	gaw:tam gaw:Past ;
+	gaw:polarity gaw:Negative ;
+	gaw:tam gaw:Present ;
+	gaw:token "⊤" ;
 	gaw:person gaw:Person3 ;
 	gaw:number gaw:Singular ;
 	gaw:gender gaw:Masc ;
 	.
-aama:ID1eeeb518-ccd2-4cfc-aeb8-94a128cd3759 a aamas:Muterm ;
+
+aama:IDe3155ea6-f18b-4edf-acdc-ad0174e86ac5 a aamas:Term ;
 	aamas:lang aama:Gawwada ;
-	aamas:morpheme aama:Gawwada-NEGFUTTEMPLATE ;
-	gaw:pdgmType gaw:Template ;
-	gaw:polarity gaw:Negative ;
+	aamas:memberOf gaw:gawwada-VNegPresent-ass ;
+	aamas:lexeme aama:Gawwada-ass ;
 	gaw:pos gaw:Verb ;
-	gaw:tense2 gaw:Future ;
-	gaw:token "CvC(vC)-n-ú" ;
-	gaw:tam gaw:Past ;
+	gaw:polarity gaw:Negative ;
+	gaw:tam gaw:Present ;
+	gaw:token "áššití" ;
 	gaw:person gaw:Person3 ;
 	gaw:number gaw:Singular ;
 	gaw:gender gaw:Fem ;
 	.
-aama:ID9103e893-b28a-47f5-bc7d-ed5e2da02812 a aamas:Muterm ;
+
+aama:IDcaa9bfa4-b004-48c5-bb00-0e1ee8fc8476 a aamas:Term ;
 	aamas:lang aama:Gawwada ;
-	aamas:morpheme aama:Gawwada-NEGFUTTEMPLATE ;
-	gaw:pdgmType gaw:Template ;
-	gaw:polarity gaw:Negative ;
+	aamas:memberOf gaw:gawwada-VNegPresent-ass ;
+	aamas:lexeme aama:Gawwada-ass ;
 	gaw:pos gaw:Verb ;
-	gaw:tense2 gaw:Future ;
-	gaw:token "CvC(vC)-n-óoni" ;
-	gaw:tam gaw:Past ;
+	gaw:polarity gaw:Negative ;
+	gaw:tam gaw:Present ;
+	gaw:token "áššiní" ;
 	gaw:person gaw:Person1 ;
 	gaw:number gaw:Plural ;
 	gaw:gender gaw:Common ;
 	.
-aama:ID255a8e3d-c58f-4659-9c37-6426c624f1ec a aamas:Muterm ;
+
+aama:ID8975c7ca-3152-4186-a5e0-906af0e29975 a aamas:Term ;
 	aamas:lang aama:Gawwada ;
-	aamas:morpheme aama:Gawwada-NEGFUTTEMPLATE ;
-	gaw:pdgmType gaw:Template ;
-	gaw:polarity gaw:Negative ;
+	aamas:memberOf gaw:gawwada-VNegPresent-ass ;
+	aamas:lexeme aama:Gawwada-ass ;
 	gaw:pos gaw:Verb ;
-	gaw:tense2 gaw:Future ;
-	gaw:token "CvC(vC)-n-óngu" ;
-	gaw:tam gaw:Past ;
+	gaw:polarity gaw:Negative ;
+	gaw:tam gaw:Present ;
+	gaw:token "áššité" ;
 	gaw:person gaw:Person2 ;
 	gaw:number gaw:Plural ;
 	gaw:gender gaw:Common ;
 	.
-aama:ID46f46ac8-2261-4f25-a8c6-78592abc7eef a aamas:Muterm ;
+
+aama:ID2b3e9ccf-6a8a-407e-961e-e131a98439b0 a aamas:Term ;
 	aamas:lang aama:Gawwada ;
-	aamas:morpheme aama:Gawwada-NEGFUTTEMPLATE ;
-	gaw:pdgmType gaw:Template ;
-	gaw:polarity gaw:Negative ;
+	aamas:memberOf gaw:gawwada-VNegPresent-ass ;
+	aamas:lexeme aama:Gawwada-ass ;
 	gaw:pos gaw:Verb ;
-	gaw:tense2 gaw:Future ;
-	gaw:token "CvC(vC)-n-óngi" ;
-	gaw:tam gaw:Past ;
+	gaw:polarity gaw:Negative ;
+	gaw:tam gaw:Present ;
+	gaw:token "⊤" ;
 	gaw:person gaw:Person3 ;
 	gaw:number gaw:Plural ;
 	gaw:gender gaw:Common ;
 	.
-aama:IDf9e330cf-b828-4684-b2a8-dd170ac306ce a aamas:Muterm ;
+
+#TERMCLUSTER:  gawwada-VNegPast-ass
+
+gaw:gawwada-VNegPast-ass a aamas:Termcluster ;
+	rdfs:label "gawwada-VNegPast-ass" ;
+	rdfs:comment "Tosco2007b Table 5 (p. 515). There are two tonally distinct inflectional classes of verb in the perfective,imperative,and consecutive positive tenses." 
+	.
+
+aama:IDd6df8226-4a3b-497d-8101-109868896737 a aamas:Term ;
 	aamas:lang aama:Gawwada ;
-	aamas:morpheme aama:Gawwada-NEGFUTTEMPLATE ;
-	gaw:pdgmType gaw:Template ;
-	gaw:polarity gaw:Negative ;
+	aamas:memberOf gaw:gawwada-VNegPast-ass ;
+	aamas:lexeme aama:Gawwada-ass ;
 	gaw:pos gaw:Verb ;
-	gaw:tense2 gaw:Future ;
-	gaw:token "CvC(vC)-n-í" ;
-	gaw:tam gaw:Present ;
+	gaw:polarity gaw:Negative ;
+	gaw:tam gaw:Past ;
+	gaw:token "⊤" ;
 	gaw:person gaw:Person1 ;
 	gaw:number gaw:Singular ;
 	gaw:gender gaw:Common ;
 	.
-aama:ID171d6148-dcd9-4723-b82c-b93981ad8c01 a aamas:Muterm ;
+
+aama:ID9a625f5c-a0d6-4984-96d7-9372ba6bcfd8 a aamas:Term ;
 	aamas:lang aama:Gawwada ;
-	aamas:morpheme aama:Gawwada-NEGFUTTEMPLATE ;
-	gaw:pdgmType gaw:Template ;
-	gaw:polarity gaw:Negative ;
+	aamas:memberOf gaw:gawwada-VNegPast-ass ;
+	aamas:lexeme aama:Gawwada-ass ;
 	gaw:pos gaw:Verb ;
-	gaw:tense2 gaw:Future ;
-	gaw:token "CvC(vC)-n-ití" ;
-	gaw:tam gaw:Present ;
+	gaw:polarity gaw:Negative ;
+	gaw:tam gaw:Past ;
+	gaw:token "⊤" ;
 	gaw:person gaw:Person2 ;
 	gaw:number gaw:Singular ;
 	gaw:gender gaw:Common ;
 	.
-aama:ID41c422d3-d945-4da3-9aa5-66ebe9409303 a aamas:Muterm ;
+
+aama:IDe44e3ae6-4bef-4dc3-88cf-779a1be3f216 a aamas:Term ;
 	aamas:lang aama:Gawwada ;
-	aamas:morpheme aama:Gawwada-NEGFUTTEMPLATE ;
-	gaw:pdgmType gaw:Template ;
-	gaw:polarity gaw:Negative ;
+	aamas:memberOf gaw:gawwada-VNegPast-ass ;
+	aamas:lexeme aama:Gawwada-ass ;
 	gaw:pos gaw:Verb ;
-	gaw:tense2 gaw:Future ;
-	gaw:token "CvC(vC)-n-í" ;
-	gaw:tam gaw:Present ;
+	gaw:polarity gaw:Negative ;
+	gaw:tam gaw:Past ;
+	gaw:token "⊤" ;
 	gaw:person gaw:Person3 ;
 	gaw:number gaw:Singular ;
 	gaw:gender gaw:Masc ;
 	.
-aama:ID0ca04a65-1fca-4859-ae03-d0ce13aca408 a aamas:Muterm ;
+
+aama:ID7cd6089b-efcb-4203-96d9-63e75ef00aa5 a aamas:Term ;
 	aamas:lang aama:Gawwada ;
-	aamas:morpheme aama:Gawwada-NEGFUTTEMPLATE ;
-	gaw:pdgmType gaw:Template ;
-	gaw:polarity gaw:Negative ;
+	aamas:memberOf gaw:gawwada-VNegPast-ass ;
+	aamas:lexeme aama:Gawwada-ass ;
 	gaw:pos gaw:Verb ;
-	gaw:tense2 gaw:Future ;
-	gaw:token "CvC(vC)-n-ití" ;
-	gaw:tam gaw:Present ;
+	gaw:polarity gaw:Negative ;
+	gaw:tam gaw:Past ;
+	gaw:token "⊤" ;
 	gaw:person gaw:Person3 ;
 	gaw:number gaw:Singular ;
 	gaw:gender gaw:Fem ;
 	.
-aama:IDa57f061d-f1bb-45a4-9dc4-48a51f488dba a aamas:Muterm ;
+
+aama:ID756183af-66b0-45c6-a082-acad88073dc1 a aamas:Term ;
 	aamas:lang aama:Gawwada ;
-	aamas:morpheme aama:Gawwada-NEGFUTTEMPLATE ;
-	gaw:pdgmType gaw:Template ;
-	gaw:polarity gaw:Negative ;
+	aamas:memberOf gaw:gawwada-VNegPast-ass ;
+	aamas:lexeme aama:Gawwada-ass ;
 	gaw:pos gaw:Verb ;
-	gaw:tense2 gaw:Future ;
-	gaw:token "CvC(vC)-n-iní" ;
-	gaw:tam gaw:Present ;
+	gaw:polarity gaw:Negative ;
+	gaw:tam gaw:Past ;
+	gaw:token "áššóoni" ;
 	gaw:person gaw:Person1 ;
 	gaw:number gaw:Plural ;
 	gaw:gender gaw:Common ;
 	.
-aama:ID8394ebdd-991a-4564-ad79-55d212daed1a a aamas:Muterm ;
+
+aama:IDd3af4022-530a-4772-9dac-9b1b7faf2c40 a aamas:Term ;
 	aamas:lang aama:Gawwada ;
-	aamas:morpheme aama:Gawwada-NEGFUTTEMPLATE ;
-	gaw:pdgmType gaw:Template ;
-	gaw:polarity gaw:Negative ;
+	aamas:memberOf gaw:gawwada-VNegPast-ass ;
+	aamas:lexeme aama:Gawwada-ass ;
 	gaw:pos gaw:Verb ;
-	gaw:tense2 gaw:Future ;
-	gaw:token "CvC(vC)-n-ité" ;
-	gaw:tam gaw:Present ;
+	gaw:polarity gaw:Negative ;
+	gaw:tam gaw:Past ;
+	gaw:token "áššóngu" ;
 	gaw:person gaw:Person2 ;
 	gaw:number gaw:Plural ;
 	gaw:gender gaw:Common ;
 	.
-aama:IDbe5163c3-1f17-4d6b-b3a6-fd596caec625 a aamas:Muterm ;
+
+aama:IDea8782cf-ab79-4840-a6f7-0bc566c5d3dd a aamas:Term ;
 	aamas:lang aama:Gawwada ;
-	aamas:morpheme aama:Gawwada-NEGFUTTEMPLATE ;
-	gaw:pdgmType gaw:Template ;
-	gaw:polarity gaw:Negative ;
+	aamas:memberOf gaw:gawwada-VNegPast-ass ;
+	aamas:lexeme aama:Gawwada-ass ;
 	gaw:pos gaw:Verb ;
-	gaw:tense2 gaw:Future ;
-	gaw:token "CvC(vC)-n-é" ;
-	gaw:tam gaw:Present ;
+	gaw:polarity gaw:Negative ;
+	gaw:tam gaw:Past ;
+	gaw:token "áššóngi" ;
 	gaw:person gaw:Person3 ;
 	gaw:number gaw:Plural ;
 	gaw:gender gaw:Common ;
 	.
 
-#MUTERMCLUSTER: gawwada-PSubjProclitic
+#TERMCLUSTER:  gawwada-VPerfective-ug
 
-aama:IDd0adf9bc-cf33-4c3d-8a8b-4b6293c2d8c2 a aamas:Muterm ;
+gaw:gawwada-VPerfective-ug a aamas:Termcluster ;
+	rdfs:label "gawwada-VPerfective-ug" ;
+	rdfs:comment "Tosco2007b Table 3 (p. 514). There are two tonally distinct inflectional classes of verb in the perfective,imperative,and consecutive positive tenses." 
+	.
+
+aama:ID751fc4a6-ea40-4ea1-bc1b-95ebf63cf022 a aamas:Term ;
 	aamas:lang aama:Gawwada ;
-	aamas:morpheme aama:Gawwada-PROSUBJPROCLITIC ;
-	gaw:pos gaw:Pronoun ;
-	gaw:proClass gaw:SubjProclitic ;
-	gaw:token "an-" ;
-	gaw:polarity gaw:Common ;
+	aamas:memberOf gaw:gawwada-VPerfective-ug ;
+	gaw:inflClass gaw:Class1 ;
+	aamas:lexeme aama:Gawwada-ug ;
+	gaw:pos gaw:Verb ;
+	gaw:tam gaw:Perfective ;
+	gaw:token "ʕúgí" ;
 	gaw:person gaw:Person1 ;
 	gaw:number gaw:Singular ;
+	gaw:gender gaw:Common ;
 	.
-aama:ID57266e83-6c3c-4658-b047-950decf9d8e8 a aamas:Muterm ;
+
+aama:ID114a1d21-96d0-4c1a-ae29-a629aa17051c a aamas:Term ;
 	aamas:lang aama:Gawwada ;
-	aamas:morpheme aama:Gawwada-PROSUBJPROCLITIC ;
-	gaw:pos gaw:Pronoun ;
-	gaw:proClass gaw:SubjProclitic ;
-	gaw:token "aC-" ;
-	gaw:polarity gaw:Common ;
+	aamas:memberOf gaw:gawwada-VPerfective-ug ;
+	gaw:inflClass gaw:Class1 ;
+	aamas:lexeme aama:Gawwada-ug ;
+	gaw:pos gaw:Verb ;
+	gaw:tam gaw:Perfective ;
+	gaw:token "ʕúgtí" ;
 	gaw:person gaw:Person2 ;
 	gaw:number gaw:Singular ;
+	gaw:gender gaw:Common ;
 	.
-aama:ID1bb88c76-4cb4-48ac-a186-87f3411db665 a aamas:Muterm ;
+
+aama:ID01f49990-14b8-42f8-804f-cfa1f01b044d a aamas:Term ;
 	aamas:lang aama:Gawwada ;
-	aamas:morpheme aama:Gawwada-PROSUBJPROCLITIC ;
-	gaw:pos gaw:Pronoun ;
-	gaw:proClass gaw:SubjProclitic ;
-	gaw:token "i-" ;
+	aamas:memberOf gaw:gawwada-VPerfective-ug ;
+	gaw:inflClass gaw:Class1 ;
+	aamas:lexeme aama:Gawwada-ug ;
+	gaw:pos gaw:Verb ;
+	gaw:tam gaw:Perfective ;
+	gaw:token "ʕúgí" ;
+	gaw:person gaw:Person3 ;
+	gaw:number gaw:Singular ;
+	gaw:gender gaw:Masc ;
+	.
+
+aama:IDb7d9843d-65a3-46d6-af8c-f154d8726e5d a aamas:Term ;
+	aamas:lang aama:Gawwada ;
+	aamas:memberOf gaw:gawwada-VPerfective-ug ;
+	gaw:inflClass gaw:Class1 ;
+	aamas:lexeme aama:Gawwada-ug ;
+	gaw:pos gaw:Verb ;
+	gaw:tam gaw:Perfective ;
+	gaw:token "ʕúgtí" ;
+	gaw:person gaw:Person3 ;
+	gaw:number gaw:Singular ;
+	gaw:gender gaw:Fem ;
+	.
+
+aama:IDd846b8b1-1bbf-45a2-a068-fa030c9556a7 a aamas:Term ;
+	aamas:lang aama:Gawwada ;
+	aamas:memberOf gaw:gawwada-VPerfective-ug ;
+	gaw:inflClass gaw:Class1 ;
+	aamas:lexeme aama:Gawwada-ug ;
+	gaw:pos gaw:Verb ;
+	gaw:tam gaw:Perfective ;
+	gaw:token "ʕúgné(eni)" ;
+	gaw:person gaw:Person1 ;
+	gaw:number gaw:Plural ;
+	gaw:gender gaw:Common ;
+	.
+
+aama:IDa8e4da3c-539a-4edd-b470-b6643d7a50ac a aamas:Term ;
+	aamas:lang aama:Gawwada ;
+	aamas:memberOf gaw:gawwada-VPerfective-ug ;
+	gaw:inflClass gaw:Class1 ;
+	aamas:lexeme aama:Gawwada-ug ;
+	gaw:pos gaw:Verb ;
+	gaw:tam gaw:Perfective ;
+	gaw:token "ʕúgté(ngu)" ;
+	gaw:person gaw:Person2 ;
+	gaw:number gaw:Plural ;
+	gaw:gender gaw:Common ;
+	.
+
+aama:IDc4bc47d7-be54-4a44-9f09-af9e0dd454ea a aamas:Term ;
+	aamas:lang aama:Gawwada ;
+	aamas:memberOf gaw:gawwada-VPerfective-ug ;
+	gaw:inflClass gaw:Class1 ;
+	aamas:lexeme aama:Gawwada-ug ;
+	gaw:pos gaw:Verb ;
+	gaw:tam gaw:Perfective ;
+	gaw:token "ʕúgné(eni)" ;
+	gaw:person gaw:Person3 ;
+	gaw:number gaw:Plural ;
+	gaw:gender gaw:Common ;
+	.
+
+#TERMCLUSTER:  gawwada-VPerfective-oggay
+
+gaw:gawwada-VPerfective-oggay a aamas:Termcluster ;
+	rdfs:label "gawwada-VPerfective-oggay" ;
+	rdfs:comment "Tosco2007b Table 3 (p. 514). There are two tonally distinct inflectional classes of verb in the perfective,imperative,and consecutive positive tenses." 
+	.
+
+aama:IDc2aefa51-9733-4bc5-8297-5ec52285ae8f a aamas:Term ;
+	aamas:lang aama:Gawwada ;
+	aamas:memberOf gaw:gawwada-VPerfective-oggay ;
+	gaw:inflClass gaw:Class1 ;
+	aamas:lexeme aama:Gawwada-oggay ;
+	gaw:pos gaw:Verb ;
+	gaw:tam gaw:Perfective ;
+	gaw:token "ógááyí" ;
+	gaw:person gaw:Person1 ;
+	gaw:number gaw:Singular ;
+	gaw:gender gaw:Common ;
+	.
+
+aama:ID3c5f43ac-9424-41bd-82a7-8c4dc963f6d5 a aamas:Term ;
+	aamas:lang aama:Gawwada ;
+	aamas:memberOf gaw:gawwada-VPerfective-oggay ;
+	gaw:inflClass gaw:Class1 ;
+	aamas:lexeme aama:Gawwada-oggay ;
+	gaw:pos gaw:Verb ;
+	gaw:tam gaw:Perfective ;
+	gaw:token "ógááytí" ;
+	gaw:person gaw:Person2 ;
+	gaw:number gaw:Singular ;
+	gaw:gender gaw:Common ;
+	.
+
+aama:ID2bb70b58-3b6c-4f34-9875-0ff9b587e2b9 a aamas:Term ;
+	aamas:lang aama:Gawwada ;
+	aamas:memberOf gaw:gawwada-VPerfective-oggay ;
+	gaw:inflClass gaw:Class1 ;
+	aamas:lexeme aama:Gawwada-oggay ;
+	gaw:pos gaw:Verb ;
+	gaw:tam gaw:Perfective ;
+	gaw:token "ógááyí" ;
+	gaw:person gaw:Person3 ;
+	gaw:number gaw:Singular ;
+	gaw:gender gaw:Masc ;
+	.
+
+aama:IDc209b697-4f39-44af-9edf-66a4edbab710 a aamas:Term ;
+	aamas:lang aama:Gawwada ;
+	aamas:memberOf gaw:gawwada-VPerfective-oggay ;
+	gaw:inflClass gaw:Class1 ;
+	aamas:lexeme aama:Gawwada-oggay ;
+	gaw:pos gaw:Verb ;
+	gaw:tam gaw:Perfective ;
+	gaw:token "ógááytí" ;
+	gaw:person gaw:Person3 ;
+	gaw:number gaw:Singular ;
+	gaw:gender gaw:Fem ;
+	.
+
+aama:ID35ec2461-24c2-4e55-afb1-bbecd5b2e5ac a aamas:Term ;
+	aamas:lang aama:Gawwada ;
+	aamas:memberOf gaw:gawwada-VPerfective-oggay ;
+	gaw:inflClass gaw:Class1 ;
+	aamas:lexeme aama:Gawwada-oggay ;
+	gaw:pos gaw:Verb ;
+	gaw:tam gaw:Perfective ;
+	gaw:token "ógááyné(eni)" ;
+	gaw:person gaw:Person1 ;
+	gaw:number gaw:Plural ;
+	gaw:gender gaw:Common ;
+	.
+
+aama:ID3887ab0a-3e3c-4a55-89f1-12b38722ddf7 a aamas:Term ;
+	aamas:lang aama:Gawwada ;
+	aamas:memberOf gaw:gawwada-VPerfective-oggay ;
+	gaw:inflClass gaw:Class1 ;
+	aamas:lexeme aama:Gawwada-oggay ;
+	gaw:pos gaw:Verb ;
+	gaw:tam gaw:Perfective ;
+	gaw:token "ógááyté(ngu)" ;
+	gaw:person gaw:Person2 ;
+	gaw:number gaw:Plural ;
+	gaw:gender gaw:Common ;
+	.
+
+aama:ID0634076c-8f7a-40d8-aec8-23342440d4d6 a aamas:Term ;
+	aamas:lang aama:Gawwada ;
+	aamas:memberOf gaw:gawwada-VPerfective-oggay ;
+	gaw:inflClass gaw:Class1 ;
+	aamas:lexeme aama:Gawwada-oggay ;
+	gaw:pos gaw:Verb ;
+	gaw:tam gaw:Perfective ;
+	gaw:token "ógááyné(eni)" ;
+	gaw:person gaw:Person3 ;
+	gaw:number gaw:Plural ;
+	gaw:gender gaw:Common ;
+	.
+
+#TERMCLUSTER:  gawwada-VAffJussive-ass
+
+gaw:gawwada-VAffJussive-ass a aamas:Termcluster ;
+	rdfs:label "gawwada-VAffJussive-ass" ;
+	rdfs:comment "Tosco2007b Table 7 3.3.6 (p.517). The desinences are the same as the past positive with a different accentual pattern." 
+	.
+
+aama:ID7ce258b4-e58d-4f68-aafc-4e2b15085192 a aamas:Term ;
+	aamas:lang aama:Gawwada ;
+	aamas:memberOf gaw:gawwada-VAffJussive-ass ;
+	aamas:lexeme aama:Gawwada-ass ;
+	gaw:pos gaw:Verb ;
 	gaw:polarity gaw:Affirmative ;
-	gaw:person gaw:Person3 ;
-	gaw:number gaw:Singular ;
-	.
-aama:IDb9d5aeb0-f5d9-408a-8069-87fc45a022e0 a aamas:Muterm ;
-	aamas:lang aama:Gawwada ;
-	aamas:morpheme aama:Gawwada-PROSUBJPROCLITIC ;
-	gaw:pos gaw:Pronoun ;
-	gaw:proClass gaw:SubjProclitic ;
-	gaw:token "ye-" ;
-	gaw:polarity gaw:Negative ;
-	gaw:person gaw:Person3 ;
-	gaw:number gaw:Singular ;
-	.
-aama:ID2d870441-0a24-4674-bd2f-3032514c5dd5 a aamas:Muterm ;
-	aamas:lang aama:Gawwada ;
-	aamas:morpheme aama:Gawwada-PROSUBJPROCLITIC ;
-	gaw:pos gaw:Pronoun ;
-	gaw:proClass gaw:SubjProclitic ;
-	gaw:token "an-" ;
-	gaw:polarity gaw:Common ;
+	gaw:tam gaw:Jussive ;
+	gaw:token "ašší" ;
 	gaw:person gaw:Person1 ;
-	gaw:number gaw:Plural ;
+	gaw:number gaw:Singular ;
+	gaw:gender gaw:Common ;
 	.
-aama:ID9b555e81-bc13-4542-947f-8bb094dea42e a aamas:Muterm ;
+
+aama:ID1eb39eea-00c8-445f-b258-2970c7eb558b a aamas:Term ;
 	aamas:lang aama:Gawwada ;
-	aamas:morpheme aama:Gawwada-PROSUBJPROCLITIC ;
-	gaw:pos gaw:Pronoun ;
-	gaw:proClass gaw:SubjProclitic ;
-	gaw:token "aC-" ;
-	gaw:polarity gaw:Common ;
-	gaw:person gaw:Person2 ;
-	gaw:number gaw:Plural ;
-	.
-aama:ID831813c2-ad85-4a23-a414-90b5410d4aea a aamas:Muterm ;
-	aamas:lang aama:Gawwada ;
-	aamas:morpheme aama:Gawwada-PROSUBJPROCLITIC ;
-	gaw:pos gaw:Pronoun ;
-	gaw:proClass gaw:SubjProclitic ;
-	gaw:token "i-" ;
+	aamas:memberOf gaw:gawwada-VAffJussive-ass ;
+	aamas:lexeme aama:Gawwada-ass ;
+	gaw:pos gaw:Verb ;
 	gaw:polarity gaw:Affirmative ;
+	gaw:tam gaw:Jussive ;
+	gaw:token "ašší" ;
+	gaw:person gaw:Person3 ;
+	gaw:number gaw:Singular ;
+	gaw:gender gaw:Masc ;
+	.
+
+aama:IDa5ad9876-3e3b-467b-bc00-c9967db1e7da a aamas:Term ;
+	aamas:lang aama:Gawwada ;
+	aamas:memberOf gaw:gawwada-VAffJussive-ass ;
+	aamas:lexeme aama:Gawwada-ass ;
+	gaw:pos gaw:Verb ;
+	gaw:polarity gaw:Affirmative ;
+	gaw:tam gaw:Jussive ;
+	gaw:token "aššití" ;
+	gaw:person gaw:Person3 ;
+	gaw:number gaw:Singular ;
+	gaw:gender gaw:Fem ;
+	.
+
+aama:ID23812579-7974-4382-ae8f-fdcadd59c839 a aamas:Term ;
+	aamas:lang aama:Gawwada ;
+	aamas:memberOf gaw:gawwada-VAffJussive-ass ;
+	aamas:lexeme aama:Gawwada-ass ;
+	gaw:pos gaw:Verb ;
+	gaw:polarity gaw:Affirmative ;
+	gaw:tam gaw:Jussive ;
+	gaw:token "aššiní" ;
+	gaw:person gaw:Person1 ;
+	gaw:number gaw:Plural ;
+	gaw:gender gaw:Common ;
+	.
+
+aama:ID910fc12e-e6dd-4b58-a6f7-9a3d8ff71c14 a aamas:Term ;
+	aamas:lang aama:Gawwada ;
+	aamas:memberOf gaw:gawwada-VAffJussive-ass ;
+	aamas:lexeme aama:Gawwada-ass ;
+	gaw:pos gaw:Verb ;
+	gaw:polarity gaw:Affirmative ;
+	gaw:tam gaw:Jussive ;
+	gaw:token "aššé" ;
 	gaw:person gaw:Person3 ;
 	gaw:number gaw:Plural ;
+	gaw:gender gaw:Common ;
 	.
-aama:ID9b194d2e-de71-4987-a371-150509d1960f a aamas:Muterm ;
+
+#TERMCLUSTER:  gawwada-VNegImprtvExx
+
+gaw:gawwada-VNegImprtvExx a aamas:Termcluster ;
+	rdfs:label "gawwada-VNegImprtvExx" ;
+	rdfs:comment "Tosco2007b 3.3.5 (p. 517). Imperative classes do not exist in the negative imperative (note classes of lexical items in the affirmative imperative). A single verb form used in both sg and pl." 
+	.
+
+aama:ID19eb539b-7e8f-43fe-ac3a-df8601fd2766 a aamas:Term ;
 	aamas:lang aama:Gawwada ;
-	aamas:morpheme aama:Gawwada-PROSUBJPROCLITIC ;
-	gaw:pos gaw:Pronoun ;
-	gaw:proClass gaw:SubjProclitic ;
-	gaw:token "ye-" ;
+	aamas:memberOf gaw:gawwada-VNegImprtvExx ;
+	aamas:lexeme aama:Gawwada-ass ;
+	gaw:person gaw:Person2 ;
 	gaw:polarity gaw:Negative ;
-	gaw:person gaw:Person3 ;
-	gaw:number gaw:Plural ;
-	.
-aama:ID9840339f-865f-4da6-bb97-0815081db9b6 a aamas:Muterm ;
-	aamas:lang aama:Gawwada ;
-	aamas:morpheme aama:Gawwada-PROSUBJPROCLITIC ;
-	gaw:pos gaw:Pronoun ;
-	gaw:proClass gaw:SubjProclitic ;
-	gaw:token "a-" ;
-	gaw:polarity gaw:Common ;
-	gaw:person gaw:Impersonal ;
-	gaw:number gaw:Common ;
+	gaw:pos gaw:Verb ;
+	gaw:tam gaw:Imperative ;
+	gaw:morphClass gaw:NegImprtvExx ;
+	gaw:token "ólo ašší" ;
+	gaw:number gaw:Singular ;
 	.
 
-#MUTERMCLUSTER: gawwada-VPerfectiveFutureTemplate
-
-aama:IDdd792cbb-094e-451b-9e1b-85c2f8f8dea7 a aamas:Muterm ;
+aama:ID9da4493c-13c9-4024-9ef2-f1095ec1a7bc a aamas:Term ;
 	aamas:lang aama:Gawwada ;
-	aamas:morpheme aama:Gawwada-PERFFUTTEMPLATE ;
-	gaw:pdgmType gaw:Template ;
-	gaw:pos gaw:Verb ;
-	gaw:tam gaw:Perfective ;
-	gaw:tense2 gaw:Future ;
-	gaw:token "Cv́C(v́C)-n-í" ;
-	gaw:person gaw:Person1 ;
-	gaw:number gaw:Singular ;
-	gaw:inflClass gaw:Class1 ;
-	gaw:gender gaw:Common ;
-	.
-aama:ID8fb60030-ce08-4ff4-bdd9-a8c808c2b8a4 a aamas:Muterm ;
-	aamas:lang aama:Gawwada ;
-	aamas:morpheme aama:Gawwada-PERFFUTTEMPLATE ;
-	gaw:pdgmType gaw:Template ;
-	gaw:pos gaw:Verb ;
-	gaw:tam gaw:Perfective ;
-	gaw:tense2 gaw:Future ;
-	gaw:token "Cv́C(v́C)-n-tí" ;
+	aamas:memberOf gaw:gawwada-VNegImprtvExx ;
+	aamas:lexeme aama:Gawwada-ass ;
 	gaw:person gaw:Person2 ;
-	gaw:number gaw:Singular ;
-	gaw:inflClass gaw:Class1 ;
-	gaw:gender gaw:Common ;
-	.
-aama:ID4e9b019f-8294-446c-bb44-ba6382b13fde a aamas:Muterm ;
-	aamas:lang aama:Gawwada ;
-	aamas:morpheme aama:Gawwada-PERFFUTTEMPLATE ;
-	gaw:pdgmType gaw:Template ;
+	gaw:polarity gaw:Negative ;
 	gaw:pos gaw:Verb ;
-	gaw:tam gaw:Perfective ;
-	gaw:tense2 gaw:Future ;
-	gaw:token "Cv́C(v́C)-n-í" ;
-	gaw:person gaw:Person3 ;
-	gaw:number gaw:Singular ;
-	gaw:inflClass gaw:Class1 ;
-	gaw:gender gaw:Masc ;
-	.
-aama:ID4354f80c-cdda-4dd8-9967-4dea8b6d85ac a aamas:Muterm ;
-	aamas:lang aama:Gawwada ;
-	aamas:morpheme aama:Gawwada-PERFFUTTEMPLATE ;
-	gaw:pdgmType gaw:Template ;
-	gaw:pos gaw:Verb ;
-	gaw:tam gaw:Perfective ;
-	gaw:tense2 gaw:Future ;
-	gaw:token "Cv́C(v́C)-n-tí" ;
-	gaw:person gaw:Person3 ;
-	gaw:number gaw:Singular ;
-	gaw:inflClass gaw:Class1 ;
-	gaw:gender gaw:Fem ;
-	.
-aama:IDbf0b54b5-2ae9-4dbf-be1e-511ea44ba116 a aamas:Muterm ;
-	aamas:lang aama:Gawwada ;
-	aamas:morpheme aama:Gawwada-PERFFUTTEMPLATE ;
-	gaw:pdgmType gaw:Template ;
-	gaw:pos gaw:Verb ;
-	gaw:tam gaw:Perfective ;
-	gaw:tense2 gaw:Future ;
-	gaw:token "Cv́C(v́C)-n-né(eni)" ;
-	gaw:person gaw:Person1 ;
+	gaw:tam gaw:Imperative ;
+	gaw:morphClass gaw:NegImprtvExx ;
+	gaw:token "ólo ašší" ;
 	gaw:number gaw:Plural ;
-	gaw:inflClass gaw:Class1 ;
-	gaw:gender gaw:Common ;
-	.
-aama:ID86f719cc-7893-43b7-8cc1-bfd3d68ac530 a aamas:Muterm ;
-	aamas:lang aama:Gawwada ;
-	aamas:morpheme aama:Gawwada-PERFFUTTEMPLATE ;
-	gaw:pdgmType gaw:Template ;
-	gaw:pos gaw:Verb ;
-	gaw:tam gaw:Perfective ;
-	gaw:tense2 gaw:Future ;
-	gaw:token "Cv́C(v́C)-n-té(ngu)" ;
-	gaw:person gaw:Person2 ;
-	gaw:number gaw:Plural ;
-	gaw:inflClass gaw:Class1 ;
-	gaw:gender gaw:Common ;
-	.
-aama:IDab968cb3-7532-4e99-86a9-0b6a9c4e8575 a aamas:Muterm ;
-	aamas:lang aama:Gawwada ;
-	aamas:morpheme aama:Gawwada-PERFFUTTEMPLATE ;
-	gaw:pdgmType gaw:Template ;
-	gaw:pos gaw:Verb ;
-	gaw:tam gaw:Perfective ;
-	gaw:tense2 gaw:Future ;
-	gaw:token "Cv́C(v́C)-n-né(eni)" ;
-	gaw:person gaw:Person3 ;
-	gaw:number gaw:Plural ;
-	gaw:inflClass gaw:Class1 ;
-	gaw:gender gaw:Common ;
-	.
-aama:ID8d2bbbd8-2bf8-441d-87e4-ad29cef22c49 a aamas:Muterm ;
-	aamas:lang aama:Gawwada ;
-	aamas:morpheme aama:Gawwada-PERFFUTTEMPLATE ;
-	gaw:pdgmType gaw:Template ;
-	gaw:pos gaw:Verb ;
-	gaw:tam gaw:Perfective ;
-	gaw:tense2 gaw:Future ;
-	gaw:token "Cv́C(v́C)-n-i" ;
-	gaw:person gaw:Person1 ;
-	gaw:number gaw:Singular ;
-	gaw:inflClass gaw:Class2 ;
-	gaw:gender gaw:Common ;
-	.
-aama:ID00a3d598-7061-4b3d-8025-e89a599e6811 a aamas:Muterm ;
-	aamas:lang aama:Gawwada ;
-	aamas:morpheme aama:Gawwada-PERFFUTTEMPLATE ;
-	gaw:pdgmType gaw:Template ;
-	gaw:pos gaw:Verb ;
-	gaw:tam gaw:Perfective ;
-	gaw:tense2 gaw:Future ;
-	gaw:token "Cv́C(v́C)-n-ti" ;
-	gaw:person gaw:Person2 ;
-	gaw:number gaw:Singular ;
-	gaw:inflClass gaw:Class2 ;
-	gaw:gender gaw:Common ;
-	.
-aama:IDb408f0ec-2066-4448-98b3-df8cdfca22ff a aamas:Muterm ;
-	aamas:lang aama:Gawwada ;
-	aamas:morpheme aama:Gawwada-PERFFUTTEMPLATE ;
-	gaw:pdgmType gaw:Template ;
-	gaw:pos gaw:Verb ;
-	gaw:tam gaw:Perfective ;
-	gaw:tense2 gaw:Future ;
-	gaw:token "Cv́C(v́C)-n-i" ;
-	gaw:person gaw:Person3 ;
-	gaw:number gaw:Singular ;
-	gaw:inflClass gaw:Class2 ;
-	gaw:gender gaw:Masc ;
-	.
-aama:IDd48ab810-a211-4f29-b9e1-bd25b50c89ec a aamas:Muterm ;
-	aamas:lang aama:Gawwada ;
-	aamas:morpheme aama:Gawwada-PERFFUTTEMPLATE ;
-	gaw:pdgmType gaw:Template ;
-	gaw:pos gaw:Verb ;
-	gaw:tam gaw:Perfective ;
-	gaw:tense2 gaw:Future ;
-	gaw:token "Cv́C(v́C)-n-ti" ;
-	gaw:person gaw:Person3 ;
-	gaw:number gaw:Singular ;
-	gaw:inflClass gaw:Class2 ;
-	gaw:gender gaw:Fem ;
-	.
-aama:IDd6e1ae71-7607-4581-8057-92d38f119876 a aamas:Muterm ;
-	aamas:lang aama:Gawwada ;
-	aamas:morpheme aama:Gawwada-PERFFUTTEMPLATE ;
-	gaw:pdgmType gaw:Template ;
-	gaw:pos gaw:Verb ;
-	gaw:tam gaw:Perfective ;
-	gaw:tense2 gaw:Future ;
-	gaw:token "Cv́C(v́C)-n-né(eni)" ;
-	gaw:person gaw:Person1 ;
-	gaw:number gaw:Plural ;
-	gaw:inflClass gaw:Class2 ;
-	gaw:gender gaw:Common ;
-	.
-aama:ID57760fbe-b023-494f-879a-dfebcd99b45c a aamas:Muterm ;
-	aamas:lang aama:Gawwada ;
-	aamas:morpheme aama:Gawwada-PERFFUTTEMPLATE ;
-	gaw:pdgmType gaw:Template ;
-	gaw:pos gaw:Verb ;
-	gaw:tam gaw:Perfective ;
-	gaw:tense2 gaw:Future ;
-	gaw:token "Cv́C(v́C)-n-té(ngu)" ;
-	gaw:person gaw:Person2 ;
-	gaw:number gaw:Plural ;
-	gaw:inflClass gaw:Class2 ;
-	gaw:gender gaw:Common ;
-	.
-aama:ID48ae72fe-6956-46f9-a8ac-473db707301e a aamas:Muterm ;
-	aamas:lang aama:Gawwada ;
-	aamas:morpheme aama:Gawwada-PERFFUTTEMPLATE ;
-	gaw:pdgmType gaw:Template ;
-	gaw:pos gaw:Verb ;
-	gaw:tam gaw:Perfective ;
-	gaw:tense2 gaw:Future ;
-	gaw:token "Cv́C(v́C)-n-né(eni)" ;
-	gaw:person gaw:Person3 ;
-	gaw:number gaw:Plural ;
-	gaw:inflClass gaw:Class2 ;
-	gaw:gender gaw:Common ;
 	.
 
-#MUTERMCLUSTER: gawwada-VImperfectiveTemplate
+#MUTERMCLUSTER:  gawwada-VNegTemplate
 
-aama:IDa8167dd5-3f96-46f1-b6d5-cfd42c44e039 a aamas:Muterm ;
-	aamas:lang aama:Gawwada ;
-	aamas:morpheme aama:Gawwada-IMPERFTEMPLATE ;
-	gaw:pdgmType gaw:Template ;
-	gaw:pos gaw:Verb ;
-	gaw:tam gaw:Imperfective ;
-	gaw:token "Cv́C(vC)a" ;
-	gaw:person gaw:Person1 ;
-	gaw:number gaw:Singular ;
-	gaw:gender gaw:Common ;
-	.
-aama:ID31114441-829d-498b-99c0-e1e19b1e839b a aamas:Muterm ;
-	aamas:lang aama:Gawwada ;
-	aamas:morpheme aama:Gawwada-IMPERFTEMPLATE ;
-	gaw:pdgmType gaw:Template ;
-	gaw:pos gaw:Verb ;
-	gaw:tam gaw:Imperfective ;
-	gaw:token "Cv́C(vC)ay" ;
-	gaw:person gaw:Person2 ;
-	gaw:number gaw:Singular ;
-	gaw:gender gaw:Common ;
-	.
-aama:IDd966da7c-a581-4164-b96f-3f81f227492c a aamas:Muterm ;
-	aamas:lang aama:Gawwada ;
-	aamas:morpheme aama:Gawwada-IMPERFTEMPLATE ;
-	gaw:pdgmType gaw:Template ;
-	gaw:pos gaw:Verb ;
-	gaw:tam gaw:Imperfective ;
-	gaw:token "Cv́C(vC)a" ;
-	gaw:person gaw:Person3 ;
-	gaw:number gaw:Singular ;
-	gaw:gender gaw:Masc ;
-	.
-aama:ID2721b3f6-4cfe-451c-9db5-36dabc1e324c a aamas:Muterm ;
-	aamas:lang aama:Gawwada ;
-	aamas:morpheme aama:Gawwada-IMPERFTEMPLATE ;
-	gaw:pdgmType gaw:Template ;
-	gaw:pos gaw:Verb ;
-	gaw:tam gaw:Imperfective ;
-	gaw:token "Cv́C(vC)ay" ;
-	gaw:person gaw:Person3 ;
-	gaw:number gaw:Singular ;
-	gaw:gender gaw:Fem ;
-	.
-aama:IDeddfb020-df07-4a81-9a45-236a400d9482 a aamas:Muterm ;
-	aamas:lang aama:Gawwada ;
-	aamas:morpheme aama:Gawwada-IMPERFTEMPLATE ;
-	gaw:pdgmType gaw:Template ;
-	gaw:pos gaw:Verb ;
-	gaw:tam gaw:Imperfective ;
-	gaw:token "Cv́C(vC)ani" ;
-	gaw:person gaw:Person1 ;
-	gaw:number gaw:Plural ;
-	gaw:gender gaw:Common ;
-	.
-aama:ID43bf98ad-916d-43f5-b355-130c7eba7a0b a aamas:Muterm ;
-	aamas:lang aama:Gawwada ;
-	aamas:morpheme aama:Gawwada-IMPERFTEMPLATE ;
-	gaw:pdgmType gaw:Template ;
-	gaw:pos gaw:Verb ;
-	gaw:tam gaw:Imperfective ;
-	gaw:token "Cv́C(vC)angu" ;
-	gaw:person gaw:Person2 ;
-	gaw:number gaw:Plural ;
-	gaw:gender gaw:Common ;
-	.
-aama:IDd15caf78-cf2f-484f-a828-f350b85e3fb5 a aamas:Muterm ;
-	aamas:lang aama:Gawwada ;
-	aamas:morpheme aama:Gawwada-IMPERFTEMPLATE ;
-	gaw:pdgmType gaw:Template ;
-	gaw:pos gaw:Verb ;
-	gaw:tam gaw:Imperfective ;
-	gaw:token "Cv́C(vC)angi" ;
-	gaw:person gaw:Person3 ;
-	gaw:number gaw:Plural ;
-	gaw:gender gaw:Common ;
-	.
-
-#MUTERMCLUSTER: gawwada-VNegTemplate
-
-aama:IDdc7d243b-24fa-4639-a531-90cbd8d53486 a aamas:Muterm ;
+aama:ID1e3a53ab-99fe-4f8d-a899-097cf6f37b6d a aamas:Muterm ;
 	aamas:lang aama:Gawwada ;
 	aamas:morpheme aama:Gawwada-NEGTEMPLATE ;
 	gaw:pdgmType gaw:Template ;
@@ -2485,7 +1469,8 @@ aama:IDdc7d243b-24fa-4639-a531-90cbd8d53486 a aamas:Muterm ;
 	gaw:number gaw:Singular ;
 	gaw:gender gaw:Common ;
 	.
-aama:ID1b57c2a4-8000-4af6-97e5-4f279c3a9291 a aamas:Muterm ;
+
+aama:IDfc6b468a-a3e9-47ff-9dc0-a75424825825 a aamas:Muterm ;
 	aamas:lang aama:Gawwada ;
 	aamas:morpheme aama:Gawwada-NEGTEMPLATE ;
 	gaw:pdgmType gaw:Template ;
@@ -2497,7 +1482,8 @@ aama:ID1b57c2a4-8000-4af6-97e5-4f279c3a9291 a aamas:Muterm ;
 	gaw:number gaw:Singular ;
 	gaw:gender gaw:Common ;
 	.
-aama:IDa85a33c3-1175-4139-835c-3ca3c217f5b4 a aamas:Muterm ;
+
+aama:IDb48af1ba-2f42-47a4-a9f5-49aa6450ecfc a aamas:Muterm ;
 	aamas:lang aama:Gawwada ;
 	aamas:morpheme aama:Gawwada-NEGTEMPLATE ;
 	gaw:pdgmType gaw:Template ;
@@ -2509,7 +1495,8 @@ aama:IDa85a33c3-1175-4139-835c-3ca3c217f5b4 a aamas:Muterm ;
 	gaw:number gaw:Singular ;
 	gaw:gender gaw:Masc ;
 	.
-aama:IDfa764afe-2c29-4181-a303-47cc4eff56d1 a aamas:Muterm ;
+
+aama:IDba9f05ba-c5b3-4da4-965c-dc596524950f a aamas:Muterm ;
 	aamas:lang aama:Gawwada ;
 	aamas:morpheme aama:Gawwada-NEGTEMPLATE ;
 	gaw:pdgmType gaw:Template ;
@@ -2521,7 +1508,8 @@ aama:IDfa764afe-2c29-4181-a303-47cc4eff56d1 a aamas:Muterm ;
 	gaw:number gaw:Singular ;
 	gaw:gender gaw:Fem ;
 	.
-aama:ID23233f65-d6b7-47bb-b768-0f778ba73b24 a aamas:Muterm ;
+
+aama:ID282364df-faab-4837-a701-75b32ece666a a aamas:Muterm ;
 	aamas:lang aama:Gawwada ;
 	aamas:morpheme aama:Gawwada-NEGTEMPLATE ;
 	gaw:pdgmType gaw:Template ;
@@ -2533,7 +1521,8 @@ aama:ID23233f65-d6b7-47bb-b768-0f778ba73b24 a aamas:Muterm ;
 	gaw:number gaw:Plural ;
 	gaw:gender gaw:Common ;
 	.
-aama:ID5e478cbd-6e59-4e13-9ff8-b77ebae95b28 a aamas:Muterm ;
+
+aama:IDb2812df8-d0d9-4ec6-a35a-3c4f156cf114 a aamas:Muterm ;
 	aamas:lang aama:Gawwada ;
 	aamas:morpheme aama:Gawwada-NEGTEMPLATE ;
 	gaw:pdgmType gaw:Template ;
@@ -2545,7 +1534,8 @@ aama:ID5e478cbd-6e59-4e13-9ff8-b77ebae95b28 a aamas:Muterm ;
 	gaw:number gaw:Plural ;
 	gaw:gender gaw:Common ;
 	.
-aama:IDb469b4a7-5a29-4ff2-8b68-7b6dc3b3125d a aamas:Muterm ;
+
+aama:ID21961c2d-8467-4d2f-9a84-0e5db34eea8b a aamas:Muterm ;
 	aamas:lang aama:Gawwada ;
 	aamas:morpheme aama:Gawwada-NEGTEMPLATE ;
 	gaw:pdgmType gaw:Template ;
@@ -2557,7 +1547,8 @@ aama:IDb469b4a7-5a29-4ff2-8b68-7b6dc3b3125d a aamas:Muterm ;
 	gaw:number gaw:Plural ;
 	gaw:gender gaw:Common ;
 	.
-aama:IDeb4c8403-ad3d-4ae3-8523-e805b3de3441 a aamas:Muterm ;
+
+aama:ID43643111-5a41-42f4-a204-74eae5fd360c a aamas:Muterm ;
 	aamas:lang aama:Gawwada ;
 	aamas:morpheme aama:Gawwada-NEGTEMPLATE ;
 	gaw:pdgmType gaw:Template ;
@@ -2569,7 +1560,8 @@ aama:IDeb4c8403-ad3d-4ae3-8523-e805b3de3441 a aamas:Muterm ;
 	gaw:number gaw:Singular ;
 	gaw:gender gaw:Common ;
 	.
-aama:ID8eae7073-65fd-4bc0-83dd-6c6ca17e5175 a aamas:Muterm ;
+
+aama:ID9b940d56-eac7-422a-bbf5-5b1f58216a93 a aamas:Muterm ;
 	aamas:lang aama:Gawwada ;
 	aamas:morpheme aama:Gawwada-NEGTEMPLATE ;
 	gaw:pdgmType gaw:Template ;
@@ -2581,7 +1573,8 @@ aama:ID8eae7073-65fd-4bc0-83dd-6c6ca17e5175 a aamas:Muterm ;
 	gaw:number gaw:Singular ;
 	gaw:gender gaw:Common ;
 	.
-aama:IDf065777c-5787-48e0-829e-e3d370dd27bc a aamas:Muterm ;
+
+aama:ID533409b2-d692-481f-a4ff-ba32fb8a1e50 a aamas:Muterm ;
 	aamas:lang aama:Gawwada ;
 	aamas:morpheme aama:Gawwada-NEGTEMPLATE ;
 	gaw:pdgmType gaw:Template ;
@@ -2593,7 +1586,8 @@ aama:IDf065777c-5787-48e0-829e-e3d370dd27bc a aamas:Muterm ;
 	gaw:number gaw:Singular ;
 	gaw:gender gaw:Masc ;
 	.
-aama:ID3a07d219-1002-4451-be96-66d23d509f77 a aamas:Muterm ;
+
+aama:IDfd5fa464-20d3-45b0-a464-76fb320c8215 a aamas:Muterm ;
 	aamas:lang aama:Gawwada ;
 	aamas:morpheme aama:Gawwada-NEGTEMPLATE ;
 	gaw:pdgmType gaw:Template ;
@@ -2605,7 +1599,8 @@ aama:ID3a07d219-1002-4451-be96-66d23d509f77 a aamas:Muterm ;
 	gaw:number gaw:Singular ;
 	gaw:gender gaw:Fem ;
 	.
-aama:IDcadcc197-d180-4fdc-b397-4fa9fa42238a a aamas:Muterm ;
+
+aama:ID94bd6451-3825-4f41-a4b6-52fbbf3e5980 a aamas:Muterm ;
 	aamas:lang aama:Gawwada ;
 	aamas:morpheme aama:Gawwada-NEGTEMPLATE ;
 	gaw:pdgmType gaw:Template ;
@@ -2617,7 +1612,8 @@ aama:IDcadcc197-d180-4fdc-b397-4fa9fa42238a a aamas:Muterm ;
 	gaw:number gaw:Plural ;
 	gaw:gender gaw:Common ;
 	.
-aama:ID3c9fb3b5-4961-42fc-afcc-e684f7fc28a0 a aamas:Muterm ;
+
+aama:ID55ea7beb-cafa-4535-adc4-a9422098b923 a aamas:Muterm ;
 	aamas:lang aama:Gawwada ;
 	aamas:morpheme aama:Gawwada-NEGTEMPLATE ;
 	gaw:pdgmType gaw:Template ;
@@ -2629,7 +1625,8 @@ aama:ID3c9fb3b5-4961-42fc-afcc-e684f7fc28a0 a aamas:Muterm ;
 	gaw:number gaw:Plural ;
 	gaw:gender gaw:Common ;
 	.
-aama:ID5c667f34-716f-411b-ba83-7bfd3c13505d a aamas:Muterm ;
+
+aama:ID2cc8a4bd-3d16-4000-94ff-8ccaf6d277fe a aamas:Muterm ;
 	aamas:lang aama:Gawwada ;
 	aamas:morpheme aama:Gawwada-NEGTEMPLATE ;
 	gaw:pdgmType gaw:Template ;
@@ -2642,267 +1639,102 @@ aama:ID5c667f34-716f-411b-ba83-7bfd3c13505d a aamas:Muterm ;
 	gaw:gender gaw:Common ;
 	.
 
-#MUTERMCLUSTER: gawwada-VImperfectiveHabitualTemplate
+#MUTERMCLUSTER:  gawwada-VImperfectiveFutureTemplate
 
-aama:ID824342ec-255d-4928-8e1c-46aed2bbdf73 a aamas:Muterm ;
+aama:IDc318d56d-cd4e-4605-abc3-a18dc43587e1 a aamas:Muterm ;
 	aamas:lang aama:Gawwada ;
-	aamas:morpheme aama:Gawwada-IMPERFHABTEMPLATE ;
+	aamas:morpheme aama:Gawwada-IMPERFFUTTEMPLATE ;
 	gaw:pdgmType gaw:Template ;
 	gaw:pos gaw:Verb ;
 	gaw:tam gaw:Imperfective ;
-	gaw:tense2 gaw:Habitual ;
-	gaw:token "Cv́C(vC)-ay-a" ;
+	gaw:tense2 gaw:Future ;
+	gaw:token "Cv́C(vC)-n-a" ;
 	gaw:person gaw:Person1 ;
 	gaw:number gaw:Singular ;
 	gaw:gender gaw:Common ;
 	.
-aama:ID6ef29911-3cad-4827-8498-b97788d6d143 a aamas:Muterm ;
+
+aama:ID612c1dc7-19c3-4a79-8e73-d3cd9c02cef4 a aamas:Muterm ;
 	aamas:lang aama:Gawwada ;
-	aamas:morpheme aama:Gawwada-IMPERFHABTEMPLATE ;
+	aamas:morpheme aama:Gawwada-IMPERFFUTTEMPLATE ;
 	gaw:pdgmType gaw:Template ;
 	gaw:pos gaw:Verb ;
 	gaw:tam gaw:Imperfective ;
-	gaw:tense2 gaw:Habitual ;
-	gaw:token "Cv́C(vC)-ay-ay" ;
+	gaw:tense2 gaw:Future ;
+	gaw:token "Cv́C(vC)-n-ay" ;
 	gaw:person gaw:Person2 ;
 	gaw:number gaw:Singular ;
 	gaw:gender gaw:Common ;
 	.
-aama:ID0b2441d3-9731-4a14-b7e1-d7ea9ebb1a53 a aamas:Muterm ;
+
+aama:IDc26643ee-d6fc-4244-9994-b0580ca89472 a aamas:Muterm ;
 	aamas:lang aama:Gawwada ;
-	aamas:morpheme aama:Gawwada-IMPERFHABTEMPLATE ;
+	aamas:morpheme aama:Gawwada-IMPERFFUTTEMPLATE ;
 	gaw:pdgmType gaw:Template ;
 	gaw:pos gaw:Verb ;
 	gaw:tam gaw:Imperfective ;
-	gaw:tense2 gaw:Habitual ;
-	gaw:token "Cv́C(vC)-ay-a" ;
+	gaw:tense2 gaw:Future ;
+	gaw:token "Cv́C(vC)-n-a" ;
 	gaw:person gaw:Person3 ;
 	gaw:number gaw:Singular ;
 	gaw:gender gaw:Masc ;
 	.
-aama:IDf4d54647-ec20-4c26-9e28-f76850181a37 a aamas:Muterm ;
+
+aama:ID86798a12-7b73-4ea3-a0ad-16ffc35e5b83 a aamas:Muterm ;
 	aamas:lang aama:Gawwada ;
-	aamas:morpheme aama:Gawwada-IMPERFHABTEMPLATE ;
+	aamas:morpheme aama:Gawwada-IMPERFFUTTEMPLATE ;
 	gaw:pdgmType gaw:Template ;
 	gaw:pos gaw:Verb ;
 	gaw:tam gaw:Imperfective ;
-	gaw:tense2 gaw:Habitual ;
-	gaw:token "Cv́C(vC)-ay-ay" ;
+	gaw:tense2 gaw:Future ;
+	gaw:token "Cv́C(vC)-n-ay" ;
 	gaw:person gaw:Person3 ;
 	gaw:number gaw:Singular ;
 	gaw:gender gaw:Fem ;
 	.
-aama:ID639f045e-1243-488f-9187-bd506c1ed6a6 a aamas:Muterm ;
+
+aama:IDec1cffcc-fe65-4ea2-9de6-d6ce60620c2b a aamas:Muterm ;
 	aamas:lang aama:Gawwada ;
-	aamas:morpheme aama:Gawwada-IMPERFHABTEMPLATE ;
+	aamas:morpheme aama:Gawwada-IMPERFFUTTEMPLATE ;
 	gaw:pdgmType gaw:Template ;
 	gaw:pos gaw:Verb ;
 	gaw:tam gaw:Imperfective ;
-	gaw:tense2 gaw:Habitual ;
-	gaw:token "Cv́C(vC)-ay-ani" ;
+	gaw:tense2 gaw:Future ;
+	gaw:token "Cv́C(vC)-n-ani" ;
 	gaw:person gaw:Person1 ;
 	gaw:number gaw:Plural ;
 	gaw:gender gaw:Common ;
 	.
-aama:ID0b277cb4-0cb0-4436-8b6f-31e92805211f a aamas:Muterm ;
+
+aama:IDc9b13507-be45-42b2-82bd-034da8084c3d a aamas:Muterm ;
 	aamas:lang aama:Gawwada ;
-	aamas:morpheme aama:Gawwada-IMPERFHABTEMPLATE ;
+	aamas:morpheme aama:Gawwada-IMPERFFUTTEMPLATE ;
 	gaw:pdgmType gaw:Template ;
 	gaw:pos gaw:Verb ;
 	gaw:tam gaw:Imperfective ;
-	gaw:tense2 gaw:Habitual ;
-	gaw:token "Cv́C(vC)-ay-angu" ;
+	gaw:tense2 gaw:Future ;
+	gaw:token "Cv́C(vC)-n-angu" ;
 	gaw:person gaw:Person2 ;
 	gaw:number gaw:Plural ;
 	gaw:gender gaw:Common ;
 	.
-aama:ID6c686a68-6f4a-45ab-8c86-2fa9dd353b1b a aamas:Muterm ;
+
+aama:IDfed9592a-d6d2-40b8-a6e4-27300845ad21 a aamas:Muterm ;
 	aamas:lang aama:Gawwada ;
-	aamas:morpheme aama:Gawwada-IMPERFHABTEMPLATE ;
+	aamas:morpheme aama:Gawwada-IMPERFFUTTEMPLATE ;
 	gaw:pdgmType gaw:Template ;
 	gaw:pos gaw:Verb ;
 	gaw:tam gaw:Imperfective ;
-	gaw:tense2 gaw:Habitual ;
-	gaw:token "Cv́C(vC)-ay-angi" ;
+	gaw:tense2 gaw:Future ;
+	gaw:token "Cv́C(vC)-n-angi" ;
 	gaw:person gaw:Person3 ;
 	gaw:number gaw:Plural ;
 	gaw:gender gaw:Common ;
 	.
 
-#MUTERMCLUSTER: gawwada-VConsecutiveTemplate
+#MUTERMCLUSTER:  gawwada-VNegHabitualTemplate
 
-aama:IDa44ff814-af0a-491a-9d80-ce4d739d66c6 a aamas:Muterm ;
-	aamas:lang aama:Gawwada ;
-	gaw:morphClass gaw:CONSECTEMPLATE ;
-	gaw:pdgmType gaw:Template ;
-	gaw:pos gaw:Verb ;
-	gaw:tam gaw:Consecutive ;
-	gaw:token "Cv́C(v́C)á" ;
-	gaw:person gaw:Person1 ;
-	gaw:number gaw:Singular ;
-	gaw:inflClass gaw:Class1 ;
-	gaw:gender gaw:Common ;
-	.
-aama:IDa725e7f1-d4a2-489c-9c5a-14f1b6e32619 a aamas:Muterm ;
-	aamas:lang aama:Gawwada ;
-	gaw:morphClass gaw:CONSECTEMPLATE ;
-	gaw:pdgmType gaw:Template ;
-	gaw:pos gaw:Verb ;
-	gaw:tam gaw:Consecutive ;
-	gaw:token "Cv́C(vC)áy" ;
-	gaw:person gaw:Person2 ;
-	gaw:number gaw:Singular ;
-	gaw:inflClass gaw:Class1 ;
-	gaw:gender gaw:Common ;
-	.
-aama:IDf7e68bd3-2a60-4b82-8113-5674f5ee00d3 a aamas:Muterm ;
-	aamas:lang aama:Gawwada ;
-	gaw:morphClass gaw:CONSECTEMPLATE ;
-	gaw:pdgmType gaw:Template ;
-	gaw:pos gaw:Verb ;
-	gaw:tam gaw:Consecutive ;
-	gaw:token "Cv́C(v́C)ú" ;
-	gaw:person gaw:Person3 ;
-	gaw:number gaw:Singular ;
-	gaw:inflClass gaw:Class1 ;
-	gaw:gender gaw:Masc ;
-	.
-aama:IDa317430d-ad82-4359-acb1-a24545f0c985 a aamas:Muterm ;
-	aamas:lang aama:Gawwada ;
-	gaw:morphClass gaw:CONSECTEMPLATE ;
-	gaw:pdgmType gaw:Template ;
-	gaw:pos gaw:Verb ;
-	gaw:tam gaw:Consecutive ;
-	gaw:token "Cv́(v́)(C)í" ;
-	gaw:person gaw:Person3 ;
-	gaw:number gaw:Singular ;
-	gaw:inflClass gaw:Class1 ;
-	gaw:gender gaw:Fem ;
-	.
-aama:ID2c71b03c-1e7d-42ab-b852-00d50c2c175c a aamas:Muterm ;
-	aamas:lang aama:Gawwada ;
-	gaw:morphClass gaw:CONSECTEMPLATE ;
-	gaw:pdgmType gaw:Template ;
-	gaw:pos gaw:Verb ;
-	gaw:tam gaw:Consecutive ;
-	gaw:token "Cv́(v́)(C)ání" ;
-	gaw:person gaw:Person1 ;
-	gaw:number gaw:Plural ;
-	gaw:inflClass gaw:Class1 ;
-	gaw:gender gaw:Common ;
-	.
-aama:ID1a12f4f8-c5b7-4091-822c-251e3205c934 a aamas:Muterm ;
-	aamas:lang aama:Gawwada ;
-	gaw:morphClass gaw:CONSECTEMPLATE ;
-	gaw:pdgmType gaw:Template ;
-	gaw:pos gaw:Verb ;
-	gaw:tam gaw:Consecutive ;
-	gaw:token "Cv́(v́)(C)ángú" ;
-	gaw:person gaw:Person2 ;
-	gaw:number gaw:Plural ;
-	gaw:inflClass gaw:Class1 ;
-	gaw:gender gaw:Common ;
-	.
-aama:ID00e578a8-02d8-4fe6-a6cc-dc1998e8ba15 a aamas:Muterm ;
-	aamas:lang aama:Gawwada ;
-	gaw:morphClass gaw:CONSECTEMPLATE ;
-	gaw:pdgmType gaw:Template ;
-	gaw:pos gaw:Verb ;
-	gaw:tam gaw:Consecutive ;
-	gaw:token "Cv́(v́)(C)ángí" ;
-	gaw:person gaw:Person3 ;
-	gaw:number gaw:Plural ;
-	gaw:inflClass gaw:Class1 ;
-	gaw:gender gaw:Common ;
-	.
-aama:ID9f9e29c6-2b52-4497-b926-301e739e0fe5 a aamas:Muterm ;
-	aamas:lang aama:Gawwada ;
-	gaw:morphClass gaw:CONSECTEMPLATE ;
-	gaw:pdgmType gaw:Template ;
-	gaw:pos gaw:Verb ;
-	gaw:tam gaw:Consecutive ;
-	gaw:token "Cv́C(v́C)ó" ;
-	gaw:person gaw:Person1 ;
-	gaw:number gaw:Singular ;
-	gaw:inflClass gaw:Class2 ;
-	gaw:gender gaw:Common ;
-	.
-aama:ID8df49456-a535-4196-951e-bc9dc1ca6dde a aamas:Muterm ;
-	aamas:lang aama:Gawwada ;
-	gaw:morphClass gaw:CONSECTEMPLATE ;
-	gaw:pdgmType gaw:Template ;
-	gaw:pos gaw:Verb ;
-	gaw:tam gaw:Consecutive ;
-	gaw:token "Cv́C(v́C)óy" ;
-	gaw:person gaw:Person2 ;
-	gaw:number gaw:Singular ;
-	gaw:inflClass gaw:Class2 ;
-	gaw:gender gaw:Common ;
-	.
-aama:ID9a3d0a8f-88bc-48ee-bedf-3a5376f33a5e a aamas:Muterm ;
-	aamas:lang aama:Gawwada ;
-	gaw:morphClass gaw:CONSECTEMPLATE ;
-	gaw:pdgmType gaw:Template ;
-	gaw:pos gaw:Verb ;
-	gaw:tam gaw:Consecutive ;
-	gaw:token "Cv́C(v́C)ó" ;
-	gaw:person gaw:Person3 ;
-	gaw:number gaw:Singular ;
-	gaw:inflClass gaw:Class2 ;
-	gaw:gender gaw:Masc ;
-	.
-aama:ID6a78c8ee-3d1a-47fd-ac26-4387f4eb4841 a aamas:Muterm ;
-	aamas:lang aama:Gawwada ;
-	gaw:morphClass gaw:CONSECTEMPLATE ;
-	gaw:pdgmType gaw:Template ;
-	gaw:pos gaw:Verb ;
-	gaw:tam gaw:Consecutive ;
-	gaw:token "Cv́C(v́C)óy" ;
-	gaw:person gaw:Person3 ;
-	gaw:number gaw:Singular ;
-	gaw:inflClass gaw:Class2 ;
-	gaw:gender gaw:Fem ;
-	.
-aama:IDeb7a4691-26e5-4601-b129-027059260741 a aamas:Muterm ;
-	aamas:lang aama:Gawwada ;
-	gaw:morphClass gaw:CONSECTEMPLATE ;
-	gaw:pdgmType gaw:Template ;
-	gaw:pos gaw:Verb ;
-	gaw:tam gaw:Consecutive ;
-	gaw:token "Cv́C(v́C)óni" ;
-	gaw:person gaw:Person1 ;
-	gaw:number gaw:Plural ;
-	gaw:inflClass gaw:Class2 ;
-	gaw:gender gaw:Common ;
-	.
-aama:ID69175d03-856f-475c-9fca-4d33898f5781 a aamas:Muterm ;
-	aamas:lang aama:Gawwada ;
-	gaw:morphClass gaw:CONSECTEMPLATE ;
-	gaw:pdgmType gaw:Template ;
-	gaw:pos gaw:Verb ;
-	gaw:tam gaw:Consecutive ;
-	gaw:token "Cv́C(v́C)óngu" ;
-	gaw:person gaw:Person2 ;
-	gaw:number gaw:Plural ;
-	gaw:inflClass gaw:Class2 ;
-	gaw:gender gaw:Common ;
-	.
-aama:IDf72014c8-9154-4e76-8517-3cf3786a38e8 a aamas:Muterm ;
-	aamas:lang aama:Gawwada ;
-	gaw:morphClass gaw:CONSECTEMPLATE ;
-	gaw:pdgmType gaw:Template ;
-	gaw:pos gaw:Verb ;
-	gaw:tam gaw:Consecutive ;
-	gaw:token "Cv́C(v́C)óngi" ;
-	gaw:person gaw:Person3 ;
-	gaw:number gaw:Plural ;
-	gaw:inflClass gaw:Class2 ;
-	gaw:gender gaw:Common ;
-	.
-
-#MUTERMCLUSTER: gawwada-VNegHabitualTemplate
-
-aama:ID09c30d28-9ccb-4610-b4b8-65b21c80306b a aamas:Muterm ;
+aama:ID6779328d-d45a-4427-aea6-8503b7af7fe6 a aamas:Muterm ;
 	aamas:lang aama:Gawwada ;
 	aamas:morpheme aama:Gawwada-NEGHABTEMPLATE ;
 	gaw:pdgmType gaw:Template ;
@@ -2915,7 +1747,8 @@ aama:ID09c30d28-9ccb-4610-b4b8-65b21c80306b a aamas:Muterm ;
 	gaw:number gaw:Singular ;
 	gaw:gender gaw:Common ;
 	.
-aama:ID5eb5a1d9-2bec-449b-891f-cfc17f3c4d7f a aamas:Muterm ;
+
+aama:ID43652ce1-d195-4445-8059-8b46916fe87a a aamas:Muterm ;
 	aamas:lang aama:Gawwada ;
 	aamas:morpheme aama:Gawwada-NEGHABTEMPLATE ;
 	gaw:pdgmType gaw:Template ;
@@ -2928,7 +1761,8 @@ aama:ID5eb5a1d9-2bec-449b-891f-cfc17f3c4d7f a aamas:Muterm ;
 	gaw:number gaw:Singular ;
 	gaw:gender gaw:Common ;
 	.
-aama:ID7fafece2-c690-4ff5-85d7-4e3599004148 a aamas:Muterm ;
+
+aama:ID0d477df2-c1af-49da-a2b9-c02f18a78b10 a aamas:Muterm ;
 	aamas:lang aama:Gawwada ;
 	aamas:morpheme aama:Gawwada-NEGHABTEMPLATE ;
 	gaw:pdgmType gaw:Template ;
@@ -2941,7 +1775,8 @@ aama:ID7fafece2-c690-4ff5-85d7-4e3599004148 a aamas:Muterm ;
 	gaw:number gaw:Singular ;
 	gaw:gender gaw:Masc ;
 	.
-aama:IDe1a60638-ecbd-4c0c-b9bf-29f808a74472 a aamas:Muterm ;
+
+aama:ID067cb009-2868-4f85-a7f0-b632b528c379 a aamas:Muterm ;
 	aamas:lang aama:Gawwada ;
 	aamas:morpheme aama:Gawwada-NEGHABTEMPLATE ;
 	gaw:pdgmType gaw:Template ;
@@ -2954,7 +1789,8 @@ aama:IDe1a60638-ecbd-4c0c-b9bf-29f808a74472 a aamas:Muterm ;
 	gaw:number gaw:Singular ;
 	gaw:gender gaw:Fem ;
 	.
-aama:IDa1102266-e8ca-46d3-a8e5-52cc8c3b73e7 a aamas:Muterm ;
+
+aama:IDfa6c7f85-e21b-4f0d-bcf2-d42ea12d1dc6 a aamas:Muterm ;
 	aamas:lang aama:Gawwada ;
 	aamas:morpheme aama:Gawwada-NEGHABTEMPLATE ;
 	gaw:pdgmType gaw:Template ;
@@ -2967,7 +1803,8 @@ aama:IDa1102266-e8ca-46d3-a8e5-52cc8c3b73e7 a aamas:Muterm ;
 	gaw:number gaw:Plural ;
 	gaw:gender gaw:Common ;
 	.
-aama:IDbfea0635-7d52-41ce-a7bd-64969b8cc818 a aamas:Muterm ;
+
+aama:ID34945cd4-e17b-4323-b42f-5c9688be2ba2 a aamas:Muterm ;
 	aamas:lang aama:Gawwada ;
 	aamas:morpheme aama:Gawwada-NEGHABTEMPLATE ;
 	gaw:pdgmType gaw:Template ;
@@ -2980,7 +1817,8 @@ aama:IDbfea0635-7d52-41ce-a7bd-64969b8cc818 a aamas:Muterm ;
 	gaw:number gaw:Plural ;
 	gaw:gender gaw:Common ;
 	.
-aama:ID704e11a9-e667-4d9f-ac79-7b408911efef a aamas:Muterm ;
+
+aama:ID77805ae3-b946-4b12-9b58-557516e1e81a a aamas:Muterm ;
 	aamas:lang aama:Gawwada ;
 	aamas:morpheme aama:Gawwada-NEGHABTEMPLATE ;
 	gaw:pdgmType gaw:Template ;
@@ -2993,7 +1831,8 @@ aama:ID704e11a9-e667-4d9f-ac79-7b408911efef a aamas:Muterm ;
 	gaw:number gaw:Plural ;
 	gaw:gender gaw:Common ;
 	.
-aama:ID671564ef-8ac3-4006-80e3-bf30515fcfbb a aamas:Muterm ;
+
+aama:IDd8bcfd55-fa63-44ac-aa80-f8868fbb84fa a aamas:Muterm ;
 	aamas:lang aama:Gawwada ;
 	aamas:morpheme aama:Gawwada-NEGHABTEMPLATE ;
 	gaw:pdgmType gaw:Template ;
@@ -3006,7 +1845,8 @@ aama:ID671564ef-8ac3-4006-80e3-bf30515fcfbb a aamas:Muterm ;
 	gaw:number gaw:Singular ;
 	gaw:gender gaw:Common ;
 	.
-aama:IDf9648e07-2321-4f60-a504-114c5e689907 a aamas:Muterm ;
+
+aama:ID357d4138-5a20-4746-b29d-9a6d71e4cf07 a aamas:Muterm ;
 	aamas:lang aama:Gawwada ;
 	aamas:morpheme aama:Gawwada-NEGHABTEMPLATE ;
 	gaw:pdgmType gaw:Template ;
@@ -3019,7 +1859,8 @@ aama:IDf9648e07-2321-4f60-a504-114c5e689907 a aamas:Muterm ;
 	gaw:number gaw:Singular ;
 	gaw:gender gaw:Common ;
 	.
-aama:ID16158901-f959-466a-b922-a6a2fa083607 a aamas:Muterm ;
+
+aama:ID1fa45196-c3f5-4d38-af5f-7ecdb8709893 a aamas:Muterm ;
 	aamas:lang aama:Gawwada ;
 	aamas:morpheme aama:Gawwada-NEGHABTEMPLATE ;
 	gaw:pdgmType gaw:Template ;
@@ -3032,7 +1873,8 @@ aama:ID16158901-f959-466a-b922-a6a2fa083607 a aamas:Muterm ;
 	gaw:number gaw:Singular ;
 	gaw:gender gaw:Masc ;
 	.
-aama:ID0a73a75c-2807-42e0-abc5-a02ec738b485 a aamas:Muterm ;
+
+aama:ID0b75ebcd-cce5-44f6-9a6b-64d5b44bee92 a aamas:Muterm ;
 	aamas:lang aama:Gawwada ;
 	aamas:morpheme aama:Gawwada-NEGHABTEMPLATE ;
 	gaw:pdgmType gaw:Template ;
@@ -3045,7 +1887,8 @@ aama:ID0a73a75c-2807-42e0-abc5-a02ec738b485 a aamas:Muterm ;
 	gaw:number gaw:Singular ;
 	gaw:gender gaw:Fem ;
 	.
-aama:IDd4626b2c-8997-4ca7-aeb6-646f320544ef a aamas:Muterm ;
+
+aama:IDec17dc18-228c-4e66-a131-e46b119b6c36 a aamas:Muterm ;
 	aamas:lang aama:Gawwada ;
 	aamas:morpheme aama:Gawwada-NEGHABTEMPLATE ;
 	gaw:pdgmType gaw:Template ;
@@ -3058,7 +1901,8 @@ aama:IDd4626b2c-8997-4ca7-aeb6-646f320544ef a aamas:Muterm ;
 	gaw:number gaw:Plural ;
 	gaw:gender gaw:Common ;
 	.
-aama:IDe80a33ae-c0bc-48a7-be60-b3adc198209e a aamas:Muterm ;
+
+aama:IDbac941c1-5ccb-4825-bff9-435bfe11b05c a aamas:Muterm ;
 	aamas:lang aama:Gawwada ;
 	aamas:morpheme aama:Gawwada-NEGHABTEMPLATE ;
 	gaw:pdgmType gaw:Template ;
@@ -3071,7 +1915,8 @@ aama:IDe80a33ae-c0bc-48a7-be60-b3adc198209e a aamas:Muterm ;
 	gaw:number gaw:Plural ;
 	gaw:gender gaw:Common ;
 	.
-aama:ID110fa21c-a3f6-4591-9672-fd7478478b35 a aamas:Muterm ;
+
+aama:ID203ceca6-b88d-4288-b3ce-93eaae7f2c47 a aamas:Muterm ;
 	aamas:lang aama:Gawwada ;
 	aamas:morpheme aama:Gawwada-NEGHABTEMPLATE ;
 	gaw:pdgmType gaw:Template ;
@@ -3085,9 +1930,919 @@ aama:ID110fa21c-a3f6-4591-9672-fd7478478b35 a aamas:Muterm ;
 	gaw:gender gaw:Common ;
 	.
 
-#MUTERMCLUSTER: gawwada-PInd
+#MUTERMCLUSTER:  gawwada-VPerfectiveFutureTemplate
 
-aama:IDc92a3e39-f20c-4444-94aa-1090c7847c22 a aamas:Muterm ;
+aama:IDd9b46084-f84e-4339-9489-dff74f217a3e a aamas:Muterm ;
+	aamas:lang aama:Gawwada ;
+	aamas:morpheme aama:Gawwada-PERFFUTTEMPLATE ;
+	gaw:pdgmType gaw:Template ;
+	gaw:pos gaw:Verb ;
+	gaw:tam gaw:Perfective ;
+	gaw:tense2 gaw:Future ;
+	gaw:token "Cv́C(v́C)-n-í" ;
+	gaw:person gaw:Person1 ;
+	gaw:number gaw:Singular ;
+	gaw:inflClass gaw:Class1 ;
+	gaw:gender gaw:Common ;
+	.
+
+aama:ID80916dbf-5ab7-44cd-8b6f-1e7e4def2ee6 a aamas:Muterm ;
+	aamas:lang aama:Gawwada ;
+	aamas:morpheme aama:Gawwada-PERFFUTTEMPLATE ;
+	gaw:pdgmType gaw:Template ;
+	gaw:pos gaw:Verb ;
+	gaw:tam gaw:Perfective ;
+	gaw:tense2 gaw:Future ;
+	gaw:token "Cv́C(v́C)-n-tí" ;
+	gaw:person gaw:Person2 ;
+	gaw:number gaw:Singular ;
+	gaw:inflClass gaw:Class1 ;
+	gaw:gender gaw:Common ;
+	.
+
+aama:IDe5032eb0-8ec0-437a-8611-bf2129d91423 a aamas:Muterm ;
+	aamas:lang aama:Gawwada ;
+	aamas:morpheme aama:Gawwada-PERFFUTTEMPLATE ;
+	gaw:pdgmType gaw:Template ;
+	gaw:pos gaw:Verb ;
+	gaw:tam gaw:Perfective ;
+	gaw:tense2 gaw:Future ;
+	gaw:token "Cv́C(v́C)-n-í" ;
+	gaw:person gaw:Person3 ;
+	gaw:number gaw:Singular ;
+	gaw:inflClass gaw:Class1 ;
+	gaw:gender gaw:Masc ;
+	.
+
+aama:IDa7e09d09-4c20-4682-bbc4-0aafacdad97e a aamas:Muterm ;
+	aamas:lang aama:Gawwada ;
+	aamas:morpheme aama:Gawwada-PERFFUTTEMPLATE ;
+	gaw:pdgmType gaw:Template ;
+	gaw:pos gaw:Verb ;
+	gaw:tam gaw:Perfective ;
+	gaw:tense2 gaw:Future ;
+	gaw:token "Cv́C(v́C)-n-tí" ;
+	gaw:person gaw:Person3 ;
+	gaw:number gaw:Singular ;
+	gaw:inflClass gaw:Class1 ;
+	gaw:gender gaw:Fem ;
+	.
+
+aama:ID254ecc01-ef18-4cf6-96ba-d7cf933bcbaa a aamas:Muterm ;
+	aamas:lang aama:Gawwada ;
+	aamas:morpheme aama:Gawwada-PERFFUTTEMPLATE ;
+	gaw:pdgmType gaw:Template ;
+	gaw:pos gaw:Verb ;
+	gaw:tam gaw:Perfective ;
+	gaw:tense2 gaw:Future ;
+	gaw:token "Cv́C(v́C)-n-né(eni)" ;
+	gaw:person gaw:Person1 ;
+	gaw:number gaw:Plural ;
+	gaw:inflClass gaw:Class1 ;
+	gaw:gender gaw:Common ;
+	.
+
+aama:IDd5511964-8331-433b-9e70-83a0792a9dad a aamas:Muterm ;
+	aamas:lang aama:Gawwada ;
+	aamas:morpheme aama:Gawwada-PERFFUTTEMPLATE ;
+	gaw:pdgmType gaw:Template ;
+	gaw:pos gaw:Verb ;
+	gaw:tam gaw:Perfective ;
+	gaw:tense2 gaw:Future ;
+	gaw:token "Cv́C(v́C)-n-té(ngu)" ;
+	gaw:person gaw:Person2 ;
+	gaw:number gaw:Plural ;
+	gaw:inflClass gaw:Class1 ;
+	gaw:gender gaw:Common ;
+	.
+
+aama:ID88ee58d4-63dd-4c44-a734-6fcc8a77018e a aamas:Muterm ;
+	aamas:lang aama:Gawwada ;
+	aamas:morpheme aama:Gawwada-PERFFUTTEMPLATE ;
+	gaw:pdgmType gaw:Template ;
+	gaw:pos gaw:Verb ;
+	gaw:tam gaw:Perfective ;
+	gaw:tense2 gaw:Future ;
+	gaw:token "Cv́C(v́C)-n-né(eni)" ;
+	gaw:person gaw:Person3 ;
+	gaw:number gaw:Plural ;
+	gaw:inflClass gaw:Class1 ;
+	gaw:gender gaw:Common ;
+	.
+
+aama:IDe2a10e2c-7795-4d6f-b17a-8a598e750862 a aamas:Muterm ;
+	aamas:lang aama:Gawwada ;
+	aamas:morpheme aama:Gawwada-PERFFUTTEMPLATE ;
+	gaw:pdgmType gaw:Template ;
+	gaw:pos gaw:Verb ;
+	gaw:tam gaw:Perfective ;
+	gaw:tense2 gaw:Future ;
+	gaw:token "Cv́C(v́C)-n-i" ;
+	gaw:person gaw:Person1 ;
+	gaw:number gaw:Singular ;
+	gaw:inflClass gaw:Class2 ;
+	gaw:gender gaw:Common ;
+	.
+
+aama:IDd0ba88d3-2b74-4777-9ecb-c624c337024f a aamas:Muterm ;
+	aamas:lang aama:Gawwada ;
+	aamas:morpheme aama:Gawwada-PERFFUTTEMPLATE ;
+	gaw:pdgmType gaw:Template ;
+	gaw:pos gaw:Verb ;
+	gaw:tam gaw:Perfective ;
+	gaw:tense2 gaw:Future ;
+	gaw:token "Cv́C(v́C)-n-ti" ;
+	gaw:person gaw:Person2 ;
+	gaw:number gaw:Singular ;
+	gaw:inflClass gaw:Class2 ;
+	gaw:gender gaw:Common ;
+	.
+
+aama:ID030d0971-5cad-468b-aa1c-adc69b64654d a aamas:Muterm ;
+	aamas:lang aama:Gawwada ;
+	aamas:morpheme aama:Gawwada-PERFFUTTEMPLATE ;
+	gaw:pdgmType gaw:Template ;
+	gaw:pos gaw:Verb ;
+	gaw:tam gaw:Perfective ;
+	gaw:tense2 gaw:Future ;
+	gaw:token "Cv́C(v́C)-n-i" ;
+	gaw:person gaw:Person3 ;
+	gaw:number gaw:Singular ;
+	gaw:inflClass gaw:Class2 ;
+	gaw:gender gaw:Masc ;
+	.
+
+aama:IDfa0d365a-ce31-4a2e-a475-e34348c6d62f a aamas:Muterm ;
+	aamas:lang aama:Gawwada ;
+	aamas:morpheme aama:Gawwada-PERFFUTTEMPLATE ;
+	gaw:pdgmType gaw:Template ;
+	gaw:pos gaw:Verb ;
+	gaw:tam gaw:Perfective ;
+	gaw:tense2 gaw:Future ;
+	gaw:token "Cv́C(v́C)-n-ti" ;
+	gaw:person gaw:Person3 ;
+	gaw:number gaw:Singular ;
+	gaw:inflClass gaw:Class2 ;
+	gaw:gender gaw:Fem ;
+	.
+
+aama:ID51eceaec-e287-4fd6-9d62-a4c3033833f9 a aamas:Muterm ;
+	aamas:lang aama:Gawwada ;
+	aamas:morpheme aama:Gawwada-PERFFUTTEMPLATE ;
+	gaw:pdgmType gaw:Template ;
+	gaw:pos gaw:Verb ;
+	gaw:tam gaw:Perfective ;
+	gaw:tense2 gaw:Future ;
+	gaw:token "Cv́C(v́C)-n-né(eni)" ;
+	gaw:person gaw:Person1 ;
+	gaw:number gaw:Plural ;
+	gaw:inflClass gaw:Class2 ;
+	gaw:gender gaw:Common ;
+	.
+
+aama:ID1abd57cb-40d2-4728-8a77-267b8a7196bc a aamas:Muterm ;
+	aamas:lang aama:Gawwada ;
+	aamas:morpheme aama:Gawwada-PERFFUTTEMPLATE ;
+	gaw:pdgmType gaw:Template ;
+	gaw:pos gaw:Verb ;
+	gaw:tam gaw:Perfective ;
+	gaw:tense2 gaw:Future ;
+	gaw:token "Cv́C(v́C)-n-té(ngu)" ;
+	gaw:person gaw:Person2 ;
+	gaw:number gaw:Plural ;
+	gaw:inflClass gaw:Class2 ;
+	gaw:gender gaw:Common ;
+	.
+
+aama:ID9be9d50b-cc63-4563-83e8-bd22bb47ef3e a aamas:Muterm ;
+	aamas:lang aama:Gawwada ;
+	aamas:morpheme aama:Gawwada-PERFFUTTEMPLATE ;
+	gaw:pdgmType gaw:Template ;
+	gaw:pos gaw:Verb ;
+	gaw:tam gaw:Perfective ;
+	gaw:tense2 gaw:Future ;
+	gaw:token "Cv́C(v́C)-n-né(eni)" ;
+	gaw:person gaw:Person3 ;
+	gaw:number gaw:Plural ;
+	gaw:inflClass gaw:Class2 ;
+	gaw:gender gaw:Common ;
+	.
+
+#MUTERMCLUSTER:  gawwada-PObjProclitic
+
+aama:IDcdf6e61f-dad1-4485-912a-158bd3c45e3c a aamas:Muterm ;
+	aamas:lang aama:Gawwada ;
+	aamas:morpheme aama:Gawwada-PROOBJPROCLITIC ;
+	gaw:pos gaw:Pronoun ;
+	gaw:proClass gaw:ObjProclitic ;
+	gaw:token "ye-" ;
+	gaw:person gaw:Person1 ;
+	gaw:number gaw:Singular ;
+	gaw:gender gaw:Common ;
+	.
+
+aama:ID1e77779c-c1c9-4235-bc5c-efcf62b99385 a aamas:Muterm ;
+	aamas:lang aama:Gawwada ;
+	aamas:morpheme aama:Gawwada-PROOBJPROCLITIC ;
+	gaw:pos gaw:Pronoun ;
+	gaw:proClass gaw:ObjProclitic ;
+	gaw:token "ħo-" ;
+	gaw:person gaw:Person2 ;
+	gaw:number gaw:Singular ;
+	gaw:gender gaw:Masc ;
+	.
+
+aama:ID3a32631a-a3a3-488e-971d-61ce9046cf60 a aamas:Muterm ;
+	aamas:lang aama:Gawwada ;
+	aamas:morpheme aama:Gawwada-PROOBJPROCLITIC ;
+	gaw:pos gaw:Pronoun ;
+	gaw:proClass gaw:ObjProclitic ;
+	gaw:token "ħe-" ;
+	gaw:person gaw:Person2 ;
+	gaw:number gaw:Singular ;
+	gaw:gender gaw:Fem ;
+	.
+
+aama:ID357936a3-436c-48e2-b016-690ddf0e7a09 a aamas:Muterm ;
+	aamas:lang aama:Gawwada ;
+	aamas:morpheme aama:Gawwada-PROOBJPROCLITIC ;
+	gaw:pos gaw:Pronoun ;
+	gaw:proClass gaw:ObjProclitic ;
+	gaw:token "⊤" ;
+	gaw:person gaw:Person3 ;
+	gaw:number gaw:Common ;
+	gaw:gender gaw:Common ;
+	.
+
+aama:IDb9cd5f0a-324f-4251-b33b-02377aebb87a a aamas:Muterm ;
+	aamas:lang aama:Gawwada ;
+	aamas:morpheme aama:Gawwada-PROOBJPROCLITIC ;
+	gaw:pos gaw:Pronoun ;
+	gaw:proClass gaw:ObjProclitic ;
+	gaw:token "⊤" ;
+	gaw:person gaw:Common ;
+	gaw:number gaw:Plural ;
+	gaw:gender gaw:Common ;
+	.
+
+#MUTERMCLUSTER:  gawwada-VNegFutureTemplate
+
+aama:IDeec25606-1435-4b3d-aacf-7ed6b5a039da a aamas:Muterm ;
+	aamas:lang aama:Gawwada ;
+	aamas:morpheme aama:Gawwada-NEGFUTTEMPLATE ;
+	gaw:pdgmType gaw:Template ;
+	gaw:polarity gaw:Negative ;
+	gaw:pos gaw:Verb ;
+	gaw:tense2 gaw:Future ;
+	gaw:token "CvC(vC)-n-ú" ;
+	gaw:tam gaw:Past ;
+	gaw:person gaw:Person1 ;
+	gaw:number gaw:Singular ;
+	gaw:gender gaw:Common ;
+	.
+
+aama:ID669a33ec-3e38-4f6c-8928-0aa6d04a8bea a aamas:Muterm ;
+	aamas:lang aama:Gawwada ;
+	aamas:morpheme aama:Gawwada-NEGFUTTEMPLATE ;
+	gaw:pdgmType gaw:Template ;
+	gaw:polarity gaw:Negative ;
+	gaw:pos gaw:Verb ;
+	gaw:tense2 gaw:Future ;
+	gaw:token "CvC(vC)-n-ú" ;
+	gaw:tam gaw:Past ;
+	gaw:person gaw:Person2 ;
+	gaw:number gaw:Singular ;
+	gaw:gender gaw:Common ;
+	.
+
+aama:IDea1d663a-ae2c-4546-afa0-486b880fc4cd a aamas:Muterm ;
+	aamas:lang aama:Gawwada ;
+	aamas:morpheme aama:Gawwada-NEGFUTTEMPLATE ;
+	gaw:pdgmType gaw:Template ;
+	gaw:polarity gaw:Negative ;
+	gaw:pos gaw:Verb ;
+	gaw:tense2 gaw:Future ;
+	gaw:token "CvC(vC)-n-ú" ;
+	gaw:tam gaw:Past ;
+	gaw:person gaw:Person3 ;
+	gaw:number gaw:Singular ;
+	gaw:gender gaw:Masc ;
+	.
+
+aama:IDc8b7396d-7029-4b70-817b-2cfe5bb9931b a aamas:Muterm ;
+	aamas:lang aama:Gawwada ;
+	aamas:morpheme aama:Gawwada-NEGFUTTEMPLATE ;
+	gaw:pdgmType gaw:Template ;
+	gaw:polarity gaw:Negative ;
+	gaw:pos gaw:Verb ;
+	gaw:tense2 gaw:Future ;
+	gaw:token "CvC(vC)-n-ú" ;
+	gaw:tam gaw:Past ;
+	gaw:person gaw:Person3 ;
+	gaw:number gaw:Singular ;
+	gaw:gender gaw:Fem ;
+	.
+
+aama:ID8214ae22-0101-4e9b-a7df-92f638bbcfeb a aamas:Muterm ;
+	aamas:lang aama:Gawwada ;
+	aamas:morpheme aama:Gawwada-NEGFUTTEMPLATE ;
+	gaw:pdgmType gaw:Template ;
+	gaw:polarity gaw:Negative ;
+	gaw:pos gaw:Verb ;
+	gaw:tense2 gaw:Future ;
+	gaw:token "CvC(vC)-n-óoni" ;
+	gaw:tam gaw:Past ;
+	gaw:person gaw:Person1 ;
+	gaw:number gaw:Plural ;
+	gaw:gender gaw:Common ;
+	.
+
+aama:ID79c513ac-8635-441b-b1aa-d55673af6604 a aamas:Muterm ;
+	aamas:lang aama:Gawwada ;
+	aamas:morpheme aama:Gawwada-NEGFUTTEMPLATE ;
+	gaw:pdgmType gaw:Template ;
+	gaw:polarity gaw:Negative ;
+	gaw:pos gaw:Verb ;
+	gaw:tense2 gaw:Future ;
+	gaw:token "CvC(vC)-n-óngu" ;
+	gaw:tam gaw:Past ;
+	gaw:person gaw:Person2 ;
+	gaw:number gaw:Plural ;
+	gaw:gender gaw:Common ;
+	.
+
+aama:IDcd260c31-257a-4932-bb99-858395f6950d a aamas:Muterm ;
+	aamas:lang aama:Gawwada ;
+	aamas:morpheme aama:Gawwada-NEGFUTTEMPLATE ;
+	gaw:pdgmType gaw:Template ;
+	gaw:polarity gaw:Negative ;
+	gaw:pos gaw:Verb ;
+	gaw:tense2 gaw:Future ;
+	gaw:token "CvC(vC)-n-óngi" ;
+	gaw:tam gaw:Past ;
+	gaw:person gaw:Person3 ;
+	gaw:number gaw:Plural ;
+	gaw:gender gaw:Common ;
+	.
+
+aama:ID93153dd4-b307-41d4-8328-780f387f0be9 a aamas:Muterm ;
+	aamas:lang aama:Gawwada ;
+	aamas:morpheme aama:Gawwada-NEGFUTTEMPLATE ;
+	gaw:pdgmType gaw:Template ;
+	gaw:polarity gaw:Negative ;
+	gaw:pos gaw:Verb ;
+	gaw:tense2 gaw:Future ;
+	gaw:token "CvC(vC)-n-í" ;
+	gaw:tam gaw:Present ;
+	gaw:person gaw:Person1 ;
+	gaw:number gaw:Singular ;
+	gaw:gender gaw:Common ;
+	.
+
+aama:IDe8bf53b8-fb8e-4510-a10a-ee93621a6267 a aamas:Muterm ;
+	aamas:lang aama:Gawwada ;
+	aamas:morpheme aama:Gawwada-NEGFUTTEMPLATE ;
+	gaw:pdgmType gaw:Template ;
+	gaw:polarity gaw:Negative ;
+	gaw:pos gaw:Verb ;
+	gaw:tense2 gaw:Future ;
+	gaw:token "CvC(vC)-n-ití" ;
+	gaw:tam gaw:Present ;
+	gaw:person gaw:Person2 ;
+	gaw:number gaw:Singular ;
+	gaw:gender gaw:Common ;
+	.
+
+aama:IDebf7c6e5-a027-4dfe-aedd-021fb9052644 a aamas:Muterm ;
+	aamas:lang aama:Gawwada ;
+	aamas:morpheme aama:Gawwada-NEGFUTTEMPLATE ;
+	gaw:pdgmType gaw:Template ;
+	gaw:polarity gaw:Negative ;
+	gaw:pos gaw:Verb ;
+	gaw:tense2 gaw:Future ;
+	gaw:token "CvC(vC)-n-í" ;
+	gaw:tam gaw:Present ;
+	gaw:person gaw:Person3 ;
+	gaw:number gaw:Singular ;
+	gaw:gender gaw:Masc ;
+	.
+
+aama:ID08c63465-cd80-4784-875a-566b6db092f5 a aamas:Muterm ;
+	aamas:lang aama:Gawwada ;
+	aamas:morpheme aama:Gawwada-NEGFUTTEMPLATE ;
+	gaw:pdgmType gaw:Template ;
+	gaw:polarity gaw:Negative ;
+	gaw:pos gaw:Verb ;
+	gaw:tense2 gaw:Future ;
+	gaw:token "CvC(vC)-n-ití" ;
+	gaw:tam gaw:Present ;
+	gaw:person gaw:Person3 ;
+	gaw:number gaw:Singular ;
+	gaw:gender gaw:Fem ;
+	.
+
+aama:ID8e08d5ca-aef3-42a4-aaf4-7d0f111fe41a a aamas:Muterm ;
+	aamas:lang aama:Gawwada ;
+	aamas:morpheme aama:Gawwada-NEGFUTTEMPLATE ;
+	gaw:pdgmType gaw:Template ;
+	gaw:polarity gaw:Negative ;
+	gaw:pos gaw:Verb ;
+	gaw:tense2 gaw:Future ;
+	gaw:token "CvC(vC)-n-iní" ;
+	gaw:tam gaw:Present ;
+	gaw:person gaw:Person1 ;
+	gaw:number gaw:Plural ;
+	gaw:gender gaw:Common ;
+	.
+
+aama:IDed719223-0e54-4959-bcd5-653598107fd6 a aamas:Muterm ;
+	aamas:lang aama:Gawwada ;
+	aamas:morpheme aama:Gawwada-NEGFUTTEMPLATE ;
+	gaw:pdgmType gaw:Template ;
+	gaw:polarity gaw:Negative ;
+	gaw:pos gaw:Verb ;
+	gaw:tense2 gaw:Future ;
+	gaw:token "CvC(vC)-n-ité" ;
+	gaw:tam gaw:Present ;
+	gaw:person gaw:Person2 ;
+	gaw:number gaw:Plural ;
+	gaw:gender gaw:Common ;
+	.
+
+aama:ID8297b840-2b51-493e-9370-f7402b7dd58e a aamas:Muterm ;
+	aamas:lang aama:Gawwada ;
+	aamas:morpheme aama:Gawwada-NEGFUTTEMPLATE ;
+	gaw:pdgmType gaw:Template ;
+	gaw:polarity gaw:Negative ;
+	gaw:pos gaw:Verb ;
+	gaw:tense2 gaw:Future ;
+	gaw:token "CvC(vC)-n-é" ;
+	gaw:tam gaw:Present ;
+	gaw:person gaw:Person3 ;
+	gaw:number gaw:Plural ;
+	gaw:gender gaw:Common ;
+	.
+
+#MUTERMCLUSTER:  gawwada-PPossSuff
+
+aama:ID657fd3b4-dd85-4644-aa25-9579d5099fff a aamas:Muterm ;
+	aamas:lang aama:Gawwada ;
+	aamas:morpheme aama:Gawwada-PROPOSSSUFF ;
+	gaw:pos gaw:Pronoun ;
+	gaw:proClass gaw:PossSuff ;
+	gaw:token "-ħ-áyyu" ;
+	gaw:person gaw:Person1 ;
+	gaw:number gaw:Singular ;
+	gaw:gender gaw:Common ;
+	gaw:genderHead gaw:Masc ;
+	.
+
+aama:IDf1bea588-90cb-44ff-b8bb-d645c572cd5d a aamas:Muterm ;
+	aamas:lang aama:Gawwada ;
+	aamas:morpheme aama:Gawwada-PROPOSSSUFF ;
+	gaw:pos gaw:Pronoun ;
+	gaw:proClass gaw:PossSuff ;
+	gaw:token "-ħ-áaħu" ;
+	gaw:person gaw:Person2 ;
+	gaw:number gaw:Singular ;
+	gaw:gender gaw:Masc ;
+	gaw:genderHead gaw:Masc ;
+	.
+
+aama:IDd4268300-04b0-4f17-a227-5e2611149634 a aamas:Muterm ;
+	aamas:lang aama:Gawwada ;
+	aamas:morpheme aama:Gawwada-PROPOSSSUFF ;
+	gaw:pos gaw:Pronoun ;
+	gaw:proClass gaw:PossSuff ;
+	gaw:token "-ħ-áaħi" ;
+	gaw:person gaw:Person2 ;
+	gaw:number gaw:Singular ;
+	gaw:gender gaw:Fem ;
+	gaw:genderHead gaw:Masc ;
+	.
+
+aama:IDfc7fa8aa-9ee2-45b4-b75a-bdb1f6dcbf31 a aamas:Muterm ;
+	aamas:lang aama:Gawwada ;
+	aamas:morpheme aama:Gawwada-PROPOSSSUFF ;
+	gaw:pos gaw:Pronoun ;
+	gaw:proClass gaw:PossSuff ;
+	gaw:token "-ħ-úusu" ;
+	gaw:person gaw:Person3 ;
+	gaw:number gaw:Singular ;
+	gaw:gender gaw:Masc ;
+	gaw:genderHead gaw:Masc ;
+	.
+
+aama:IDc7225217-0940-4f53-9cda-2920e96c0bb9 a aamas:Muterm ;
+	aamas:lang aama:Gawwada ;
+	aamas:morpheme aama:Gawwada-PROPOSSSUFF ;
+	gaw:pos gaw:Pronoun ;
+	gaw:proClass gaw:PossSuff ;
+	gaw:token "-ħ-íisi" ;
+	gaw:person gaw:Person3 ;
+	gaw:number gaw:Singular ;
+	gaw:gender gaw:Fem ;
+	gaw:genderHead gaw:Masc ;
+	.
+
+aama:IDc13fe10b-6305-471d-ae55-1d3ccbea1e76 a aamas:Muterm ;
+	aamas:lang aama:Gawwada ;
+	aamas:morpheme aama:Gawwada-PROPOSSSUFF ;
+	gaw:pos gaw:Pronoun ;
+	gaw:proClass gaw:PossSuff ;
+	gaw:token "-ħ-áani" ;
+	gaw:person gaw:Person1 ;
+	gaw:number gaw:Plural ;
+	gaw:gender gaw:Common ;
+	gaw:genderHead gaw:Masc ;
+	.
+
+aama:IDdf422da8-33ad-4ff8-8c1b-8f3073d1e7d9 a aamas:Muterm ;
+	aamas:lang aama:Gawwada ;
+	aamas:morpheme aama:Gawwada-PROPOSSSUFF ;
+	gaw:pos gaw:Pronoun ;
+	gaw:proClass gaw:PossSuff ;
+	gaw:token "-ħ-áħunɗi" ;
+	gaw:person gaw:Person2 ;
+	gaw:number gaw:Plural ;
+	gaw:gender gaw:Common ;
+	gaw:genderHead gaw:Masc ;
+	.
+
+aama:ID47c7eec2-ebf8-4a48-a9a7-89b5b1a8eac5 a aamas:Muterm ;
+	aamas:lang aama:Gawwada ;
+	aamas:morpheme aama:Gawwada-PROPOSSSUFF ;
+	gaw:pos gaw:Pronoun ;
+	gaw:proClass gaw:PossSuff ;
+	gaw:token "-ħ-úsunɗi" ;
+	gaw:person gaw:Person3 ;
+	gaw:number gaw:Plural ;
+	gaw:gender gaw:Common ;
+	gaw:genderHead gaw:Masc ;
+	.
+
+aama:IDc8d5c030-e058-44da-bac7-c805df918f31 a aamas:Muterm ;
+	aamas:lang aama:Gawwada ;
+	aamas:morpheme aama:Gawwada-PROPOSSSUFF ;
+	gaw:pos gaw:Pronoun ;
+	gaw:proClass gaw:PossSuff ;
+	gaw:token "-t-áyyu" ;
+	gaw:person gaw:Person1 ;
+	gaw:number gaw:Singular ;
+	gaw:gender gaw:Common ;
+	gaw:genderHead gaw:Fem ;
+	.
+
+aama:IDd6eed2cd-8fc8-4756-843b-3b284680f522 a aamas:Muterm ;
+	aamas:lang aama:Gawwada ;
+	aamas:morpheme aama:Gawwada-PROPOSSSUFF ;
+	gaw:pos gaw:Pronoun ;
+	gaw:proClass gaw:PossSuff ;
+	gaw:token "-t-áaħu" ;
+	gaw:person gaw:Person2 ;
+	gaw:number gaw:Singular ;
+	gaw:gender gaw:Masc ;
+	gaw:genderHead gaw:Fem ;
+	.
+
+aama:ID498c4478-bc80-4f33-a6c5-180376695d5d a aamas:Muterm ;
+	aamas:lang aama:Gawwada ;
+	aamas:morpheme aama:Gawwada-PROPOSSSUFF ;
+	gaw:pos gaw:Pronoun ;
+	gaw:proClass gaw:PossSuff ;
+	gaw:token "-t-áaħi" ;
+	gaw:person gaw:Person2 ;
+	gaw:number gaw:Singular ;
+	gaw:gender gaw:Fem ;
+	gaw:genderHead gaw:Fem ;
+	.
+
+aama:ID55c1c202-1534-441e-8d69-63487431a81c a aamas:Muterm ;
+	aamas:lang aama:Gawwada ;
+	aamas:morpheme aama:Gawwada-PROPOSSSUFF ;
+	gaw:pos gaw:Pronoun ;
+	gaw:proClass gaw:PossSuff ;
+	gaw:token "-t-úusu" ;
+	gaw:person gaw:Person3 ;
+	gaw:number gaw:Singular ;
+	gaw:gender gaw:Masc ;
+	gaw:genderHead gaw:Fem ;
+	.
+
+aama:ID4b5d9d84-d220-4310-a115-2a2c83f21265 a aamas:Muterm ;
+	aamas:lang aama:Gawwada ;
+	aamas:morpheme aama:Gawwada-PROPOSSSUFF ;
+	gaw:pos gaw:Pronoun ;
+	gaw:proClass gaw:PossSuff ;
+	gaw:token "-t-íisi" ;
+	gaw:person gaw:Person3 ;
+	gaw:number gaw:Singular ;
+	gaw:gender gaw:Fem ;
+	gaw:genderHead gaw:Fem ;
+	.
+
+aama:ID9ba2e4f8-3b14-4f8b-9587-1fbaa78f5e7c a aamas:Muterm ;
+	aamas:lang aama:Gawwada ;
+	aamas:morpheme aama:Gawwada-PROPOSSSUFF ;
+	gaw:pos gaw:Pronoun ;
+	gaw:proClass gaw:PossSuff ;
+	gaw:token "-t-áani" ;
+	gaw:person gaw:Person1 ;
+	gaw:number gaw:Plural ;
+	gaw:gender gaw:Common ;
+	gaw:genderHead gaw:Fem ;
+	.
+
+aama:ID06873663-12cf-47fb-8ae4-d5d5c96ff03d a aamas:Muterm ;
+	aamas:lang aama:Gawwada ;
+	aamas:morpheme aama:Gawwada-PROPOSSSUFF ;
+	gaw:pos gaw:Pronoun ;
+	gaw:proClass gaw:PossSuff ;
+	gaw:token "-t-áħunɗi" ;
+	gaw:person gaw:Person2 ;
+	gaw:number gaw:Plural ;
+	gaw:gender gaw:Common ;
+	gaw:genderHead gaw:Fem ;
+	.
+
+aama:IDdb21de04-ea83-4625-952a-9ddb797455f3 a aamas:Muterm ;
+	aamas:lang aama:Gawwada ;
+	aamas:morpheme aama:Gawwada-PROPOSSSUFF ;
+	gaw:pos gaw:Pronoun ;
+	gaw:proClass gaw:PossSuff ;
+	gaw:token "-t-úsunɗi" ;
+	gaw:person gaw:Person3 ;
+	gaw:number gaw:Plural ;
+	gaw:gender gaw:Common ;
+	gaw:genderHead gaw:Fem ;
+	.
+
+#MUTERMCLUSTER:  gawwada-VDervStems
+
+aama:IDe6d9dfd9-9a37-4b4f-87b6-d7b6f1a47156 a aamas:Muterm ;
+	aamas:lang aama:Gawwada ;
+	aamas:morpheme aama:Gawwada-DERVSTEMS ;
+	gaw:pdgmType gaw:Template ;
+	gaw:tokenType "SuffixShapes" ;
+	gaw:pos gaw:Verb ;
+	gaw:morphClass gaw:DervStem ;
+	gaw:token "C1VC2C1VC2 [reduplication of first CV(V) string of first syllable" ;
+	gaw:derivedStem gaw:Intensive ;
+	.
+
+aama:ID0c432222-f93b-4635-82a8-734af1b40a3a a aamas:Muterm ;
+	aamas:lang aama:Gawwada ;
+	aamas:morpheme aama:Gawwada-DERVSTEMS ;
+	gaw:pdgmType gaw:Template ;
+	gaw:tokenType "SuffixShapes" ;
+	gaw:pos gaw:Verb ;
+	gaw:morphClass gaw:DervStem ;
+	gaw:token "CV(CCV)CC [reduplication of all stem C except the first" ;
+	gaw:derivedStem gaw:Semelfactive ;
+	.
+
+aama:IDb88aea0d-8b94-4ed1-b125-bb58eda324f5 a aamas:Muterm ;
+	aamas:lang aama:Gawwada ;
+	aamas:morpheme aama:Gawwada-DERVSTEMS ;
+	gaw:pdgmType gaw:Template ;
+	gaw:tokenType "SuffixShapes" ;
+	gaw:pos gaw:Verb ;
+	gaw:morphClass gaw:DervStem ;
+	gaw:token "-um-" ;
+	gaw:derivedStem gaw:Inceptive ;
+	.
+
+aama:IDf329f3a7-90d0-49b6-b956-44384cc93d2e a aamas:Muterm ;
+	aamas:lang aama:Gawwada ;
+	aamas:morpheme aama:Gawwada-DERVSTEMS ;
+	gaw:pdgmType gaw:Template ;
+	gaw:tokenType "SuffixShapes" ;
+	gaw:pos gaw:Verb ;
+	gaw:morphClass gaw:DervStem ;
+	gaw:token "-uy-" ;
+	gaw:derivedStem gaw:Ingressive ;
+	.
+
+aama:ID1f50b06e-f99b-4a53-bc6f-b40f21bdb51e a aamas:Muterm ;
+	aamas:lang aama:Gawwada ;
+	aamas:morpheme aama:Gawwada-DERVSTEMS ;
+	gaw:pdgmType gaw:Template ;
+	gaw:tokenType "SuffixShapes" ;
+	gaw:pos gaw:Verb ;
+	gaw:morphClass gaw:DervStem ;
+	gaw:token "-ad-" ;
+	gaw:derivedStem gaw:Middel ;
+	.
+
+aama:ID41e559f6-65d7-4ab4-8a07-ea0c8d0c701d a aamas:Muterm ;
+	aamas:lang aama:Gawwada ;
+	aamas:morpheme aama:Gawwada-DERVSTEMS ;
+	gaw:pdgmType gaw:Template ;
+	gaw:tokenType "SuffixShapes" ;
+	gaw:pos gaw:Verb ;
+	gaw:morphClass gaw:DervStem ;
+	gaw:token "-am-" ;
+	gaw:derivedStem gaw:Passive ;
+	.
+
+aama:ID8aa21302-3938-47f3-94e8-b515522c2f14 a aamas:Muterm ;
+	aamas:lang aama:Gawwada ;
+	aamas:morpheme aama:Gawwada-DERVSTEMS ;
+	gaw:pdgmType gaw:Template ;
+	gaw:tokenType "SuffixShapes" ;
+	gaw:pos gaw:Verb ;
+	gaw:morphClass gaw:DervStem ;
+	gaw:token "-Vs-" ;
+	gaw:derivedStem gaw:Causative ;
+	.
+
+#MUTERMCLUSTER:  gawwada-VPerfectiveTemplate
+
+aama:ID274a2456-e7c3-448c-abd2-493cedcdb96c a aamas:Muterm ;
+	aamas:lang aama:Gawwada ;
+	aamas:morpheme aama:Gawwada-PERFECTIVETEMPLATE ;
+	gaw:pdgmType gaw:Template ;
+	gaw:pos gaw:Verb ;
+	gaw:tam gaw:Perfective ;
+	gaw:token "Cv́C(v́C)í" ;
+	gaw:person gaw:Person1 ;
+	gaw:number gaw:Singular ;
+	gaw:inflClass gaw:Class1 ;
+	gaw:gender gaw:Common ;
+	.
+
+aama:ID16cc92ac-a7ef-4265-8401-c9730f4e3f09 a aamas:Muterm ;
+	aamas:lang aama:Gawwada ;
+	aamas:morpheme aama:Gawwada-PERFECTIVETEMPLATE ;
+	gaw:pdgmType gaw:Template ;
+	gaw:pos gaw:Verb ;
+	gaw:tam gaw:Perfective ;
+	gaw:token "Cv́C(v́C)tí" ;
+	gaw:person gaw:Person2 ;
+	gaw:number gaw:Singular ;
+	gaw:inflClass gaw:Class1 ;
+	gaw:gender gaw:Common ;
+	.
+
+aama:IDfb562a4d-f994-49cd-a99e-38571bc887f3 a aamas:Muterm ;
+	aamas:lang aama:Gawwada ;
+	aamas:morpheme aama:Gawwada-PERFECTIVETEMPLATE ;
+	gaw:pdgmType gaw:Template ;
+	gaw:pos gaw:Verb ;
+	gaw:tam gaw:Perfective ;
+	gaw:token "Cv́C(v́C)í" ;
+	gaw:person gaw:Person3 ;
+	gaw:number gaw:Singular ;
+	gaw:inflClass gaw:Class1 ;
+	gaw:gender gaw:Masc ;
+	.
+
+aama:IDc0ac8850-aefb-4565-9127-efcdc8cb556d a aamas:Muterm ;
+	aamas:lang aama:Gawwada ;
+	aamas:morpheme aama:Gawwada-PERFECTIVETEMPLATE ;
+	gaw:pdgmType gaw:Template ;
+	gaw:pos gaw:Verb ;
+	gaw:tam gaw:Perfective ;
+	gaw:token "Cv́C(v́C)tí" ;
+	gaw:person gaw:Person3 ;
+	gaw:number gaw:Singular ;
+	gaw:inflClass gaw:Class1 ;
+	gaw:gender gaw:Fem ;
+	.
+
+aama:ID804731a6-5df4-4ccc-947e-3122792ca016 a aamas:Muterm ;
+	aamas:lang aama:Gawwada ;
+	aamas:morpheme aama:Gawwada-PERFECTIVETEMPLATE ;
+	gaw:pdgmType gaw:Template ;
+	gaw:pos gaw:Verb ;
+	gaw:tam gaw:Perfective ;
+	gaw:token "Cv́C(v́C)né(eni)" ;
+	gaw:person gaw:Person1 ;
+	gaw:number gaw:Plural ;
+	gaw:inflClass gaw:Class1 ;
+	gaw:gender gaw:Common ;
+	.
+
+aama:ID9640c711-e5ac-44a6-bf88-4176a515876b a aamas:Muterm ;
+	aamas:lang aama:Gawwada ;
+	aamas:morpheme aama:Gawwada-PERFECTIVETEMPLATE ;
+	gaw:pdgmType gaw:Template ;
+	gaw:pos gaw:Verb ;
+	gaw:tam gaw:Perfective ;
+	gaw:token "Cv́C(v́C)té(ngu)" ;
+	gaw:person gaw:Person2 ;
+	gaw:number gaw:Plural ;
+	gaw:inflClass gaw:Class1 ;
+	gaw:gender gaw:Common ;
+	.
+
+aama:ID4970a21a-8eeb-44d5-b140-c3a149aa0f31 a aamas:Muterm ;
+	aamas:lang aama:Gawwada ;
+	aamas:morpheme aama:Gawwada-PERFECTIVETEMPLATE ;
+	gaw:pdgmType gaw:Template ;
+	gaw:pos gaw:Verb ;
+	gaw:tam gaw:Perfective ;
+	gaw:token "Cv́C(v́C)né(eni)" ;
+	gaw:person gaw:Person3 ;
+	gaw:number gaw:Plural ;
+	gaw:inflClass gaw:Class1 ;
+	gaw:gender gaw:Common ;
+	.
+
+aama:ID1fa4213f-6198-4292-a234-c0d11a691291 a aamas:Muterm ;
+	aamas:lang aama:Gawwada ;
+	aamas:morpheme aama:Gawwada-PERFECTIVETEMPLATE ;
+	gaw:pdgmType gaw:Template ;
+	gaw:pos gaw:Verb ;
+	gaw:tam gaw:Perfective ;
+	gaw:token "Cv́C(v́C)i" ;
+	gaw:person gaw:Person1 ;
+	gaw:number gaw:Singular ;
+	gaw:inflClass gaw:Class2 ;
+	gaw:gender gaw:Common ;
+	.
+
+aama:ID3391061e-a660-4072-bc15-32cd263bebc2 a aamas:Muterm ;
+	aamas:lang aama:Gawwada ;
+	aamas:morpheme aama:Gawwada-PERFECTIVETEMPLATE ;
+	gaw:pdgmType gaw:Template ;
+	gaw:pos gaw:Verb ;
+	gaw:tam gaw:Perfective ;
+	gaw:token "Cv́C(v́C)ti" ;
+	gaw:person gaw:Person2 ;
+	gaw:number gaw:Singular ;
+	gaw:inflClass gaw:Class2 ;
+	gaw:gender gaw:Common ;
+	.
+
+aama:ID3e20a869-4c06-4ec6-ba11-c2db0c23b529 a aamas:Muterm ;
+	aamas:lang aama:Gawwada ;
+	aamas:morpheme aama:Gawwada-PERFECTIVETEMPLATE ;
+	gaw:pdgmType gaw:Template ;
+	gaw:pos gaw:Verb ;
+	gaw:tam gaw:Perfective ;
+	gaw:token "Cv́C(v́C)i" ;
+	gaw:person gaw:Person3 ;
+	gaw:number gaw:Singular ;
+	gaw:inflClass gaw:Class2 ;
+	gaw:gender gaw:Masc ;
+	.
+
+aama:ID2e1cc122-b263-4890-9691-81ea184a4706 a aamas:Muterm ;
+	aamas:lang aama:Gawwada ;
+	aamas:morpheme aama:Gawwada-PERFECTIVETEMPLATE ;
+	gaw:pdgmType gaw:Template ;
+	gaw:pos gaw:Verb ;
+	gaw:tam gaw:Perfective ;
+	gaw:token "Cv́C(v́C)ti" ;
+	gaw:person gaw:Person3 ;
+	gaw:number gaw:Singular ;
+	gaw:inflClass gaw:Class2 ;
+	gaw:gender gaw:Fem ;
+	.
+
+aama:IDac0346be-ebc5-465e-8a47-a831ef56b8f5 a aamas:Muterm ;
+	aamas:lang aama:Gawwada ;
+	aamas:morpheme aama:Gawwada-PERFECTIVETEMPLATE ;
+	gaw:pdgmType gaw:Template ;
+	gaw:pos gaw:Verb ;
+	gaw:tam gaw:Perfective ;
+	gaw:token "Cv́C(v́C)né(eni)" ;
+	gaw:person gaw:Person1 ;
+	gaw:number gaw:Plural ;
+	gaw:inflClass gaw:Class2 ;
+	gaw:gender gaw:Common ;
+	.
+
+aama:IDfaa4d184-1079-49cf-943e-b9095921d086 a aamas:Muterm ;
+	aamas:lang aama:Gawwada ;
+	aamas:morpheme aama:Gawwada-PERFECTIVETEMPLATE ;
+	gaw:pdgmType gaw:Template ;
+	gaw:pos gaw:Verb ;
+	gaw:tam gaw:Perfective ;
+	gaw:token "Cv́C(v́C)té(ngu)" ;
+	gaw:person gaw:Person2 ;
+	gaw:number gaw:Plural ;
+	gaw:inflClass gaw:Class2 ;
+	gaw:gender gaw:Common ;
+	.
+
+aama:ID7be88626-fb2c-4f7e-a86b-513fff8c8201 a aamas:Muterm ;
+	aamas:lang aama:Gawwada ;
+	aamas:morpheme aama:Gawwada-PERFECTIVETEMPLATE ;
+	gaw:pdgmType gaw:Template ;
+	gaw:pos gaw:Verb ;
+	gaw:tam gaw:Perfective ;
+	gaw:token "Cv́C(v́C)né(eni)" ;
+	gaw:person gaw:Person3 ;
+	gaw:number gaw:Plural ;
+	gaw:inflClass gaw:Class2 ;
+	gaw:gender gaw:Common ;
+	.
+
+#MUTERMCLUSTER:  gawwada-PInd
+
+aama:ID64f8b1b1-d0b8-486f-99d8-932ba400f501 a aamas:Muterm ;
 	aamas:lang aama:Gawwada ;
 	aamas:morpheme aama:Gawwada-PROIND ;
 	gaw:pos gaw:Pronoun ;
@@ -3097,7 +2852,8 @@ aama:IDc92a3e39-f20c-4444-94aa-1090c7847c22 a aamas:Muterm ;
 	gaw:number gaw:Singular ;
 	gaw:gender gaw:Common ;
 	.
-aama:ID166ba947-08d6-49cf-acb6-52912a1a2c36 a aamas:Muterm ;
+
+aama:IDf4e40876-1496-4e77-adb1-58d5a4bd636e a aamas:Muterm ;
 	aamas:lang aama:Gawwada ;
 	aamas:morpheme aama:Gawwada-PROIND ;
 	gaw:pos gaw:Pronoun ;
@@ -3107,7 +2863,8 @@ aama:ID166ba947-08d6-49cf-acb6-52912a1a2c36 a aamas:Muterm ;
 	gaw:number gaw:Singular ;
 	gaw:gender gaw:Common ;
 	.
-aama:ID8d5549b0-7706-4d16-bfc2-d0be7a045e2e a aamas:Muterm ;
+
+aama:ID65f0a3bf-23c0-4dd0-8ec6-7092d36ee93d a aamas:Muterm ;
 	aamas:lang aama:Gawwada ;
 	aamas:morpheme aama:Gawwada-PROIND ;
 	gaw:pos gaw:Pronoun ;
@@ -3117,7 +2874,8 @@ aama:ID8d5549b0-7706-4d16-bfc2-d0be7a045e2e a aamas:Muterm ;
 	gaw:number gaw:Singular ;
 	gaw:gender gaw:Masc ;
 	.
-aama:IDee607ae4-0840-4bce-a505-333924405395 a aamas:Muterm ;
+
+aama:ID93c5781b-924c-474d-b975-7ffe0a16544c a aamas:Muterm ;
 	aamas:lang aama:Gawwada ;
 	aamas:morpheme aama:Gawwada-PROIND ;
 	gaw:pos gaw:Pronoun ;
@@ -3127,7 +2885,8 @@ aama:IDee607ae4-0840-4bce-a505-333924405395 a aamas:Muterm ;
 	gaw:number gaw:Singular ;
 	gaw:gender gaw:Fem ;
 	.
-aama:IDdb7aeb2e-c0c5-48b6-95d8-7a8057594afc a aamas:Muterm ;
+
+aama:ID14dd2e14-6cb7-4c53-b50b-0516d65b2f58 a aamas:Muterm ;
 	aamas:lang aama:Gawwada ;
 	aamas:morpheme aama:Gawwada-PROIND ;
 	gaw:pos gaw:Pronoun ;
@@ -3137,7 +2896,8 @@ aama:IDdb7aeb2e-c0c5-48b6-95d8-7a8057594afc a aamas:Muterm ;
 	gaw:number gaw:Plural ;
 	gaw:gender gaw:Common ;
 	.
-aama:IDfee4bc39-689e-4479-8736-9b73898e4636 a aamas:Muterm ;
+
+aama:ID9e2b5785-d98e-449f-8130-b7c9592ad1e9 a aamas:Muterm ;
 	aamas:lang aama:Gawwada ;
 	aamas:morpheme aama:Gawwada-PROIND ;
 	gaw:pos gaw:Pronoun ;
@@ -3147,7 +2907,8 @@ aama:IDfee4bc39-689e-4479-8736-9b73898e4636 a aamas:Muterm ;
 	gaw:number gaw:Plural ;
 	gaw:gender gaw:Common ;
 	.
-aama:IDe47e7303-dfff-4989-9b6d-286a1547944f a aamas:Muterm ;
+
+aama:ID3dda1375-f2aa-47bf-b02c-81b1dd0c411f a aamas:Muterm ;
 	aamas:lang aama:Gawwada ;
 	aamas:morpheme aama:Gawwada-PROIND ;
 	gaw:pos gaw:Pronoun ;
@@ -3158,9 +2919,9 @@ aama:IDe47e7303-dfff-4989-9b6d-286a1547944f a aamas:Muterm ;
 	gaw:gender gaw:Common ;
 	.
 
-#MUTERMCLUSTER: gawwada-VImprtvTemplate
+#MUTERMCLUSTER:  gawwada-VImprtvTemplate
 
-aama:ID95773944-4933-4397-b4b7-038dd4b82d23 a aamas:Muterm ;
+aama:ID2b5ee61b-dad5-4369-85a0-a395a533a800 a aamas:Muterm ;
 	aamas:lang aama:Gawwada ;
 	aamas:morpheme aama:Gawwada-IMPRTVTEMPLATE ;
 	gaw:pdgmType gaw:Template ;
@@ -3170,7 +2931,8 @@ aama:ID95773944-4933-4397-b4b7-038dd4b82d23 a aamas:Muterm ;
 	gaw:number gaw:Singular ;
 	gaw:inflClass gaw:Class1a ;
 	.
-aama:ID396b608f-0d79-4fd9-b5e5-567c8d3c5be5 a aamas:Muterm ;
+
+aama:ID965daf37-37d3-4347-beb9-ac9ab1e387f5 a aamas:Muterm ;
 	aamas:lang aama:Gawwada ;
 	aamas:morpheme aama:Gawwada-IMPRTVTEMPLATE ;
 	gaw:pdgmType gaw:Template ;
@@ -3180,7 +2942,8 @@ aama:ID396b608f-0d79-4fd9-b5e5-567c8d3c5be5 a aamas:Muterm ;
 	gaw:number gaw:Plural ;
 	gaw:inflClass gaw:Class1a ;
 	.
-aama:IDd5c1bd12-10e9-4493-a63c-9514609509fc a aamas:Muterm ;
+
+aama:ID0ab122c5-d169-48d5-bb76-6883e5b15e49 a aamas:Muterm ;
 	aamas:lang aama:Gawwada ;
 	aamas:morpheme aama:Gawwada-IMPRTVTEMPLATE ;
 	gaw:pdgmType gaw:Template ;
@@ -3190,7 +2953,8 @@ aama:IDd5c1bd12-10e9-4493-a63c-9514609509fc a aamas:Muterm ;
 	gaw:number gaw:Singular ;
 	gaw:inflClass gaw:Class1b ;
 	.
-aama:IDcc2d0db7-56ec-406b-99d2-d5fb9bfa8501 a aamas:Muterm ;
+
+aama:ID1088c6f3-9d53-4f00-af5a-e9f05fb5d16a a aamas:Muterm ;
 	aamas:lang aama:Gawwada ;
 	aamas:morpheme aama:Gawwada-IMPRTVTEMPLATE ;
 	gaw:pdgmType gaw:Template ;
@@ -3200,7 +2964,8 @@ aama:IDcc2d0db7-56ec-406b-99d2-d5fb9bfa8501 a aamas:Muterm ;
 	gaw:number gaw:Plural ;
 	gaw:inflClass gaw:Class1b ;
 	.
-aama:ID5db0a3fa-a340-4105-a14d-ba6817de7cea a aamas:Muterm ;
+
+aama:IDb0d602f0-d38d-4655-a562-cda735bc1d30 a aamas:Muterm ;
 	aamas:lang aama:Gawwada ;
 	aamas:morpheme aama:Gawwada-IMPRTVTEMPLATE ;
 	gaw:pdgmType gaw:Template ;
@@ -3210,7 +2975,8 @@ aama:ID5db0a3fa-a340-4105-a14d-ba6817de7cea a aamas:Muterm ;
 	gaw:number gaw:Singular ;
 	gaw:inflClass gaw:Class2 ;
 	.
-aama:IDf9a12aad-d548-4f2c-afce-fd7e9544e9f9 a aamas:Muterm ;
+
+aama:ID8e6e87e2-7cf6-4ad1-bd1b-0035c6aabccd a aamas:Muterm ;
 	aamas:lang aama:Gawwada ;
 	aamas:morpheme aama:Gawwada-IMPRTVTEMPLATE ;
 	gaw:pdgmType gaw:Template ;
@@ -3221,88 +2987,663 @@ aama:IDf9a12aad-d548-4f2c-afce-fd7e9544e9f9 a aamas:Muterm ;
 	gaw:inflClass gaw:Class2 ;
 	.
 
-#MUTERMCLUSTER: gawwada-VImperfectiveFutureTemplate
+#MUTERMCLUSTER:  gawwada-VPerfectiveHabitualTemplate
 
-aama:IDba34339f-38f0-4f7a-994b-6e231cc0d70e a aamas:Muterm ;
+aama:IDa39b2ff9-8024-40b2-bc8e-5324a11ead9d a aamas:Muterm ;
 	aamas:lang aama:Gawwada ;
-	aamas:morpheme aama:Gawwada-IMPERFFUTTEMPLATE ;
+	aamas:morpheme aama:Gawwada-PERFHABTEMPLATE ;
+	gaw:pdgmType gaw:Template ;
+	gaw:pos gaw:Verb ;
+	gaw:tam gaw:Perfective ;
+	gaw:tense2 gaw:Habitual ;
+	gaw:token "Cv́C(v́C)-ay-í" ;
+	gaw:person gaw:Person1 ;
+	gaw:number gaw:Singular ;
+	gaw:inflClass gaw:Class1 ;
+	gaw:gender gaw:Common ;
+	.
+
+aama:ID1928fca6-fce9-42d0-abf8-80138f7328ee a aamas:Muterm ;
+	aamas:lang aama:Gawwada ;
+	aamas:morpheme aama:Gawwada-PERFHABTEMPLATE ;
+	gaw:pdgmType gaw:Template ;
+	gaw:pos gaw:Verb ;
+	gaw:tam gaw:Perfective ;
+	gaw:tense2 gaw:Habitual ;
+	gaw:token "Cv́C(v́C)-ay-tí" ;
+	gaw:person gaw:Person2 ;
+	gaw:number gaw:Singular ;
+	gaw:inflClass gaw:Class1 ;
+	gaw:gender gaw:Common ;
+	.
+
+aama:IDab0a1ee7-e83d-4b10-94c9-65f4601eda66 a aamas:Muterm ;
+	aamas:lang aama:Gawwada ;
+	aamas:morpheme aama:Gawwada-PERFHABTEMPLATE ;
+	gaw:pdgmType gaw:Template ;
+	gaw:pos gaw:Verb ;
+	gaw:tam gaw:Perfective ;
+	gaw:tense2 gaw:Habitual ;
+	gaw:token "Cv́C(v́C)-ay-í" ;
+	gaw:person gaw:Person3 ;
+	gaw:number gaw:Singular ;
+	gaw:inflClass gaw:Class1 ;
+	gaw:gender gaw:Masc ;
+	.
+
+aama:ID76f67921-6d5a-499f-a9c1-39d95754c622 a aamas:Muterm ;
+	aamas:lang aama:Gawwada ;
+	aamas:morpheme aama:Gawwada-PERFHABTEMPLATE ;
+	gaw:pdgmType gaw:Template ;
+	gaw:pos gaw:Verb ;
+	gaw:tam gaw:Perfective ;
+	gaw:tense2 gaw:Habitual ;
+	gaw:token "Cv́C(v́C)-ay-tí" ;
+	gaw:person gaw:Person3 ;
+	gaw:number gaw:Singular ;
+	gaw:inflClass gaw:Class1 ;
+	gaw:gender gaw:Fem ;
+	.
+
+aama:ID46315b83-5344-4921-bdfc-65e67c05822a a aamas:Muterm ;
+	aamas:lang aama:Gawwada ;
+	aamas:morpheme aama:Gawwada-PERFHABTEMPLATE ;
+	gaw:pdgmType gaw:Template ;
+	gaw:pos gaw:Verb ;
+	gaw:tam gaw:Perfective ;
+	gaw:tense2 gaw:Habitual ;
+	gaw:token "Cv́C(v́C)-ay-né(eni)" ;
+	gaw:person gaw:Person1 ;
+	gaw:number gaw:Plural ;
+	gaw:inflClass gaw:Class1 ;
+	gaw:gender gaw:Common ;
+	.
+
+aama:ID69570cdb-90b1-4ee4-ba5c-51327285b58a a aamas:Muterm ;
+	aamas:lang aama:Gawwada ;
+	aamas:morpheme aama:Gawwada-PERFHABTEMPLATE ;
+	gaw:pdgmType gaw:Template ;
+	gaw:pos gaw:Verb ;
+	gaw:tam gaw:Perfective ;
+	gaw:tense2 gaw:Habitual ;
+	gaw:token "Cv́C(v́C)-ay-té(ngu)" ;
+	gaw:person gaw:Person2 ;
+	gaw:number gaw:Plural ;
+	gaw:inflClass gaw:Class1 ;
+	gaw:gender gaw:Common ;
+	.
+
+aama:ID6f9e64c6-8e92-49f2-adfe-dbe24db26009 a aamas:Muterm ;
+	aamas:lang aama:Gawwada ;
+	aamas:morpheme aama:Gawwada-PERFHABTEMPLATE ;
+	gaw:pdgmType gaw:Template ;
+	gaw:pos gaw:Verb ;
+	gaw:tam gaw:Perfective ;
+	gaw:tense2 gaw:Habitual ;
+	gaw:token "Cv́C(v́C)-ay-né(eni)" ;
+	gaw:person gaw:Person3 ;
+	gaw:number gaw:Plural ;
+	gaw:inflClass gaw:Class1 ;
+	gaw:gender gaw:Common ;
+	.
+
+aama:IDbe228949-47a8-4c00-a3b5-f748100bdfa3 a aamas:Muterm ;
+	aamas:lang aama:Gawwada ;
+	aamas:morpheme aama:Gawwada-PERFHABTEMPLATE ;
+	gaw:pdgmType gaw:Template ;
+	gaw:pos gaw:Verb ;
+	gaw:tam gaw:Perfective ;
+	gaw:tense2 gaw:Habitual ;
+	gaw:token "Cv́C(v́C)-ay-i" ;
+	gaw:person gaw:Person1 ;
+	gaw:number gaw:Singular ;
+	gaw:inflClass gaw:Class2 ;
+	gaw:gender gaw:Common ;
+	.
+
+aama:ID0076e170-d864-46c9-9273-0716115910de a aamas:Muterm ;
+	aamas:lang aama:Gawwada ;
+	aamas:morpheme aama:Gawwada-PERFHABTEMPLATE ;
+	gaw:pdgmType gaw:Template ;
+	gaw:pos gaw:Verb ;
+	gaw:tam gaw:Perfective ;
+	gaw:tense2 gaw:Habitual ;
+	gaw:token "Cv́C(v́C)-ay-ti" ;
+	gaw:person gaw:Person2 ;
+	gaw:number gaw:Singular ;
+	gaw:inflClass gaw:Class2 ;
+	gaw:gender gaw:Common ;
+	.
+
+aama:ID345e2bc1-719a-4430-a01d-185ae71cd8ed a aamas:Muterm ;
+	aamas:lang aama:Gawwada ;
+	aamas:morpheme aama:Gawwada-PERFHABTEMPLATE ;
+	gaw:pdgmType gaw:Template ;
+	gaw:pos gaw:Verb ;
+	gaw:tam gaw:Perfective ;
+	gaw:tense2 gaw:Habitual ;
+	gaw:token "Cv́C(v́C)-ay-i" ;
+	gaw:person gaw:Person3 ;
+	gaw:number gaw:Singular ;
+	gaw:inflClass gaw:Class2 ;
+	gaw:gender gaw:Masc ;
+	.
+
+aama:IDff643610-0bee-4b26-90d8-a2bec0aae5ae a aamas:Muterm ;
+	aamas:lang aama:Gawwada ;
+	aamas:morpheme aama:Gawwada-PERFHABTEMPLATE ;
+	gaw:pdgmType gaw:Template ;
+	gaw:pos gaw:Verb ;
+	gaw:tam gaw:Perfective ;
+	gaw:tense2 gaw:Habitual ;
+	gaw:token "Cv́C(v́C)-ay-ti" ;
+	gaw:person gaw:Person3 ;
+	gaw:number gaw:Singular ;
+	gaw:inflClass gaw:Class2 ;
+	gaw:gender gaw:Fem ;
+	.
+
+aama:IDfc46dd94-1012-49b9-a368-365b6f64d973 a aamas:Muterm ;
+	aamas:lang aama:Gawwada ;
+	aamas:morpheme aama:Gawwada-PERFHABTEMPLATE ;
+	gaw:pdgmType gaw:Template ;
+	gaw:pos gaw:Verb ;
+	gaw:tam gaw:Perfective ;
+	gaw:tense2 gaw:Habitual ;
+	gaw:token "Cv́C(v́C)-ay-né(eni)" ;
+	gaw:person gaw:Person1 ;
+	gaw:number gaw:Plural ;
+	gaw:inflClass gaw:Class2 ;
+	gaw:gender gaw:Common ;
+	.
+
+aama:ID65e6f0cc-baa4-438b-8045-ccf314364520 a aamas:Muterm ;
+	aamas:lang aama:Gawwada ;
+	aamas:morpheme aama:Gawwada-PERFHABTEMPLATE ;
+	gaw:pdgmType gaw:Template ;
+	gaw:pos gaw:Verb ;
+	gaw:tam gaw:Perfective ;
+	gaw:tense2 gaw:Habitual ;
+	gaw:token "Cv́C(v́C)-ay-té(ngu)" ;
+	gaw:person gaw:Person2 ;
+	gaw:number gaw:Plural ;
+	gaw:inflClass gaw:Class2 ;
+	gaw:gender gaw:Common ;
+	.
+
+aama:ID71f1a3bc-81a6-4b52-8cfc-fc9feb055c50 a aamas:Muterm ;
+	aamas:lang aama:Gawwada ;
+	aamas:morpheme aama:Gawwada-PERFHABTEMPLATE ;
+	gaw:pdgmType gaw:Template ;
+	gaw:pos gaw:Verb ;
+	gaw:tam gaw:Perfective ;
+	gaw:tense2 gaw:Habitual ;
+	gaw:token "Cv́C(v́C)-ay-né(eni)" ;
+	gaw:person gaw:Person3 ;
+	gaw:number gaw:Plural ;
+	gaw:inflClass gaw:Class2 ;
+	gaw:gender gaw:Common ;
+	.
+
+#MUTERMCLUSTER:  gawwada-VConsecutiveTemplate
+
+aama:ID0fcfabc2-edf1-4e12-8261-270089696b83 a aamas:Muterm ;
+	aamas:lang aama:Gawwada ;
+	gaw:morphClass gaw:CONSECTEMPLATE ;
+	gaw:pdgmType gaw:Template ;
+	gaw:pos gaw:Verb ;
+	gaw:tam gaw:Consecutive ;
+	gaw:token "Cv́C(v́C)á" ;
+	gaw:person gaw:Person1 ;
+	gaw:number gaw:Singular ;
+	gaw:inflClass gaw:Class1 ;
+	gaw:gender gaw:Common ;
+	.
+
+aama:IDd5fbb96f-3a69-4341-93a9-463ed6ac7ea5 a aamas:Muterm ;
+	aamas:lang aama:Gawwada ;
+	gaw:morphClass gaw:CONSECTEMPLATE ;
+	gaw:pdgmType gaw:Template ;
+	gaw:pos gaw:Verb ;
+	gaw:tam gaw:Consecutive ;
+	gaw:token "Cv́C(vC)áy" ;
+	gaw:person gaw:Person2 ;
+	gaw:number gaw:Singular ;
+	gaw:inflClass gaw:Class1 ;
+	gaw:gender gaw:Common ;
+	.
+
+aama:ID8b6dd4b4-6c45-4d5e-aeeb-dd65554020e5 a aamas:Muterm ;
+	aamas:lang aama:Gawwada ;
+	gaw:morphClass gaw:CONSECTEMPLATE ;
+	gaw:pdgmType gaw:Template ;
+	gaw:pos gaw:Verb ;
+	gaw:tam gaw:Consecutive ;
+	gaw:token "Cv́C(v́C)ú" ;
+	gaw:person gaw:Person3 ;
+	gaw:number gaw:Singular ;
+	gaw:inflClass gaw:Class1 ;
+	gaw:gender gaw:Masc ;
+	.
+
+aama:ID4b8df7ca-35bc-4843-87aa-1cae5508ee37 a aamas:Muterm ;
+	aamas:lang aama:Gawwada ;
+	gaw:morphClass gaw:CONSECTEMPLATE ;
+	gaw:pdgmType gaw:Template ;
+	gaw:pos gaw:Verb ;
+	gaw:tam gaw:Consecutive ;
+	gaw:token "Cv́(v́)(C)í" ;
+	gaw:person gaw:Person3 ;
+	gaw:number gaw:Singular ;
+	gaw:inflClass gaw:Class1 ;
+	gaw:gender gaw:Fem ;
+	.
+
+aama:IDca56a490-b743-47b1-bf2b-82ceb32dcc29 a aamas:Muterm ;
+	aamas:lang aama:Gawwada ;
+	gaw:morphClass gaw:CONSECTEMPLATE ;
+	gaw:pdgmType gaw:Template ;
+	gaw:pos gaw:Verb ;
+	gaw:tam gaw:Consecutive ;
+	gaw:token "Cv́(v́)(C)ání" ;
+	gaw:person gaw:Person1 ;
+	gaw:number gaw:Plural ;
+	gaw:inflClass gaw:Class1 ;
+	gaw:gender gaw:Common ;
+	.
+
+aama:IDb33ba68f-cf09-417f-9e0a-3650939d970a a aamas:Muterm ;
+	aamas:lang aama:Gawwada ;
+	gaw:morphClass gaw:CONSECTEMPLATE ;
+	gaw:pdgmType gaw:Template ;
+	gaw:pos gaw:Verb ;
+	gaw:tam gaw:Consecutive ;
+	gaw:token "Cv́(v́)(C)ángú" ;
+	gaw:person gaw:Person2 ;
+	gaw:number gaw:Plural ;
+	gaw:inflClass gaw:Class1 ;
+	gaw:gender gaw:Common ;
+	.
+
+aama:ID0512a2b7-6f89-4c95-ae2d-a68feef94240 a aamas:Muterm ;
+	aamas:lang aama:Gawwada ;
+	gaw:morphClass gaw:CONSECTEMPLATE ;
+	gaw:pdgmType gaw:Template ;
+	gaw:pos gaw:Verb ;
+	gaw:tam gaw:Consecutive ;
+	gaw:token "Cv́(v́)(C)ángí" ;
+	gaw:person gaw:Person3 ;
+	gaw:number gaw:Plural ;
+	gaw:inflClass gaw:Class1 ;
+	gaw:gender gaw:Common ;
+	.
+
+aama:IDc80ac093-2d60-4005-8398-f92d6a03dcb7 a aamas:Muterm ;
+	aamas:lang aama:Gawwada ;
+	gaw:morphClass gaw:CONSECTEMPLATE ;
+	gaw:pdgmType gaw:Template ;
+	gaw:pos gaw:Verb ;
+	gaw:tam gaw:Consecutive ;
+	gaw:token "Cv́C(v́C)ó" ;
+	gaw:person gaw:Person1 ;
+	gaw:number gaw:Singular ;
+	gaw:inflClass gaw:Class2 ;
+	gaw:gender gaw:Common ;
+	.
+
+aama:IDa30f958c-24da-41e9-9be9-13420238fbf3 a aamas:Muterm ;
+	aamas:lang aama:Gawwada ;
+	gaw:morphClass gaw:CONSECTEMPLATE ;
+	gaw:pdgmType gaw:Template ;
+	gaw:pos gaw:Verb ;
+	gaw:tam gaw:Consecutive ;
+	gaw:token "Cv́C(v́C)óy" ;
+	gaw:person gaw:Person2 ;
+	gaw:number gaw:Singular ;
+	gaw:inflClass gaw:Class2 ;
+	gaw:gender gaw:Common ;
+	.
+
+aama:ID508532c4-72a0-49bf-93fd-45d745391195 a aamas:Muterm ;
+	aamas:lang aama:Gawwada ;
+	gaw:morphClass gaw:CONSECTEMPLATE ;
+	gaw:pdgmType gaw:Template ;
+	gaw:pos gaw:Verb ;
+	gaw:tam gaw:Consecutive ;
+	gaw:token "Cv́C(v́C)ó" ;
+	gaw:person gaw:Person3 ;
+	gaw:number gaw:Singular ;
+	gaw:inflClass gaw:Class2 ;
+	gaw:gender gaw:Masc ;
+	.
+
+aama:ID9377f232-968e-4ba3-bba0-9df6b719d244 a aamas:Muterm ;
+	aamas:lang aama:Gawwada ;
+	gaw:morphClass gaw:CONSECTEMPLATE ;
+	gaw:pdgmType gaw:Template ;
+	gaw:pos gaw:Verb ;
+	gaw:tam gaw:Consecutive ;
+	gaw:token "Cv́C(v́C)óy" ;
+	gaw:person gaw:Person3 ;
+	gaw:number gaw:Singular ;
+	gaw:inflClass gaw:Class2 ;
+	gaw:gender gaw:Fem ;
+	.
+
+aama:ID6e6dbcb3-3ccd-4e2b-9855-60c3091babf3 a aamas:Muterm ;
+	aamas:lang aama:Gawwada ;
+	gaw:morphClass gaw:CONSECTEMPLATE ;
+	gaw:pdgmType gaw:Template ;
+	gaw:pos gaw:Verb ;
+	gaw:tam gaw:Consecutive ;
+	gaw:token "Cv́C(v́C)óni" ;
+	gaw:person gaw:Person1 ;
+	gaw:number gaw:Plural ;
+	gaw:inflClass gaw:Class2 ;
+	gaw:gender gaw:Common ;
+	.
+
+aama:IDc2c28bc3-8666-4d48-b80a-acf12d45c86c a aamas:Muterm ;
+	aamas:lang aama:Gawwada ;
+	gaw:morphClass gaw:CONSECTEMPLATE ;
+	gaw:pdgmType gaw:Template ;
+	gaw:pos gaw:Verb ;
+	gaw:tam gaw:Consecutive ;
+	gaw:token "Cv́C(v́C)óngu" ;
+	gaw:person gaw:Person2 ;
+	gaw:number gaw:Plural ;
+	gaw:inflClass gaw:Class2 ;
+	gaw:gender gaw:Common ;
+	.
+
+aama:IDca30045d-e6ea-4160-b5f1-68e6453d030f a aamas:Muterm ;
+	aamas:lang aama:Gawwada ;
+	gaw:morphClass gaw:CONSECTEMPLATE ;
+	gaw:pdgmType gaw:Template ;
+	gaw:pos gaw:Verb ;
+	gaw:tam gaw:Consecutive ;
+	gaw:token "Cv́C(v́C)óngi" ;
+	gaw:person gaw:Person3 ;
+	gaw:number gaw:Plural ;
+	gaw:inflClass gaw:Class2 ;
+	gaw:gender gaw:Common ;
+	.
+
+#MUTERMCLUSTER:  gawwada-VImperfectiveTemplate
+
+aama:IDdbfc8611-6153-4451-acb0-c1b1e12106e1 a aamas:Muterm ;
+	aamas:lang aama:Gawwada ;
+	aamas:morpheme aama:Gawwada-IMPERFTEMPLATE ;
 	gaw:pdgmType gaw:Template ;
 	gaw:pos gaw:Verb ;
 	gaw:tam gaw:Imperfective ;
-	gaw:tense2 gaw:Future ;
-	gaw:token "Cv́C(vC)-n-a" ;
+	gaw:token "Cv́C(vC)a" ;
 	gaw:person gaw:Person1 ;
 	gaw:number gaw:Singular ;
 	gaw:gender gaw:Common ;
 	.
-aama:ID57d4525e-7839-4da2-94a5-ab63bbcc2cb2 a aamas:Muterm ;
+
+aama:ID6359b479-89a1-41c5-a560-df4e50fc5004 a aamas:Muterm ;
 	aamas:lang aama:Gawwada ;
-	aamas:morpheme aama:Gawwada-IMPERFFUTTEMPLATE ;
+	aamas:morpheme aama:Gawwada-IMPERFTEMPLATE ;
 	gaw:pdgmType gaw:Template ;
 	gaw:pos gaw:Verb ;
 	gaw:tam gaw:Imperfective ;
-	gaw:tense2 gaw:Future ;
-	gaw:token "Cv́C(vC)-n-ay" ;
+	gaw:token "Cv́C(vC)ay" ;
 	gaw:person gaw:Person2 ;
 	gaw:number gaw:Singular ;
 	gaw:gender gaw:Common ;
 	.
-aama:ID9fcf7dc9-f881-4f77-9e03-1a772db0d654 a aamas:Muterm ;
+
+aama:ID8422ab11-34e6-40cb-b82d-1b6949a5d9bf a aamas:Muterm ;
 	aamas:lang aama:Gawwada ;
-	aamas:morpheme aama:Gawwada-IMPERFFUTTEMPLATE ;
+	aamas:morpheme aama:Gawwada-IMPERFTEMPLATE ;
 	gaw:pdgmType gaw:Template ;
 	gaw:pos gaw:Verb ;
 	gaw:tam gaw:Imperfective ;
-	gaw:tense2 gaw:Future ;
-	gaw:token "Cv́C(vC)-n-a" ;
+	gaw:token "Cv́C(vC)a" ;
 	gaw:person gaw:Person3 ;
 	gaw:number gaw:Singular ;
 	gaw:gender gaw:Masc ;
 	.
-aama:IDc00924a9-317f-4b05-a2f0-327bf755cdba a aamas:Muterm ;
+
+aama:ID7f018990-c745-4d7e-8dcf-cee4e48ecf29 a aamas:Muterm ;
 	aamas:lang aama:Gawwada ;
-	aamas:morpheme aama:Gawwada-IMPERFFUTTEMPLATE ;
+	aamas:morpheme aama:Gawwada-IMPERFTEMPLATE ;
 	gaw:pdgmType gaw:Template ;
 	gaw:pos gaw:Verb ;
 	gaw:tam gaw:Imperfective ;
-	gaw:tense2 gaw:Future ;
-	gaw:token "Cv́C(vC)-n-ay" ;
+	gaw:token "Cv́C(vC)ay" ;
 	gaw:person gaw:Person3 ;
 	gaw:number gaw:Singular ;
 	gaw:gender gaw:Fem ;
 	.
-aama:IDbecd7e8a-ba22-46c8-a3b7-bf6fd80ebb54 a aamas:Muterm ;
+
+aama:ID0fddbab3-2ec4-4f87-99c7-14847d13a16f a aamas:Muterm ;
 	aamas:lang aama:Gawwada ;
-	aamas:morpheme aama:Gawwada-IMPERFFUTTEMPLATE ;
+	aamas:morpheme aama:Gawwada-IMPERFTEMPLATE ;
 	gaw:pdgmType gaw:Template ;
 	gaw:pos gaw:Verb ;
 	gaw:tam gaw:Imperfective ;
-	gaw:tense2 gaw:Future ;
-	gaw:token "Cv́C(vC)-n-ani" ;
+	gaw:token "Cv́C(vC)ani" ;
 	gaw:person gaw:Person1 ;
 	gaw:number gaw:Plural ;
 	gaw:gender gaw:Common ;
 	.
-aama:IDf3ec38e0-ab34-479c-a9f9-2feab5b7c778 a aamas:Muterm ;
+
+aama:ID9eafdc66-ae15-4a27-87a5-e1e697a07ada a aamas:Muterm ;
 	aamas:lang aama:Gawwada ;
-	aamas:morpheme aama:Gawwada-IMPERFFUTTEMPLATE ;
+	aamas:morpheme aama:Gawwada-IMPERFTEMPLATE ;
 	gaw:pdgmType gaw:Template ;
 	gaw:pos gaw:Verb ;
 	gaw:tam gaw:Imperfective ;
-	gaw:tense2 gaw:Future ;
-	gaw:token "Cv́C(vC)-n-angu" ;
+	gaw:token "Cv́C(vC)angu" ;
 	gaw:person gaw:Person2 ;
 	gaw:number gaw:Plural ;
 	gaw:gender gaw:Common ;
 	.
-aama:ID283d5ee6-b6e7-4be5-924f-b142a0984048 a aamas:Muterm ;
+
+aama:ID157b98d3-3d51-4e64-809b-bcf1af4368d2 a aamas:Muterm ;
 	aamas:lang aama:Gawwada ;
-	aamas:morpheme aama:Gawwada-IMPERFFUTTEMPLATE ;
+	aamas:morpheme aama:Gawwada-IMPERFTEMPLATE ;
 	gaw:pdgmType gaw:Template ;
 	gaw:pos gaw:Verb ;
 	gaw:tam gaw:Imperfective ;
-	gaw:tense2 gaw:Future ;
-	gaw:token "Cv́C(vC)-n-angi" ;
+	gaw:token "Cv́C(vC)angi" ;
+	gaw:person gaw:Person3 ;
+	gaw:number gaw:Plural ;
+	gaw:gender gaw:Common ;
+	.
+
+#MUTERMCLUSTER:  gawwada-PSubjProclitic
+
+aama:ID2d8d3032-cfa3-4f78-afa6-deb718665155 a aamas:Muterm ;
+	aamas:lang aama:Gawwada ;
+	aamas:morpheme aama:Gawwada-PROSUBJPROCLITIC ;
+	gaw:pos gaw:Pronoun ;
+	gaw:proClass gaw:SubjProclitic ;
+	gaw:token "an-" ;
+	gaw:polarity gaw:Common ;
+	gaw:person gaw:Person1 ;
+	gaw:number gaw:Singular ;
+	.
+
+aama:ID8277183f-e256-4101-990f-86305472d5b7 a aamas:Muterm ;
+	aamas:lang aama:Gawwada ;
+	aamas:morpheme aama:Gawwada-PROSUBJPROCLITIC ;
+	gaw:pos gaw:Pronoun ;
+	gaw:proClass gaw:SubjProclitic ;
+	gaw:token "aC-" ;
+	gaw:polarity gaw:Common ;
+	gaw:person gaw:Person2 ;
+	gaw:number gaw:Singular ;
+	.
+
+aama:ID0ed233ab-c086-4c97-b635-f0dd092cf20c a aamas:Muterm ;
+	aamas:lang aama:Gawwada ;
+	aamas:morpheme aama:Gawwada-PROSUBJPROCLITIC ;
+	gaw:pos gaw:Pronoun ;
+	gaw:proClass gaw:SubjProclitic ;
+	gaw:token "i-" ;
+	gaw:polarity gaw:Affirmative ;
+	gaw:person gaw:Person3 ;
+	gaw:number gaw:Singular ;
+	.
+
+aama:IDd3b3ca45-d3c6-4fc1-87c5-1f7f058b7633 a aamas:Muterm ;
+	aamas:lang aama:Gawwada ;
+	aamas:morpheme aama:Gawwada-PROSUBJPROCLITIC ;
+	gaw:pos gaw:Pronoun ;
+	gaw:proClass gaw:SubjProclitic ;
+	gaw:token "ye-" ;
+	gaw:polarity gaw:Negative ;
+	gaw:person gaw:Person3 ;
+	gaw:number gaw:Singular ;
+	.
+
+aama:IDb96c70e3-5957-4262-a732-869cce55adfa a aamas:Muterm ;
+	aamas:lang aama:Gawwada ;
+	aamas:morpheme aama:Gawwada-PROSUBJPROCLITIC ;
+	gaw:pos gaw:Pronoun ;
+	gaw:proClass gaw:SubjProclitic ;
+	gaw:token "an-" ;
+	gaw:polarity gaw:Common ;
+	gaw:person gaw:Person1 ;
+	gaw:number gaw:Plural ;
+	.
+
+aama:IDf0951dd0-aa5f-49fe-9804-e550d2af5982 a aamas:Muterm ;
+	aamas:lang aama:Gawwada ;
+	aamas:morpheme aama:Gawwada-PROSUBJPROCLITIC ;
+	gaw:pos gaw:Pronoun ;
+	gaw:proClass gaw:SubjProclitic ;
+	gaw:token "aC-" ;
+	gaw:polarity gaw:Common ;
+	gaw:person gaw:Person2 ;
+	gaw:number gaw:Plural ;
+	.
+
+aama:ID7c200757-a662-43ad-9146-c4b8e4c2e7e1 a aamas:Muterm ;
+	aamas:lang aama:Gawwada ;
+	aamas:morpheme aama:Gawwada-PROSUBJPROCLITIC ;
+	gaw:pos gaw:Pronoun ;
+	gaw:proClass gaw:SubjProclitic ;
+	gaw:token "i-" ;
+	gaw:polarity gaw:Affirmative ;
+	gaw:person gaw:Person3 ;
+	gaw:number gaw:Plural ;
+	.
+
+aama:IDb0214499-d382-46de-bf19-bd31c5192c18 a aamas:Muterm ;
+	aamas:lang aama:Gawwada ;
+	aamas:morpheme aama:Gawwada-PROSUBJPROCLITIC ;
+	gaw:pos gaw:Pronoun ;
+	gaw:proClass gaw:SubjProclitic ;
+	gaw:token "ye-" ;
+	gaw:polarity gaw:Negative ;
+	gaw:person gaw:Person3 ;
+	gaw:number gaw:Plural ;
+	.
+
+aama:IDd446ce3a-de1c-48e4-b918-3d999a6417c9 a aamas:Muterm ;
+	aamas:lang aama:Gawwada ;
+	aamas:morpheme aama:Gawwada-PROSUBJPROCLITIC ;
+	gaw:pos gaw:Pronoun ;
+	gaw:proClass gaw:SubjProclitic ;
+	gaw:token "a-" ;
+	gaw:polarity gaw:Common ;
+	gaw:person gaw:Impersonal ;
+	gaw:number gaw:Common ;
+	.
+
+#MUTERMCLUSTER:  gawwada-VImperfectiveHabitualTemplate
+
+aama:IDd9395dac-ff80-49f6-842e-f45ec0c93dc2 a aamas:Muterm ;
+	aamas:lang aama:Gawwada ;
+	aamas:morpheme aama:Gawwada-IMPERFHABTEMPLATE ;
+	gaw:pdgmType gaw:Template ;
+	gaw:pos gaw:Verb ;
+	gaw:tam gaw:Imperfective ;
+	gaw:tense2 gaw:Habitual ;
+	gaw:token "Cv́C(vC)-ay-a" ;
+	gaw:person gaw:Person1 ;
+	gaw:number gaw:Singular ;
+	gaw:gender gaw:Common ;
+	.
+
+aama:ID226aadd6-d643-4245-9bee-d131c88da79b a aamas:Muterm ;
+	aamas:lang aama:Gawwada ;
+	aamas:morpheme aama:Gawwada-IMPERFHABTEMPLATE ;
+	gaw:pdgmType gaw:Template ;
+	gaw:pos gaw:Verb ;
+	gaw:tam gaw:Imperfective ;
+	gaw:tense2 gaw:Habitual ;
+	gaw:token "Cv́C(vC)-ay-ay" ;
+	gaw:person gaw:Person2 ;
+	gaw:number gaw:Singular ;
+	gaw:gender gaw:Common ;
+	.
+
+aama:IDff857c3a-3787-43fd-9612-9a8a6fc37a2b a aamas:Muterm ;
+	aamas:lang aama:Gawwada ;
+	aamas:morpheme aama:Gawwada-IMPERFHABTEMPLATE ;
+	gaw:pdgmType gaw:Template ;
+	gaw:pos gaw:Verb ;
+	gaw:tam gaw:Imperfective ;
+	gaw:tense2 gaw:Habitual ;
+	gaw:token "Cv́C(vC)-ay-a" ;
+	gaw:person gaw:Person3 ;
+	gaw:number gaw:Singular ;
+	gaw:gender gaw:Masc ;
+	.
+
+aama:ID4f662f3d-2d51-4e7a-b664-45b73e9adac7 a aamas:Muterm ;
+	aamas:lang aama:Gawwada ;
+	aamas:morpheme aama:Gawwada-IMPERFHABTEMPLATE ;
+	gaw:pdgmType gaw:Template ;
+	gaw:pos gaw:Verb ;
+	gaw:tam gaw:Imperfective ;
+	gaw:tense2 gaw:Habitual ;
+	gaw:token "Cv́C(vC)-ay-ay" ;
+	gaw:person gaw:Person3 ;
+	gaw:number gaw:Singular ;
+	gaw:gender gaw:Fem ;
+	.
+
+aama:ID92f66d34-fc2c-4222-9be0-fb49692305ec a aamas:Muterm ;
+	aamas:lang aama:Gawwada ;
+	aamas:morpheme aama:Gawwada-IMPERFHABTEMPLATE ;
+	gaw:pdgmType gaw:Template ;
+	gaw:pos gaw:Verb ;
+	gaw:tam gaw:Imperfective ;
+	gaw:tense2 gaw:Habitual ;
+	gaw:token "Cv́C(vC)-ay-ani" ;
+	gaw:person gaw:Person1 ;
+	gaw:number gaw:Plural ;
+	gaw:gender gaw:Common ;
+	.
+
+aama:ID2679df84-818c-4df9-b364-356b6981c3cf a aamas:Muterm ;
+	aamas:lang aama:Gawwada ;
+	aamas:morpheme aama:Gawwada-IMPERFHABTEMPLATE ;
+	gaw:pdgmType gaw:Template ;
+	gaw:pos gaw:Verb ;
+	gaw:tam gaw:Imperfective ;
+	gaw:tense2 gaw:Habitual ;
+	gaw:token "Cv́C(vC)-ay-angu" ;
+	gaw:person gaw:Person2 ;
+	gaw:number gaw:Plural ;
+	gaw:gender gaw:Common ;
+	.
+
+aama:ID047e5d76-0057-431a-be5f-78e68b3d97ef a aamas:Muterm ;
+	aamas:lang aama:Gawwada ;
+	aamas:morpheme aama:Gawwada-IMPERFHABTEMPLATE ;
+	gaw:pdgmType gaw:Template ;
+	gaw:pos gaw:Verb ;
+	gaw:tam gaw:Imperfective ;
+	gaw:tense2 gaw:Habitual ;
+	gaw:token "Cv́C(vC)-ay-angi" ;
 	gaw:person gaw:Person3 ;
 	gaw:number gaw:Plural ;
 	gaw:gender gaw:Common ;
