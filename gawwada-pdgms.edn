@@ -38,7 +38,7 @@
  :termclusters [
                 {:label "gawwada-VAffJussive-ass"
                  :note "Tosco2007b Table 7 3.3.6 (p.517). The desinences are the same as the past positive with a different accentual pattern."
-                 :common {:vmorphclass :Finite
+                 :common {:vmorphClass :Finite
                           :lexeme :ass,
                           :pos :Verb,
                           :polarity :Affirmative,
@@ -52,7 +52,7 @@
                  }
                 {:label "gawwada-VConsecutive-ass"
                  :note "Tosco2007b Table 4 (p. 515). There are two tonally distinct inflectional classes of verb in the perfective,imperative,and consecutive positive tenses."
-                 :common {:vmorphclass :Finite
+                 :common {:vmorphClass :Finite
                           :inflClass :Class2,
                           :lexeme :ass,
                           :pos :Verb,
@@ -68,7 +68,7 @@
                  }
                 {:label "gawwada-VConsecutive-sor"
                  :note "Tosco2007b Table 4 (p. 515). There are two tonally distinct inflectional classes of verb in the perfective,imperative,and consecutive positive tenses."
-                 :common {:vmorphclass :Finite
+                 :common {:vmorphClass :Finite
                           :inflClass :Class1,
                           :lexeme :sor,
                           :pos :Verb,
@@ -84,7 +84,7 @@
                  }
                 {:label "gawwada-VImperfective-ass"
                  :note "Tosco2007b Table 4 (p. 515). There are two tonally distinct inflectional classes of verb in the perfective,imperative,and consecutive positive tenses."
-                 :common {:vmorphclass :Finite
+                 :common {:vmorphClass :Finite
                           :lexeme :ass,
                           :pos :Verb,
                           :tam :Imperfective}
@@ -99,7 +99,7 @@
                  }
                 {:label "gawwada-VNegImprtvExx"
                  :note "Tosco2007b 3.3.5 (p. 517). Imperative classes do not exist in the negative imperative (note classes of lexical items in the affirmative imperative). A single verb form used in both sg and pl."
-                 :common {:vmorphclass :Finite
+                 :common {:vmorphClass :Finite
                           :lexeme :ass,
                           :person :Person2,
                           :polarity :Negative,
@@ -111,7 +111,7 @@
                  }
                 {:label "gawwada-VNegJussive-ass"
                  :note "Tosco2007b Table 8,3.3.7 (p.517). The desinences are the same as the past negative,preceded by the jussive marker ínnu."
-                 :common {:vmorphclass :Finite
+                 :common {:vmorphClass :Finite
                           :lexeme :ass,
                           :pos :Verb,
                           :polarity :Negative,
@@ -125,7 +125,7 @@
                  }
                 {:label "gawwada-VNegPast-ass"
                  :note "Tosco2007b Table 5 (p. 515). There are two tonally distinct inflectional classes of verb in the perfective,imperative,and consecutive positive tenses."
-                 :common {:vmorphclass :Finite
+                 :common {:vmorphClass :Finite
                           :lexeme :ass,
                           :pos :Verb,
                           :polarity :Negative,
@@ -141,7 +141,7 @@
                  }
                 {:label "gawwada-VNegPresent-ass"
                  :note "Tosco2007b Table 5 (p. 515). There are two tonally distinct inflectional classes of verb in the perfective,imperative,and consecutive positive tenses."
-                 :common {:vmorphclass :Finite
+                 :common {:vmorphClass :Finite
                           :lexeme :ass,
                           :pos :Verb,
                           :polarity :Negative,
@@ -157,7 +157,7 @@
                  }
                 {:label "gawwada-VPerfective-oggay"
                  :note "Tosco2007b Table 3 (p. 514). There are two tonally distinct inflectional classes of verb in the perfective,imperative,and consecutive positive tenses."
-                 :common {:vmorphclass :Finite
+                 :common {:vmorphClass :Finite
                           :inflClass :Class1,
                           :lexeme :oggay,
                           :pos :Verb,
@@ -173,7 +173,7 @@
                  }
                 {:label "gawwada-VPerfective-ug"
                  :note "Tosco2007b Table 3 (p. 514). There are two tonally distinct inflectional classes of verb in the perfective,imperative,and consecutive positive tenses."
-                 :common {:vmorphclass :Finite
+                 :common {:vmorphClass :Finite
                           :inflClass :Class1,
                           :lexeme :ug,
                           :pos :Verb,
@@ -189,7 +189,7 @@
                  }
                 {:label "gawwada-VPerfectiveTemplate-ass"
                  :note "Tosco2007b Table 3 (p. 514). There are two tonally distinct inflectional classes of verb in the perfective,imperative,and consecutive positive tenses."
-                 :common {:vmorphclass :Finite
+                 :common {:vmorphClass :Finite
                           :inflClass :Class2,
                           :lexeme :ass,
                           :pos :Verb,
