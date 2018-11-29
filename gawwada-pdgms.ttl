@@ -1,5 +1,5 @@
 #TTL FROM INPUT FILE:
-#../aama-data/data//gawwada/gawwada-pdgms.edn
+#../aama-data/data/gawwada//gawwada-pdgms.edn
 
 @prefix rdf:	 <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:	 <http://www.w3.org/2000/01/rdf-schema#> .
@@ -234,28 +234,6 @@ gaw:SubjProclitic aamas:lang aama:Gawwada .
 gaw:SubjProclitic rdf:type gaw:Proclass .
 gaw:SubjProclitic rdfs:label "SubjProclitic" .
 
-#SCHEMATA: lexeme
-gaw:lexeme aamas:lang aama:Gawwada .
-gaw:Lexeme aamas:lang aama:Gawwada .
-gaw:lexeme rdfs:domain aamas:Term .
-gaw:Lexeme rdfs:label "lexeme exponents" .
-gaw:lexeme rdfs:label "lexeme" .
-gaw:lexeme rdfs:range gaw:Lexeme .
-gaw:Lexeme rdfs:subClassOf gaw:MuExponent .
-gaw:lexeme rdfs:subPropertyOf gaw:muProperty .
-gaw:ass aamas:lang aama:Gawwada .
-gaw:ass rdf:type gaw:Lexeme .
-gaw:ass rdfs:label "ass" .
-gaw:oggay aamas:lang aama:Gawwada .
-gaw:oggay rdf:type gaw:Lexeme .
-gaw:oggay rdfs:label "oggay" .
-gaw:sor aamas:lang aama:Gawwada .
-gaw:sor rdf:type gaw:Lexeme .
-gaw:sor rdfs:label "sor" .
-gaw:ug aamas:lang aama:Gawwada .
-gaw:ug rdf:type gaw:Lexeme .
-gaw:ug rdfs:label "ug" .
-
 #SCHEMATA: polarity
 gaw:polarity aamas:lang aama:Gawwada .
 gaw:Polarity aamas:lang aama:Gawwada .
@@ -355,81 +333,96 @@ gaw:inflClass aamas:pclass aamas:inflClass .
 aamas:inflClass rdfs:label "inflClass" .
 
 #LEXEMES:
+
+##LexItems
 aama:Gawwada-yooq a aamas:Lexeme ;
 	aamas:lang aama:Gawwada ;
 	rdfs:label "yooq" ;
+	gaw:pos gaw:Verb ;
 	aamas:lemma "yóoqa" ;
 	aamas:gloss "grind" ;
 	.
 aama:Gawwada-ug a aamas:Lexeme ;
 	aamas:lang aama:Gawwada ;
 	rdfs:label "ug" ;
+	gaw:pos gaw:Verb ;
 	aamas:lemma "ʕúg-" ;
 	aamas:gloss "drink" ;
 	.
 aama:Gawwada-sor a aamas:Lexeme ;
 	aamas:lang aama:Gawwada ;
 	rdfs:label "sor" ;
+	gaw:pos gaw:Verb ;
 	aamas:lemma "sór" ;
 	aamas:gloss "run" ;
 	.
 aama:Gawwada-teeh a aamas:Lexeme ;
 	aamas:lang aama:Gawwada ;
 	rdfs:label "teeh" ;
+	gaw:pos gaw:Verb ;
 	aamas:lemma "teeħ-" ;
 	aamas:gloss "give" ;
 	.
 aama:Gawwada-urkeesad a aamas:Lexeme ;
 	aamas:lang aama:Gawwada ;
 	rdfs:label "urkeesad" ;
+	gaw:pos gaw:Verb ;
 	aamas:lemma "úrkeesáɗ" ;
 	aamas:gloss "dress(intr.)" ;
 	.
 aama:Gawwada-tatak a aamas:Lexeme ;
 	aamas:lang aama:Gawwada ;
 	rdfs:label "tatak" ;
+	gaw:pos gaw:Verb ;
 	aamas:lemma "tatak-" ;
 	aamas:gloss "betray(G)" ;
 	.
 aama:Gawwada-af a aamas:Lexeme ;
 	aamas:lang aama:Gawwada ;
 	rdfs:label "af" ;
+	gaw:pos gaw:Verb ;
 	aamas:lemma "ʕáf" ;
 	aamas:gloss "spread" ;
 	.
 aama:Gawwada-dawr a aamas:Lexeme ;
 	aamas:lang aama:Gawwada ;
 	rdfs:label "dawr" ;
+	gaw:pos gaw:Verb ;
 	aamas:lemma "ɗawr" ;
 	aamas:gloss "refuse" ;
 	.
 aama:Gawwada-ass a aamas:Lexeme ;
 	aamas:lang aama:Gawwada ;
 	rdfs:label "ass" ;
+	gaw:pos gaw:Verb ;
 	aamas:lemma "ášša-" ;
 	aamas:gloss "go" ;
 	.
 aama:Gawwada-pupusa a aamas:Lexeme ;
 	aamas:lang aama:Gawwada ;
 	rdfs:label "pupusa" ;
+	gaw:pos gaw:Verb ;
 	aamas:lemma "pupusaʕ-" ;
 	aamas:gloss "betray(HD)" ;
 	.
 aama:Gawwada-qut a aamas:Lexeme ;
 	aamas:lang aama:Gawwada ;
 	rdfs:label "qut" ;
+	gaw:pos gaw:Verb ;
 	aamas:lemma "qút'" ;
 	aamas:gloss "cut" ;
 	.
 aama:Gawwada-oggay a aamas:Lexeme ;
 	aamas:lang aama:Gawwada ;
 	rdfs:label "oggay" ;
+	gaw:pos gaw:Verb ;
 	aamas:lemma "ógááy-" ;
 	aamas:gloss "come" ;
 	.
 aama:Gawwada-urkees a aamas:Lexeme ;
 	aamas:lang aama:Gawwada ;
 	rdfs:label "urkees" ;
+	gaw:pos gaw:Verb ;
 	aamas:lemma "úrkées" ;
 	aamas:gloss "dress(tr.)" ;
 	.
@@ -442,7 +435,7 @@ gaw:gawwada-VAffJussive-ass a aamas:Termcluster ;
 	rdfs:comment "Tosco2007b Table 7 3.3.6 (p.517). The desinences are the same as the past positive with a different accentual pattern." 
 	.
 
-aama:ID6f4a17ba-1fcf-4ba4-b241-5d56d2e375d2 a aamas:Term ;
+aama:IDda918911-af22-42d9-97c1-cae12fba3682 a aamas:Term ;
 	aamas:lang aama:Gawwada ;
 	aamas:memberOf gaw:gawwada-VAffJussive-ass ;
 	gaw:vmorphClass gaw:Finite ;
@@ -456,7 +449,7 @@ aama:ID6f4a17ba-1fcf-4ba4-b241-5d56d2e375d2 a aamas:Term ;
 	gaw:number gaw:Singular ;
 	.
 
-aama:ID83efeb14-33fe-43cf-ad7c-93559c6d7cc8 a aamas:Term ;
+aama:IDdd224bc8-a9d0-44e3-bceb-32098fe141eb a aamas:Term ;
 	aamas:lang aama:Gawwada ;
 	aamas:memberOf gaw:gawwada-VAffJussive-ass ;
 	gaw:vmorphClass gaw:Finite ;
@@ -470,7 +463,7 @@ aama:ID83efeb14-33fe-43cf-ad7c-93559c6d7cc8 a aamas:Term ;
 	gaw:number gaw:Singular ;
 	.
 
-aama:ID70bf3e23-3991-4469-adf0-046cf2280cf1 a aamas:Term ;
+aama:ID6f9315d3-e5de-4809-ae5d-ea1573fe9dd3 a aamas:Term ;
 	aamas:lang aama:Gawwada ;
 	aamas:memberOf gaw:gawwada-VAffJussive-ass ;
 	gaw:vmorphClass gaw:Finite ;
@@ -484,7 +477,7 @@ aama:ID70bf3e23-3991-4469-adf0-046cf2280cf1 a aamas:Term ;
 	gaw:number gaw:Singular ;
 	.
 
-aama:IDf7ec843b-bc21-426a-b6d0-e8831f27430b a aamas:Term ;
+aama:IDb5cc1a83-7f54-4d7f-a4ad-e03173216bd4 a aamas:Term ;
 	aamas:lang aama:Gawwada ;
 	aamas:memberOf gaw:gawwada-VAffJussive-ass ;
 	gaw:vmorphClass gaw:Finite ;
@@ -498,7 +491,7 @@ aama:IDf7ec843b-bc21-426a-b6d0-e8831f27430b a aamas:Term ;
 	gaw:number gaw:Plural ;
 	.
 
-aama:IDa80fb494-87d1-45e6-8935-c1967d06a0c6 a aamas:Term ;
+aama:ID287817a1-e9e9-4947-82c3-52e3ddd90abe a aamas:Term ;
 	aamas:lang aama:Gawwada ;
 	aamas:memberOf gaw:gawwada-VAffJussive-ass ;
 	gaw:vmorphClass gaw:Finite ;
@@ -520,7 +513,7 @@ gaw:gawwada-VConsecutive-ass a aamas:Termcluster ;
 	rdfs:comment "Tosco2007b Table 4 (p. 515). There are two tonally distinct inflectional classes of verb in the perfective%%imperative%%and consecutive positive tenses." 
 	.
 
-aama:ID621b758e-7017-412f-bb3f-d6ad968bc79b a aamas:Term ;
+aama:IDc7f33ac5-b519-48d1-9358-f30eb2e9dcc5 a aamas:Term ;
 	aamas:lang aama:Gawwada ;
 	aamas:memberOf gaw:gawwada-VConsecutive-ass ;
 	gaw:vmorphClass gaw:Finite ;
@@ -534,7 +527,7 @@ aama:ID621b758e-7017-412f-bb3f-d6ad968bc79b a aamas:Term ;
 	gaw:number gaw:Singular ;
 	.
 
-aama:IDe5b78497-3090-443a-9924-a71460214bc2 a aamas:Term ;
+aama:ID81923078-f213-408e-b2f6-2566d4538d97 a aamas:Term ;
 	aamas:lang aama:Gawwada ;
 	aamas:memberOf gaw:gawwada-VConsecutive-ass ;
 	gaw:vmorphClass gaw:Finite ;
@@ -548,7 +541,7 @@ aama:IDe5b78497-3090-443a-9924-a71460214bc2 a aamas:Term ;
 	gaw:number gaw:Singular ;
 	.
 
-aama:ID2c4d224a-59bd-4413-90e0-d467f2ad0481 a aamas:Term ;
+aama:IDfe40deec-9c77-4482-8767-3a05a3f9f8a0 a aamas:Term ;
 	aamas:lang aama:Gawwada ;
 	aamas:memberOf gaw:gawwada-VConsecutive-ass ;
 	gaw:vmorphClass gaw:Finite ;
@@ -562,7 +555,7 @@ aama:ID2c4d224a-59bd-4413-90e0-d467f2ad0481 a aamas:Term ;
 	gaw:number gaw:Singular ;
 	.
 
-aama:IDdb16fe13-cda4-4910-b6c3-7ccb17f9967b a aamas:Term ;
+aama:ID3eb809ed-f8a6-4e01-b35d-175910b6b9a7 a aamas:Term ;
 	aamas:lang aama:Gawwada ;
 	aamas:memberOf gaw:gawwada-VConsecutive-ass ;
 	gaw:vmorphClass gaw:Finite ;
@@ -576,7 +569,7 @@ aama:IDdb16fe13-cda4-4910-b6c3-7ccb17f9967b a aamas:Term ;
 	gaw:number gaw:Singular ;
 	.
 
-aama:ID899bc8ff-90b5-461e-801b-1417630a2901 a aamas:Term ;
+aama:IDf9b1fd17-70f4-49de-ab6e-3a3b42452b47 a aamas:Term ;
 	aamas:lang aama:Gawwada ;
 	aamas:memberOf gaw:gawwada-VConsecutive-ass ;
 	gaw:vmorphClass gaw:Finite ;
@@ -590,7 +583,7 @@ aama:ID899bc8ff-90b5-461e-801b-1417630a2901 a aamas:Term ;
 	gaw:number gaw:Plural ;
 	.
 
-aama:ID9201781b-4c65-44d1-8e8a-338fcc2555ff a aamas:Term ;
+aama:ID3bb6707a-e260-4ab7-bc31-3c062b258672 a aamas:Term ;
 	aamas:lang aama:Gawwada ;
 	aamas:memberOf gaw:gawwada-VConsecutive-ass ;
 	gaw:vmorphClass gaw:Finite ;
@@ -604,7 +597,7 @@ aama:ID9201781b-4c65-44d1-8e8a-338fcc2555ff a aamas:Term ;
 	gaw:number gaw:Plural ;
 	.
 
-aama:IDc87fa51e-d003-457a-affb-6c461a149f09 a aamas:Term ;
+aama:IDbb54127d-a624-4be6-9f14-3f46d85fcf94 a aamas:Term ;
 	aamas:lang aama:Gawwada ;
 	aamas:memberOf gaw:gawwada-VConsecutive-ass ;
 	gaw:vmorphClass gaw:Finite ;
@@ -626,7 +619,7 @@ gaw:gawwada-VConsecutive-sor a aamas:Termcluster ;
 	rdfs:comment "Tosco2007b Table 4 (p. 515). There are two tonally distinct inflectional classes of verb in the perfective%%imperative%%and consecutive positive tenses." 
 	.
 
-aama:ID19177326-9fbb-43a4-8dd0-323c53de0a8a a aamas:Term ;
+aama:IDc91ef4da-2678-444c-a747-4aec2ccc9098 a aamas:Term ;
 	aamas:lang aama:Gawwada ;
 	aamas:memberOf gaw:gawwada-VConsecutive-sor ;
 	gaw:vmorphClass gaw:Finite ;
@@ -640,7 +633,7 @@ aama:ID19177326-9fbb-43a4-8dd0-323c53de0a8a a aamas:Term ;
 	gaw:number gaw:Singular ;
 	.
 
-aama:ID70c28e08-39a7-41d5-ab20-c2d985e0f4df a aamas:Term ;
+aama:ID6345808d-e0da-4185-9b27-6b8857ac6071 a aamas:Term ;
 	aamas:lang aama:Gawwada ;
 	aamas:memberOf gaw:gawwada-VConsecutive-sor ;
 	gaw:vmorphClass gaw:Finite ;
@@ -654,7 +647,7 @@ aama:ID70c28e08-39a7-41d5-ab20-c2d985e0f4df a aamas:Term ;
 	gaw:number gaw:Singular ;
 	.
 
-aama:ID5dfe0aa1-d3ce-494a-b4b2-cc57768e99e2 a aamas:Term ;
+aama:ID492f08d9-ca79-4632-be63-867e93695e04 a aamas:Term ;
 	aamas:lang aama:Gawwada ;
 	aamas:memberOf gaw:gawwada-VConsecutive-sor ;
 	gaw:vmorphClass gaw:Finite ;
@@ -668,7 +661,7 @@ aama:ID5dfe0aa1-d3ce-494a-b4b2-cc57768e99e2 a aamas:Term ;
 	gaw:number gaw:Singular ;
 	.
 
-aama:ID8ff06ece-8ba8-4cf7-ab3f-6711e060c724 a aamas:Term ;
+aama:ID87dc93f2-2350-47e1-8532-508311217f52 a aamas:Term ;
 	aamas:lang aama:Gawwada ;
 	aamas:memberOf gaw:gawwada-VConsecutive-sor ;
 	gaw:vmorphClass gaw:Finite ;
@@ -682,7 +675,7 @@ aama:ID8ff06ece-8ba8-4cf7-ab3f-6711e060c724 a aamas:Term ;
 	gaw:number gaw:Singular ;
 	.
 
-aama:ID935297ae-3caa-4fbd-8285-6663cbfd30d7 a aamas:Term ;
+aama:ID9cf94e2b-f80b-4cde-9390-0299d28b6066 a aamas:Term ;
 	aamas:lang aama:Gawwada ;
 	aamas:memberOf gaw:gawwada-VConsecutive-sor ;
 	gaw:vmorphClass gaw:Finite ;
@@ -696,7 +689,7 @@ aama:ID935297ae-3caa-4fbd-8285-6663cbfd30d7 a aamas:Term ;
 	gaw:number gaw:Plural ;
 	.
 
-aama:ID1e013a78-3846-4fa5-bc51-a418ee6be0a5 a aamas:Term ;
+aama:IDce4c4459-1de3-4261-b6d7-6e49ca013fd2 a aamas:Term ;
 	aamas:lang aama:Gawwada ;
 	aamas:memberOf gaw:gawwada-VConsecutive-sor ;
 	gaw:vmorphClass gaw:Finite ;
@@ -710,7 +703,7 @@ aama:ID1e013a78-3846-4fa5-bc51-a418ee6be0a5 a aamas:Term ;
 	gaw:number gaw:Plural ;
 	.
 
-aama:IDb1451f2c-e0d5-4529-8885-bd28c94ac084 a aamas:Term ;
+aama:IDafab901a-ed8e-4fff-a7e7-8cb1cd59df31 a aamas:Term ;
 	aamas:lang aama:Gawwada ;
 	aamas:memberOf gaw:gawwada-VConsecutive-sor ;
 	gaw:vmorphClass gaw:Finite ;
@@ -732,7 +725,7 @@ gaw:gawwada-VImperfective-ass a aamas:Termcluster ;
 	rdfs:comment "Tosco2007b Table 4 (p. 515). There are two tonally distinct inflectional classes of verb in the perfective%%imperative%%and consecutive positive tenses." 
 	.
 
-aama:ID47f94a9c-6a75-4b22-84a1-36e067ef32ab a aamas:Term ;
+aama:ID3e086b22-8b07-4be0-9867-b57dfec91e0e a aamas:Term ;
 	aamas:lang aama:Gawwada ;
 	aamas:memberOf gaw:gawwada-VImperfective-ass ;
 	gaw:vmorphClass gaw:Finite ;
@@ -745,7 +738,7 @@ aama:ID47f94a9c-6a75-4b22-84a1-36e067ef32ab a aamas:Term ;
 	gaw:number gaw:Singular ;
 	.
 
-aama:ID1fd73a41-88d2-42c1-ba66-c6764682d7a0 a aamas:Term ;
+aama:ID38f7296c-1fb5-443f-864b-5df6ec8e9430 a aamas:Term ;
 	aamas:lang aama:Gawwada ;
 	aamas:memberOf gaw:gawwada-VImperfective-ass ;
 	gaw:vmorphClass gaw:Finite ;
@@ -758,7 +751,7 @@ aama:ID1fd73a41-88d2-42c1-ba66-c6764682d7a0 a aamas:Term ;
 	gaw:number gaw:Singular ;
 	.
 
-aama:IDe562c3f2-b10b-42d0-9879-407cfc17cde2 a aamas:Term ;
+aama:ID5de18916-cf01-43ea-9e0c-d97d4abc2b80 a aamas:Term ;
 	aamas:lang aama:Gawwada ;
 	aamas:memberOf gaw:gawwada-VImperfective-ass ;
 	gaw:vmorphClass gaw:Finite ;
@@ -771,7 +764,7 @@ aama:IDe562c3f2-b10b-42d0-9879-407cfc17cde2 a aamas:Term ;
 	gaw:number gaw:Singular ;
 	.
 
-aama:ID48bd9def-4baa-43ee-9272-163bd9525b2a a aamas:Term ;
+aama:IDad8b4515-26ff-44ed-9c83-c8150e987db8 a aamas:Term ;
 	aamas:lang aama:Gawwada ;
 	aamas:memberOf gaw:gawwada-VImperfective-ass ;
 	gaw:vmorphClass gaw:Finite ;
@@ -784,7 +777,7 @@ aama:ID48bd9def-4baa-43ee-9272-163bd9525b2a a aamas:Term ;
 	gaw:number gaw:Singular ;
 	.
 
-aama:IDae7abdac-50ab-4fc7-94a0-e9cf3e9eb07b a aamas:Term ;
+aama:ID5037882f-c674-4218-a941-1b52395112bd a aamas:Term ;
 	aamas:lang aama:Gawwada ;
 	aamas:memberOf gaw:gawwada-VImperfective-ass ;
 	gaw:vmorphClass gaw:Finite ;
@@ -797,7 +790,7 @@ aama:IDae7abdac-50ab-4fc7-94a0-e9cf3e9eb07b a aamas:Term ;
 	gaw:number gaw:Plural ;
 	.
 
-aama:ID4e7e73e7-876a-4f39-a637-3dde56c8bc58 a aamas:Term ;
+aama:ID3fed3711-9b15-4f00-aadc-e63c60b8bf0e a aamas:Term ;
 	aamas:lang aama:Gawwada ;
 	aamas:memberOf gaw:gawwada-VImperfective-ass ;
 	gaw:vmorphClass gaw:Finite ;
@@ -810,7 +803,7 @@ aama:ID4e7e73e7-876a-4f39-a637-3dde56c8bc58 a aamas:Term ;
 	gaw:number gaw:Plural ;
 	.
 
-aama:ID6dceabeb-73de-47a3-9daf-9e896d7ba734 a aamas:Term ;
+aama:IDe05c1b6f-3b61-4b80-8f56-993cbde6e46b a aamas:Term ;
 	aamas:lang aama:Gawwada ;
 	aamas:memberOf gaw:gawwada-VImperfective-ass ;
 	gaw:vmorphClass gaw:Finite ;
@@ -831,7 +824,7 @@ gaw:gawwada-VNegImprtvExx a aamas:Termcluster ;
 	rdfs:comment "Tosco2007b 3.3.5 (p. 517). Imperative classes do not exist in the negative imperative (note classes of lexical items in the affirmative imperative). A single verb form used in both sg and pl." 
 	.
 
-aama:IDd66c6d6a-7f00-48d8-a75a-f6748d66d140 a aamas:Term ;
+aama:ID5b511815-d45d-45dd-8371-7539ed3cb317 a aamas:Term ;
 	aamas:lang aama:Gawwada ;
 	aamas:memberOf gaw:gawwada-VNegImprtvExx ;
 	aamas:lexeme aama:Gawwada-ass ;
@@ -844,7 +837,7 @@ aama:IDd66c6d6a-7f00-48d8-a75a-f6748d66d140 a aamas:Term ;
 	gaw:number gaw:Singular ;
 	.
 
-aama:ID1e4b4586-4ac3-4102-b8b5-35ba320d8783 a aamas:Term ;
+aama:ID46dc1775-1c8b-4898-8821-762f124ee6b0 a aamas:Term ;
 	aamas:lang aama:Gawwada ;
 	aamas:memberOf gaw:gawwada-VNegImprtvExx ;
 	aamas:lexeme aama:Gawwada-ass ;
@@ -865,7 +858,7 @@ gaw:gawwada-VNegJussive-ass a aamas:Termcluster ;
 	rdfs:comment "Tosco2007b Table 8%%3.3.7 (p.517). The desinences are the same as the past negative%%preceded by the jussive marker ínnu." 
 	.
 
-aama:ID182688b4-b6b4-49b2-81e4-71d67ae45e2e a aamas:Term ;
+aama:ID8fa33d20-46a2-4f3f-8966-1035bc510223 a aamas:Term ;
 	aamas:lang aama:Gawwada ;
 	aamas:memberOf gaw:gawwada-VNegJussive-ass ;
 	gaw:vmorphClass gaw:Finite ;
@@ -879,7 +872,7 @@ aama:ID182688b4-b6b4-49b2-81e4-71d67ae45e2e a aamas:Term ;
 	gaw:number gaw:Singular ;
 	.
 
-aama:IDadb21c94-93e3-4793-93cd-7984cc279d3f a aamas:Term ;
+aama:ID9d4c1f99-d22c-415c-8dd4-91ed22a0dde6 a aamas:Term ;
 	aamas:lang aama:Gawwada ;
 	aamas:memberOf gaw:gawwada-VNegJussive-ass ;
 	gaw:vmorphClass gaw:Finite ;
@@ -893,7 +886,7 @@ aama:IDadb21c94-93e3-4793-93cd-7984cc279d3f a aamas:Term ;
 	gaw:number gaw:Singular ;
 	.
 
-aama:ID9a1c6dc9-f687-4a55-ae11-14a9c56d9ec3 a aamas:Term ;
+aama:IDc04341ea-ef9a-4380-9359-9312a3d784aa a aamas:Term ;
 	aamas:lang aama:Gawwada ;
 	aamas:memberOf gaw:gawwada-VNegJussive-ass ;
 	gaw:vmorphClass gaw:Finite ;
@@ -907,7 +900,7 @@ aama:ID9a1c6dc9-f687-4a55-ae11-14a9c56d9ec3 a aamas:Term ;
 	gaw:number gaw:Singular ;
 	.
 
-aama:ID48335fd1-091c-4efe-b6b6-1c82c803e1a5 a aamas:Term ;
+aama:ID78dfeb83-63b8-4c4e-aad3-ee1934c2f0d3 a aamas:Term ;
 	aamas:lang aama:Gawwada ;
 	aamas:memberOf gaw:gawwada-VNegJussive-ass ;
 	gaw:vmorphClass gaw:Finite ;
@@ -921,7 +914,7 @@ aama:ID48335fd1-091c-4efe-b6b6-1c82c803e1a5 a aamas:Term ;
 	gaw:number gaw:Plural ;
 	.
 
-aama:ID828b30d3-da91-4faf-b465-3a289b0da510 a aamas:Term ;
+aama:ID9b64a99b-4c1b-4626-ac51-822c986096e1 a aamas:Term ;
 	aamas:lang aama:Gawwada ;
 	aamas:memberOf gaw:gawwada-VNegJussive-ass ;
 	gaw:vmorphClass gaw:Finite ;
@@ -943,7 +936,7 @@ gaw:gawwada-VNegPast-ass a aamas:Termcluster ;
 	rdfs:comment "Tosco2007b Table 5 (p. 515). There are two tonally distinct inflectional classes of verb in the perfective%%imperative%%and consecutive positive tenses." 
 	.
 
-aama:IDdcfbc554-46a7-4dce-b670-118a6b73db73 a aamas:Term ;
+aama:ID174170ed-93f3-461b-8550-8b1da2259186 a aamas:Term ;
 	aamas:lang aama:Gawwada ;
 	aamas:memberOf gaw:gawwada-VNegPast-ass ;
 	gaw:vmorphClass gaw:Finite ;
@@ -957,7 +950,7 @@ aama:IDdcfbc554-46a7-4dce-b670-118a6b73db73 a aamas:Term ;
 	gaw:number gaw:Singular ;
 	.
 
-aama:IDb6815e75-1d63-4812-a42e-a74a33657c1a a aamas:Term ;
+aama:ID95e9eb2a-7ee2-4a65-a252-708479feeab2 a aamas:Term ;
 	aamas:lang aama:Gawwada ;
 	aamas:memberOf gaw:gawwada-VNegPast-ass ;
 	gaw:vmorphClass gaw:Finite ;
@@ -971,7 +964,7 @@ aama:IDb6815e75-1d63-4812-a42e-a74a33657c1a a aamas:Term ;
 	gaw:number gaw:Singular ;
 	.
 
-aama:ID8835e568-bf20-4fb4-ab2f-dd49adc8ed39 a aamas:Term ;
+aama:ID6f87bb40-ca83-4d3a-968c-369b6c7e371c a aamas:Term ;
 	aamas:lang aama:Gawwada ;
 	aamas:memberOf gaw:gawwada-VNegPast-ass ;
 	gaw:vmorphClass gaw:Finite ;
@@ -985,7 +978,7 @@ aama:ID8835e568-bf20-4fb4-ab2f-dd49adc8ed39 a aamas:Term ;
 	gaw:number gaw:Singular ;
 	.
 
-aama:ID7987b36b-9318-4cc7-868a-aecd2ab45b9b a aamas:Term ;
+aama:ID48df94e9-5cff-44e7-9f98-216a69e43829 a aamas:Term ;
 	aamas:lang aama:Gawwada ;
 	aamas:memberOf gaw:gawwada-VNegPast-ass ;
 	gaw:vmorphClass gaw:Finite ;
@@ -999,7 +992,7 @@ aama:ID7987b36b-9318-4cc7-868a-aecd2ab45b9b a aamas:Term ;
 	gaw:number gaw:Singular ;
 	.
 
-aama:ID40f31899-02b5-46b4-ad60-886c6ad305e8 a aamas:Term ;
+aama:IDb7c6482e-ec04-44c7-b353-8e542a6482fc a aamas:Term ;
 	aamas:lang aama:Gawwada ;
 	aamas:memberOf gaw:gawwada-VNegPast-ass ;
 	gaw:vmorphClass gaw:Finite ;
@@ -1013,7 +1006,7 @@ aama:ID40f31899-02b5-46b4-ad60-886c6ad305e8 a aamas:Term ;
 	gaw:number gaw:Plural ;
 	.
 
-aama:ID88e6f51e-d3a3-427e-888d-5af355152856 a aamas:Term ;
+aama:ID7e96b17a-cc49-4f86-adc7-288a1553c66c a aamas:Term ;
 	aamas:lang aama:Gawwada ;
 	aamas:memberOf gaw:gawwada-VNegPast-ass ;
 	gaw:vmorphClass gaw:Finite ;
@@ -1027,7 +1020,7 @@ aama:ID88e6f51e-d3a3-427e-888d-5af355152856 a aamas:Term ;
 	gaw:number gaw:Plural ;
 	.
 
-aama:IDb5c9064d-cd30-4e3a-b682-4a0544dc00ca a aamas:Term ;
+aama:ID8bf5562c-288a-459d-a875-ea81e90dbca8 a aamas:Term ;
 	aamas:lang aama:Gawwada ;
 	aamas:memberOf gaw:gawwada-VNegPast-ass ;
 	gaw:vmorphClass gaw:Finite ;
@@ -1049,7 +1042,7 @@ gaw:gawwada-VNegPresent-ass a aamas:Termcluster ;
 	rdfs:comment "Tosco2007b Table 5 (p. 515). There are two tonally distinct inflectional classes of verb in the perfective%%imperative%%and consecutive positive tenses." 
 	.
 
-aama:ID100a59f1-87a8-4d03-85de-1ab7122589d6 a aamas:Term ;
+aama:IDdba95a1d-2f89-4109-b598-d93752a05929 a aamas:Term ;
 	aamas:lang aama:Gawwada ;
 	aamas:memberOf gaw:gawwada-VNegPresent-ass ;
 	gaw:vmorphClass gaw:Finite ;
@@ -1063,7 +1056,7 @@ aama:ID100a59f1-87a8-4d03-85de-1ab7122589d6 a aamas:Term ;
 	gaw:number gaw:Singular ;
 	.
 
-aama:IDee6a192a-5f8c-477a-9960-1130abeeb50a a aamas:Term ;
+aama:ID0a8bb3bc-4c7d-4839-bb52-4be3c0226da6 a aamas:Term ;
 	aamas:lang aama:Gawwada ;
 	aamas:memberOf gaw:gawwada-VNegPresent-ass ;
 	gaw:vmorphClass gaw:Finite ;
@@ -1077,7 +1070,7 @@ aama:IDee6a192a-5f8c-477a-9960-1130abeeb50a a aamas:Term ;
 	gaw:number gaw:Singular ;
 	.
 
-aama:ID7e9d7d24-20e9-4af3-a843-39f382554902 a aamas:Term ;
+aama:ID27476e9b-1665-4dcc-a989-2c74aad701d7 a aamas:Term ;
 	aamas:lang aama:Gawwada ;
 	aamas:memberOf gaw:gawwada-VNegPresent-ass ;
 	gaw:vmorphClass gaw:Finite ;
@@ -1091,7 +1084,7 @@ aama:ID7e9d7d24-20e9-4af3-a843-39f382554902 a aamas:Term ;
 	gaw:number gaw:Singular ;
 	.
 
-aama:IDc691daa1-b7fa-43f8-904f-20bdce7a5d1e a aamas:Term ;
+aama:ID5cfa8bac-f45f-4077-b1b0-6159025b2833 a aamas:Term ;
 	aamas:lang aama:Gawwada ;
 	aamas:memberOf gaw:gawwada-VNegPresent-ass ;
 	gaw:vmorphClass gaw:Finite ;
@@ -1105,7 +1098,7 @@ aama:IDc691daa1-b7fa-43f8-904f-20bdce7a5d1e a aamas:Term ;
 	gaw:number gaw:Singular ;
 	.
 
-aama:ID7ef340cf-a0e8-4a37-8b8d-1fcc19e5cb59 a aamas:Term ;
+aama:IDf9f55246-a544-4214-92f9-7eb09cbbdbd0 a aamas:Term ;
 	aamas:lang aama:Gawwada ;
 	aamas:memberOf gaw:gawwada-VNegPresent-ass ;
 	gaw:vmorphClass gaw:Finite ;
@@ -1119,7 +1112,7 @@ aama:ID7ef340cf-a0e8-4a37-8b8d-1fcc19e5cb59 a aamas:Term ;
 	gaw:number gaw:Plural ;
 	.
 
-aama:ID6310d683-6118-47be-a836-c083a9916a4c a aamas:Term ;
+aama:ID6bf63771-fac6-482e-aca2-46ddf92c7c30 a aamas:Term ;
 	aamas:lang aama:Gawwada ;
 	aamas:memberOf gaw:gawwada-VNegPresent-ass ;
 	gaw:vmorphClass gaw:Finite ;
@@ -1133,7 +1126,7 @@ aama:ID6310d683-6118-47be-a836-c083a9916a4c a aamas:Term ;
 	gaw:number gaw:Plural ;
 	.
 
-aama:ID349cb576-af0c-4198-85e8-6ccbad2389b0 a aamas:Term ;
+aama:ID333521ac-244e-4c2d-befe-1c166c288932 a aamas:Term ;
 	aamas:lang aama:Gawwada ;
 	aamas:memberOf gaw:gawwada-VNegPresent-ass ;
 	gaw:vmorphClass gaw:Finite ;
@@ -1155,7 +1148,7 @@ gaw:gawwada-VPerfective-oggay a aamas:Termcluster ;
 	rdfs:comment "Tosco2007b Table 3 (p. 514). There are two tonally distinct inflectional classes of verb in the perfective%%imperative%%and consecutive positive tenses." 
 	.
 
-aama:IDaf8cb709-938a-4b71-b201-7f4d662b48da a aamas:Term ;
+aama:IDcac3c136-24bd-460e-91f8-ff00948f90b3 a aamas:Term ;
 	aamas:lang aama:Gawwada ;
 	aamas:memberOf gaw:gawwada-VPerfective-oggay ;
 	gaw:vmorphClass gaw:Finite ;
@@ -1169,7 +1162,7 @@ aama:IDaf8cb709-938a-4b71-b201-7f4d662b48da a aamas:Term ;
 	gaw:number gaw:Singular ;
 	.
 
-aama:ID07a2f662-86d1-40f7-afd1-6648574bba64 a aamas:Term ;
+aama:IDae349e88-0abd-446c-9bed-18a02df27dc3 a aamas:Term ;
 	aamas:lang aama:Gawwada ;
 	aamas:memberOf gaw:gawwada-VPerfective-oggay ;
 	gaw:vmorphClass gaw:Finite ;
@@ -1183,7 +1176,7 @@ aama:ID07a2f662-86d1-40f7-afd1-6648574bba64 a aamas:Term ;
 	gaw:number gaw:Singular ;
 	.
 
-aama:ID2cef1388-1937-4235-8b8b-4022956032e1 a aamas:Term ;
+aama:ID2cf7ec05-835b-491c-82f1-8301b0f8437f a aamas:Term ;
 	aamas:lang aama:Gawwada ;
 	aamas:memberOf gaw:gawwada-VPerfective-oggay ;
 	gaw:vmorphClass gaw:Finite ;
@@ -1197,7 +1190,7 @@ aama:ID2cef1388-1937-4235-8b8b-4022956032e1 a aamas:Term ;
 	gaw:number gaw:Singular ;
 	.
 
-aama:ID2e504b0b-b89c-4d52-8219-1b1f9bbe2807 a aamas:Term ;
+aama:ID26100f45-355a-4a5f-bf79-c22ad0728efa a aamas:Term ;
 	aamas:lang aama:Gawwada ;
 	aamas:memberOf gaw:gawwada-VPerfective-oggay ;
 	gaw:vmorphClass gaw:Finite ;
@@ -1211,7 +1204,7 @@ aama:ID2e504b0b-b89c-4d52-8219-1b1f9bbe2807 a aamas:Term ;
 	gaw:number gaw:Singular ;
 	.
 
-aama:IDb26f1a83-6f7a-4e24-8e7f-2bf19c32b663 a aamas:Term ;
+aama:ID877cf8c4-3951-4ce3-92fc-710eaf7bcbcb a aamas:Term ;
 	aamas:lang aama:Gawwada ;
 	aamas:memberOf gaw:gawwada-VPerfective-oggay ;
 	gaw:vmorphClass gaw:Finite ;
@@ -1225,7 +1218,7 @@ aama:IDb26f1a83-6f7a-4e24-8e7f-2bf19c32b663 a aamas:Term ;
 	gaw:number gaw:Plural ;
 	.
 
-aama:IDee34a6c4-af33-4d99-8c3e-3e43f228f3e3 a aamas:Term ;
+aama:ID5410d809-37b0-4788-b189-1cba17a8de7c a aamas:Term ;
 	aamas:lang aama:Gawwada ;
 	aamas:memberOf gaw:gawwada-VPerfective-oggay ;
 	gaw:vmorphClass gaw:Finite ;
@@ -1239,7 +1232,7 @@ aama:IDee34a6c4-af33-4d99-8c3e-3e43f228f3e3 a aamas:Term ;
 	gaw:number gaw:Plural ;
 	.
 
-aama:IDff5058d2-b3e8-43ef-b9b2-22be5a1a2277 a aamas:Term ;
+aama:ID158beb84-064b-48b7-bc34-f24891334f3d a aamas:Term ;
 	aamas:lang aama:Gawwada ;
 	aamas:memberOf gaw:gawwada-VPerfective-oggay ;
 	gaw:vmorphClass gaw:Finite ;
@@ -1261,7 +1254,7 @@ gaw:gawwada-VPerfective-ug a aamas:Termcluster ;
 	rdfs:comment "Tosco2007b Table 3 (p. 514). There are two tonally distinct inflectional classes of verb in the perfective%%imperative%%and consecutive positive tenses." 
 	.
 
-aama:ID6fdd083e-b154-4955-8f3e-343ac79513d1 a aamas:Term ;
+aama:ID1794aab4-61d7-466d-8e37-72bd505fa67b a aamas:Term ;
 	aamas:lang aama:Gawwada ;
 	aamas:memberOf gaw:gawwada-VPerfective-ug ;
 	gaw:vmorphClass gaw:Finite ;
@@ -1275,7 +1268,7 @@ aama:ID6fdd083e-b154-4955-8f3e-343ac79513d1 a aamas:Term ;
 	gaw:number gaw:Singular ;
 	.
 
-aama:ID16a2d730-a5f7-45cb-a507-7d73d8e3ffff a aamas:Term ;
+aama:ID68e2c4af-104a-4b7a-8b2e-2795c975075b a aamas:Term ;
 	aamas:lang aama:Gawwada ;
 	aamas:memberOf gaw:gawwada-VPerfective-ug ;
 	gaw:vmorphClass gaw:Finite ;
@@ -1289,7 +1282,7 @@ aama:ID16a2d730-a5f7-45cb-a507-7d73d8e3ffff a aamas:Term ;
 	gaw:number gaw:Singular ;
 	.
 
-aama:ID4071c0e6-c980-4fdb-8f5b-e6109fea3869 a aamas:Term ;
+aama:ID64a76c9b-43c6-4685-afa8-dfa7cad169ce a aamas:Term ;
 	aamas:lang aama:Gawwada ;
 	aamas:memberOf gaw:gawwada-VPerfective-ug ;
 	gaw:vmorphClass gaw:Finite ;
@@ -1303,7 +1296,7 @@ aama:ID4071c0e6-c980-4fdb-8f5b-e6109fea3869 a aamas:Term ;
 	gaw:number gaw:Singular ;
 	.
 
-aama:ID832fa4db-e4fd-4f31-b84e-51a433d1d5e6 a aamas:Term ;
+aama:ID1fdb506e-cc63-44a7-8ee4-b7789dedca64 a aamas:Term ;
 	aamas:lang aama:Gawwada ;
 	aamas:memberOf gaw:gawwada-VPerfective-ug ;
 	gaw:vmorphClass gaw:Finite ;
@@ -1317,7 +1310,7 @@ aama:ID832fa4db-e4fd-4f31-b84e-51a433d1d5e6 a aamas:Term ;
 	gaw:number gaw:Singular ;
 	.
 
-aama:ID70c6968f-5669-44e6-b999-07d42c9daf6f a aamas:Term ;
+aama:ID7dc48ad2-d719-4575-84dc-0cf158d876d7 a aamas:Term ;
 	aamas:lang aama:Gawwada ;
 	aamas:memberOf gaw:gawwada-VPerfective-ug ;
 	gaw:vmorphClass gaw:Finite ;
@@ -1331,7 +1324,7 @@ aama:ID70c6968f-5669-44e6-b999-07d42c9daf6f a aamas:Term ;
 	gaw:number gaw:Plural ;
 	.
 
-aama:ID6ea47179-423a-4806-92f0-f651d02bdcba a aamas:Term ;
+aama:ID0650c93e-782b-4d62-bf24-961d82d94b5b a aamas:Term ;
 	aamas:lang aama:Gawwada ;
 	aamas:memberOf gaw:gawwada-VPerfective-ug ;
 	gaw:vmorphClass gaw:Finite ;
@@ -1345,7 +1338,7 @@ aama:ID6ea47179-423a-4806-92f0-f651d02bdcba a aamas:Term ;
 	gaw:number gaw:Plural ;
 	.
 
-aama:IDdd0801d5-83ba-4fda-8548-de35aed002b2 a aamas:Term ;
+aama:IDed8df753-9b89-48e7-9bb7-f0ab6e13f6a5 a aamas:Term ;
 	aamas:lang aama:Gawwada ;
 	aamas:memberOf gaw:gawwada-VPerfective-ug ;
 	gaw:vmorphClass gaw:Finite ;
@@ -1367,7 +1360,7 @@ gaw:gawwada-VPerfectiveTemplate-ass a aamas:Termcluster ;
 	rdfs:comment "Tosco2007b Table 3 (p. 514). There are two tonally distinct inflectional classes of verb in the perfective%%imperative%%and consecutive positive tenses." 
 	.
 
-aama:IDbfac3c8e-6451-4f05-b907-91a8f7ce58af a aamas:Term ;
+aama:ID99d018a1-387d-4723-a10c-f1a3c8887537 a aamas:Term ;
 	aamas:lang aama:Gawwada ;
 	aamas:memberOf gaw:gawwada-VPerfectiveTemplate-ass ;
 	gaw:vmorphClass gaw:Finite ;
@@ -1381,7 +1374,7 @@ aama:IDbfac3c8e-6451-4f05-b907-91a8f7ce58af a aamas:Term ;
 	gaw:number gaw:Singular ;
 	.
 
-aama:ID427e9fbd-790a-41da-b29c-fd362c6268ce a aamas:Term ;
+aama:ID548273f8-5b59-45cf-b198-f32c34eb265d a aamas:Term ;
 	aamas:lang aama:Gawwada ;
 	aamas:memberOf gaw:gawwada-VPerfectiveTemplate-ass ;
 	gaw:vmorphClass gaw:Finite ;
@@ -1395,7 +1388,7 @@ aama:ID427e9fbd-790a-41da-b29c-fd362c6268ce a aamas:Term ;
 	gaw:number gaw:Singular ;
 	.
 
-aama:IDea393ae7-bb72-40c0-af12-9a4e7ab7f984 a aamas:Term ;
+aama:ID749ceb84-6540-494c-9a03-e86cd1eb7232 a aamas:Term ;
 	aamas:lang aama:Gawwada ;
 	aamas:memberOf gaw:gawwada-VPerfectiveTemplate-ass ;
 	gaw:vmorphClass gaw:Finite ;
@@ -1409,7 +1402,7 @@ aama:IDea393ae7-bb72-40c0-af12-9a4e7ab7f984 a aamas:Term ;
 	gaw:number gaw:Singular ;
 	.
 
-aama:ID15d9402f-35df-40d5-81d5-b54501cb69d3 a aamas:Term ;
+aama:ID5a0c90ea-a6b7-4ddd-9713-6e6dd97acb3f a aamas:Term ;
 	aamas:lang aama:Gawwada ;
 	aamas:memberOf gaw:gawwada-VPerfectiveTemplate-ass ;
 	gaw:vmorphClass gaw:Finite ;
@@ -1423,7 +1416,7 @@ aama:ID15d9402f-35df-40d5-81d5-b54501cb69d3 a aamas:Term ;
 	gaw:number gaw:Singular ;
 	.
 
-aama:ID87f0abb0-8cfb-412f-b9cf-a435f9b584bb a aamas:Term ;
+aama:IDaf41f77b-f13a-4935-8b2c-fb15d2ff6e19 a aamas:Term ;
 	aamas:lang aama:Gawwada ;
 	aamas:memberOf gaw:gawwada-VPerfectiveTemplate-ass ;
 	gaw:vmorphClass gaw:Finite ;
@@ -1437,7 +1430,7 @@ aama:ID87f0abb0-8cfb-412f-b9cf-a435f9b584bb a aamas:Term ;
 	gaw:number gaw:Plural ;
 	.
 
-aama:ID69edd6a0-af63-433e-9eda-4a9e5401a89b a aamas:Term ;
+aama:IDdf4385ce-3b89-4441-8582-15f207cbe5c5 a aamas:Term ;
 	aamas:lang aama:Gawwada ;
 	aamas:memberOf gaw:gawwada-VPerfectiveTemplate-ass ;
 	gaw:vmorphClass gaw:Finite ;
@@ -1451,7 +1444,7 @@ aama:ID69edd6a0-af63-433e-9eda-4a9e5401a89b a aamas:Term ;
 	gaw:number gaw:Plural ;
 	.
 
-aama:ID60d5fb67-c2de-4204-ae70-3ca9c2f77295 a aamas:Term ;
+aama:ID3e7197ed-a337-4267-a6d1-2987dd460252 a aamas:Term ;
 	aamas:lang aama:Gawwada ;
 	aamas:memberOf gaw:gawwada-VPerfectiveTemplate-ass ;
 	gaw:vmorphClass gaw:Finite ;
@@ -1473,7 +1466,7 @@ gaw:gawwada-PInd a aamas:Termcluster ;
 	rdfs:comment "Tosco2007b Table 10 (5.0%%p. 523)" 
 	.
 
-aama:ID559fa2a2-017b-4908-893f-72d080e902a2 a aamas:Term ;
+aama:ID8da2b361-dc7f-4801-b242-cdfda2df5b9d a aamas:Term ;
 	aamas:lang aama:Gawwada ;
 	aamas:memberOf gaw:gawwada-PInd ;
 	gaw:vmorphClass gaw:PROIND ;
@@ -1486,7 +1479,7 @@ aama:ID559fa2a2-017b-4908-893f-72d080e902a2 a aamas:Term ;
 	gaw:number gaw:Singular ;
 	.
 
-aama:ID75732ce8-861a-4201-9f24-d173d23aac37 a aamas:Term ;
+aama:IDafc5ab38-ce31-4a28-9367-67998aa33e75 a aamas:Term ;
 	aamas:lang aama:Gawwada ;
 	aamas:memberOf gaw:gawwada-PInd ;
 	gaw:vmorphClass gaw:PROIND ;
@@ -1499,7 +1492,7 @@ aama:ID75732ce8-861a-4201-9f24-d173d23aac37 a aamas:Term ;
 	gaw:number gaw:Singular ;
 	.
 
-aama:ID81b9bf3d-50bc-4cd7-9a6d-d5a00fed57ec a aamas:Term ;
+aama:ID25aed6fb-43da-4f60-baf6-676d21d288b3 a aamas:Term ;
 	aamas:lang aama:Gawwada ;
 	aamas:memberOf gaw:gawwada-PInd ;
 	gaw:vmorphClass gaw:PROIND ;
@@ -1512,7 +1505,7 @@ aama:ID81b9bf3d-50bc-4cd7-9a6d-d5a00fed57ec a aamas:Term ;
 	gaw:number gaw:Singular ;
 	.
 
-aama:IDceda076a-31a3-4c62-93e7-f855ac85396d a aamas:Term ;
+aama:IDc0faa8aa-ec90-4c89-9d19-7ef9e6f66e36 a aamas:Term ;
 	aamas:lang aama:Gawwada ;
 	aamas:memberOf gaw:gawwada-PInd ;
 	gaw:vmorphClass gaw:PROIND ;
@@ -1525,7 +1518,7 @@ aama:IDceda076a-31a3-4c62-93e7-f855ac85396d a aamas:Term ;
 	gaw:number gaw:Singular ;
 	.
 
-aama:ID0c0c3c0a-8161-4690-85ad-a6c7658b5b19 a aamas:Term ;
+aama:ID23a631af-9b94-45f9-9bf3-ebeee1acfb0a a aamas:Term ;
 	aamas:lang aama:Gawwada ;
 	aamas:memberOf gaw:gawwada-PInd ;
 	gaw:vmorphClass gaw:PROIND ;
@@ -1538,7 +1531,7 @@ aama:ID0c0c3c0a-8161-4690-85ad-a6c7658b5b19 a aamas:Term ;
 	gaw:number gaw:Plural ;
 	.
 
-aama:ID92ef50a0-9155-4aa7-9817-a9146e14ae35 a aamas:Term ;
+aama:IDb4f0b407-6289-446d-88a2-0b8b8514a7d4 a aamas:Term ;
 	aamas:lang aama:Gawwada ;
 	aamas:memberOf gaw:gawwada-PInd ;
 	gaw:vmorphClass gaw:PROIND ;
@@ -1551,7 +1544,7 @@ aama:ID92ef50a0-9155-4aa7-9817-a9146e14ae35 a aamas:Term ;
 	gaw:number gaw:Plural ;
 	.
 
-aama:IDfadbe918-4678-464b-a143-df768c0565b5 a aamas:Term ;
+aama:IDb4521187-4f1f-436d-a0bf-65b51d5d7e6b a aamas:Term ;
 	aamas:lang aama:Gawwada ;
 	aamas:memberOf gaw:gawwada-PInd ;
 	gaw:vmorphClass gaw:PROIND ;
@@ -1572,7 +1565,7 @@ gaw:gawwada-PObjProclitic a aamas:Termcluster ;
 	rdfs:comment "Tosco2007b Table 10 (5.0%%p. 523)" 
 	.
 
-aama:IDf3cf5818-bae3-49d7-8b48-7b2e0da11658 a aamas:Term ;
+aama:ID26afb749-9081-4a47-a489-4cab9050a25a a aamas:Term ;
 	aamas:lang aama:Gawwada ;
 	aamas:memberOf gaw:gawwada-PObjProclitic ;
 	gaw:vmorphClass gaw:PROOBJPROCLITIC ;
@@ -1585,7 +1578,7 @@ aama:IDf3cf5818-bae3-49d7-8b48-7b2e0da11658 a aamas:Term ;
 	gaw:number gaw:Singular ;
 	.
 
-aama:IDa48d84f9-e673-4a33-a8a6-33ff3a1b0776 a aamas:Term ;
+aama:ID17821da1-32ad-45c3-809a-c0674f032606 a aamas:Term ;
 	aamas:lang aama:Gawwada ;
 	aamas:memberOf gaw:gawwada-PObjProclitic ;
 	gaw:vmorphClass gaw:PROOBJPROCLITIC ;
@@ -1598,7 +1591,7 @@ aama:IDa48d84f9-e673-4a33-a8a6-33ff3a1b0776 a aamas:Term ;
 	gaw:number gaw:Singular ;
 	.
 
-aama:IDae7674a9-7f2c-443e-80c8-091aacdbc2da a aamas:Term ;
+aama:ID680a5875-c292-40d1-bc15-ea7d61c2efaa a aamas:Term ;
 	aamas:lang aama:Gawwada ;
 	aamas:memberOf gaw:gawwada-PObjProclitic ;
 	gaw:vmorphClass gaw:PROOBJPROCLITIC ;
@@ -1611,7 +1604,7 @@ aama:IDae7674a9-7f2c-443e-80c8-091aacdbc2da a aamas:Term ;
 	gaw:number gaw:Singular ;
 	.
 
-aama:ID82b6e5d5-f7a7-4219-9ed0-07fdec65c718 a aamas:Term ;
+aama:ID536da780-2570-4168-bd3d-29a9798bf4cb a aamas:Term ;
 	aamas:lang aama:Gawwada ;
 	aamas:memberOf gaw:gawwada-PObjProclitic ;
 	gaw:vmorphClass gaw:PROOBJPROCLITIC ;
@@ -1624,7 +1617,7 @@ aama:ID82b6e5d5-f7a7-4219-9ed0-07fdec65c718 a aamas:Term ;
 	gaw:number gaw:Plural ;
 	.
 
-aama:ID6a606a53-8418-4cc4-90ff-8298fa6ffc72 a aamas:Term ;
+aama:IDcf816e3d-9f58-4e52-85a7-57f323de6cf5 a aamas:Term ;
 	aamas:lang aama:Gawwada ;
 	aamas:memberOf gaw:gawwada-PObjProclitic ;
 	gaw:vmorphClass gaw:PROOBJPROCLITIC ;
@@ -1645,7 +1638,7 @@ gaw:gawwada-PPossSuff a aamas:Termcluster ;
 	rdfs:comment "Tosco2007b Table 10 (5.0%%p. 523)" 
 	.
 
-aama:IDa87760ac-e3ec-426a-b582-c7f14d941cda a aamas:Term ;
+aama:IDdff25057-b841-4c14-82e3-2b31bf1bb140 a aamas:Term ;
 	aamas:lang aama:Gawwada ;
 	aamas:memberOf gaw:gawwada-PPossSuff ;
 	gaw:vmorphClass gaw:PROPOSSSUFF ;
@@ -1659,7 +1652,7 @@ aama:IDa87760ac-e3ec-426a-b582-c7f14d941cda a aamas:Term ;
 	gaw:genderHead gaw:HeadFem ;
 	.
 
-aama:IDfc919eaa-acd7-4175-8c7c-391fdd717374 a aamas:Term ;
+aama:ID8e9976ca-3a5f-422c-b14b-3410d3dfaffc a aamas:Term ;
 	aamas:lang aama:Gawwada ;
 	aamas:memberOf gaw:gawwada-PPossSuff ;
 	gaw:vmorphClass gaw:PROPOSSSUFF ;
@@ -1673,7 +1666,7 @@ aama:IDfc919eaa-acd7-4175-8c7c-391fdd717374 a aamas:Term ;
 	gaw:genderHead gaw:HeadFem ;
 	.
 
-aama:ID8a3763f3-5ae7-48ea-b271-2d038c3c76d3 a aamas:Term ;
+aama:ID6d1cc036-6a6f-47c5-bd64-ea120753f2d7 a aamas:Term ;
 	aamas:lang aama:Gawwada ;
 	aamas:memberOf gaw:gawwada-PPossSuff ;
 	gaw:vmorphClass gaw:PROPOSSSUFF ;
@@ -1687,7 +1680,7 @@ aama:ID8a3763f3-5ae7-48ea-b271-2d038c3c76d3 a aamas:Term ;
 	gaw:genderHead gaw:HeadFem ;
 	.
 
-aama:IDc804fe5a-96d1-4969-a3cc-b6260ea76156 a aamas:Term ;
+aama:IDafdbe599-1baa-43a6-aead-bee959784a3b a aamas:Term ;
 	aamas:lang aama:Gawwada ;
 	aamas:memberOf gaw:gawwada-PPossSuff ;
 	gaw:vmorphClass gaw:PROPOSSSUFF ;
@@ -1701,7 +1694,7 @@ aama:IDc804fe5a-96d1-4969-a3cc-b6260ea76156 a aamas:Term ;
 	gaw:genderHead gaw:HeadFem ;
 	.
 
-aama:IDaf09c3d7-b2ea-43c8-b767-7263339917ec a aamas:Term ;
+aama:ID0c579ab9-6170-4454-9d0f-ce6291650ea5 a aamas:Term ;
 	aamas:lang aama:Gawwada ;
 	aamas:memberOf gaw:gawwada-PPossSuff ;
 	gaw:vmorphClass gaw:PROPOSSSUFF ;
@@ -1715,7 +1708,7 @@ aama:IDaf09c3d7-b2ea-43c8-b767-7263339917ec a aamas:Term ;
 	gaw:genderHead gaw:HeadFem ;
 	.
 
-aama:IDa12e80d7-ce1e-4e20-8dde-4276828f3f33 a aamas:Term ;
+aama:ID6475a4fd-b580-4848-ae97-60915805da8f a aamas:Term ;
 	aamas:lang aama:Gawwada ;
 	aamas:memberOf gaw:gawwada-PPossSuff ;
 	gaw:vmorphClass gaw:PROPOSSSUFF ;
@@ -1729,7 +1722,7 @@ aama:IDa12e80d7-ce1e-4e20-8dde-4276828f3f33 a aamas:Term ;
 	gaw:genderHead gaw:HeadFem ;
 	.
 
-aama:ID0c1c459a-c9e4-48ce-802d-ac917eacf82a a aamas:Term ;
+aama:IDef946af2-6580-45b4-99df-e199a7bbff08 a aamas:Term ;
 	aamas:lang aama:Gawwada ;
 	aamas:memberOf gaw:gawwada-PPossSuff ;
 	gaw:vmorphClass gaw:PROPOSSSUFF ;
@@ -1743,7 +1736,7 @@ aama:ID0c1c459a-c9e4-48ce-802d-ac917eacf82a a aamas:Term ;
 	gaw:genderHead gaw:HeadFem ;
 	.
 
-aama:ID149f8ae3-4cf0-41f3-8dc6-09761eeee387 a aamas:Term ;
+aama:ID210d6853-f5a9-47fe-903c-89c5f9d999d7 a aamas:Term ;
 	aamas:lang aama:Gawwada ;
 	aamas:memberOf gaw:gawwada-PPossSuff ;
 	gaw:vmorphClass gaw:PROPOSSSUFF ;
@@ -1757,7 +1750,7 @@ aama:ID149f8ae3-4cf0-41f3-8dc6-09761eeee387 a aamas:Term ;
 	gaw:genderHead gaw:HeadFem ;
 	.
 
-aama:ID7ff4bb9f-01d6-46de-84f1-0a367624e291 a aamas:Term ;
+aama:ID9e7fac76-0903-49dc-9bd2-b3b86a11e031 a aamas:Term ;
 	aamas:lang aama:Gawwada ;
 	aamas:memberOf gaw:gawwada-PPossSuff ;
 	gaw:vmorphClass gaw:PROPOSSSUFF ;
@@ -1771,7 +1764,7 @@ aama:ID7ff4bb9f-01d6-46de-84f1-0a367624e291 a aamas:Term ;
 	gaw:genderHead gaw:HeadMasc ;
 	.
 
-aama:IDfa846515-2244-40d9-b851-f705b6fb420e a aamas:Term ;
+aama:IDdd011014-ca1f-4c41-83d7-0a140f4dc41d a aamas:Term ;
 	aamas:lang aama:Gawwada ;
 	aamas:memberOf gaw:gawwada-PPossSuff ;
 	gaw:vmorphClass gaw:PROPOSSSUFF ;
@@ -1785,7 +1778,7 @@ aama:IDfa846515-2244-40d9-b851-f705b6fb420e a aamas:Term ;
 	gaw:genderHead gaw:HeadMasc ;
 	.
 
-aama:IDb56ac64e-dd6a-4cdb-924d-b21e1febabb5 a aamas:Term ;
+aama:ID86194896-369a-4b9c-ad4b-4f436b0cfadd a aamas:Term ;
 	aamas:lang aama:Gawwada ;
 	aamas:memberOf gaw:gawwada-PPossSuff ;
 	gaw:vmorphClass gaw:PROPOSSSUFF ;
@@ -1799,7 +1792,7 @@ aama:IDb56ac64e-dd6a-4cdb-924d-b21e1febabb5 a aamas:Term ;
 	gaw:genderHead gaw:HeadMasc ;
 	.
 
-aama:ID7287f009-f5b2-4148-8978-d719b02523be a aamas:Term ;
+aama:ID4720c909-dafc-4b78-82d7-001dcb7ee83e a aamas:Term ;
 	aamas:lang aama:Gawwada ;
 	aamas:memberOf gaw:gawwada-PPossSuff ;
 	gaw:vmorphClass gaw:PROPOSSSUFF ;
@@ -1813,7 +1806,7 @@ aama:ID7287f009-f5b2-4148-8978-d719b02523be a aamas:Term ;
 	gaw:genderHead gaw:HeadMasc ;
 	.
 
-aama:ID72f4ed1a-d626-4355-b1d0-fba08cd8ab84 a aamas:Term ;
+aama:ID44bf8d1e-3e99-41af-9f70-658169e6f1c9 a aamas:Term ;
 	aamas:lang aama:Gawwada ;
 	aamas:memberOf gaw:gawwada-PPossSuff ;
 	gaw:vmorphClass gaw:PROPOSSSUFF ;
@@ -1827,7 +1820,7 @@ aama:ID72f4ed1a-d626-4355-b1d0-fba08cd8ab84 a aamas:Term ;
 	gaw:genderHead gaw:HeadMasc ;
 	.
 
-aama:ID396fc2a4-003a-45b1-a7eb-ac50ef192323 a aamas:Term ;
+aama:ID08905301-4851-45cd-ad7b-072f787f261e a aamas:Term ;
 	aamas:lang aama:Gawwada ;
 	aamas:memberOf gaw:gawwada-PPossSuff ;
 	gaw:vmorphClass gaw:PROPOSSSUFF ;
@@ -1841,7 +1834,7 @@ aama:ID396fc2a4-003a-45b1-a7eb-ac50ef192323 a aamas:Term ;
 	gaw:genderHead gaw:HeadMasc ;
 	.
 
-aama:ID6b016887-cf79-431b-a105-d16ccf7febda a aamas:Term ;
+aama:ID402a7864-4230-4d94-a1cf-96226956e292 a aamas:Term ;
 	aamas:lang aama:Gawwada ;
 	aamas:memberOf gaw:gawwada-PPossSuff ;
 	gaw:vmorphClass gaw:PROPOSSSUFF ;
@@ -1855,7 +1848,7 @@ aama:ID6b016887-cf79-431b-a105-d16ccf7febda a aamas:Term ;
 	gaw:genderHead gaw:HeadMasc ;
 	.
 
-aama:ID6a67a1f6-9abd-4359-8038-6f24a8d24ccd a aamas:Term ;
+aama:IDacac001a-89f2-41d4-9444-9720c6adf1fd a aamas:Term ;
 	aamas:lang aama:Gawwada ;
 	aamas:memberOf gaw:gawwada-PPossSuff ;
 	gaw:vmorphClass gaw:PROPOSSSUFF ;
@@ -1877,7 +1870,7 @@ gaw:gawwada-PSubjProclitic a aamas:Termcluster ;
 	rdfs:comment "Tosco2007b Table 10 (5.0%%p. 523)" 
 	.
 
-aama:ID6d5c0aa5-10a0-4785-a7b8-ea164eb09470 a aamas:Term ;
+aama:IDcc0919a6-ccdc-40c5-8207-bfcbcbbd1fa5 a aamas:Term ;
 	aamas:lang aama:Gawwada ;
 	aamas:memberOf gaw:gawwada-PSubjProclitic ;
 	gaw:vmorphClass gaw:PROSUBJPROCLITIC ;
@@ -1890,7 +1883,7 @@ aama:ID6d5c0aa5-10a0-4785-a7b8-ea164eb09470 a aamas:Term ;
 	gaw:polarity gaw:Affirmative ;
 	.
 
-aama:IDf95b39c4-d4ac-42fb-9ce5-d2515c9df470 a aamas:Term ;
+aama:ID5e5fe377-b0f9-4ca2-b5ab-4853122f13be a aamas:Term ;
 	aamas:lang aama:Gawwada ;
 	aamas:memberOf gaw:gawwada-PSubjProclitic ;
 	gaw:vmorphClass gaw:PROSUBJPROCLITIC ;
@@ -1903,7 +1896,7 @@ aama:IDf95b39c4-d4ac-42fb-9ce5-d2515c9df470 a aamas:Term ;
 	gaw:polarity gaw:Affirmative ;
 	.
 
-aama:IDcf3961c3-85a2-41e2-89c8-3e5e6b90c8f7 a aamas:Term ;
+aama:IDe114febf-1525-4eb1-81f2-44abb4f53cd5 a aamas:Term ;
 	aamas:lang aama:Gawwada ;
 	aamas:memberOf gaw:gawwada-PSubjProclitic ;
 	gaw:vmorphClass gaw:PROSUBJPROCLITIC ;
@@ -1916,7 +1909,7 @@ aama:IDcf3961c3-85a2-41e2-89c8-3e5e6b90c8f7 a aamas:Term ;
 	gaw:polarity gaw:Negative ;
 	.
 
-aama:ID59231df5-aa57-4570-8108-67bb3466ba9e a aamas:Term ;
+aama:IDc6c6a7ef-a955-4333-8ab5-b9b5faeba465 a aamas:Term ;
 	aamas:lang aama:Gawwada ;
 	aamas:memberOf gaw:gawwada-PSubjProclitic ;
 	gaw:vmorphClass gaw:PROSUBJPROCLITIC ;
@@ -1929,7 +1922,7 @@ aama:ID59231df5-aa57-4570-8108-67bb3466ba9e a aamas:Term ;
 	gaw:polarity gaw:Negative ;
 	.
 
-aama:IDd1d74bb2-1d89-4df2-9a2f-3032477ccc42 a aamas:Term ;
+aama:ID5ba999f9-2ee8-48e1-8233-57cd603ca6d1 a aamas:Term ;
 	aamas:lang aama:Gawwada ;
 	aamas:memberOf gaw:gawwada-PSubjProclitic ;
 	gaw:vmorphClass gaw:PROSUBJPROCLITIC ;
@@ -1942,7 +1935,7 @@ aama:IDd1d74bb2-1d89-4df2-9a2f-3032477ccc42 a aamas:Term ;
 	gaw:polarity gaw:PolUnmarked ;
 	.
 
-aama:IDc466d3c7-b397-44e6-8354-ff196ae4850f a aamas:Term ;
+aama:ID2aa74880-987a-4345-8343-c36b97a045a0 a aamas:Term ;
 	aamas:lang aama:Gawwada ;
 	aamas:memberOf gaw:gawwada-PSubjProclitic ;
 	gaw:vmorphClass gaw:PROSUBJPROCLITIC ;
@@ -1955,7 +1948,7 @@ aama:IDc466d3c7-b397-44e6-8354-ff196ae4850f a aamas:Term ;
 	gaw:polarity gaw:PolUnmarked ;
 	.
 
-aama:IDae418257-955e-4163-a7a9-fb45d2c8be85 a aamas:Term ;
+aama:ID8b0ef999-108d-486e-831b-257d162ccabb a aamas:Term ;
 	aamas:lang aama:Gawwada ;
 	aamas:memberOf gaw:gawwada-PSubjProclitic ;
 	gaw:vmorphClass gaw:PROSUBJPROCLITIC ;
@@ -1968,7 +1961,7 @@ aama:IDae418257-955e-4163-a7a9-fb45d2c8be85 a aamas:Term ;
 	gaw:polarity gaw:PolUnmarked ;
 	.
 
-aama:IDfdd80df9-54fa-4567-90cd-37eb0d2a9b01 a aamas:Term ;
+aama:IDb9c84c46-cb26-4016-9717-f323ad6b7f75 a aamas:Term ;
 	aamas:lang aama:Gawwada ;
 	aamas:memberOf gaw:gawwada-PSubjProclitic ;
 	gaw:vmorphClass gaw:PROSUBJPROCLITIC ;
@@ -1981,7 +1974,7 @@ aama:IDfdd80df9-54fa-4567-90cd-37eb0d2a9b01 a aamas:Term ;
 	gaw:polarity gaw:PolUnmarked ;
 	.
 
-aama:IDb420193d-0519-4855-96d7-f123530d295f a aamas:Term ;
+aama:ID40d61509-1fed-42f5-b988-ca8d0daeed36 a aamas:Term ;
 	aamas:lang aama:Gawwada ;
 	aamas:memberOf gaw:gawwada-PSubjProclitic ;
 	gaw:vmorphClass gaw:PROSUBJPROCLITIC ;
@@ -2002,7 +1995,7 @@ gaw:gawwada-VConsecutiveTemplate a aamas:Termcluster ;
 	rdfs:comment "Tosco2007b Table 4 (p. 515). There are two tonally distinct inflectional classes of verb in the perfective%%imperative%%and consecutive positive tenses." 
 	.
 
-aama:ID0ddb4b28-f6c8-422a-962d-3a4f6fa0e2d7 a aamas:Term ;
+aama:ID551f2286-f2a8-49c4-bfe0-09f885cd5438 a aamas:Term ;
 	aamas:lang aama:Gawwada ;
 	aamas:memberOf gaw:gawwada-VConsecutiveTemplate ;
 	gaw:vmorphClass gaw:CONSECTEMPLATE ;
@@ -2015,7 +2008,7 @@ aama:ID0ddb4b28-f6c8-422a-962d-3a4f6fa0e2d7 a aamas:Term ;
 	gaw:inflClass gaw:Class1 ;
 	.
 
-aama:ID8d8416fa-698c-4800-bbbe-862a41ba76e6 a aamas:Term ;
+aama:IDb385f6c4-45d2-43a9-8ee4-1e21a144d1ba a aamas:Term ;
 	aamas:lang aama:Gawwada ;
 	aamas:memberOf gaw:gawwada-VConsecutiveTemplate ;
 	gaw:vmorphClass gaw:CONSECTEMPLATE ;
@@ -2028,7 +2021,7 @@ aama:ID8d8416fa-698c-4800-bbbe-862a41ba76e6 a aamas:Term ;
 	gaw:inflClass gaw:Class1 ;
 	.
 
-aama:ID57e1d718-5f78-4756-ae18-8215de13d743 a aamas:Term ;
+aama:ID301f0426-fe54-46b3-8dcf-be42d51065bd a aamas:Term ;
 	aamas:lang aama:Gawwada ;
 	aamas:memberOf gaw:gawwada-VConsecutiveTemplate ;
 	gaw:vmorphClass gaw:CONSECTEMPLATE ;
@@ -2041,7 +2034,7 @@ aama:ID57e1d718-5f78-4756-ae18-8215de13d743 a aamas:Term ;
 	gaw:inflClass gaw:Class1 ;
 	.
 
-aama:IDca99833e-460f-44ed-b7ef-c8ec02442cc1 a aamas:Term ;
+aama:ID3d502d8b-3c36-4624-9ef3-ee82245bce0c a aamas:Term ;
 	aamas:lang aama:Gawwada ;
 	aamas:memberOf gaw:gawwada-VConsecutiveTemplate ;
 	gaw:vmorphClass gaw:CONSECTEMPLATE ;
@@ -2054,7 +2047,7 @@ aama:IDca99833e-460f-44ed-b7ef-c8ec02442cc1 a aamas:Term ;
 	gaw:inflClass gaw:Class1 ;
 	.
 
-aama:ID4f3ac7e3-a417-48c5-ba11-737d5bb96a1a a aamas:Term ;
+aama:ID570b03cb-2195-435c-a147-07802f1a7bb2 a aamas:Term ;
 	aamas:lang aama:Gawwada ;
 	aamas:memberOf gaw:gawwada-VConsecutiveTemplate ;
 	gaw:vmorphClass gaw:CONSECTEMPLATE ;
@@ -2067,7 +2060,7 @@ aama:ID4f3ac7e3-a417-48c5-ba11-737d5bb96a1a a aamas:Term ;
 	gaw:inflClass gaw:Class1 ;
 	.
 
-aama:IDcb5bcd4b-e8c2-4a59-8b15-e33ce4a0fa14 a aamas:Term ;
+aama:IDc58eae89-69d2-4fcf-84a1-cda7d3d09926 a aamas:Term ;
 	aamas:lang aama:Gawwada ;
 	aamas:memberOf gaw:gawwada-VConsecutiveTemplate ;
 	gaw:vmorphClass gaw:CONSECTEMPLATE ;
@@ -2080,7 +2073,7 @@ aama:IDcb5bcd4b-e8c2-4a59-8b15-e33ce4a0fa14 a aamas:Term ;
 	gaw:inflClass gaw:Class1 ;
 	.
 
-aama:ID1db93942-947f-437b-b4bc-b4712ed851ef a aamas:Term ;
+aama:ID264aaf9b-4e7d-4caa-be28-543c3a78816c a aamas:Term ;
 	aamas:lang aama:Gawwada ;
 	aamas:memberOf gaw:gawwada-VConsecutiveTemplate ;
 	gaw:vmorphClass gaw:CONSECTEMPLATE ;
@@ -2093,7 +2086,7 @@ aama:ID1db93942-947f-437b-b4bc-b4712ed851ef a aamas:Term ;
 	gaw:inflClass gaw:Class1 ;
 	.
 
-aama:IDd7cce42a-47b0-4f7b-9443-b7694c8a326d a aamas:Term ;
+aama:ID32b2a963-aa4b-486e-bfd1-947fceef9238 a aamas:Term ;
 	aamas:lang aama:Gawwada ;
 	aamas:memberOf gaw:gawwada-VConsecutiveTemplate ;
 	gaw:vmorphClass gaw:CONSECTEMPLATE ;
@@ -2106,7 +2099,7 @@ aama:IDd7cce42a-47b0-4f7b-9443-b7694c8a326d a aamas:Term ;
 	gaw:inflClass gaw:Class2 ;
 	.
 
-aama:IDd3cc1996-155e-4f5d-ae06-a47a19c46c52 a aamas:Term ;
+aama:IDb744ebc7-aee3-46a8-a6b6-40ff1b5a37f9 a aamas:Term ;
 	aamas:lang aama:Gawwada ;
 	aamas:memberOf gaw:gawwada-VConsecutiveTemplate ;
 	gaw:vmorphClass gaw:CONSECTEMPLATE ;
@@ -2119,7 +2112,7 @@ aama:IDd3cc1996-155e-4f5d-ae06-a47a19c46c52 a aamas:Term ;
 	gaw:inflClass gaw:Class2 ;
 	.
 
-aama:ID1e439459-b8e5-4009-9cca-7396c095c9c1 a aamas:Term ;
+aama:IDd352c565-26e5-4f3d-b63c-c1d28074de0d a aamas:Term ;
 	aamas:lang aama:Gawwada ;
 	aamas:memberOf gaw:gawwada-VConsecutiveTemplate ;
 	gaw:vmorphClass gaw:CONSECTEMPLATE ;
@@ -2132,7 +2125,7 @@ aama:ID1e439459-b8e5-4009-9cca-7396c095c9c1 a aamas:Term ;
 	gaw:inflClass gaw:Class2 ;
 	.
 
-aama:ID94cf3002-a55e-4d21-b394-c8fce236ae7b a aamas:Term ;
+aama:ID9ed5eefe-3387-4940-84f9-766c70622588 a aamas:Term ;
 	aamas:lang aama:Gawwada ;
 	aamas:memberOf gaw:gawwada-VConsecutiveTemplate ;
 	gaw:vmorphClass gaw:CONSECTEMPLATE ;
@@ -2145,7 +2138,7 @@ aama:ID94cf3002-a55e-4d21-b394-c8fce236ae7b a aamas:Term ;
 	gaw:inflClass gaw:Class2 ;
 	.
 
-aama:IDf2197d2f-8cc1-4618-99a4-f1bf399f6869 a aamas:Term ;
+aama:IDf7a7aa9b-49eb-4936-94aa-7250a7936d13 a aamas:Term ;
 	aamas:lang aama:Gawwada ;
 	aamas:memberOf gaw:gawwada-VConsecutiveTemplate ;
 	gaw:vmorphClass gaw:CONSECTEMPLATE ;
@@ -2158,7 +2151,7 @@ aama:IDf2197d2f-8cc1-4618-99a4-f1bf399f6869 a aamas:Term ;
 	gaw:inflClass gaw:Class2 ;
 	.
 
-aama:ID29d4a2f4-0454-4c1a-9168-b34a87050b53 a aamas:Term ;
+aama:ID5042f8b8-664a-4a22-a9bf-7bdc77c1c8b1 a aamas:Term ;
 	aamas:lang aama:Gawwada ;
 	aamas:memberOf gaw:gawwada-VConsecutiveTemplate ;
 	gaw:vmorphClass gaw:CONSECTEMPLATE ;
@@ -2171,7 +2164,7 @@ aama:ID29d4a2f4-0454-4c1a-9168-b34a87050b53 a aamas:Term ;
 	gaw:inflClass gaw:Class2 ;
 	.
 
-aama:IDc5e6a0cf-901f-4678-b127-4e1dc1be6b41 a aamas:Term ;
+aama:ID89355dfa-f81a-4727-85bc-4777b231cf43 a aamas:Term ;
 	aamas:lang aama:Gawwada ;
 	aamas:memberOf gaw:gawwada-VConsecutiveTemplate ;
 	gaw:vmorphClass gaw:CONSECTEMPLATE ;
@@ -2192,7 +2185,7 @@ gaw:gawwada-VDervStems a aamas:Termcluster ;
 	rdfs:comment "Tosco2007b Table 1 (p. 510)" 
 	.
 
-aama:ID29a27379-4ce1-4646-a3d9-e60b7aa18810 a aamas:Term ;
+aama:ID788452ee-47ea-4ebf-81f6-635839acc3fa a aamas:Term ;
 	aamas:lang aama:Gawwada ;
 	aamas:memberOf gaw:gawwada-VDervStems ;
 	gaw:vmorphClass gaw:DERVSTEMS ;
@@ -2202,7 +2195,7 @@ aama:ID29a27379-4ce1-4646-a3d9-e60b7aa18810 a aamas:Term ;
 	gaw:derivedStem gaw:Causative ;
 	.
 
-aama:ID4229ac3e-c0b8-4ea8-bfe3-abb88f92c273 a aamas:Term ;
+aama:ID0b900996-67ef-45f8-8adc-f33be38ab7d3 a aamas:Term ;
 	aamas:lang aama:Gawwada ;
 	aamas:memberOf gaw:gawwada-VDervStems ;
 	gaw:vmorphClass gaw:DERVSTEMS ;
@@ -2212,7 +2205,7 @@ aama:ID4229ac3e-c0b8-4ea8-bfe3-abb88f92c273 a aamas:Term ;
 	gaw:derivedStem gaw:Inceptive ;
 	.
 
-aama:IDc077898a-12c0-49f1-b74d-028c928d131e a aamas:Term ;
+aama:ID359ea3d3-1f12-4961-984f-e0897cc069b8 a aamas:Term ;
 	aamas:lang aama:Gawwada ;
 	aamas:memberOf gaw:gawwada-VDervStems ;
 	gaw:vmorphClass gaw:DERVSTEMS ;
@@ -2222,7 +2215,7 @@ aama:IDc077898a-12c0-49f1-b74d-028c928d131e a aamas:Term ;
 	gaw:derivedStem gaw:Ingressive ;
 	.
 
-aama:ID4530cee1-df96-407d-9fd4-75331f0ac752 a aamas:Term ;
+aama:ID16a8ad90-7435-4e00-9278-ce230ddf35c0 a aamas:Term ;
 	aamas:lang aama:Gawwada ;
 	aamas:memberOf gaw:gawwada-VDervStems ;
 	gaw:vmorphClass gaw:DERVSTEMS ;
@@ -2232,7 +2225,7 @@ aama:ID4530cee1-df96-407d-9fd4-75331f0ac752 a aamas:Term ;
 	gaw:derivedStem gaw:Intensive ;
 	.
 
-aama:ID07edc404-8a87-43a9-91b5-363ee9e00d2a a aamas:Term ;
+aama:ID908f66bc-d588-4a69-acf7-78bbdf78a413 a aamas:Term ;
 	aamas:lang aama:Gawwada ;
 	aamas:memberOf gaw:gawwada-VDervStems ;
 	gaw:vmorphClass gaw:DERVSTEMS ;
@@ -2242,7 +2235,7 @@ aama:ID07edc404-8a87-43a9-91b5-363ee9e00d2a a aamas:Term ;
 	gaw:derivedStem gaw:Middle ;
 	.
 
-aama:ID651a7f53-7819-4c2b-b1f1-991215ae36d6 a aamas:Term ;
+aama:ID2926a0a6-287e-4ad3-a748-245e1294ccbf a aamas:Term ;
 	aamas:lang aama:Gawwada ;
 	aamas:memberOf gaw:gawwada-VDervStems ;
 	gaw:vmorphClass gaw:DERVSTEMS ;
@@ -2252,7 +2245,7 @@ aama:ID651a7f53-7819-4c2b-b1f1-991215ae36d6 a aamas:Term ;
 	gaw:derivedStem gaw:Passive ;
 	.
 
-aama:ID45e35073-e0b0-46a6-bbbb-f41c8d13f87c a aamas:Term ;
+aama:ID2d4fa252-7c7c-439e-abba-1352f4ad59f7 a aamas:Term ;
 	aamas:lang aama:Gawwada ;
 	aamas:memberOf gaw:gawwada-VDervStems ;
 	gaw:vmorphClass gaw:DERVSTEMS ;
@@ -2270,7 +2263,7 @@ gaw:gawwada-VImperfectiveFutureTemplate a aamas:Termcluster ;
 	rdfs:comment "Tosco2007b p. 515. The future and habitual template paradigms are not given as such in the source%%but are an extrapolation from the following statement of the author:Two affixes%%-n- for the future and –ay- for the Habitual%%may be inserted between the stem and the Prefective%%Imperfective%%and Negative endings." 
 	.
 
-aama:ID72b7c4a6-9ff7-4310-8336-8a24703276a0 a aamas:Term ;
+aama:IDa28d4076-0d54-4dc3-ba02-c01ceb403e3c a aamas:Term ;
 	aamas:lang aama:Gawwada ;
 	aamas:memberOf gaw:gawwada-VImperfectiveFutureTemplate ;
 	gaw:vmorphClass gaw:IMPERFFUTTEMPLATE ;
@@ -2283,7 +2276,7 @@ aama:ID72b7c4a6-9ff7-4310-8336-8a24703276a0 a aamas:Term ;
 	gaw:number gaw:Singular ;
 	.
 
-aama:IDd2da1133-cae6-4d0d-8b15-1ad3eb8dc97f a aamas:Term ;
+aama:IDcf64326a-37af-46dc-b43e-b0237547f5ff a aamas:Term ;
 	aamas:lang aama:Gawwada ;
 	aamas:memberOf gaw:gawwada-VImperfectiveFutureTemplate ;
 	gaw:vmorphClass gaw:IMPERFFUTTEMPLATE ;
@@ -2296,7 +2289,7 @@ aama:IDd2da1133-cae6-4d0d-8b15-1ad3eb8dc97f a aamas:Term ;
 	gaw:number gaw:Singular ;
 	.
 
-aama:IDac33a187-ad8a-4275-b380-da6c8662ec82 a aamas:Term ;
+aama:IDfe65f0a3-59cd-475d-9c36-a149361fdddc a aamas:Term ;
 	aamas:lang aama:Gawwada ;
 	aamas:memberOf gaw:gawwada-VImperfectiveFutureTemplate ;
 	gaw:vmorphClass gaw:IMPERFFUTTEMPLATE ;
@@ -2309,7 +2302,7 @@ aama:IDac33a187-ad8a-4275-b380-da6c8662ec82 a aamas:Term ;
 	gaw:number gaw:Singular ;
 	.
 
-aama:ID4845a0e1-abe2-4cc5-bc93-a1dfb1874190 a aamas:Term ;
+aama:ID4893fd00-a292-4884-a459-4d32f84dc39c a aamas:Term ;
 	aamas:lang aama:Gawwada ;
 	aamas:memberOf gaw:gawwada-VImperfectiveFutureTemplate ;
 	gaw:vmorphClass gaw:IMPERFFUTTEMPLATE ;
@@ -2322,7 +2315,7 @@ aama:ID4845a0e1-abe2-4cc5-bc93-a1dfb1874190 a aamas:Term ;
 	gaw:number gaw:Singular ;
 	.
 
-aama:ID9b864d0d-84f1-4983-9f7c-20bbd89e21c2 a aamas:Term ;
+aama:ID640649c0-f539-4cb1-8563-6a903c8f6b5d a aamas:Term ;
 	aamas:lang aama:Gawwada ;
 	aamas:memberOf gaw:gawwada-VImperfectiveFutureTemplate ;
 	gaw:vmorphClass gaw:IMPERFFUTTEMPLATE ;
@@ -2335,7 +2328,7 @@ aama:ID9b864d0d-84f1-4983-9f7c-20bbd89e21c2 a aamas:Term ;
 	gaw:number gaw:Plural ;
 	.
 
-aama:IDe42b0823-d6fd-4cc0-9988-14199d77493e a aamas:Term ;
+aama:ID9d4da590-c673-4c2a-88a8-f8bf6cc527ca a aamas:Term ;
 	aamas:lang aama:Gawwada ;
 	aamas:memberOf gaw:gawwada-VImperfectiveFutureTemplate ;
 	gaw:vmorphClass gaw:IMPERFFUTTEMPLATE ;
@@ -2348,7 +2341,7 @@ aama:IDe42b0823-d6fd-4cc0-9988-14199d77493e a aamas:Term ;
 	gaw:number gaw:Plural ;
 	.
 
-aama:IDf11d3a35-808d-4344-9643-2fea31b2a925 a aamas:Term ;
+aama:IDdf70c138-826b-4789-9309-fab9a0e6d3b1 a aamas:Term ;
 	aamas:lang aama:Gawwada ;
 	aamas:memberOf gaw:gawwada-VImperfectiveFutureTemplate ;
 	gaw:vmorphClass gaw:IMPERFFUTTEMPLATE ;
@@ -2369,7 +2362,7 @@ gaw:gawwada-VImperfectiveHabitualTemplate a aamas:Termcluster ;
 	rdfs:comment "Tosco2007b p. 515. The future and habitual template paradigms are not given as such in the source%%but are an extrapolation from the following statement of the author:Two affixes%%-n- for the future and –ay- for the Habitual%%may be inserted between the stem and the Prefective%%Imperfective%%and Negative endings." 
 	.
 
-aama:ID8d5309a2-c34d-4bb7-a046-943d8253d992 a aamas:Term ;
+aama:ID19e2eef3-3ba9-4986-9650-274c70ce9355 a aamas:Term ;
 	aamas:lang aama:Gawwada ;
 	aamas:memberOf gaw:gawwada-VImperfectiveHabitualTemplate ;
 	gaw:vmorphClass gaw:IMPERFHABTEMPLATE ;
@@ -2382,7 +2375,7 @@ aama:ID8d5309a2-c34d-4bb7-a046-943d8253d992 a aamas:Term ;
 	gaw:number gaw:Singular ;
 	.
 
-aama:IDd244acb1-7e20-4913-b566-1e315fa61019 a aamas:Term ;
+aama:ID3da8790a-77c1-4ada-89a2-2d22e00fce36 a aamas:Term ;
 	aamas:lang aama:Gawwada ;
 	aamas:memberOf gaw:gawwada-VImperfectiveHabitualTemplate ;
 	gaw:vmorphClass gaw:IMPERFHABTEMPLATE ;
@@ -2395,7 +2388,7 @@ aama:IDd244acb1-7e20-4913-b566-1e315fa61019 a aamas:Term ;
 	gaw:number gaw:Singular ;
 	.
 
-aama:ID76ff9a79-e5bd-4bf3-8c94-a699ce3712d3 a aamas:Term ;
+aama:ID953d1f02-6cea-483c-a858-d2a6772028d5 a aamas:Term ;
 	aamas:lang aama:Gawwada ;
 	aamas:memberOf gaw:gawwada-VImperfectiveHabitualTemplate ;
 	gaw:vmorphClass gaw:IMPERFHABTEMPLATE ;
@@ -2408,7 +2401,7 @@ aama:ID76ff9a79-e5bd-4bf3-8c94-a699ce3712d3 a aamas:Term ;
 	gaw:number gaw:Singular ;
 	.
 
-aama:IDd81f4539-1fd3-45c7-a5e8-d86277cc8470 a aamas:Term ;
+aama:ID4fa5999a-de95-4fcb-9fb2-eb3688944d47 a aamas:Term ;
 	aamas:lang aama:Gawwada ;
 	aamas:memberOf gaw:gawwada-VImperfectiveHabitualTemplate ;
 	gaw:vmorphClass gaw:IMPERFHABTEMPLATE ;
@@ -2421,7 +2414,7 @@ aama:IDd81f4539-1fd3-45c7-a5e8-d86277cc8470 a aamas:Term ;
 	gaw:number gaw:Singular ;
 	.
 
-aama:IDfe039fba-9557-4ad4-8972-c5c974a4b42b a aamas:Term ;
+aama:IDa85cc63e-4723-44a5-864e-a158c3c32dad a aamas:Term ;
 	aamas:lang aama:Gawwada ;
 	aamas:memberOf gaw:gawwada-VImperfectiveHabitualTemplate ;
 	gaw:vmorphClass gaw:IMPERFHABTEMPLATE ;
@@ -2434,7 +2427,7 @@ aama:IDfe039fba-9557-4ad4-8972-c5c974a4b42b a aamas:Term ;
 	gaw:number gaw:Plural ;
 	.
 
-aama:IDdce9c70b-c211-44ee-8032-bab9d704e1ad a aamas:Term ;
+aama:ID55564602-58e8-4959-8207-df7be49a9301 a aamas:Term ;
 	aamas:lang aama:Gawwada ;
 	aamas:memberOf gaw:gawwada-VImperfectiveHabitualTemplate ;
 	gaw:vmorphClass gaw:IMPERFHABTEMPLATE ;
@@ -2447,7 +2440,7 @@ aama:IDdce9c70b-c211-44ee-8032-bab9d704e1ad a aamas:Term ;
 	gaw:number gaw:Plural ;
 	.
 
-aama:ID9859b0eb-e4ac-40ed-a5e0-42c667dd31c1 a aamas:Term ;
+aama:ID4fbae9d8-9735-4646-9698-19a66352e5ef a aamas:Term ;
 	aamas:lang aama:Gawwada ;
 	aamas:memberOf gaw:gawwada-VImperfectiveHabitualTemplate ;
 	gaw:vmorphClass gaw:IMPERFHABTEMPLATE ;
@@ -2468,7 +2461,7 @@ gaw:gawwada-VImperfectiveTemplate a aamas:Termcluster ;
 	rdfs:comment "Tosco2007b Table 4 (p. 515). There are two tonally distinct inflectional classes of verb in the perfective%%imperative%%and consecutive positive tenses." 
 	.
 
-aama:IDc96a0ca1-cc17-45a5-8ae5-51deb8c4e79d a aamas:Term ;
+aama:ID0f5f1378-a4dd-4e58-bbbb-69bfc279e084 a aamas:Term ;
 	aamas:lang aama:Gawwada ;
 	aamas:memberOf gaw:gawwada-VImperfectiveTemplate ;
 	gaw:vmorphClass gaw:IMPERFTEMPLATE ;
@@ -2480,7 +2473,7 @@ aama:IDc96a0ca1-cc17-45a5-8ae5-51deb8c4e79d a aamas:Term ;
 	gaw:number gaw:Singular ;
 	.
 
-aama:ID4c0f11c8-6888-42d4-b3a4-29ea37e99f83 a aamas:Term ;
+aama:ID962c61b6-dbc3-4235-89f0-a4086c40ad19 a aamas:Term ;
 	aamas:lang aama:Gawwada ;
 	aamas:memberOf gaw:gawwada-VImperfectiveTemplate ;
 	gaw:vmorphClass gaw:IMPERFTEMPLATE ;
@@ -2492,7 +2485,7 @@ aama:ID4c0f11c8-6888-42d4-b3a4-29ea37e99f83 a aamas:Term ;
 	gaw:number gaw:Singular ;
 	.
 
-aama:ID30d52599-3dd0-4e45-91b8-89a94f714dfe a aamas:Term ;
+aama:IDe3e918a8-3414-4e88-97ba-6d39f050888e a aamas:Term ;
 	aamas:lang aama:Gawwada ;
 	aamas:memberOf gaw:gawwada-VImperfectiveTemplate ;
 	gaw:vmorphClass gaw:IMPERFTEMPLATE ;
@@ -2504,7 +2497,7 @@ aama:ID30d52599-3dd0-4e45-91b8-89a94f714dfe a aamas:Term ;
 	gaw:number gaw:Singular ;
 	.
 
-aama:IDc4dc9ab3-fca8-4de2-b251-31ecc36038b5 a aamas:Term ;
+aama:IDc4fcd605-f9ff-4523-89c8-96d4e5e259d7 a aamas:Term ;
 	aamas:lang aama:Gawwada ;
 	aamas:memberOf gaw:gawwada-VImperfectiveTemplate ;
 	gaw:vmorphClass gaw:IMPERFTEMPLATE ;
@@ -2516,7 +2509,7 @@ aama:IDc4dc9ab3-fca8-4de2-b251-31ecc36038b5 a aamas:Term ;
 	gaw:number gaw:Singular ;
 	.
 
-aama:IDd5fc0111-595c-4d4a-a696-7a9ca402f6ae a aamas:Term ;
+aama:IDccd799dd-1c16-4050-afa7-7501bcb475c2 a aamas:Term ;
 	aamas:lang aama:Gawwada ;
 	aamas:memberOf gaw:gawwada-VImperfectiveTemplate ;
 	gaw:vmorphClass gaw:IMPERFTEMPLATE ;
@@ -2528,7 +2521,7 @@ aama:IDd5fc0111-595c-4d4a-a696-7a9ca402f6ae a aamas:Term ;
 	gaw:number gaw:Plural ;
 	.
 
-aama:IDa43c967d-44ee-4a06-86f8-e49f7efb12ce a aamas:Term ;
+aama:IDcd5e0279-99ff-446c-a422-e04498ddc1ee a aamas:Term ;
 	aamas:lang aama:Gawwada ;
 	aamas:memberOf gaw:gawwada-VImperfectiveTemplate ;
 	gaw:vmorphClass gaw:IMPERFTEMPLATE ;
@@ -2540,7 +2533,7 @@ aama:IDa43c967d-44ee-4a06-86f8-e49f7efb12ce a aamas:Term ;
 	gaw:number gaw:Plural ;
 	.
 
-aama:ID1903022b-89f2-4a06-aee1-0e835afa16ee a aamas:Term ;
+aama:IDa4e59331-da2d-460b-b185-550ace7ecb5c a aamas:Term ;
 	aamas:lang aama:Gawwada ;
 	aamas:memberOf gaw:gawwada-VImperfectiveTemplate ;
 	gaw:vmorphClass gaw:IMPERFTEMPLATE ;
@@ -2560,7 +2553,7 @@ gaw:gawwada-VImprtvTemplate a aamas:Termcluster ;
 	rdfs:comment "Tosco2007b Table 6 and 3.34 (pp. 516f). Class1a verbs are C final;class1b are CC final." 
 	.
 
-aama:IDd8043a2a-1723-4b13-8803-7d2ebcfd0eb5 a aamas:Term ;
+aama:IDed27ff82-0ed2-4451-915a-af207c2a836c a aamas:Term ;
 	aamas:lang aama:Gawwada ;
 	aamas:memberOf gaw:gawwada-VImprtvTemplate ;
 	gaw:vmorphClass gaw:IMPRTVTEMPLATE ;
@@ -2571,7 +2564,7 @@ aama:IDd8043a2a-1723-4b13-8803-7d2ebcfd0eb5 a aamas:Term ;
 	gaw:inflClass gaw:Class1a ;
 	.
 
-aama:ID9d5f7673-7067-4b59-b4f1-2d9191cc5277 a aamas:Term ;
+aama:ID5fad8e5b-0c9d-4d43-a15b-35efdd096325 a aamas:Term ;
 	aamas:lang aama:Gawwada ;
 	aamas:memberOf gaw:gawwada-VImprtvTemplate ;
 	gaw:vmorphClass gaw:IMPRTVTEMPLATE ;
@@ -2582,7 +2575,7 @@ aama:ID9d5f7673-7067-4b59-b4f1-2d9191cc5277 a aamas:Term ;
 	gaw:inflClass gaw:Class1a ;
 	.
 
-aama:ID56c07f11-74f0-4e5e-962b-514d12b24e15 a aamas:Term ;
+aama:ID57d6a8d4-787d-4209-a389-f90213b4537b a aamas:Term ;
 	aamas:lang aama:Gawwada ;
 	aamas:memberOf gaw:gawwada-VImprtvTemplate ;
 	gaw:vmorphClass gaw:IMPRTVTEMPLATE ;
@@ -2593,7 +2586,7 @@ aama:ID56c07f11-74f0-4e5e-962b-514d12b24e15 a aamas:Term ;
 	gaw:inflClass gaw:Class1b ;
 	.
 
-aama:IDd329b53c-d24c-4733-89ec-5276e97abb42 a aamas:Term ;
+aama:ID2f1d57eb-4220-4787-b238-b1324a5d307a a aamas:Term ;
 	aamas:lang aama:Gawwada ;
 	aamas:memberOf gaw:gawwada-VImprtvTemplate ;
 	gaw:vmorphClass gaw:IMPRTVTEMPLATE ;
@@ -2604,7 +2597,7 @@ aama:IDd329b53c-d24c-4733-89ec-5276e97abb42 a aamas:Term ;
 	gaw:inflClass gaw:Class1b ;
 	.
 
-aama:ID7595eee8-0f6e-4907-9eb1-bad41e8f8f8c a aamas:Term ;
+aama:IDa312dec1-98c0-446e-8312-e6103634b45d a aamas:Term ;
 	aamas:lang aama:Gawwada ;
 	aamas:memberOf gaw:gawwada-VImprtvTemplate ;
 	gaw:vmorphClass gaw:IMPRTVTEMPLATE ;
@@ -2615,7 +2608,7 @@ aama:ID7595eee8-0f6e-4907-9eb1-bad41e8f8f8c a aamas:Term ;
 	gaw:inflClass gaw:Class2 ;
 	.
 
-aama:IDe6821e85-bcef-406f-9b4d-3f46ecce4d66 a aamas:Term ;
+aama:ID3699ed2c-bcf8-4c1f-adf9-b43d6959fa07 a aamas:Term ;
 	aamas:lang aama:Gawwada ;
 	aamas:memberOf gaw:gawwada-VImprtvTemplate ;
 	gaw:vmorphClass gaw:IMPRTVTEMPLATE ;
@@ -2634,7 +2627,7 @@ gaw:gawwada-VNegFutureTemplate a aamas:Termcluster ;
 	rdfs:comment "Tosco2007b p. 515. The future and habitual template paradigms are not given as such in the source%%but are an extrapolation from the following statement of the author:Two affixes%%-n- for the future and –ay- for the Habitual%%may be inserted between the stem and the Prefective%%Imperfective%%and Negative endings." 
 	.
 
-aama:ID3d8ea809-6d87-4386-ae10-314b59d24627 a aamas:Term ;
+aama:IDe71a9433-8d34-4c29-9a2d-e8109c2abace a aamas:Term ;
 	aamas:lang aama:Gawwada ;
 	aamas:memberOf gaw:gawwada-VNegFutureTemplate ;
 	gaw:vmorphClass gaw:NEGFUTTEMPLATE ;
@@ -2648,7 +2641,7 @@ aama:ID3d8ea809-6d87-4386-ae10-314b59d24627 a aamas:Term ;
 	gaw:tam gaw:Past ;
 	.
 
-aama:ID067258ad-3805-4092-876f-e5d1dd96abd3 a aamas:Term ;
+aama:ID9a7c9768-28c1-4d3c-a8fc-8b89632a18e3 a aamas:Term ;
 	aamas:lang aama:Gawwada ;
 	aamas:memberOf gaw:gawwada-VNegFutureTemplate ;
 	gaw:vmorphClass gaw:NEGFUTTEMPLATE ;
@@ -2662,7 +2655,7 @@ aama:ID067258ad-3805-4092-876f-e5d1dd96abd3 a aamas:Term ;
 	gaw:tam gaw:Past ;
 	.
 
-aama:ID8c615220-d60e-421e-8a93-07dd9e773b3f a aamas:Term ;
+aama:IDc460d5fc-7c61-4656-9e65-943a05a10b16 a aamas:Term ;
 	aamas:lang aama:Gawwada ;
 	aamas:memberOf gaw:gawwada-VNegFutureTemplate ;
 	gaw:vmorphClass gaw:NEGFUTTEMPLATE ;
@@ -2676,7 +2669,7 @@ aama:ID8c615220-d60e-421e-8a93-07dd9e773b3f a aamas:Term ;
 	gaw:tam gaw:Past ;
 	.
 
-aama:IDff52e987-4adc-4e6e-8140-90142c9ca4c7 a aamas:Term ;
+aama:ID3b500972-4ca9-4452-92be-862522ff96bd a aamas:Term ;
 	aamas:lang aama:Gawwada ;
 	aamas:memberOf gaw:gawwada-VNegFutureTemplate ;
 	gaw:vmorphClass gaw:NEGFUTTEMPLATE ;
@@ -2690,7 +2683,7 @@ aama:IDff52e987-4adc-4e6e-8140-90142c9ca4c7 a aamas:Term ;
 	gaw:tam gaw:Past ;
 	.
 
-aama:ID2386788c-fd60-4ec9-9dfe-cdfa946f0b18 a aamas:Term ;
+aama:ID9a477c68-c4cd-40ac-8f57-141466236194 a aamas:Term ;
 	aamas:lang aama:Gawwada ;
 	aamas:memberOf gaw:gawwada-VNegFutureTemplate ;
 	gaw:vmorphClass gaw:NEGFUTTEMPLATE ;
@@ -2704,7 +2697,7 @@ aama:ID2386788c-fd60-4ec9-9dfe-cdfa946f0b18 a aamas:Term ;
 	gaw:tam gaw:Past ;
 	.
 
-aama:IDae278c0c-b746-415b-a9d1-df321296bd87 a aamas:Term ;
+aama:ID62fe5179-0e94-41c2-bf8b-b400e9ec262a a aamas:Term ;
 	aamas:lang aama:Gawwada ;
 	aamas:memberOf gaw:gawwada-VNegFutureTemplate ;
 	gaw:vmorphClass gaw:NEGFUTTEMPLATE ;
@@ -2718,7 +2711,7 @@ aama:IDae278c0c-b746-415b-a9d1-df321296bd87 a aamas:Term ;
 	gaw:tam gaw:Past ;
 	.
 
-aama:ID7373f5d4-a70f-40ac-9d88-9f7680bf6601 a aamas:Term ;
+aama:IDceafbd0b-eb74-447c-8def-6d6a3e82424a a aamas:Term ;
 	aamas:lang aama:Gawwada ;
 	aamas:memberOf gaw:gawwada-VNegFutureTemplate ;
 	gaw:vmorphClass gaw:NEGFUTTEMPLATE ;
@@ -2732,7 +2725,7 @@ aama:ID7373f5d4-a70f-40ac-9d88-9f7680bf6601 a aamas:Term ;
 	gaw:tam gaw:Past ;
 	.
 
-aama:ID7e561497-aabd-484a-80d4-3a3a80b263e0 a aamas:Term ;
+aama:ID13ade020-ccc8-4b69-98a7-074b76402c81 a aamas:Term ;
 	aamas:lang aama:Gawwada ;
 	aamas:memberOf gaw:gawwada-VNegFutureTemplate ;
 	gaw:vmorphClass gaw:NEGFUTTEMPLATE ;
@@ -2746,7 +2739,7 @@ aama:ID7e561497-aabd-484a-80d4-3a3a80b263e0 a aamas:Term ;
 	gaw:tam gaw:Present ;
 	.
 
-aama:ID48e1a92c-58b3-4cd5-8f3b-36d016e7ec7e a aamas:Term ;
+aama:IDa406237d-ae66-4635-ad63-88451a9dea1f a aamas:Term ;
 	aamas:lang aama:Gawwada ;
 	aamas:memberOf gaw:gawwada-VNegFutureTemplate ;
 	gaw:vmorphClass gaw:NEGFUTTEMPLATE ;
@@ -2760,7 +2753,7 @@ aama:ID48e1a92c-58b3-4cd5-8f3b-36d016e7ec7e a aamas:Term ;
 	gaw:tam gaw:Present ;
 	.
 
-aama:IDfc26ccd1-489d-4070-b467-1d261edecafd a aamas:Term ;
+aama:ID34cc73b4-09c0-4748-a023-0d3720f021b1 a aamas:Term ;
 	aamas:lang aama:Gawwada ;
 	aamas:memberOf gaw:gawwada-VNegFutureTemplate ;
 	gaw:vmorphClass gaw:NEGFUTTEMPLATE ;
@@ -2774,7 +2767,7 @@ aama:IDfc26ccd1-489d-4070-b467-1d261edecafd a aamas:Term ;
 	gaw:tam gaw:Present ;
 	.
 
-aama:ID41c62dc4-efc1-42b6-9d02-1431db17c094 a aamas:Term ;
+aama:IDe689df63-bba0-4d34-89a1-ee6337c70d3c a aamas:Term ;
 	aamas:lang aama:Gawwada ;
 	aamas:memberOf gaw:gawwada-VNegFutureTemplate ;
 	gaw:vmorphClass gaw:NEGFUTTEMPLATE ;
@@ -2788,7 +2781,7 @@ aama:ID41c62dc4-efc1-42b6-9d02-1431db17c094 a aamas:Term ;
 	gaw:tam gaw:Present ;
 	.
 
-aama:ID220d4f32-6664-4883-97bd-0b468b576b81 a aamas:Term ;
+aama:ID55262616-2591-4a44-a60a-4ebfe1f4098b a aamas:Term ;
 	aamas:lang aama:Gawwada ;
 	aamas:memberOf gaw:gawwada-VNegFutureTemplate ;
 	gaw:vmorphClass gaw:NEGFUTTEMPLATE ;
@@ -2802,7 +2795,7 @@ aama:ID220d4f32-6664-4883-97bd-0b468b576b81 a aamas:Term ;
 	gaw:tam gaw:Present ;
 	.
 
-aama:IDce5215ed-e62a-4084-8e62-b3b50dea14c2 a aamas:Term ;
+aama:ID67b7eaec-a571-4def-bce9-dd7389fcb59f a aamas:Term ;
 	aamas:lang aama:Gawwada ;
 	aamas:memberOf gaw:gawwada-VNegFutureTemplate ;
 	gaw:vmorphClass gaw:NEGFUTTEMPLATE ;
@@ -2816,7 +2809,7 @@ aama:IDce5215ed-e62a-4084-8e62-b3b50dea14c2 a aamas:Term ;
 	gaw:tam gaw:Present ;
 	.
 
-aama:ID8bc98793-b5ef-4ef7-bce8-3774d7aa3590 a aamas:Term ;
+aama:IDa996b65b-6e46-4c51-8ce4-98183e9b90db a aamas:Term ;
 	aamas:lang aama:Gawwada ;
 	aamas:memberOf gaw:gawwada-VNegFutureTemplate ;
 	gaw:vmorphClass gaw:NEGFUTTEMPLATE ;
@@ -2838,7 +2831,7 @@ gaw:gawwada-VNegHabitualTemplate a aamas:Termcluster ;
 	rdfs:comment "Tosco2007b p. 515. The future and habitual template paradigms are not given as such in the source%%but are an extrapolation from the following statement of the author:Two affixes%%-n- for the future and –ay- for the Habitual%%may be inserted between the stem and the Prefective%%Imperfective%%and Negative endings." 
 	.
 
-aama:ID20cd5c04-4541-4f0f-b4ee-219a0383b884 a aamas:Term ;
+aama:IDb2796a4a-f540-45e9-8ebd-e95ccaa1e587 a aamas:Term ;
 	aamas:lang aama:Gawwada ;
 	aamas:memberOf gaw:gawwada-VNegHabitualTemplate ;
 	gaw:vmorphClass gaw:NEGHABTEMPLATE ;
@@ -2852,7 +2845,7 @@ aama:ID20cd5c04-4541-4f0f-b4ee-219a0383b884 a aamas:Term ;
 	gaw:tam gaw:Past ;
 	.
 
-aama:ID7e8bd079-9b15-4ba7-ae79-14eca3e08188 a aamas:Term ;
+aama:IDcd143d2f-bc46-4651-8878-ea85bb56525f a aamas:Term ;
 	aamas:lang aama:Gawwada ;
 	aamas:memberOf gaw:gawwada-VNegHabitualTemplate ;
 	gaw:vmorphClass gaw:NEGHABTEMPLATE ;
@@ -2866,7 +2859,7 @@ aama:ID7e8bd079-9b15-4ba7-ae79-14eca3e08188 a aamas:Term ;
 	gaw:tam gaw:Past ;
 	.
 
-aama:ID7aed3a4f-94cc-430d-ab3a-485a1d28cdae a aamas:Term ;
+aama:ID3ab19caa-817a-4260-b0fa-3abaf1cf918c a aamas:Term ;
 	aamas:lang aama:Gawwada ;
 	aamas:memberOf gaw:gawwada-VNegHabitualTemplate ;
 	gaw:vmorphClass gaw:NEGHABTEMPLATE ;
@@ -2880,7 +2873,7 @@ aama:ID7aed3a4f-94cc-430d-ab3a-485a1d28cdae a aamas:Term ;
 	gaw:tam gaw:Past ;
 	.
 
-aama:ID2b63573e-8827-4fe0-8411-1c488a4bda75 a aamas:Term ;
+aama:ID8564a341-601f-4957-966a-2f0d1f26184f a aamas:Term ;
 	aamas:lang aama:Gawwada ;
 	aamas:memberOf gaw:gawwada-VNegHabitualTemplate ;
 	gaw:vmorphClass gaw:NEGHABTEMPLATE ;
@@ -2894,7 +2887,7 @@ aama:ID2b63573e-8827-4fe0-8411-1c488a4bda75 a aamas:Term ;
 	gaw:tam gaw:Past ;
 	.
 
-aama:ID37ca91c7-e25b-4204-94c5-6363fba75013 a aamas:Term ;
+aama:ID6aab66a0-dc8c-4947-9bf7-1d0c39b64cc0 a aamas:Term ;
 	aamas:lang aama:Gawwada ;
 	aamas:memberOf gaw:gawwada-VNegHabitualTemplate ;
 	gaw:vmorphClass gaw:NEGHABTEMPLATE ;
@@ -2908,7 +2901,7 @@ aama:ID37ca91c7-e25b-4204-94c5-6363fba75013 a aamas:Term ;
 	gaw:tam gaw:Past ;
 	.
 
-aama:ID87116235-5d1b-4f01-a18b-023bf62acf7c a aamas:Term ;
+aama:ID2510ca43-f77a-40ef-9d15-0d91d4c6b5ad a aamas:Term ;
 	aamas:lang aama:Gawwada ;
 	aamas:memberOf gaw:gawwada-VNegHabitualTemplate ;
 	gaw:vmorphClass gaw:NEGHABTEMPLATE ;
@@ -2922,7 +2915,7 @@ aama:ID87116235-5d1b-4f01-a18b-023bf62acf7c a aamas:Term ;
 	gaw:tam gaw:Past ;
 	.
 
-aama:IDf0b0dd46-c0f9-4ebc-894f-3cae4d125c0b a aamas:Term ;
+aama:IDbff41f7c-1c01-46f9-922b-cfcf5fa65683 a aamas:Term ;
 	aamas:lang aama:Gawwada ;
 	aamas:memberOf gaw:gawwada-VNegHabitualTemplate ;
 	gaw:vmorphClass gaw:NEGHABTEMPLATE ;
@@ -2936,7 +2929,7 @@ aama:IDf0b0dd46-c0f9-4ebc-894f-3cae4d125c0b a aamas:Term ;
 	gaw:tam gaw:Past ;
 	.
 
-aama:ID76ad63bf-5db2-45b6-ade8-eda0b6f4d0fd a aamas:Term ;
+aama:ID52c009c8-274b-4627-bbb3-807616d34a33 a aamas:Term ;
 	aamas:lang aama:Gawwada ;
 	aamas:memberOf gaw:gawwada-VNegHabitualTemplate ;
 	gaw:vmorphClass gaw:NEGHABTEMPLATE ;
@@ -2950,7 +2943,7 @@ aama:ID76ad63bf-5db2-45b6-ade8-eda0b6f4d0fd a aamas:Term ;
 	gaw:tam gaw:Present ;
 	.
 
-aama:ID928fbced-630e-441f-9979-ce55c3689922 a aamas:Term ;
+aama:IDc2f08e18-b8c2-4a1d-bccc-61df7ccbcd29 a aamas:Term ;
 	aamas:lang aama:Gawwada ;
 	aamas:memberOf gaw:gawwada-VNegHabitualTemplate ;
 	gaw:vmorphClass gaw:NEGHABTEMPLATE ;
@@ -2964,7 +2957,7 @@ aama:ID928fbced-630e-441f-9979-ce55c3689922 a aamas:Term ;
 	gaw:tam gaw:Present ;
 	.
 
-aama:ID8c14cec6-01b5-4d2f-8888-1ec299b543b9 a aamas:Term ;
+aama:ID09f6aa3d-de04-4415-859a-31e9abe5d9e6 a aamas:Term ;
 	aamas:lang aama:Gawwada ;
 	aamas:memberOf gaw:gawwada-VNegHabitualTemplate ;
 	gaw:vmorphClass gaw:NEGHABTEMPLATE ;
@@ -2978,7 +2971,7 @@ aama:ID8c14cec6-01b5-4d2f-8888-1ec299b543b9 a aamas:Term ;
 	gaw:tam gaw:Present ;
 	.
 
-aama:IDd8bda132-429a-42fb-9f2b-469ed97697c4 a aamas:Term ;
+aama:IDce58c78d-1420-4644-9c67-0f0bfd66329b a aamas:Term ;
 	aamas:lang aama:Gawwada ;
 	aamas:memberOf gaw:gawwada-VNegHabitualTemplate ;
 	gaw:vmorphClass gaw:NEGHABTEMPLATE ;
@@ -2992,7 +2985,7 @@ aama:IDd8bda132-429a-42fb-9f2b-469ed97697c4 a aamas:Term ;
 	gaw:tam gaw:Present ;
 	.
 
-aama:ID012af261-84bd-45e9-8e0a-d68fb4de41b4 a aamas:Term ;
+aama:IDb1057ece-9429-46ad-9286-c06d457456dd a aamas:Term ;
 	aamas:lang aama:Gawwada ;
 	aamas:memberOf gaw:gawwada-VNegHabitualTemplate ;
 	gaw:vmorphClass gaw:NEGHABTEMPLATE ;
@@ -3006,7 +2999,7 @@ aama:ID012af261-84bd-45e9-8e0a-d68fb4de41b4 a aamas:Term ;
 	gaw:tam gaw:Present ;
 	.
 
-aama:ID23a85742-273f-4883-a7b9-798714493097 a aamas:Term ;
+aama:ID535e83b6-2ef2-47ba-acd3-4a21499fd777 a aamas:Term ;
 	aamas:lang aama:Gawwada ;
 	aamas:memberOf gaw:gawwada-VNegHabitualTemplate ;
 	gaw:vmorphClass gaw:NEGHABTEMPLATE ;
@@ -3020,7 +3013,7 @@ aama:ID23a85742-273f-4883-a7b9-798714493097 a aamas:Term ;
 	gaw:tam gaw:Present ;
 	.
 
-aama:ID04c4eafd-cd39-43b0-8488-c46e1ea33056 a aamas:Term ;
+aama:ID4578af13-c403-476a-bd73-06d65d356000 a aamas:Term ;
 	aamas:lang aama:Gawwada ;
 	aamas:memberOf gaw:gawwada-VNegHabitualTemplate ;
 	gaw:vmorphClass gaw:NEGHABTEMPLATE ;
@@ -3042,7 +3035,7 @@ gaw:gawwada-VNegTemplate a aamas:Termcluster ;
 	rdfs:comment "Tosco2007b Table 5 (p. 515). There are two tonally distinct inflectional classes of verb in the perfective%%imperative%%and consecutive positive tenses." 
 	.
 
-aama:ID77b89c38-ba66-4972-ad59-c06d88246143 a aamas:Term ;
+aama:ID57ad1669-1687-46bc-a4c1-36d8c3785dc7 a aamas:Term ;
 	aamas:lang aama:Gawwada ;
 	aamas:memberOf gaw:gawwada-VNegTemplate ;
 	gaw:vmorphClass gaw:NEGTEMPLATE ;
@@ -3055,7 +3048,7 @@ aama:ID77b89c38-ba66-4972-ad59-c06d88246143 a aamas:Term ;
 	gaw:tam gaw:Past ;
 	.
 
-aama:ID540da8f2-5f9a-40d4-af25-c8fb76d6b6b4 a aamas:Term ;
+aama:ID6340e7b2-d62d-4c9f-bfec-bc1cfcb9bfe5 a aamas:Term ;
 	aamas:lang aama:Gawwada ;
 	aamas:memberOf gaw:gawwada-VNegTemplate ;
 	gaw:vmorphClass gaw:NEGTEMPLATE ;
@@ -3068,7 +3061,7 @@ aama:ID540da8f2-5f9a-40d4-af25-c8fb76d6b6b4 a aamas:Term ;
 	gaw:tam gaw:Past ;
 	.
 
-aama:IDd96dd42e-2213-460a-a3c1-33a60ed87566 a aamas:Term ;
+aama:ID79a2be81-4e66-43a9-8afc-43f8b6d77535 a aamas:Term ;
 	aamas:lang aama:Gawwada ;
 	aamas:memberOf gaw:gawwada-VNegTemplate ;
 	gaw:vmorphClass gaw:NEGTEMPLATE ;
@@ -3081,7 +3074,7 @@ aama:IDd96dd42e-2213-460a-a3c1-33a60ed87566 a aamas:Term ;
 	gaw:tam gaw:Past ;
 	.
 
-aama:ID1ce0c06b-ba7e-4a40-8b36-2997fcb48e61 a aamas:Term ;
+aama:ID25880ce9-a098-4743-b159-542bbf7417c9 a aamas:Term ;
 	aamas:lang aama:Gawwada ;
 	aamas:memberOf gaw:gawwada-VNegTemplate ;
 	gaw:vmorphClass gaw:NEGTEMPLATE ;
@@ -3094,7 +3087,7 @@ aama:ID1ce0c06b-ba7e-4a40-8b36-2997fcb48e61 a aamas:Term ;
 	gaw:tam gaw:Past ;
 	.
 
-aama:ID4687eabe-64e7-44fe-8d93-1ae833f403e2 a aamas:Term ;
+aama:ID3fee3a25-dfcd-431a-af12-4bda1bc79fab a aamas:Term ;
 	aamas:lang aama:Gawwada ;
 	aamas:memberOf gaw:gawwada-VNegTemplate ;
 	gaw:vmorphClass gaw:NEGTEMPLATE ;
@@ -3107,7 +3100,7 @@ aama:ID4687eabe-64e7-44fe-8d93-1ae833f403e2 a aamas:Term ;
 	gaw:tam gaw:Past ;
 	.
 
-aama:IDb8196707-34bc-464c-ba64-ceaab634054d a aamas:Term ;
+aama:ID94aa7b75-032c-4cd9-a4a1-25850da708e1 a aamas:Term ;
 	aamas:lang aama:Gawwada ;
 	aamas:memberOf gaw:gawwada-VNegTemplate ;
 	gaw:vmorphClass gaw:NEGTEMPLATE ;
@@ -3120,7 +3113,7 @@ aama:IDb8196707-34bc-464c-ba64-ceaab634054d a aamas:Term ;
 	gaw:tam gaw:Past ;
 	.
 
-aama:ID521b41df-c2dc-4245-b25a-aabf08746ba9 a aamas:Term ;
+aama:ID26938809-6aea-4101-b3e9-cec50a1dc99d a aamas:Term ;
 	aamas:lang aama:Gawwada ;
 	aamas:memberOf gaw:gawwada-VNegTemplate ;
 	gaw:vmorphClass gaw:NEGTEMPLATE ;
@@ -3133,7 +3126,7 @@ aama:ID521b41df-c2dc-4245-b25a-aabf08746ba9 a aamas:Term ;
 	gaw:tam gaw:Past ;
 	.
 
-aama:IDf4097f59-10c8-4a4e-a8bc-c9ac235e6946 a aamas:Term ;
+aama:IDb3a9eae4-0d1a-4331-b1a8-7159afac3a15 a aamas:Term ;
 	aamas:lang aama:Gawwada ;
 	aamas:memberOf gaw:gawwada-VNegTemplate ;
 	gaw:vmorphClass gaw:NEGTEMPLATE ;
@@ -3146,7 +3139,7 @@ aama:IDf4097f59-10c8-4a4e-a8bc-c9ac235e6946 a aamas:Term ;
 	gaw:tam gaw:Present ;
 	.
 
-aama:ID664cd4fb-06c7-4af7-baac-ef9a0d7f4c27 a aamas:Term ;
+aama:IDce297836-c3a2-4c4d-a7dd-55b9d32c7187 a aamas:Term ;
 	aamas:lang aama:Gawwada ;
 	aamas:memberOf gaw:gawwada-VNegTemplate ;
 	gaw:vmorphClass gaw:NEGTEMPLATE ;
@@ -3159,7 +3152,7 @@ aama:ID664cd4fb-06c7-4af7-baac-ef9a0d7f4c27 a aamas:Term ;
 	gaw:tam gaw:Present ;
 	.
 
-aama:IDe0e1b81a-fca1-43ea-af6e-235e31d6ec7b a aamas:Term ;
+aama:ID55b16f0c-a342-4b52-bb91-141872d619f2 a aamas:Term ;
 	aamas:lang aama:Gawwada ;
 	aamas:memberOf gaw:gawwada-VNegTemplate ;
 	gaw:vmorphClass gaw:NEGTEMPLATE ;
@@ -3172,7 +3165,7 @@ aama:IDe0e1b81a-fca1-43ea-af6e-235e31d6ec7b a aamas:Term ;
 	gaw:tam gaw:Present ;
 	.
 
-aama:IDd525f90b-c0a5-4a3d-bb78-d5650176d92d a aamas:Term ;
+aama:ID0533ac17-610d-4afa-900e-f0124d7fa773 a aamas:Term ;
 	aamas:lang aama:Gawwada ;
 	aamas:memberOf gaw:gawwada-VNegTemplate ;
 	gaw:vmorphClass gaw:NEGTEMPLATE ;
@@ -3185,7 +3178,7 @@ aama:IDd525f90b-c0a5-4a3d-bb78-d5650176d92d a aamas:Term ;
 	gaw:tam gaw:Present ;
 	.
 
-aama:ID3590997f-e378-42ad-9074-e02950935b53 a aamas:Term ;
+aama:ID44ff6e4a-fe91-4da1-a049-4fc28a36e59e a aamas:Term ;
 	aamas:lang aama:Gawwada ;
 	aamas:memberOf gaw:gawwada-VNegTemplate ;
 	gaw:vmorphClass gaw:NEGTEMPLATE ;
@@ -3198,7 +3191,7 @@ aama:ID3590997f-e378-42ad-9074-e02950935b53 a aamas:Term ;
 	gaw:tam gaw:Present ;
 	.
 
-aama:ID03e67564-3fc2-4f6e-8baf-6640848fd6f8 a aamas:Term ;
+aama:IDd9f0af64-f4ac-4259-87da-50d7a9755eff a aamas:Term ;
 	aamas:lang aama:Gawwada ;
 	aamas:memberOf gaw:gawwada-VNegTemplate ;
 	gaw:vmorphClass gaw:NEGTEMPLATE ;
@@ -3211,7 +3204,7 @@ aama:ID03e67564-3fc2-4f6e-8baf-6640848fd6f8 a aamas:Term ;
 	gaw:tam gaw:Present ;
 	.
 
-aama:ID26f58a00-158a-4be6-b8eb-61da1cf6dd83 a aamas:Term ;
+aama:ID9e8802d1-2a44-41e0-a142-1716d02003c8 a aamas:Term ;
 	aamas:lang aama:Gawwada ;
 	aamas:memberOf gaw:gawwada-VNegTemplate ;
 	gaw:vmorphClass gaw:NEGTEMPLATE ;
@@ -3232,7 +3225,7 @@ gaw:gawwada-VPerfectiveFutureTemplate a aamas:Termcluster ;
 	rdfs:comment "Tosco2007b p. 515. The future and habitual template paradigms are not given as such in the source%%but are an extrapolation from the following statement of the author:Two affixes%%-n- for the future and –ay- for the Habitual%%may be inserted between the stem and the Prefective%%Imperfective%%and Negative endings." 
 	.
 
-aama:IDda81c21c-521d-46f9-97a7-a43fd8e94062 a aamas:Term ;
+aama:ID139df3d8-321b-496c-ac13-99a26e54623a a aamas:Term ;
 	aamas:lang aama:Gawwada ;
 	aamas:memberOf gaw:gawwada-VPerfectiveFutureTemplate ;
 	gaw:vmorphClass gaw:PERFFUTTEMPLATE ;
@@ -3246,7 +3239,7 @@ aama:IDda81c21c-521d-46f9-97a7-a43fd8e94062 a aamas:Term ;
 	gaw:inflClass gaw:Class1 ;
 	.
 
-aama:ID20c107b3-f0dd-4955-bf7c-9d19deb14988 a aamas:Term ;
+aama:ID9d6ce2d9-1626-4fb6-bf51-01655d4f327a a aamas:Term ;
 	aamas:lang aama:Gawwada ;
 	aamas:memberOf gaw:gawwada-VPerfectiveFutureTemplate ;
 	gaw:vmorphClass gaw:PERFFUTTEMPLATE ;
@@ -3260,7 +3253,7 @@ aama:ID20c107b3-f0dd-4955-bf7c-9d19deb14988 a aamas:Term ;
 	gaw:inflClass gaw:Class1 ;
 	.
 
-aama:IDc88f6aa8-a8f6-4b5a-8bfa-246e5d82f2e4 a aamas:Term ;
+aama:IDc75290bd-e424-473e-8918-4933a16da331 a aamas:Term ;
 	aamas:lang aama:Gawwada ;
 	aamas:memberOf gaw:gawwada-VPerfectiveFutureTemplate ;
 	gaw:vmorphClass gaw:PERFFUTTEMPLATE ;
@@ -3274,7 +3267,7 @@ aama:IDc88f6aa8-a8f6-4b5a-8bfa-246e5d82f2e4 a aamas:Term ;
 	gaw:inflClass gaw:Class1 ;
 	.
 
-aama:ID0d18d0bb-6a8c-4371-8af1-ca1e093a6ded a aamas:Term ;
+aama:IDac2f2b07-c7cb-4bb7-8f43-f24a10180248 a aamas:Term ;
 	aamas:lang aama:Gawwada ;
 	aamas:memberOf gaw:gawwada-VPerfectiveFutureTemplate ;
 	gaw:vmorphClass gaw:PERFFUTTEMPLATE ;
@@ -3288,7 +3281,7 @@ aama:ID0d18d0bb-6a8c-4371-8af1-ca1e093a6ded a aamas:Term ;
 	gaw:inflClass gaw:Class1 ;
 	.
 
-aama:IDe92df0f6-9e93-41af-b60b-2bda82b66329 a aamas:Term ;
+aama:ID0f34a78d-df87-4362-9e3b-79e85cbfd37f a aamas:Term ;
 	aamas:lang aama:Gawwada ;
 	aamas:memberOf gaw:gawwada-VPerfectiveFutureTemplate ;
 	gaw:vmorphClass gaw:PERFFUTTEMPLATE ;
@@ -3302,7 +3295,7 @@ aama:IDe92df0f6-9e93-41af-b60b-2bda82b66329 a aamas:Term ;
 	gaw:inflClass gaw:Class1 ;
 	.
 
-aama:ID3095f850-5922-4aed-8c27-186b8e1b0672 a aamas:Term ;
+aama:IDfb4f830c-6c73-48ed-b60f-1759273042a5 a aamas:Term ;
 	aamas:lang aama:Gawwada ;
 	aamas:memberOf gaw:gawwada-VPerfectiveFutureTemplate ;
 	gaw:vmorphClass gaw:PERFFUTTEMPLATE ;
@@ -3316,7 +3309,7 @@ aama:ID3095f850-5922-4aed-8c27-186b8e1b0672 a aamas:Term ;
 	gaw:inflClass gaw:Class1 ;
 	.
 
-aama:IDd79d7d2c-b3d8-44a1-87f1-46a814c4348f a aamas:Term ;
+aama:ID5b183a76-115b-42c3-8fac-3f96e2da192c a aamas:Term ;
 	aamas:lang aama:Gawwada ;
 	aamas:memberOf gaw:gawwada-VPerfectiveFutureTemplate ;
 	gaw:vmorphClass gaw:PERFFUTTEMPLATE ;
@@ -3330,7 +3323,7 @@ aama:IDd79d7d2c-b3d8-44a1-87f1-46a814c4348f a aamas:Term ;
 	gaw:inflClass gaw:Class1 ;
 	.
 
-aama:ID9eb3c6b6-f34b-44a5-ab7e-d98b81cc653d a aamas:Term ;
+aama:IDf01618f8-9435-4e0f-96c6-51061e0c1937 a aamas:Term ;
 	aamas:lang aama:Gawwada ;
 	aamas:memberOf gaw:gawwada-VPerfectiveFutureTemplate ;
 	gaw:vmorphClass gaw:PERFFUTTEMPLATE ;
@@ -3344,7 +3337,7 @@ aama:ID9eb3c6b6-f34b-44a5-ab7e-d98b81cc653d a aamas:Term ;
 	gaw:inflClass gaw:Class2 ;
 	.
 
-aama:ID6059ca02-8bb2-42ee-93c5-f5dd015582e7 a aamas:Term ;
+aama:ID6b21398d-f6c0-49c4-96ac-d8c4003e5ba0 a aamas:Term ;
 	aamas:lang aama:Gawwada ;
 	aamas:memberOf gaw:gawwada-VPerfectiveFutureTemplate ;
 	gaw:vmorphClass gaw:PERFFUTTEMPLATE ;
@@ -3358,7 +3351,7 @@ aama:ID6059ca02-8bb2-42ee-93c5-f5dd015582e7 a aamas:Term ;
 	gaw:inflClass gaw:Class2 ;
 	.
 
-aama:ID3bc12a24-f2d9-4307-8550-ed51e1a4bc33 a aamas:Term ;
+aama:ID84625e14-048c-4892-b069-caa93d802494 a aamas:Term ;
 	aamas:lang aama:Gawwada ;
 	aamas:memberOf gaw:gawwada-VPerfectiveFutureTemplate ;
 	gaw:vmorphClass gaw:PERFFUTTEMPLATE ;
@@ -3372,7 +3365,7 @@ aama:ID3bc12a24-f2d9-4307-8550-ed51e1a4bc33 a aamas:Term ;
 	gaw:inflClass gaw:Class2 ;
 	.
 
-aama:ID1287a513-ee05-4cdd-bc9a-9a96ef61f0bb a aamas:Term ;
+aama:IDf8dda7bf-8b19-4818-837d-2fbf4fa1438d a aamas:Term ;
 	aamas:lang aama:Gawwada ;
 	aamas:memberOf gaw:gawwada-VPerfectiveFutureTemplate ;
 	gaw:vmorphClass gaw:PERFFUTTEMPLATE ;
@@ -3386,7 +3379,7 @@ aama:ID1287a513-ee05-4cdd-bc9a-9a96ef61f0bb a aamas:Term ;
 	gaw:inflClass gaw:Class2 ;
 	.
 
-aama:IDf83f5842-5555-4e9b-90bb-2318187a0a44 a aamas:Term ;
+aama:IDda9bc0f0-ae17-4069-8674-6368637d20ef a aamas:Term ;
 	aamas:lang aama:Gawwada ;
 	aamas:memberOf gaw:gawwada-VPerfectiveFutureTemplate ;
 	gaw:vmorphClass gaw:PERFFUTTEMPLATE ;
@@ -3400,7 +3393,7 @@ aama:IDf83f5842-5555-4e9b-90bb-2318187a0a44 a aamas:Term ;
 	gaw:inflClass gaw:Class2 ;
 	.
 
-aama:IDde4b40c7-e4be-483b-97b0-bce1423cf636 a aamas:Term ;
+aama:ID2826db9b-f238-438e-a61d-5af33380b0cd a aamas:Term ;
 	aamas:lang aama:Gawwada ;
 	aamas:memberOf gaw:gawwada-VPerfectiveFutureTemplate ;
 	gaw:vmorphClass gaw:PERFFUTTEMPLATE ;
@@ -3414,7 +3407,7 @@ aama:IDde4b40c7-e4be-483b-97b0-bce1423cf636 a aamas:Term ;
 	gaw:inflClass gaw:Class2 ;
 	.
 
-aama:ID3ca7c228-c49b-4372-8225-81bf8346c8cf a aamas:Term ;
+aama:ID09b27656-6395-4c0e-9587-e10c700cdcae a aamas:Term ;
 	aamas:lang aama:Gawwada ;
 	aamas:memberOf gaw:gawwada-VPerfectiveFutureTemplate ;
 	gaw:vmorphClass gaw:PERFFUTTEMPLATE ;
@@ -3436,7 +3429,7 @@ gaw:gawwada-VPerfectiveHabitualTemplate a aamas:Termcluster ;
 	rdfs:comment "Tosco2007b p. 515. The future and habitual template paradigms are not given as such in the source%%but are an extrapolation from the following statement of the author:Two affixes%%-n- for the future and –ay- for the Habitual%%may be inserted between the stem and the Prefective%%Imperfective%%and Negative endings." 
 	.
 
-aama:ID7d998163-f9e7-4353-913e-1c54a69da128 a aamas:Term ;
+aama:ID2450f738-d613-47b8-96db-6d45759b91fd a aamas:Term ;
 	aamas:lang aama:Gawwada ;
 	aamas:memberOf gaw:gawwada-VPerfectiveHabitualTemplate ;
 	gaw:vmorphClass gaw:PERFHABTEMPLATE ;
@@ -3450,7 +3443,7 @@ aama:ID7d998163-f9e7-4353-913e-1c54a69da128 a aamas:Term ;
 	gaw:inflClass gaw:Class1 ;
 	.
 
-aama:ID42a8c3b4-bfb8-44fd-9fbe-8ee47644a7b9 a aamas:Term ;
+aama:ID7d3dbb42-295c-413c-afa5-6102a7235eb3 a aamas:Term ;
 	aamas:lang aama:Gawwada ;
 	aamas:memberOf gaw:gawwada-VPerfectiveHabitualTemplate ;
 	gaw:vmorphClass gaw:PERFHABTEMPLATE ;
@@ -3464,7 +3457,7 @@ aama:ID42a8c3b4-bfb8-44fd-9fbe-8ee47644a7b9 a aamas:Term ;
 	gaw:inflClass gaw:Class1 ;
 	.
 
-aama:ID8880bff0-56f3-418d-9883-a0976a8b3841 a aamas:Term ;
+aama:ID2bda9c2c-9e85-42c1-a8e3-349a0ffbd5b3 a aamas:Term ;
 	aamas:lang aama:Gawwada ;
 	aamas:memberOf gaw:gawwada-VPerfectiveHabitualTemplate ;
 	gaw:vmorphClass gaw:PERFHABTEMPLATE ;
@@ -3478,7 +3471,7 @@ aama:ID8880bff0-56f3-418d-9883-a0976a8b3841 a aamas:Term ;
 	gaw:inflClass gaw:Class1 ;
 	.
 
-aama:IDa30e017d-8b83-458e-bc2c-99a83012bc8a a aamas:Term ;
+aama:ID4dca7794-127c-4614-8926-6dd0765e0594 a aamas:Term ;
 	aamas:lang aama:Gawwada ;
 	aamas:memberOf gaw:gawwada-VPerfectiveHabitualTemplate ;
 	gaw:vmorphClass gaw:PERFHABTEMPLATE ;
@@ -3492,7 +3485,7 @@ aama:IDa30e017d-8b83-458e-bc2c-99a83012bc8a a aamas:Term ;
 	gaw:inflClass gaw:Class1 ;
 	.
 
-aama:ID99539b51-1332-4fe4-bdcb-dc9db0bad518 a aamas:Term ;
+aama:IDa8f7727b-599a-49d0-9cd7-f44c9d20fbaa a aamas:Term ;
 	aamas:lang aama:Gawwada ;
 	aamas:memberOf gaw:gawwada-VPerfectiveHabitualTemplate ;
 	gaw:vmorphClass gaw:PERFHABTEMPLATE ;
@@ -3506,7 +3499,7 @@ aama:ID99539b51-1332-4fe4-bdcb-dc9db0bad518 a aamas:Term ;
 	gaw:inflClass gaw:Class1 ;
 	.
 
-aama:IDe9af9253-4226-49e0-ab05-1f9b5367f5c4 a aamas:Term ;
+aama:IDf23898f7-f0ce-4c6a-939e-070a3d126a9d a aamas:Term ;
 	aamas:lang aama:Gawwada ;
 	aamas:memberOf gaw:gawwada-VPerfectiveHabitualTemplate ;
 	gaw:vmorphClass gaw:PERFHABTEMPLATE ;
@@ -3520,7 +3513,7 @@ aama:IDe9af9253-4226-49e0-ab05-1f9b5367f5c4 a aamas:Term ;
 	gaw:inflClass gaw:Class1 ;
 	.
 
-aama:ID7042d127-abb0-4375-8b05-140697bffb24 a aamas:Term ;
+aama:ID740aafed-459f-4675-94aa-157f8b099f61 a aamas:Term ;
 	aamas:lang aama:Gawwada ;
 	aamas:memberOf gaw:gawwada-VPerfectiveHabitualTemplate ;
 	gaw:vmorphClass gaw:PERFHABTEMPLATE ;
@@ -3534,7 +3527,7 @@ aama:ID7042d127-abb0-4375-8b05-140697bffb24 a aamas:Term ;
 	gaw:inflClass gaw:Class1 ;
 	.
 
-aama:IDe733c2ec-1d60-4f33-9bcf-166f50e993b9 a aamas:Term ;
+aama:IDdd3d364a-e4c3-470e-bccf-0206a9cfcb33 a aamas:Term ;
 	aamas:lang aama:Gawwada ;
 	aamas:memberOf gaw:gawwada-VPerfectiveHabitualTemplate ;
 	gaw:vmorphClass gaw:PERFHABTEMPLATE ;
@@ -3548,7 +3541,7 @@ aama:IDe733c2ec-1d60-4f33-9bcf-166f50e993b9 a aamas:Term ;
 	gaw:inflClass gaw:Class2 ;
 	.
 
-aama:IDf263adfe-823d-46f4-91a6-88e069de90ce a aamas:Term ;
+aama:IDddad9382-909d-4445-a371-0ff7a47a3be0 a aamas:Term ;
 	aamas:lang aama:Gawwada ;
 	aamas:memberOf gaw:gawwada-VPerfectiveHabitualTemplate ;
 	gaw:vmorphClass gaw:PERFHABTEMPLATE ;
@@ -3562,7 +3555,7 @@ aama:IDf263adfe-823d-46f4-91a6-88e069de90ce a aamas:Term ;
 	gaw:inflClass gaw:Class2 ;
 	.
 
-aama:ID34f4c6d3-5e72-4fb5-9183-4632865ce16d a aamas:Term ;
+aama:IDcd62fca1-c69b-4825-99fd-4ec30ae75b09 a aamas:Term ;
 	aamas:lang aama:Gawwada ;
 	aamas:memberOf gaw:gawwada-VPerfectiveHabitualTemplate ;
 	gaw:vmorphClass gaw:PERFHABTEMPLATE ;
@@ -3576,7 +3569,7 @@ aama:ID34f4c6d3-5e72-4fb5-9183-4632865ce16d a aamas:Term ;
 	gaw:inflClass gaw:Class2 ;
 	.
 
-aama:IDe47588a3-1667-42cf-9073-90f64256718c a aamas:Term ;
+aama:ID2d4c4a99-17ee-4987-94dd-891f0514efb0 a aamas:Term ;
 	aamas:lang aama:Gawwada ;
 	aamas:memberOf gaw:gawwada-VPerfectiveHabitualTemplate ;
 	gaw:vmorphClass gaw:PERFHABTEMPLATE ;
@@ -3590,7 +3583,7 @@ aama:IDe47588a3-1667-42cf-9073-90f64256718c a aamas:Term ;
 	gaw:inflClass gaw:Class2 ;
 	.
 
-aama:ID54b6d9cb-6f5c-4673-84f8-d64ab793601e a aamas:Term ;
+aama:IDc4bd2041-8ac0-4576-9480-fce97f0ff884 a aamas:Term ;
 	aamas:lang aama:Gawwada ;
 	aamas:memberOf gaw:gawwada-VPerfectiveHabitualTemplate ;
 	gaw:vmorphClass gaw:PERFHABTEMPLATE ;
@@ -3604,7 +3597,7 @@ aama:ID54b6d9cb-6f5c-4673-84f8-d64ab793601e a aamas:Term ;
 	gaw:inflClass gaw:Class2 ;
 	.
 
-aama:ID4202b183-de4f-4ea8-8b65-2e21d4d62fa4 a aamas:Term ;
+aama:ID7231dc9f-aacb-4ce1-bb5c-380805615706 a aamas:Term ;
 	aamas:lang aama:Gawwada ;
 	aamas:memberOf gaw:gawwada-VPerfectiveHabitualTemplate ;
 	gaw:vmorphClass gaw:PERFHABTEMPLATE ;
@@ -3618,7 +3611,7 @@ aama:ID4202b183-de4f-4ea8-8b65-2e21d4d62fa4 a aamas:Term ;
 	gaw:inflClass gaw:Class2 ;
 	.
 
-aama:ID97624324-a474-4bb5-bb92-2ec3a2ea67de a aamas:Term ;
+aama:ID800a1a89-6fee-437d-add2-76afe4608f2a a aamas:Term ;
 	aamas:lang aama:Gawwada ;
 	aamas:memberOf gaw:gawwada-VPerfectiveHabitualTemplate ;
 	gaw:vmorphClass gaw:PERFHABTEMPLATE ;
@@ -3640,7 +3633,7 @@ gaw:gawwada-VPerfectiveTemplate a aamas:Termcluster ;
 	rdfs:comment "Tosco2007b Table 3 (p. 514). There are two tonally distinct inflectional classes of verb in the perfective%%imperative%%and consecutive positive tenses." 
 	.
 
-aama:ID2fe854e6-927e-491a-b4f1-17176a04bfde a aamas:Term ;
+aama:ID928f6082-54fa-4ac3-b12d-2728dc427cd4 a aamas:Term ;
 	aamas:lang aama:Gawwada ;
 	aamas:memberOf gaw:gawwada-VPerfectiveTemplate ;
 	gaw:vmorphClass gaw:PERFECTIVETEMPLATE ;
@@ -3653,7 +3646,7 @@ aama:ID2fe854e6-927e-491a-b4f1-17176a04bfde a aamas:Term ;
 	gaw:inflClass gaw:Class1 ;
 	.
 
-aama:ID17c73aa6-33aa-4fb7-9c72-2c0ebcd50f6a a aamas:Term ;
+aama:ID70b792fd-f559-4363-9a8d-1072f4a945d0 a aamas:Term ;
 	aamas:lang aama:Gawwada ;
 	aamas:memberOf gaw:gawwada-VPerfectiveTemplate ;
 	gaw:vmorphClass gaw:PERFECTIVETEMPLATE ;
@@ -3666,7 +3659,7 @@ aama:ID17c73aa6-33aa-4fb7-9c72-2c0ebcd50f6a a aamas:Term ;
 	gaw:inflClass gaw:Class1 ;
 	.
 
-aama:IDf4f88110-380a-4069-984d-e10519940a28 a aamas:Term ;
+aama:IDc93557b4-a3c8-43a0-816b-ce4947dba22f a aamas:Term ;
 	aamas:lang aama:Gawwada ;
 	aamas:memberOf gaw:gawwada-VPerfectiveTemplate ;
 	gaw:vmorphClass gaw:PERFECTIVETEMPLATE ;
@@ -3679,7 +3672,7 @@ aama:IDf4f88110-380a-4069-984d-e10519940a28 a aamas:Term ;
 	gaw:inflClass gaw:Class1 ;
 	.
 
-aama:ID75710e45-5066-4bed-bc9e-a53397e43efd a aamas:Term ;
+aama:IDfcc09894-7bce-4e61-babb-c0f8d4408d75 a aamas:Term ;
 	aamas:lang aama:Gawwada ;
 	aamas:memberOf gaw:gawwada-VPerfectiveTemplate ;
 	gaw:vmorphClass gaw:PERFECTIVETEMPLATE ;
@@ -3692,7 +3685,7 @@ aama:ID75710e45-5066-4bed-bc9e-a53397e43efd a aamas:Term ;
 	gaw:inflClass gaw:Class1 ;
 	.
 
-aama:IDd3cd7575-8d6d-4f7a-8b34-0451f495f09a a aamas:Term ;
+aama:ID1012d896-b545-4d98-a622-b7f0bc8b3707 a aamas:Term ;
 	aamas:lang aama:Gawwada ;
 	aamas:memberOf gaw:gawwada-VPerfectiveTemplate ;
 	gaw:vmorphClass gaw:PERFECTIVETEMPLATE ;
@@ -3705,7 +3698,7 @@ aama:IDd3cd7575-8d6d-4f7a-8b34-0451f495f09a a aamas:Term ;
 	gaw:inflClass gaw:Class1 ;
 	.
 
-aama:ID9dd1e8f7-b6f9-4e7c-8ded-9424f496ee3b a aamas:Term ;
+aama:ID54dcc5a7-715d-4824-9f92-ba59c7c189ba a aamas:Term ;
 	aamas:lang aama:Gawwada ;
 	aamas:memberOf gaw:gawwada-VPerfectiveTemplate ;
 	gaw:vmorphClass gaw:PERFECTIVETEMPLATE ;
@@ -3718,7 +3711,7 @@ aama:ID9dd1e8f7-b6f9-4e7c-8ded-9424f496ee3b a aamas:Term ;
 	gaw:inflClass gaw:Class1 ;
 	.
 
-aama:IDf0093852-35ce-437a-85af-d17b20740c02 a aamas:Term ;
+aama:IDe991deef-6a01-4715-93d7-894ee6ee22c6 a aamas:Term ;
 	aamas:lang aama:Gawwada ;
 	aamas:memberOf gaw:gawwada-VPerfectiveTemplate ;
 	gaw:vmorphClass gaw:PERFECTIVETEMPLATE ;
@@ -3731,7 +3724,7 @@ aama:IDf0093852-35ce-437a-85af-d17b20740c02 a aamas:Term ;
 	gaw:inflClass gaw:Class1 ;
 	.
 
-aama:ID23fc84bf-8087-4f3a-b26e-afbf864603cd a aamas:Term ;
+aama:ID7a2cb281-9cd6-4229-b363-bc7568dd48a5 a aamas:Term ;
 	aamas:lang aama:Gawwada ;
 	aamas:memberOf gaw:gawwada-VPerfectiveTemplate ;
 	gaw:vmorphClass gaw:PERFECTIVETEMPLATE ;
@@ -3744,7 +3737,7 @@ aama:ID23fc84bf-8087-4f3a-b26e-afbf864603cd a aamas:Term ;
 	gaw:inflClass gaw:Class2 ;
 	.
 
-aama:ID29374196-6366-4cb1-9c66-0c0258c57b58 a aamas:Term ;
+aama:IDd705538a-dae6-4e9a-8400-fd7c08ad8eb0 a aamas:Term ;
 	aamas:lang aama:Gawwada ;
 	aamas:memberOf gaw:gawwada-VPerfectiveTemplate ;
 	gaw:vmorphClass gaw:PERFECTIVETEMPLATE ;
@@ -3757,7 +3750,7 @@ aama:ID29374196-6366-4cb1-9c66-0c0258c57b58 a aamas:Term ;
 	gaw:inflClass gaw:Class2 ;
 	.
 
-aama:ID4d681a27-a37a-459e-98dc-6cfbf0e2b596 a aamas:Term ;
+aama:ID1d9335d7-a8e8-4bcb-872e-01cecbbbaf94 a aamas:Term ;
 	aamas:lang aama:Gawwada ;
 	aamas:memberOf gaw:gawwada-VPerfectiveTemplate ;
 	gaw:vmorphClass gaw:PERFECTIVETEMPLATE ;
@@ -3770,7 +3763,7 @@ aama:ID4d681a27-a37a-459e-98dc-6cfbf0e2b596 a aamas:Term ;
 	gaw:inflClass gaw:Class2 ;
 	.
 
-aama:IDb5d3db12-1e03-4e31-9e3b-82f7d877c5f2 a aamas:Term ;
+aama:IDf5c57a1f-b1c8-400f-bd72-e02b9137f080 a aamas:Term ;
 	aamas:lang aama:Gawwada ;
 	aamas:memberOf gaw:gawwada-VPerfectiveTemplate ;
 	gaw:vmorphClass gaw:PERFECTIVETEMPLATE ;
@@ -3783,7 +3776,7 @@ aama:IDb5d3db12-1e03-4e31-9e3b-82f7d877c5f2 a aamas:Term ;
 	gaw:inflClass gaw:Class2 ;
 	.
 
-aama:IDa6451775-2c2e-4cda-a620-74fd08206428 a aamas:Term ;
+aama:ID6c314f21-92df-4a8c-a2bb-229db9da7e23 a aamas:Term ;
 	aamas:lang aama:Gawwada ;
 	aamas:memberOf gaw:gawwada-VPerfectiveTemplate ;
 	gaw:vmorphClass gaw:PERFECTIVETEMPLATE ;
@@ -3796,7 +3789,7 @@ aama:IDa6451775-2c2e-4cda-a620-74fd08206428 a aamas:Term ;
 	gaw:inflClass gaw:Class2 ;
 	.
 
-aama:IDf21eaa7f-be72-4ee3-9620-9167ca0790b8 a aamas:Term ;
+aama:ID2fbb1bbe-dccd-485f-b205-e6d1ac59e78a a aamas:Term ;
 	aamas:lang aama:Gawwada ;
 	aamas:memberOf gaw:gawwada-VPerfectiveTemplate ;
 	gaw:vmorphClass gaw:PERFECTIVETEMPLATE ;
@@ -3809,7 +3802,7 @@ aama:IDf21eaa7f-be72-4ee3-9620-9167ca0790b8 a aamas:Term ;
 	gaw:inflClass gaw:Class2 ;
 	.
 
-aama:ID63ac14ce-faaf-4f8b-93c3-57462ba3002e a aamas:Term ;
+aama:IDec6124bf-645d-4c60-a91f-951b7c4d1404 a aamas:Term ;
 	aamas:lang aama:Gawwada ;
 	aamas:memberOf gaw:gawwada-VPerfectiveTemplate ;
 	gaw:vmorphClass gaw:PERFECTIVETEMPLATE ;

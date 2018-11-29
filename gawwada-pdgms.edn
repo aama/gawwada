@@ -5,8 +5,7 @@
 :datasource "Tosco2007b"
 :geodemoURL "http://www.ethnologue.com/language/gwd"
 :geodemoTXT "Varieties and subdialects of Gawwada are spoken in Ethiopia 'Southern Nations, Nationalities, and Peoples’ region: Tsegen zone, west of Lake Chamo'. "
-:schemata {:lexeme [:ass  :oggay :sor :ug],
- :derivedStem [:Causative :Inceptive :Ingressive :Intensive :Middle :Passive :Semelfactive],
+:schemata { :derivedStem [:Causative :Inceptive :Ingressive :Intensive :Middle :Passive :Semelfactive],
  :gender [:Common :Fem :Masc],
  :genderHead [:HeadFem :HeadMasc],
  :inflClass [:Class1 :Class1a :Class1b :Class2],
@@ -23,19 +22,21 @@
           :synsemClass [:case :derivedStem :focusType :polarity :pos :proClass :tamb :tense2],
           :inflClass [:inflClass],
           :otherClass []}
-:lexemes{:pupusa {:lemma "pupusaʕ-", :gloss "betray(HD)"},
-           :dawr {:lemma "ɗawr", :gloss "refuse"},
-           :urkees {:lemma "úrkées", :gloss "dress(tr.)"},
-           :af {:lemma "ʕáf", :gloss "spread"},
-           :sor {:lemma "sór", :gloss "run"},
-           :tatak {:lemma "tatak-", :gloss "betray(G)"},
-           :ug {:lemma "ʕúg-", :gloss "drink"},
-           :yooq {:lemma "yóoqa", :gloss "grind"},
-           :urkeesad {:lemma "úrkeesáɗ", :gloss "dress(intr.)"},
-           :ass {:lemma "ášša-", :gloss "go"},
-           :teeh {:lemma "teeħ-", :gloss "give"},
-           :qut {:lemma "qút'", :gloss "cut"},
-           :oggay {:lemma "ógááy-", :gloss "come"}}
+:lexemes {
+:af   {:pos :Verb, :lemma "ʕáf", :gloss "spread", },
+:ass   {:pos :Verb, :lemma "ášša-", :gloss "go", },
+:dawr   {:pos :Verb, :lemma "ɗawr", :gloss "refuse", },
+:oggay   {:pos :Verb, :lemma "ógááy-", :gloss "come", },
+:pupusa   {:pos :Verb, :lemma "pupusaʕ-", :gloss "betray(HD)", },
+:qut   {:pos :Verb, :lemma "qút'", :gloss "cut", },
+:sor   {:pos :Verb, :lemma "sór", :gloss "run", },
+:tatak   {:pos :Verb, :lemma "tatak-", :gloss "betray(G)", },
+:teeh   {:pos :Verb, :lemma "teeħ-", :gloss "give", },
+:ug   {:pos :Verb, :lemma "ʕúg-", :gloss "drink", },
+:urkees   {:pos :Verb, :lemma "úrkées", :gloss "dress(tr.)", },
+:urkeesad   {:pos :Verb, :lemma "úrkeesáɗ", :gloss "dress(intr.)", },
+:yooq   {:pos :Verb, :lemma "yóoqa", :gloss "grind", },
+}
 :termclusters [
     {:label "gawwada-VAffJussive-ass"
     :note "Tosco2007b Table 7 3.3.6 (p.517). The desinences are the same as the past positive with a different accentual pattern."
