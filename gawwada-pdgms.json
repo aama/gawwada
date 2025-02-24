@@ -1,12 +1,24 @@
 {
   "lang": "gawwada",
-  "subfamily": "East Cushitic Yaaku-Dullay",
+  "subfamily": "cushitic east yaaku-dullay",
   "lgpref": "gaw",
   "datasource": "Tosco, Mauro. 2007. 'Gawwada Morphology'. in Alan Kaye (ed.), Morphologies of Asian and Africa (2 vols). Eisenbrauns. Winona Lake IN.: Eisenbrauns. vol. 1, pp. 505-528. [T07]",
+  "transcription": { 
+    "Consonants": "AAMA transcription table",
+    "Vowels": "i e a o u; ii ee aa oo uu",
+    "Tone": "'á' high; 'a' unmarked"},
   "datasourceNotes": "",
   "geodemoURL": "http://www.ethnologue.com/language/gwd",
   "geodemoTXT": "Varieties and subdialects of Gawwada are spoken in Ethiopia ZZSouthern Nations, Nationalities, and Peoples’ region: Tsegen zone, west of Lake ChamoZZ. ",
   "schemata": {
+  "conjClass": [
+    "",
+    "2",
+    "Class1",
+    "Class1a",
+    "Class1b",
+    "Class2"
+  ],
   "derivedStem": [
     "Causative",
     "Inceptive",
@@ -24,12 +36,6 @@
   "genderHead": [
     "HeadFem",
     "HeadMasc"
-  ],
-  "inflClass": [
-    "Class1",
-    "Class1a",
-    "Class1b",
-    "Class2"
   ],
   "lexeme": [
     "ass",
@@ -120,10 +126,232 @@
     "gloss": "drink"
   }
 },
-  "pdgmPropOrder": ["pos", "proClass", "morphClass", "inflClass", "lexeme", "tam", "tense2", "polarity" ],
+  "pdgmPropOrder": ["pos", "proClass", "morphClass", "conjClass", "lexeme", "tam", "tense2", "polarity" ],
   "termclusters": [
   {
-    "label": "gaw-PronounIndependentmorph-PROIND-",
+    "label": "gaw-Verb2-ass-ImperativeNegative",
+    "note": "T073.3.5(p.517) :: Imperative classes do not exist in the negative imperative (note classes of lexical items in the affirmative imperative). A single verb form used in both sg and pl.",
+    "common": {
+      "lexeme": "ass",
+      "polarity": "Negative",
+      "pos": "Verb",
+      "conjClass": "2",
+      "tam": "Imperative"
+    },
+    "terms": [
+      ["number" ,"persom" ,"gender" ,"token"],
+      ["Singular" ,"Person2" ,"Common" ,"ólo ašší"],
+      ["Plural" ,"Person2" ,"Common" ,"ólo ašší"]
+    ]
+  },
+  {
+    "label": "gaw-Verb2-ass-ImperfectiveAffirmative",
+    "note": "T07t4(p.515) :: There are two tonally distinct inflectional classes of verb in the perfective,imperative,and consecutive positive tenses.",
+    "common": {
+      "lexeme": "ass",
+      "pos": "Verb",
+      "polarity": "Affirmative",
+      "conjClass": "2",
+      "tam": "Imperfective"
+    },
+    "terms": [
+      ["number" ,"person" ,"gender" ,"token"],
+      ["Singular" ,"Person1" ,"Common" ,"ášša"],
+      ["Singular" ,"Person2" ,"Common" ,"áššay"],
+      ["Singular" ,"Person3" ,"Masc" ,"ášša"],
+      ["Singular" ,"Person3" ,"Fem" ,"áššay"],
+      ["Plural" ,"Person1" ,"Common" ,"áššani"],
+      ["Plural" ,"Person2" ,"Common" ,"áššangu"],
+      ["Plural" ,"Person3" ,"Common" ,"áššangi"]
+    ]
+  },
+  {
+    "label": "gaw-Verb2-ass-JussiveAffirmative",
+    "note": "T07t7 3.3.6(p.517) :: The desinences are the same as the past positive with a different accentual pattern.",
+    "common": {
+      "lexeme": "ass",
+      "polarity": "Affirmative",
+      "pos": "Verb",
+      "conjClass": "2",
+      "tam": "Jussive"
+    },
+    "terms": [
+      ["number" ,"person" ,"gender" ,"token"],
+      ["Singular" ,"Person1" ,"Common" ,"ašší"],
+      ["Singular" ,"Person3" ,"Masc" ,"ašší"],
+      ["Singular" ,"Person3" ,"Fem" ,"aššití"],
+      ["Plural" ,"Person1" ,"Common" ,"aššiní"],
+      ["Plural" ,"Person3" ,"Common" ,"aššé"]
+    ]
+  },
+  {
+    "label": "gaw-Verb2-ass-JussiveNegative",
+    "note": "T07t8,3.3.7(p.517) :: The desinences are the same as the past negative,preceded by the jussive marker ínnu.",
+    "common": {
+      "lexeme": "ass",
+      "polarity": "Negative",
+      "pos": "Verb",
+      "conjClass": "2",
+      "tam": "Jussive"
+    },
+    "terms": [
+      ["number" ,"person" ,"gender" ,"token"],
+      ["Singular" ,"Person1" ,"Common" ,"(áno) aššé"],
+      ["Singular" ,"Person3" ,"Masc" ,"ínnu aššú"],
+      ["Singular" ,"Person3" ,"Fem" ,"ínnu aššú"],
+      ["Plural" ,"Person1" ,"Common" ,"(íne) aššiné"],
+      ["Plural" ,"Person3" ,"Common" ,"ínnu aššóngi"]
+    ]
+  },
+  {
+    "label": "gaw-Verb2-ass-PastNegative",
+    "note": "T07t5(p.515) :: There are two tonally distinct inflectional classes of verb in the perfective,imperative,and consecutive positive tenses.",
+    "common": {
+      "lexeme": "ass",
+      "polarity": "Negative",
+      "pos": "Verb",
+      "conjClass": "2",
+      "tam": "Past"
+    },
+    "terms": [
+      ["number" ,"person" ,"gender" ,"token"],
+      ["Singular" ,"Person1" ,"Common" ,"ássú"],
+      ["Singular" ,"Person2" ,"Common" ,"ássú"],
+      ["Singular" ,"Person3" ,"Masc" ,"ássú"],
+      ["Singular" ,"Person3" ,"Fem" ,"ássú"],
+      ["Plural" ,"Person1" ,"Common" ,"áššóoni"],
+      ["Plural" ,"Person2" ,"Common" ,"áššóngu"],
+      ["Plural" ,"Person3" ,"Common" ,"áššóngi"]
+    ]
+  },
+  {
+    "label": "gaw-Verb2-ass-PresentNegative",
+    "note": "T07t5(p.515) :: There are two tonally distinct inflectional classes of verb in the perfective,imperative,and consecutive positive tenses.",
+    "common": {
+      "lexeme": "ass",
+      "polarity": "Negative",
+      "pos": "Verb",
+      "conjClass": "2",
+      "tam": "Present"
+    },
+    "terms": [
+      ["number" ,"person" ,"gender" ,"token"],
+      ["Singular" ,"Person1" ,"Common" ,"ássí"],
+      ["Singular" ,"Person2" ,"Common" ,"áššití"],
+      ["Singular" ,"Person3" ,"Masc" ,"ássí"],
+      ["Singular" ,"Person3" ,"Fem" ,"áššití"],
+      ["Plural" ,"Person1" ,"Common" ,"áššiní"],
+      ["Plural" ,"Person2" ,"Common" ,"áššité"],
+      ["Plural" ,"Person3" ,"Common" ,"ássé"]
+    ]
+  },
+  {
+    "label": "gaw-VerbClass1-oggay-PerfectiveAffirmative",
+    "note": "T07t3(p.514) :: There are two tonally distinct inflectional classes of verb in the perfective,imperative,and consecutive positive tenses.",
+    "common": {
+      "conjClass": "Class1",
+      "polarity": "Affirmative",
+      "lexeme": "oggay",
+      "pos": "Verb",
+      "tam": "Perfective"
+    },
+    "terms": [
+      ["number" ,"person" ,"gender" ,"token"],
+      ["Singular" ,"Person1" ,"Common" ,"ógááyí"],
+      ["Singular" ,"Person2" ,"Common" ,"ógááytí"],
+      ["Singular" ,"Person3" ,"Masc" ,"ógááyí"],
+      ["Singular" ,"Person3" ,"Fem" ,"ógááytí"],
+      ["Plural" ,"Person1" ,"Common" ,"ógááyné(eni)"],
+      ["Plural" ,"Person2" ,"Common" ,"ógááyté(ngu)"],
+      ["Plural" ,"Person3" ,"Common" ,"ógááyné(eni)"]
+    ]
+  },
+  {
+    "label": "gaw-VerbClass1-sor-ConsecutiveAffirmative",
+    "note": "T07t4(p.515) :: There are two tonally distinct inflectional classes of verb in the perfective,imperative,and consecutive positive tenses.",
+    "common": {
+      "conjClass": "Class1",
+      "polarity": "Affirmative",
+      "lexeme": "sor",
+      "pos": "Verb",
+      "tam": "Consecutive"
+    },
+    "terms": [
+      ["number" ,"person" ,"gender" ,"token"],
+      ["Singular" ,"Person1" ,"Common" ,"sorá"],
+      ["Singular" ,"Person2" ,"Common" ,"soráy"],
+      ["Singular" ,"Person3" ,"Masc" ,"sorú"],
+      ["Singular" ,"Person3" ,"Fem" ,"sorí"],
+      ["Plural" ,"Person1" ,"Common" ,"sórání"],
+      ["Plural" ,"Person2" ,"Common" ,"sórángú"],
+      ["Plural" ,"Person3" ,"Common" ,"sórángí"]
+    ]
+  },
+  {
+    "label": "gaw-VerbClass1-ug-PerfectiveAffirmative",
+    "note": "T07t3(p.514) :: There are two tonally distinct inflectional classes of verb in the perfective,imperative,and consecutive positive tenses.",
+    "common": {
+      "conjClass": "Class1",
+      "lexeme": "ug",
+      "polarity": "Affirmative",
+      "pos": "Verb",
+      "tam": "Perfective"
+    },
+    "terms": [
+      ["number" ,"person" ,"gender" ,"token"],
+      ["Singular" ,"Person1" ,"Common" ,"ʕúgí"],
+      ["Singular" ,"Person2" ,"Common" ,"ʕúgtí"],
+      ["Singular" ,"Person3" ,"Masc" ,"ʕúgí"],
+      ["Singular" ,"Person3" ,"Fem" ,"ʕúgtí"],
+      ["Plural" ,"Person1" ,"Common" ,"ʕúgné(eni)"],
+      ["Plural" ,"Person2" ,"Common" ,"ʕúgté(ngu)"],
+      ["Plural" ,"Person3" ,"Common" ,"ʕúgné(eni)"]
+    ]
+  },
+  {
+    "label": "gaw-VerbClass2-ass-ConsecutiveAffirmative",
+    "note": "T07t4(p.515) :: There are two tonally distinct inflectional classes of verb in the perfective,imperative,and consecutive positive tenses.",
+    "common": {
+      "conjClass": "Class2",
+      "polarity": "Affirmative",
+      "lexeme": "ass",
+      "pos": "Verb",
+      "tam": "Consecutive"
+    },
+    "terms": [
+      ["number" ,"person" ,"gender" ,"token"],
+      ["Singular" ,"Person1" ,"Common" ,"ássó"],
+      ["Singular" ,"Person2" ,"Common" ,"áššóy"],
+      ["Singular" ,"Person3" ,"Masc" ,"ássó"],
+      ["Singular" ,"Person3" ,"Fem" ,"áššóy"],
+      ["Plural" ,"Person1" ,"Common" ,"áššóni"],
+      ["Plural" ,"Person2" ,"Common" ,"áššóngu"],
+      ["Plural" ,"Person3" ,"Common" ,"áššóngi"]
+    ]
+  },
+  {
+    "label": "gaw-VerbClass2-ass-PerfectiveAffirmative",
+    "note": "T07t3(p.514) :: There are two tonally distinct inflectional classes of verb in the perfective,imperative,and consecutive positive tenses.",
+    "common": {
+      "conjClass": "Class2",
+      "polarity": "Affirmative",
+      "lexeme": "ass",
+      "pos": "Verb",
+      "tam": "Perfective"
+    },
+    "terms": [
+      ["number" ,"person" ,"gender" ,"token"],
+      ["Singular" ,"Person1" ,"Common" ,"ášši"],
+      ["Singular" ,"Person2" ,"Common" ,"áššti"],
+      ["Singular" ,"Person3" ,"Masc" ,"ášši"],
+      ["Singular" ,"Person3" ,"Fem" ,"áššti"],
+      ["Plural" ,"Person1" ,"Common" ,"áššné(eni)"],
+      ["Plural" ,"Person2" ,"Common" ,"áššté(ngu)"],
+      ["Plural" ,"Person3" ,"Common" ,"áššné(eni)"]
+    ]
+  },
+  {
+    "label": "gaw-morphPronounIndependent-PROIND",
     "note": "T07t10(5.0,p.523)",
     "common": {
       "pos": "Pronoun",
@@ -142,7 +370,7 @@
     ]
   },
   {
-    "label": "gaw-PronounObjProcliticmorph-PROOBJPROCLITIC-",
+    "label": "gaw-morphPronounObjProclitic-PROOBJPROCLITIC",
     "note": "T07t10(5.0,p.523)",
     "common": {
       "pos": "Pronoun",
@@ -159,7 +387,7 @@
     ]
   },
   {
-    "label": "gaw-PronounPossSuffmorph-PROPOSSSUFF-",
+    "label": "gaw-morphPronounPossSuff-PROPOSSSUFF",
     "note": "T07t10(5.0,p.523)",
     "common": {
       "pos": "Pronoun",
@@ -187,7 +415,7 @@
     ]
   },
   {
-    "label": "gaw-PronounSubjProcliticmorph-PROSUBJPROCLITIC-",
+    "label": "gaw-morphPronounSubjProclitic-PROSUBJPROCLITIC",
     "note": "T07t10(5.0,p.523)",
     "common": {
       "pos": "Pronoun",
@@ -208,225 +436,17 @@
     ]
   },
   {
-    "label": "gaw-Verb-ass-ImperativeNegative",
-    "note": "T073.3.5(p.517) :: Imperative classes do not exist in the negative imperative (note classes of lexical items in the affirmative imperative). A single verb form used in both sg and pl.",
-    "common": {
-      "lexeme": "ass",
-      "polarity": "Negative",
-      "pos": "Verb",
-      "tam": "Imperative"
-    },
-    "terms": [
-      ["number" ,"persom" ,"gender" ,"token"],
-      ["Singular" ,"Person2" ,"Common" ,"ólo ašší"],
-      ["Plural" ,"Person2" ,"Common" ,"ólo ašší"]
-    ]
-  },
-  {
-    "label": "gaw-Verb-ass-Imperfective",
+    "label": "gaw-morphVerb-CONSECTEMPLATEConsecutiveAffirmative",
     "note": "T07t4(p.515) :: There are two tonally distinct inflectional classes of verb in the perfective,imperative,and consecutive positive tenses.",
     "common": {
-      "lexeme": "ass",
       "pos": "Verb",
-      "tam": "Imperfective"
-    },
-    "terms": [
-      ["number" ,"person" ,"gender" ,"token"],
-      ["Singular" ,"Person1" ,"Common" ,"ášša"],
-      ["Singular" ,"Person2" ,"Common" ,"áššay"],
-      ["Singular" ,"Person3" ,"Masc" ,"ášša"],
-      ["Singular" ,"Person3" ,"Fem" ,"áššay"],
-      ["Plural" ,"Person1" ,"Common" ,"áššani"],
-      ["Plural" ,"Person2" ,"Common" ,"áššangu"],
-      ["Plural" ,"Person3" ,"Common" ,"áššangi"]
-    ]
-  },
-  {
-    "label": "gaw-Verb-ass-JussiveAffirmative",
-    "note": "T07t7 3.3.6(p.517) :: The desinences are the same as the past positive with a different accentual pattern.",
-    "common": {
-      "lexeme": "ass",
       "polarity": "Affirmative",
-      "pos": "Verb",
-      "tam": "Jussive"
-    },
-    "terms": [
-      ["number" ,"person" ,"gender" ,"token"],
-      ["Singular" ,"Person1" ,"Common" ,"ašší"],
-      ["Singular" ,"Person3" ,"Masc" ,"ašší"],
-      ["Singular" ,"Person3" ,"Fem" ,"aššití"],
-      ["Plural" ,"Person1" ,"Common" ,"aššiní"],
-      ["Plural" ,"Person3" ,"Common" ,"aššé"]
-    ]
-  },
-  {
-    "label": "gaw-Verb-ass-JussiveNegative",
-    "note": "T07t8,3.3.7(p.517) :: The desinences are the same as the past negative,preceded by the jussive marker ínnu.",
-    "common": {
-      "lexeme": "ass",
-      "polarity": "Negative",
-      "pos": "Verb",
-      "tam": "Jussive"
-    },
-    "terms": [
-      ["number" ,"person" ,"gender" ,"token"],
-      ["Singular" ,"Person1" ,"Common" ,"(áno) aššé"],
-      ["Singular" ,"Person3" ,"Masc" ,"ínnu aššú"],
-      ["Singular" ,"Person3" ,"Fem" ,"ínnu aššú"],
-      ["Plural" ,"Person1" ,"Common" ,"(íne) aššiné"],
-      ["Plural" ,"Person3" ,"Common" ,"ínnu aššóngi"]
-    ]
-  },
-  {
-    "label": "gaw-Verb-ass-PastNegative",
-    "note": "T07t5(p.515) :: There are two tonally distinct inflectional classes of verb in the perfective,imperative,and consecutive positive tenses.",
-    "common": {
-      "lexeme": "ass",
-      "polarity": "Negative",
-      "pos": "Verb",
-      "tam": "Past"
-    },
-    "terms": [
-      ["number" ,"person" ,"gender" ,"token"],
-      ["Singular" ,"Person1" ,"Common" ,"⊤"],
-      ["Singular" ,"Person2" ,"Common" ,"⊤"],
-      ["Singular" ,"Person3" ,"Masc" ,"⊤"],
-      ["Singular" ,"Person3" ,"Fem" ,"⊤"],
-      ["Plural" ,"Person1" ,"Common" ,"áššóoni"],
-      ["Plural" ,"Person2" ,"Common" ,"áššóngu"],
-      ["Plural" ,"Person3" ,"Common" ,"áššóngi"]
-    ]
-  },
-  {
-    "label": "gaw-Verb-ass-PresentNegative",
-    "note": "T07t5(p.515) :: There are two tonally distinct inflectional classes of verb in the perfective,imperative,and consecutive positive tenses.",
-    "common": {
-      "lexeme": "ass",
-      "polarity": "Negative",
-      "pos": "Verb",
-      "tam": "Present"
-    },
-    "terms": [
-      ["number" ,"person" ,"gender" ,"token"],
-      ["Singular" ,"Person1" ,"Common" ,"⊤"],
-      ["Singular" ,"Person2" ,"Common" ,"áššití"],
-      ["Singular" ,"Person3" ,"Masc" ,"⊤"],
-      ["Singular" ,"Person3" ,"Fem" ,"áššití"],
-      ["Plural" ,"Person1" ,"Common" ,"áššiní"],
-      ["Plural" ,"Person2" ,"Common" ,"áššité"],
-      ["Plural" ,"Person3" ,"Common" ,"⊤"]
-    ]
-  },
-  {
-    "label": "gaw-VerbClass1-oggay-Perfective",
-    "note": "T07t3(p.514) :: There are two tonally distinct inflectional classes of verb in the perfective,imperative,and consecutive positive tenses.",
-    "common": {
-      "inflClass": "Class1",
-      "lexeme": "oggay",
-      "pos": "Verb",
-      "tam": "Perfective"
-    },
-    "terms": [
-      ["number" ,"person" ,"gender" ,"token"],
-      ["Singular" ,"Person1" ,"Common" ,"ógááyí"],
-      ["Singular" ,"Person2" ,"Common" ,"ógááytí"],
-      ["Singular" ,"Person3" ,"Masc" ,"ógááyí"],
-      ["Singular" ,"Person3" ,"Fem" ,"ógááytí"],
-      ["Plural" ,"Person1" ,"Common" ,"ógááyné(eni)"],
-      ["Plural" ,"Person2" ,"Common" ,"ógááyté(ngu)"],
-      ["Plural" ,"Person3" ,"Common" ,"ógááyné(eni)"]
-    ]
-  },
-  {
-    "label": "gaw-VerbClass1-sor-Consecutive",
-    "note": "T07t4(p.515) :: There are two tonally distinct inflectional classes of verb in the perfective,imperative,and consecutive positive tenses.",
-    "common": {
-      "inflClass": "Class1",
-      "lexeme": "sor",
-      "pos": "Verb",
-      "tam": "Consecutive"
-    },
-    "terms": [
-      ["number" ,"person" ,"gender" ,"token"],
-      ["Singular" ,"Person1" ,"Common" ,"sorá"],
-      ["Singular" ,"Person2" ,"Common" ,"soráy"],
-      ["Singular" ,"Person3" ,"Masc" ,"sorú"],
-      ["Singular" ,"Person3" ,"Fem" ,"sorí"],
-      ["Plural" ,"Person1" ,"Common" ,"sórání"],
-      ["Plural" ,"Person2" ,"Common" ,"sórángú"],
-      ["Plural" ,"Person3" ,"Common" ,"sórángí"]
-    ]
-  },
-  {
-    "label": "gaw-VerbClass1-ug-Perfective",
-    "note": "T07t3(p.514) :: There are two tonally distinct inflectional classes of verb in the perfective,imperative,and consecutive positive tenses.",
-    "common": {
-      "inflClass": "Class1",
-      "lexeme": "ug",
-      "pos": "Verb",
-      "tam": "Perfective"
-    },
-    "terms": [
-      ["number" ,"person" ,"gender" ,"token"],
-      ["Singular" ,"Person1" ,"Common" ,"ʕúgí"],
-      ["Singular" ,"Person2" ,"Common" ,"ʕúgtí"],
-      ["Singular" ,"Person3" ,"Masc" ,"ʕúgí"],
-      ["Singular" ,"Person3" ,"Fem" ,"ʕúgtí"],
-      ["Plural" ,"Person1" ,"Common" ,"ʕúgné(eni)"],
-      ["Plural" ,"Person2" ,"Common" ,"ʕúgté(ngu)"],
-      ["Plural" ,"Person3" ,"Common" ,"ʕúgné(eni)"]
-    ]
-  },
-  {
-    "label": "gaw-VerbClass2-ass-Consecutive",
-    "note": "T07t4(p.515) :: There are two tonally distinct inflectional classes of verb in the perfective,imperative,and consecutive positive tenses.",
-    "common": {
-      "inflClass": "Class2",
-      "lexeme": "ass",
-      "pos": "Verb",
-      "tam": "Consecutive"
-    },
-    "terms": [
-      ["number" ,"person" ,"gender" ,"token"],
-      ["Singular" ,"Person1" ,"Common" ,"⊤"],
-      ["Singular" ,"Person2" ,"Common" ,"áššóy"],
-      ["Singular" ,"Person3" ,"Masc" ,"⊤"],
-      ["Singular" ,"Person3" ,"Fem" ,"áššóy"],
-      ["Plural" ,"Person1" ,"Common" ,"áššóni"],
-      ["Plural" ,"Person2" ,"Common" ,"áššóngu"],
-      ["Plural" ,"Person3" ,"Common" ,"áššóngi"]
-    ]
-  },
-  {
-    "label": "gaw-VerbClass2-ass-Perfective",
-    "note": "T07t3(p.514) :: There are two tonally distinct inflectional classes of verb in the perfective,imperative,and consecutive positive tenses.",
-    "common": {
-      "inflClass": "Class2",
-      "lexeme": "ass",
-      "pos": "Verb",
-      "tam": "Perfective"
-    },
-    "terms": [
-      ["number" ,"person" ,"gender" ,"token"],
-      ["Singular" ,"Person1" ,"Common" ,"ášši"],
-      ["Singular" ,"Person2" ,"Common" ,"áššti"],
-      ["Singular" ,"Person3" ,"Masc" ,"ášši"],
-      ["Singular" ,"Person3" ,"Fem" ,"áššti"],
-      ["Plural" ,"Person1" ,"Common" ,"áššné(eni)"],
-      ["Plural" ,"Person2" ,"Common" ,"áššté(ngu)"],
-      ["Plural" ,"Person3" ,"Common" ,"áššné(eni)"]
-    ]
-  },
-  {
-    "label": "gaw-Verbmorph-CONSECTEMPLATE-Consecutive",
-    "note": "T07t4(p.515) :: There are two tonally distinct inflectional classes of verb in the perfective,imperative,and consecutive positive tenses.",
-    "common": {
-      "pos": "Verb",
+      "conjClass": "",
       "tam": "Consecutive",
       "morphClass": "CONSECTEMPLATE"
     },
     "terms": [
-      ["inflClass" ,"number" ,"person" ,"gender" ,"token"],
+      ["conjClass" ,"number" ,"person" ,"gender" ,"token"],
       ["Class1" ,"Singular" ,"Person1" ,"Common" ,"Cv́C(v́C)á"],
       ["Class1" ,"Singular" ,"Person2" ,"Common" ,"Cv́C(vC)áy"],
       ["Class1" ,"Singular" ,"Person3" ,"Masc" ,"Cv́C(v́C)ú"],
@@ -444,7 +464,7 @@
     ]
   },
   {
-    "label": "gaw-Verbmorph-DERVSTEMS-",
+    "label": "gaw-morphVerb-DERVSTEMS",
     "note": "T07t1(p.510)",
     "common": {
       "pos": "Verb",
@@ -462,10 +482,11 @@
     ]
   },
   {
-    "label": "gaw-Verbmorph-IMPERFFUTTEMPLATE-ImperfectiveFuture",
+    "label": "gaw-morphVerb-IMPERFFUTTEMPLATEImperfectiveFutureAffirmative",
     "note": "T07p.515 :: The future and habitual template paradigms are not given as such in the source,but are an extrapolation from the following statement of the author:Two affixes,-n- for the future and –ay- for the Habitual,may be inserted between the stem and the Prefective,Imperfective,and Negative endings.",
     "common": {
       "pos": "Verb",
+      "polarity": "Affirmative",
       "tam": "Imperfective",
       "tense2": "Future",
       "morphClass": "IMPERFFUTTEMPLATE"
@@ -482,10 +503,11 @@
     ]
   },
   {
-    "label": "gaw-Verbmorph-IMPERFHABTEMPLATE-ImperfectiveHabitual",
+    "label": "gaw-morphVerb-IMPERFHABTEMPLATEImperfectiveHabitualAffirmative",
     "note": "T07p.515 :: The future and habitual template paradigms are not given as such in the source,but are an extrapolation from the following statement of the author:Two affixes,-n- for the future and –ay- for the Habitual,may be inserted between the stem and the Prefective,Imperfective,and Negative endings.",
     "common": {
       "pos": "Verb",
+      "polarity": "Affirmative",
       "tam": "Imperfective",
       "tense2": "Habitual",
       "morphClass": "IMPERFHABTEMPLATE"
@@ -502,9 +524,10 @@
     ]
   },
   {
-    "label": "gaw-Verbmorph-IMPERFTEMPLATE-Imperfective",
+    "label": "gaw-morphVerb-IMPERFTEMPLATEImperfectiveAffirmative",
     "note": "T07t4(p.515) :: There are two tonally distinct inflectional classes of verb in the perfective,imperative,and consecutive positive tenses.",
     "common": {
+      "polarity": "Affirmative",
       "pos": "Verb",
       "tam": "Imperfective",
       "morphClass": "IMPERFTEMPLATE"
@@ -521,15 +544,16 @@
     ]
   },
   {
-    "label": "gaw-Verbmorph-IMPRTVTEMPLATE-Imperative",
+    "label": "gaw-morphVerb-IMPRTVTEMPLATEImperativeAffirmative",
     "note": "T07t6&3.34(pp.516f) :: Class1a verbs are C final;class1b are CC final.",
     "common": {
+      "polarity": "Affirmative",
       "pos": "Verb",
       "tam": "Imperative",
       "morphClass": "IMPRTVTEMPLATE"
     },
     "terms": [
-      ["inflClass" ,"number" ,"token"],
+      ["conjClass" ,"number" ,"token"],
       ["Class1a" ,"Singular" ,"v́[X]-Ø"],
       ["Class1a" ,"Plural" ,"v́[X]-á"],
       ["Class1b" ,"Singular" ,"v́[X]-í"],
@@ -539,163 +563,211 @@
     ]
   },
   {
-    "label": "gaw-Verbmorph-NEGFUTTEMPLATE-FutureNegative",
+    "label": "gaw-morphVerb-NEGFUTTEMPLATEPastFutureNegative",
     "note": "T07p.515 :: The future and habitual template paradigms are not given as such in the source,but are an extrapolation from the following statement of the author:Two affixes,-n- for the future and –ay- for the Habitual,may be inserted between the stem and the Prefective,Imperfective,and Negative endings.",
     "common": {
       "polarity": "Negative",
       "pos": "Verb",
+      "tam": "Past",
       "tense2": "Future",
       "morphClass": "NEGFUTTEMPLATE"
     },
     "terms": [
-      ["tam" ,"number" ,"person" ,"gender" ,"token"],
-      ["Past" ,"Singular" ,"Person1" ,"Common" ,"CvC(vC)-n-ú"],
-      ["Past" ,"Singular" ,"Person2" ,"Common" ,"CvC(vC)-n-ú"],
-      ["Past" ,"Singular" ,"Person3" ,"Masc" ,"CvC(vC)-n-ú"],
-      ["Past" ,"Singular" ,"Person3" ,"Fem" ,"CvC(vC)-n-ú"],
-      ["Past" ,"Plural" ,"Person1" ,"Common" ,"CvC(vC)-n-óoni"],
-      ["Past" ,"Plural" ,"Person2" ,"Common" ,"CvC(vC)-n-óngu"],
-      ["Past" ,"Plural" ,"Person3" ,"Common" ,"CvC(vC)-n-óngi"],
-      ["Present" ,"Singular" ,"Person1" ,"Common" ,"CvC(vC)-n-í"],
-      ["Present" ,"Singular" ,"Person2" ,"Common" ,"CvC(vC)-n-ití"],
-      ["Present" ,"Singular" ,"Person3" ,"Masc" ,"CvC(vC)-n-í"],
-      ["Present" ,"Singular" ,"Person3" ,"Fem" ,"CvC(vC)-n-ití"],
-      ["Present" ,"Plural" ,"Person1" ,"Common" ,"CvC(vC)-n-iní"],
-      ["Present" ,"Plural" ,"Person2" ,"Common" ,"CvC(vC)-n-ité"],
-      ["Present" ,"Plural" ,"Person3" ,"Common" ,"CvC(vC)-n-é"]
+      ["number" ,"person" ,"gender" ,"token"],
+      ["Singular" ,"Person1" ,"Common" ,"CvC(vC)-n-ú"],
+      ["Singular" ,"Person2" ,"Common" ,"CvC(vC)-n-ú"],
+      ["Singular" ,"Person3" ,"Masc" ,"CvC(vC)-n-ú"],
+      ["Singular" ,"Person3" ,"Fem" ,"CvC(vC)-n-ú"],
+      ["Plural" ,"Person1" ,"Common" ,"CvC(vC)-n-óoni"],
+      ["Plural" ,"Person2" ,"Common" ,"CvC(vC)-n-óngu"],
+      ["Plural" ,"Person3" ,"Common" ,"CvC(vC)-n-óngi"]
     ]
   },
   {
-    "label": "gaw-Verbmorph-NEGHABTEMPLATE-HabitualNegative",
+    "label": "gaw-morphVerb-NEGFUTTEMPLATEPresentFutureNegative",
     "note": "T07p.515 :: The future and habitual template paradigms are not given as such in the source,but are an extrapolation from the following statement of the author:Two affixes,-n- for the future and –ay- for the Habitual,may be inserted between the stem and the Prefective,Imperfective,and Negative endings.",
     "common": {
       "polarity": "Negative",
       "pos": "Verb",
+      "tam": "Present",
+      "tense2": "Future",
+      "morphClass": "NEGFUTTEMPLATE"
+    },
+    "terms": [
+      ["number" ,"person" ,"gender" ,"token"],
+      ["Singular" ,"Person1" ,"Common" ,"CvC(vC)-n-í"],
+      ["Singular" ,"Person2" ,"Common" ,"CvC(vC)-n-ití"],
+      ["Singular" ,"Person3" ,"Masc" ,"CvC(vC)-n-í"],
+      ["Singular" ,"Person3" ,"Fem" ,"CvC(vC)-n-ití"],
+      ["Plural" ,"Person1" ,"Common" ,"CvC(vC)-n-iní"],
+      ["Plural" ,"Person2" ,"Common" ,"CvC(vC)-n-ité"],
+      ["Plural" ,"Person3" ,"Common" ,"CvC(vC)-n-é"]
+    ]
+  },
+  {
+    "label": "gaw-morphVerb-NEGHABTEMPLATEPastHabitualNegative",
+    "note": "T07p.515 :: The future and habitual template paradigms are not given as such in the source,but are an extrapolation from the following statement of the author:Two affixes,-n- for the future and –ay- for the Habitual,may be inserted between the stem and the Prefective,Imperfective,and Negative endings.",
+    "common": {
+      "polarity": "Negative",
+      "pos": "Verb",
+      "tam": "Past",
       "tense2": "Habitual",
       "morphClass": "NEGHABTEMPLATE"
     },
     "terms": [
-      ["tam" ,"number" ,"person" ,"gender" ,"token"],
-      ["Past" ,"Singular" ,"Person1" ,"Common" ,"CvC(vC)-ay-ú"],
-      ["Past" ,"Singular" ,"Person2" ,"Common" ,"CvC(vC)-ay-ú"],
-      ["Past" ,"Singular" ,"Person3" ,"Masc" ,"CvC(vC)-ay-ú"],
-      ["Past" ,"Singular" ,"Person3" ,"Fem" ,"CvC(vC)-ay-ú"],
-      ["Past" ,"Plural" ,"Person1" ,"Common" ,"CvC(vC)-ay-óoni"],
-      ["Past" ,"Plural" ,"Person2" ,"Common" ,"CvC(vC)-ay-óngu"],
-      ["Past" ,"Plural" ,"Person3" ,"Common" ,"CvC(vC)-ay-óngi"],
-      ["Present" ,"Singular" ,"Person1" ,"Common" ,"CvC(vC)-ay-í"],
-      ["Present" ,"Singular" ,"Person2" ,"Common" ,"CvC(vC)-ay-ití"],
-      ["Present" ,"Singular" ,"Person3" ,"Masc" ,"CvC(vC)-ay-í"],
-      ["Present" ,"Singular" ,"Person3" ,"Fem" ,"CvC(vC)-ay-ití"],
-      ["Present" ,"Plural" ,"Person1" ,"Common" ,"CvC(vC)-ay-iní"],
-      ["Present" ,"Plural" ,"Person2" ,"Common" ,"CvC(vC)-ay-ité"],
-      ["Present" ,"Plural" ,"Person3" ,"Common" ,"CvC(vC)-ay-é"]
+      ["number" ,"person" ,"gender" ,"token"],
+      ["Singular" ,"Person1" ,"Common" ,"CvC(vC)-ay-ú"],
+      ["Singular" ,"Person2" ,"Common" ,"CvC(vC)-ay-ú"],
+      ["Singular" ,"Person3" ,"Masc" ,"CvC(vC)-ay-ú"],
+      ["Singular" ,"Person3" ,"Fem" ,"CvC(vC)-ay-ú"],
+      ["Plural" ,"Person1" ,"Common" ,"CvC(vC)-ay-óoni"],
+      ["Plural" ,"Person2" ,"Common" ,"CvC(vC)-ay-óngu"],
+      ["Plural" ,"Person3" ,"Common" ,"CvC(vC)-ay-óngi"]
     ]
   },
   {
-    "label": "gaw-Verbmorph-NEGTEMPLATE-Negative",
+    "label": "gaw-morphVerb-NEGHABTEMPLATEPresentHabitualNegative",
+    "note": "T07p.515 :: The future and habitual template paradigms are not given as such in the source,but are an extrapolation from the following statement of the author:Two affixes,-n- for the future and –ay- for the Habitual,may be inserted between the stem and the Prefective,Imperfective,and Negative endings.",
+    "common": {
+      "polarity": "Negative",
+      "pos": "Verb",
+      "tam": "Present",
+      "tense2": "Habitual",
+      "morphClass": "NEGHABTEMPLATE"
+    },
+    "terms": [
+      ["number" ,"person" ,"gender" ,"token"],
+      ["Singular" ,"Person1" ,"Common" ,"CvC(vC)-ay-í"],
+      ["Singular" ,"Person2" ,"Common" ,"CvC(vC)-ay-ití"],
+      ["Singular" ,"Person3" ,"Masc" ,"CvC(vC)-ay-í"],
+      ["Singular" ,"Person3" ,"Fem" ,"CvC(vC)-ay-ití"],
+      ["Plural" ,"Person1" ,"Common" ,"CvC(vC)-ay-iní"],
+      ["Plural" ,"Person2" ,"Common" ,"CvC(vC)-ay-ité"],
+      ["Plural" ,"Person3" ,"Common" ,"CvC(vC)-ay-é"]
+    ]
+  },
+  {
+    "label": "gaw-morphVerb-NEGTEMPLATEPastNegative",
     "note": "T07t5(p.515) :: There are two tonally distinct inflectional classes of verb in the perfective,imperative,and consecutive positive tenses.",
     "common": {
       "polarity": "Negative",
       "pos": "Verb",
+      "tam": "Past",
       "morphClass": "NEGTEMPLATE"
     },
     "terms": [
-      ["tam" ,"number" ,"person" ,"gender" ,"token"],
-      ["Past" ,"Singular" ,"Person1" ,"Common" ,"CvC(vC)ú"],
-      ["Past" ,"Singular" ,"Person2" ,"Common" ,"CvC(vC)ú"],
-      ["Past" ,"Singular" ,"Person3" ,"Masc" ,"CvC(vC)ú"],
-      ["Past" ,"Singular" ,"Person3" ,"Fem" ,"CvC(vC)ú"],
-      ["Past" ,"Plural" ,"Person1" ,"Common" ,"CvC(vC)óoni"],
-      ["Past" ,"Plural" ,"Person2" ,"Common" ,"CvC(vC)óngu"],
-      ["Past" ,"Plural" ,"Person3" ,"Common" ,"CvC(vC)óngi"],
-      ["Present" ,"Singular" ,"Person1" ,"Common" ,"CvC(vC)í"],
-      ["Present" ,"Singular" ,"Person2" ,"Common" ,"CvC(vC)ití"],
-      ["Present" ,"Singular" ,"Person3" ,"Masc" ,"CvC(vC)í"],
-      ["Present" ,"Singular" ,"Person3" ,"Fem" ,"CvC(vC)ití"],
-      ["Present" ,"Plural" ,"Person1" ,"Common" ,"CvC(vC)iní"],
-      ["Present" ,"Plural" ,"Person2" ,"Common" ,"CvC(vC)ité"],
-      ["Present" ,"Plural" ,"Person3" ,"Common" ,"CvC(vC)é"]
+      ["number" ,"person" ,"gender" ,"token"],
+      ["Singular" ,"Person1" ,"Common" ,"CvC(vC)ú"],
+      ["Singular" ,"Person2" ,"Common" ,"CvC(vC)ú"],
+      ["Singular" ,"Person3" ,"Masc" ,"CvC(vC)ú"],
+      ["Singular" ,"Person3" ,"Fem" ,"CvC(vC)ú"],
+      ["Plural" ,"Person1" ,"Common" ,"CvC(vC)óoni"],
+      ["Plural" ,"Person2" ,"Common" ,"CvC(vC)óngu"],
+      ["Plural" ,"Person3" ,"Common" ,"CvC(vC)óngi"]
     ]
   },
   {
-    "label": "gaw-Verbmorph-PERFECTIVETEMPLATE-Perfective",
+    "label": "gaw-morphVerb-NEGTEMPLATEPresentNegative",
+    "note": "T07t5(p.515) :: There are two tonally distinct inflectional classes of verb in the perfective,imperative,and consecutive positive tenses.",
+    "common": {
+      "polarity": "Negative",
+      "pos": "Verb",
+      "tam": "Present",
+      "morphClass": "NEGTEMPLATE"
+    },
+    "terms": [
+      ["number" ,"person" ,"gender" ,"token"],
+      ["Singular" ,"Person1" ,"Common" ,"CvC(vC)í"],
+      ["Singular" ,"Person2" ,"Common" ,"CvC(vC)ití"],
+      ["Singular" ,"Person3" ,"Masc" ,"CvC(vC)í"],
+      ["Singular" ,"Person3" ,"Fem" ,"CvC(vC)ití"],
+      ["Plural" ,"Person1" ,"Common" ,"CvC(vC)iní"],
+      ["Plural" ,"Person2" ,"Common" ,"CvC(vC)ité"],
+      ["Plural" ,"Person3" ,"Common" ,"CvC(vC)é"]
+    ]
+  },
+  {
+    "label": "gaw-morphVerb-PERFECTIVETEMPLATEClass1PerfectiveAffirmative",
     "note": "T07t3(p.514) :: There are two tonally distinct inflectional classes of verb in the perfective,imperative,and consecutive positive tenses.",
     "common": {
       "pos": "Verb",
+      "conjClass": "Class1",
+      "polarity": "Affirmative",
       "tam": "Perfective",
       "morphClass": "PERFECTIVETEMPLATE"
     },
     "terms": [
-      ["inflClass" ,"number" ,"person" ,"gender" ,"token"],
-      ["Class1" ,"Singular" ,"Person1" ,"Common" ,"Cv́C(v́C)í"],
-      ["Class1" ,"Singular" ,"Person2" ,"Common" ,"Cv́C(v́C)tí"],
-      ["Class1" ,"Singular" ,"Person3" ,"Masc" ,"Cv́C(v́C)í"],
-      ["Class1" ,"Singular" ,"Person3" ,"Fem" ,"Cv́C(v́C)tí"],
-      ["Class1" ,"Plural" ,"Person1" ,"Common" ,"Cv́C(v́C)né(eni)"],
-      ["Class1" ,"Plural" ,"Person2" ,"Common" ,"Cv́C(v́C)té(ngu)"],
-      ["Class1" ,"Plural" ,"Person3" ,"Common" ,"Cv́C(v́C)né(eni)"],
-      ["Class2" ,"Singular" ,"Person1" ,"Common" ,"Cv́C(v́C)i"],
-      ["Class2" ,"Singular" ,"Person2" ,"Common" ,"Cv́C(v́C)ti"],
-      ["Class2" ,"Singular" ,"Person3" ,"Masc" ,"Cv́C(v́C)i"],
-      ["Class2" ,"Singular" ,"Person3" ,"Fem" ,"Cv́C(v́C)ti"],
-      ["Class2" ,"Plural" ,"Person1" ,"Common" ,"Cv́C(v́C)né(eni)"],
-      ["Class2" ,"Plural" ,"Person2" ,"Common" ,"Cv́C(v́C)té(ngu)"],
-      ["Class2" ,"Plural" ,"Person3" ,"Common" ,"Cv́C(v́C)né(eni)"]
+      ["number" ,"person" ,"gender" ,"token"],
+      ["Singular" ,"Person1" ,"Common" ,"Cv́C(v́C)í"],
+      ["Singular" ,"Person2" ,"Common" ,"Cv́C(v́C)tí"],
+      ["Singular" ,"Person3" ,"Masc" ,"Cv́C(v́C)í"],
+      ["Singular" ,"Person3" ,"Fem" ,"Cv́C(v́C)tí"],
+      ["Plural" ,"Person1" ,"Common" ,"Cv́C(v́C)né(eni)"],
+      ["Plural" ,"Person2" ,"Common" ,"Cv́C(v́C)té(ngu)"],
+      ["Plural" ,"Person3" ,"Common" ,"Cv́C(v́C)né(eni)"]
     ]
   },
   {
-    "label": "gaw-Verbmorph-PERFFUTTEMPLATE-PerfectiveFuture",
+    "label": "gaw-morphVerb-PERFECTIVETEMPLATEClass2PerfectiveAffirmative",
+    "note": "T07t3(p.514) :: There are two tonally distinct inflectional classes of verb in the perfective,imperative,and consecutive positive tenses.",
+    "common": {
+      "pos": "Verb",
+      "conjClass": "Class2",
+      "polarity": "Affirmative",
+      "tam": "Perfective",
+      "morphClass": "PERFECTIVETEMPLATE"
+    },
+    "terms": [
+      ["number" ,"person" ,"gender" ,"token"],
+      ["Singular" ,"Person1" ,"Common" ,"Cv́C(v́C)i"],
+      ["Singular" ,"Person2" ,"Common" ,"Cv́C(v́C)ti"],
+      ["Singular" ,"Person3" ,"Masc" ,"Cv́C(v́C)i"],
+      ["Singular" ,"Person3" ,"Fem" ,"Cv́C(v́C)ti"],
+      ["Plural" ,"Person1" ,"Common" ,"Cv́C(v́C)né(eni)"],
+      ["Plural" ,"Person2" ,"Common" ,"Cv́C(v́C)té(ngu)"],
+      ["Plural" ,"Person3" ,"Common" ,"Cv́C(v́C)né(eni)"]
+    ]
+  },
+  {
+    "label": "gaw-morphVerb-PERFFUTTEMPLATEClass1PerfectiveFuture",
     "note": "T07p.515 :: The future and habitual template paradigms are not given as such in the source,but are an extrapolation from the following statement of the author:Two affixes,-n- for the future and –ay- for the Habitual,may be inserted between the stem and the Prefective,Imperfective,and Negative endings.",
     "common": {
       "pos": "Verb",
+      "conjClass": "Class1",
       "tam": "Perfective",
       "tense2": "Future",
       "morphClass": "PERFFUTTEMPLATE"
     },
     "terms": [
-      ["inflClass" ,"number" ,"person" ,"gender" ,"token"],
-      ["Class1" ,"Singular" ,"Person1" ,"Common" ,"Cv́C(v́C)-n-í"],
-      ["Class1" ,"Singular" ,"Person2" ,"Common" ,"Cv́C(v́C)-n-tí"],
-      ["Class1" ,"Singular" ,"Person3" ,"Masc" ,"Cv́C(v́C)-n-í"],
-      ["Class1" ,"Singular" ,"Person3" ,"Fem" ,"Cv́C(v́C)-n-tí"],
-      ["Class1" ,"Plural" ,"Person1" ,"Common" ,"Cv́C(v́C)-n-né(eni)"],
-      ["Class1" ,"Plural" ,"Person2" ,"Common" ,"Cv́C(v́C)-n-té(ngu)"],
-      ["Class1" ,"Plural" ,"Person3" ,"Common" ,"Cv́C(v́C)-n-né(eni)"],
-      ["Class2" ,"Singular" ,"Person1" ,"Common" ,"Cv́C(v́C)-n-i"],
-      ["Class2" ,"Singular" ,"Person2" ,"Common" ,"Cv́C(v́C)-n-ti"],
-      ["Class2" ,"Singular" ,"Person3" ,"Masc" ,"Cv́C(v́C)-n-i"],
-      ["Class2" ,"Singular" ,"Person3" ,"Fem" ,"Cv́C(v́C)-n-ti"],
-      ["Class2" ,"Plural" ,"Person1" ,"Common" ,"Cv́C(v́C)-n-né(eni)"],
-      ["Class2" ,"Plural" ,"Person2" ,"Common" ,"Cv́C(v́C)-n-té(ngu)"],
-      ["Class2" ,"Plural" ,"Person3" ,"Common" ,"Cv́C(v́C)-n-né(eni)"]
+      ["number" ,"person" ,"gender" ,"token"],
+      ["Singular" ,"Person1" ,"Common" ,"Cv́C(v́C)-n-í"],
+      ["Singular" ,"Person2" ,"Common" ,"Cv́C(v́C)-n-tí"],
+      ["Singular" ,"Person3" ,"Masc" ,"Cv́C(v́C)-n-í"],
+      ["Singular" ,"Person3" ,"Fem" ,"Cv́C(v́C)-n-tí"],
+      ["Plural" ,"Person1" ,"Common" ,"Cv́C(v́C)-n-né(eni)"],
+      ["Plural" ,"Person2" ,"Common" ,"Cv́C(v́C)-n-té(ngu)"],
+      ["Plural" ,"Person3" ,"Common" ,"Cv́C(v́C)-n-né(eni)"]
     ]
   },
   {
-    "label": "gaw-Verbmorph-PERFHABTEMPLATE-PerfectiveHabitual",
+    "label": "gaw-morphVerb-PERFHABTEMPLATEClass2PerfectiveHabitual",
     "note": "T07p.515 :: The future and habitual template paradigms are not given as such in the source,but are an extrapolation from the following statement of the author:Two affixes,-n- for the future and –ay- for the Habitual,may be inserted between the stem and the Prefective,Imperfective,and Negative endings.",
     "common": {
       "pos": "Verb",
+      "conjClass": "Class2",
       "tam": "Perfective",
       "tense2": "Habitual",
       "morphClass": "PERFHABTEMPLATE"
     },
     "terms": [
-      ["inflClass" ,"number" ,"person" ,"gender" ,"token"],
-      ["Class1" ,"Singular" ,"Person1" ,"Common" ,"Cv́C(v́C)-ay-í"],
-      ["Class1" ,"Singular" ,"Person2" ,"Common" ,"Cv́C(v́C)-ay-tí"],
-      ["Class1" ,"Singular" ,"Person3" ,"Masc" ,"Cv́C(v́C)-ay-í"],
-      ["Class1" ,"Singular" ,"Person3" ,"Fem" ,"Cv́C(v́C)-ay-tí"],
-      ["Class1" ,"Plural" ,"Person1" ,"Common" ,"Cv́C(v́C)-ay-né(eni)"],
-      ["Class1" ,"Plural" ,"Person2" ,"Common" ,"Cv́C(v́C)-ay-té(ngu)"],
-      ["Class1" ,"Plural" ,"Person3" ,"Common" ,"Cv́C(v́C)-ay-né(eni)"],
-      ["Class2" ,"Singular" ,"Person1" ,"Common" ,"Cv́C(v́C)-ay-i"],
-      ["Class2" ,"Singular" ,"Person2" ,"Common" ,"Cv́C(v́C)-ay-ti"],
-      ["Class2" ,"Singular" ,"Person3" ,"Masc" ,"Cv́C(v́C)-ay-i"],
-      ["Class2" ,"Singular" ,"Person3" ,"Fem" ,"Cv́C(v́C)-ay-ti"],
-      ["Class2" ,"Plural" ,"Person1" ,"Common" ,"Cv́C(v́C)-ay-né(eni)"],
-      ["Class2" ,"Plural" ,"Person2" ,"Common" ,"Cv́C(v́C)-ay-té(ngu)"],
-      ["Class2" ,"Plural" ,"Person3" ,"Common" ,"Cv́C(v́C)-ay-né(eni)"]
+      ["number" ,"person" ,"gender" ,"token"],
+      ["Singular" ,"Person1" ,"Common" ,"Cv́C(v́C)-ay-i"],
+      ["Singular" ,"Person2" ,"Common" ,"Cv́C(v́C)-ay-ti"],
+      ["Singular" ,"Person3" ,"Masc" ,"Cv́C(v́C)-ay-i"],
+      ["Singular" ,"Person3" ,"Fem" ,"Cv́C(v́C)-ay-ti"],
+      ["Plural" ,"Person1" ,"Common" ,"Cv́C(v́C)-ay-né(eni)"],
+      ["Plural" ,"Person2" ,"Common" ,"Cv́C(v́C)-ay-té(ngu)"],
+      ["Plural" ,"Person3" ,"Common" ,"Cv́C(v́C)-ay-né(eni)"]
     ]
   }
 ]}
